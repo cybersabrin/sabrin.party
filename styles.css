@@ -2,14 +2,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: '04b03', sans-serif
+    font-family: Arial, Helvetica, sans-serif
 }
 #container {
     max-width: 900px;
     margin: auto;
 }
 #container a {
-    color: deeppink;
+    color: greenyellow;
+    background-color: limegreen;
     font-weight: bold;
     text-decoration: none;
 }
@@ -41,8 +42,10 @@
 
 #navbar li a {
     color: aquamarine;
+    background-color: plum;
     font-weight: 800;
     text-decoration: none;
+    font-family: '04b03', sans-serif;
 }
 
 #navbar li a:hover {
@@ -82,8 +85,8 @@ footer {
 h1, h3 {
     color: aqua;
     text-align: center;
+    font-family: '04b03', sans-serif;
 }
-
 
 p {
     font-family: Arial, Helvetica, sans-serif;
