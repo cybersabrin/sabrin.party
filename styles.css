@@ -108,11 +108,3 @@ p {
     font-size:smaller;
     background-color:#13092D;
   }
-
-  @media only screen and (max-width: 800px) {
-    #flex {
-      flex-wrap:wrap;
-    }
-    aside {
-      width:100%;
-    }
