@@ -81,6 +81,7 @@ footer {
 
 h1, h3 {
     color: aqua;
+    text-align: center;
 }
 
 p {
@@ -88,9 +89,10 @@ p {
 }
 
 h2 {
-    color: red;
-    font-size: smaller;
-    background-color: azure;
+    color: greenyellow;
+    background-color: limegreen;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
 }
 h1 {
     font-size: 25px;
