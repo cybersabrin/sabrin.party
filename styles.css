@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: '04b03', sans-serif,
+    font-family: Arial, Helvetica, sans-serif
 }
 #container {
     max-width: 900px;
@@ -43,6 +43,7 @@
     color: aquamarine;
     font-weight: 800;
     text-decoration: none;
+    font-family: '04b03', sans-serif;
 }
 
 #navbar li a:hover {
@@ -79,8 +80,9 @@ footer {
     text-align: center;
 }
 
-h1{
+h1, h3 {
     color: aqua;
+    font-family: '04b03', sans-serif;
 }
 
 h2 {
@@ -90,9 +92,6 @@ h2 {
 }
 h1 {
     font-size: 25px;
-}
-p {
-    font-family: Arial, Helvetica, sans-serif;
 }
 .box {
     background-color:#13092D;
