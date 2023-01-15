@@ -114,3 +114,10 @@ h1 {
     font-size:smaller;
     background-color:#13092D;
   }
+
+  .center {
+    display: block;
+    margin-right: auto;
+    margin-right: auto;
+    width: 50%;
+  }
