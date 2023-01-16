@@ -10,7 +10,6 @@
 }
 #container a {
     color: greenyellow;
-    background-color: limegreen;
     font-weight: bold;
     text-decoration: none;
 }
@@ -69,9 +68,15 @@
 aside {
     background-image: url(https://sadhost.neocities.org/images/tiles/blobz.gif);
     width: 200px;
+    height:fit-content;
     padding: 20px;
     font-size: smaller;
 }
+
+aside, #main {
+    height:600px;
+    overflow:auto;
+  }
 
 main {
     background-color: hotpink;
