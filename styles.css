@@ -56,6 +56,16 @@
     display: flex;
 }
 
+#child {
+    width: 600px;
+    height: auto;
+    background-color: hotpink;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 -300px;
+}
+
 aside {
     background-image: url(https://sadhost.neocities.org/images/tiles/blobz.gif);
     width: 200px;
