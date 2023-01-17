@@ -155,6 +155,7 @@ h1 {
     color: yellow;
     word-wrap: break-word;
     width: 200px;
+    text-align: center;
   }
 
   div.scrollable {
