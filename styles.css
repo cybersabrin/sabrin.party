@@ -63,6 +63,7 @@
     color: red;
     text-decoration: wavy;
 }
+
 #flex {
     display: flex;
 }
@@ -114,7 +115,7 @@ footer {
 h1, h3 {
     color: aqua;
     text-align: center;
-    font-family: '04b03', sans-serif;
+    font-family: 'Times New Roman', Times, serif
 }
 
 p {
@@ -122,6 +123,12 @@ p {
     font-size: large;
     line-height: 1.5;
     text-align: justify;
+}
+
+a {
+  text-decoration: underline;
+  color: #ED64F5;
+  background-color: aqua;
 }
 
 h2 {
@@ -173,6 +180,8 @@ table {
     word-wrap: break-word;
     width: 200px;
     text-align: center;
+    font-size: smaller;
+    line-height: 1;
   }
 
   div.scrollable {
@@ -230,4 +239,17 @@ table {
   @font-face {
     font-family: rainyhearts;
     src: url(/fonts/rainyhearts.ttf);
+  }
+
+  .results {
+width: 200px;
+background-color: white;
+color: black;
+display: block;
+padding: 10px;
+border: 1px solid;
+margin: 0 auto;
+font-family: 'Times New Roman', Times, serif;
+font-size: 15pt;
+
   }
