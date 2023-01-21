@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif
+    font-family: 'rainyhearts'
 }
 #container {
     max-width: 900px;
@@ -83,6 +83,7 @@ aside {
     height:auto;
     padding: 20px;
     font-size: smaller;
+    font-family: 'rainyhearts';
 }
 
 aside, #main {
@@ -117,17 +118,21 @@ h1, h3 {
 }
 
 p {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'rainyhearts';
+    font-size: large;
+    line-height: 1.5;
+    text-align: justify;
 }
 
 h2 {
     color: greenyellow;
     background-color: limegreen;
     font-size: medium;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'rainyhearts';
 }
 h1 {
     font-size: 25px;
+    font-family: 'rainyhearts';
 }
 .box {
     background-color:#13092D;
@@ -163,7 +168,7 @@ table {
 
   th, td, tr {
     padding: 15px;
-    font-family: '04b03';
+    font-family: 'rainyhearts';
     color: yellow;
     word-wrap: break-word;
     width: 200px;
@@ -222,7 +227,7 @@ table {
     text-align: center;
   }
 
-  p {
-    line-height: 1.5;
-    text-align: justify;
+  @font-face {
+    font-family: rainyhearts;
+    src: url(/fonts/rainyhearts.ttf);
   }
