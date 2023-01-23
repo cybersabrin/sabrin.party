@@ -28,14 +28,14 @@
 
 #header {
     width: 100%;
-    background-color: greenyellow;
+    background-color: transparent;
     height: 150px;
     background-size: 100%;
 }
 
 #navbar {
     height: 60px;
-    background-color: aqua;
+    background-color: greenyellow;
     width: 100%;
 }
 
@@ -53,7 +53,6 @@
 
 #navbar li a {
     color: aquamarine;
-    background-color: aqua;
     font-weight: 800;
     text-decoration: none;
     font-family: '04b03', sans-serif;
@@ -132,7 +131,7 @@ a {
 }
 
 h2 {
-    color: greenyellow;
+    color: hotpink;
     background-color: limegreen;
     font-size: medium;
     font-family: 'rainyhearts';
@@ -261,3 +260,17 @@ font-size: 15pt;
   }
 
   
+  #statuscafe {
+    padding: .5em;
+    background-color: lavender;
+    border: 1px solid orange;
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+    color: #ED64F5;
+    text-decoration: none;
+    font-weight: bold;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}
