@@ -1,132 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CYBERSABRIN</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/gif" sizes="16x16" href="/images/kyubey gif.gif">
+    <title>☆ sabrin's homepage ☆</title>
+    <link rel="icon" type="image/gif" sizes="16x16" href="/images/enter-gif.gif">
+    <link rel="stylesheet" href="landingstyles.css">
+<!-- wobbly text effect -->
+<script type="text/javascript">
+    // <![CDATA[
+    var speed=100; // speed of wobbling, lower is faster
+    var height=3; // height of wobbling in pixels
+    var alink=""; // page to link text to (set to ="" for no link)
+    
+    /****************************
+    *    Wobbly Text Effect     *
+    *(c) 2003-6 mf2fm web-design*
+    *  http://www.mf2fm.com/rv  *
+    * DON'T EDIT BELOW THIS BOX *
+    ****************************/
+    var wobtxt, wobble, wobcnt=0;
+    window.onload=function() { if (document.getElementById) {
+      var i, wobli;
+      wobble=document.getElementById("wobble");
+      wobtxt=wobble.firstChild.nodeValue;
+      while (wobble.childNodes.length) wobble.removeChild(wobble.childNodes[0]);
+      for (i=0; i<wobtxt.length; i++) {
+        wobli=document.createElement("span");
+        wobli.setAttribute("id", "wobb"+i);
+        wobli.style.position="relative";
+        wobli.appendChild(document.createTextNode(wobtxt.charAt(i)));
+        if (alink) {
+          wobli.style.cursor="pointer";
+          wobli.onclick=function() { top.location.href=alink; }
+        }
+        wobble.appendChild(wobli);
+      }
+      setInterval("wobbler()", speed);
+    }}
+    
+    function wobbler() {
+      for (var i=0; i<wobtxt.length; i++) document.getElementById("wobb"+i).style.top=Math.round(height*Math.sin(i+wobcnt))+"px"
+      wobcnt++;
+    }
+    // ]]>
+    </script>
+
+<script type="text/javascript">
+    // <![CDATA[
+    var colours=new Array('#f00', '#f06', '#f0f', '#f6f', '#f39', '#f9c'); // colours of the hearts
+    var minisize=16; // smallest size of hearts in pixels
+    var maxisize=28; // biggest size of hearts in pixels
+    var hearts=66; // maximum number of hearts on screen
+    var over_or_under="over"; // set to "over" for hearts to always be on top, or "under" to allow them to float behind other objects
+    
+    /*****************************
+    *JavaScript Love Heart Cursor*
+    *  (c)2013+ mf2fm web-design *
+    *   http://www.mf2fm.com/rv  *
+    *  DON'T EDIT BELOW THIS BOX *
+    *****************************/
+    var x=ox=400;
+    var y=oy=300;
+    var swide=800;
+    var shigh=600;
+    var sleft=sdown=0;
+    var herz=new Array();
+    var herzx=new Array();
+    var herzy=new Array();
+    var herzs=new Array();
+    var kiss=false;
+    
+    if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+      var oldonload=window.onload;
+      if (typeof(oldonload)!='function') window.onload=funky;
+      else window.onload=function() {
+        if (oldonload) oldonload();
+        funky();
+      }
+    }
+    
+    addRVLoadEvent(mwah);
+    
+    function mwah() { if (document.getElementById) {
+      var i, heart;
+      for (i=0; i<hearts; i++) {
+        heart=createDiv("auto", "auto");
+        heart.style.visibility="hidden";
+        heart.style.zIndex=(over_or_under=="over")?"1001":"0";
+        heart.style.color=colours[i%colours.length];
+        heart.style.pointerEvents="none";
+        if (navigator.appName=="Microsoft Internet Explorer") heart.style.filter="alpha(opacity=75)";
+        else heart.style.opacity=0.75;
+        heart.appendChild(document.createTextNode(String.fromCharCode(9829)));
+        document.body.appendChild(heart);
+        herz[i]=heart;
+        herzy[i]=false;
+      }
+      set_scroll();
+      set_width();
+      herzle();
+    }}
+    
+    function herzle() {
+      var c;
+      if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+        ox=x;
+        oy=y;
+        for (c=0; c<hearts; c++) if (herzy[c]===false) {
+          herz[c].firstChild.nodeValue=String.fromCharCode(9829);
+          herz[c].style.left=(herzx[c]=x-minisize/2)+"px";
+          herz[c].style.top=(herzy[c]=y-minisize)+"px";
+          herz[c].style.fontSize=minisize+"px";
+          herz[c].style.fontWeight='normal';
+          herz[c].style.visibility='visible';
+          herzs[c]=minisize;
+          break;
+        }
+      }
+      for (c=0; c<hearts; c++) if (herzy[c]!==false) blow_me_a_kiss(c);
+      setTimeout("herzle()", 40);
+    }
+    
+    document.onmousedown=pucker;
+    document.onmouseup=function(){clearTimeout(kiss);};
+    
+    function pucker() {
+      ox=-1;
+      oy=-1;
+      kiss=setTimeout('pucker()', 100);
+    }
+    
+    function blow_me_a_kiss(i) {
+      herzy[i]-=herzs[i]/minisize+i%2;
+      herzx[i]+=(i%5-2)/5;
+      if (herzy[i]<sdown-herzs[i] || herzx[i]<sleft-herzs[i] || herzx[i]>sleft+swide-herzs[i]) {
+        herz[i].style.visibility="hidden";
+        herzy[i]=false;
+      }
+      else if (herzs[i]>minisize+2 && Math.random()<.5/hearts) break_my_heart(i);
+      else {
+        if (Math.random()<maxisize/herzy[i] && herzs[i]<maxisize) herz[i].style.fontSize=(++herzs[i])+"px";
+        herz[i].style.top=herzy[i]+"px";
+        herz[i].style.left=herzx[i]+"px";
+      }
+    }
+    
+    function break_my_heart(i) {
+      var t;
+      herz[i].firstChild.nodeValue=String.fromCharCode(9676);
+      herz[i].style.fontWeight='bold';
+      herzy[i]=false;
+      for (t=herzs[i]; t<=maxisize; t++) setTimeout('herz['+i+'].style.fontSize="'+t+'px"', 60*(t-herzs[i]));
+      setTimeout('herz['+i+'].style.visibility="hidden";', 60*(t-herzs[i]));
+    }
+    
+    document.onmousemove=mouse;
+    function mouse(e) {
+      if (e) {
+        y=e.pageY;
+        x=e.pageX;
+      }
+      else {
+        set_scroll();
+        y=event.y+sdown;
+        x=event.x+sleft;
+      }
+    }
+    
+    window.onresize=set_width;
+    function set_width() {
+      var sw_min=999999;
+      var sh_min=999999;
+      if (document.documentElement && document.documentElement.clientWidth) {
+        if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+        if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+      }
+      if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+        if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+        if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+      }
+      if (document.body.clientWidth) {
+        if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+        if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+      }
+      if (sw_min==999999 || sh_min==999999) {
+        sw_min=800;
+        sh_min=600;
+      }
+      swide=sw_min;
+      shigh=sh_min;
+    }
+    
+    window.onscroll=set_scroll;
+    function set_scroll() {
+      if (typeof(self.pageYOffset)=='number') {
+        sdown=self.pageYOffset;
+        sleft=self.pageXOffset;
+      }
+      else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+        sdown=document.body.scrollTop;
+        sleft=document.body.scrollLeft;
+      }
+      else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+        sleft=document.documentElement.scrollLeft;
+        sdown=document.documentElement.scrollTop;
+      }
+      else {
+        sdown=0;
+        sleft=0;
+      }
+    }
+    
+    function createDiv(height, width) {
+      var div=document.createElement("div");
+      div.style.position="absolute";
+      div.style.height=height;
+      div.style.width=width;
+      div.style.overflow="hidden";
+      div.style.backgroundColor="transparent";
+      return (div);
+    }
+    // ]]>
+    </script>
+
 </head>
-<body>
-<!-- SCM Music Player https://www.scmplayer.net -->
-<script type="text/javascript" src="https://www.scmplayer.net/script.js" 
-data-config="{'skin':'skins/aquaBlue/skin.css','volume':29,'autoplay':true,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':[{'title':'Cardcaptor Sakura - Groovy!','url':'https://youtu.be/UNknNFHSkVU'},{'title':'Stay With Me - Miki Matsubara','url':'https://www.youtube.com/watch?v=nuU2YHtxMik'},{'title':'Remember Summer Days - Anri','url':'https://youtu.be/yHKb38-nl3U?list=RDEMhG4uVdn8gWpEQz33389slw'},{'title':'Flyday Chinatown - Yasuha','url':'https://youtu.be/5syUvHEQcv8?list=RDEMhG4uVdn8gWpEQz33389slw'},{'title':'Dress Down - Kaoru Akimoto','url':'https://youtu.be/RoYV25zTldI?list=RDEMhG4uVdn8gWpEQz33389slw'},{'title':'Midnight Cruisin%27 - Kingo Hamada','url':'https://youtu.be/ChQaa0eqZak?list=RDEMhG4uVdn8gWpEQz33389slw'},{'title':'LAZY DANCE - Yoko Oginome','url':'https://youtu.be/3biE1EI26CQ?list=RDEMhG4uVdn8gWpEQz33389slw'}]}" ></script>
-<!-- SCM Music Player script end -->
-
-    <body background="https://sadhost.neocities.org/images/tiles/animate.gif"
-    <div id="container">
-            <div id="header">
-                <br>
-                <br>
-                <p style="text-align: center;"><img src="https://www.animatedimages.org/data/media/43/animated-letter-image-0087.gif" height="100px">
-                    <img src="https://www.animatedimages.org/data/media/43/animated-letter-image-0235.gif" height="100px">
-                    <img src="https://www.animatedimages.org/data/media/43/animated-letter-image-0200.gif" height="100px">
-                    <a style="background-color: transparent;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://www.animatedimages.org/data/media/43/animated-letter-image-0048.gif" height="100px"></a>
-                    <img src="https://www.animatedimages.org/data/media/43/animated-letter-image-1212.gif" height="100px">
-                    <img src="https://www.animatedimages.org/data/media/43/animated-letter-image-1237.gif" height="100px"></p>
-                </div>
-        </div>
-        <nav id="navbar" style="margin-bottom: 10px;" style="font-family: '04b03', sans-serif';"><ul>
-            <li><a href="/"><img src="/images/home button.gif" height="40"></li>
-            <li><a href="/blog.html"><img src="/images/feed button.gif" height="35"></a></li>
-            <li><a href="/favs.html"><img src="/images/about-button.gif" height="35"></a></li>
-            <li><a href="https://sabrin.123guestbook.com/#"><img src="/images/guestbook-button.gif" height="35"></a></li>
-        </ul></nav></div>
-    <div id="flex">
-        <main>
-            <h1>CYBERSABRIN'S HOME PAGE</h1>
-            <br>
-            <p style="text-align: center;"><img src="/images/welcome-to-my-webpage.gif" height="150"></p>
-            <br>
-            <p>this is my own personal website i made on my very own thanks to help from people on the internet like sadgrl.online and youtube. the goal? dream of this is to use this site as like.. a little home. blogging and such. so that one day i may eventually be free from the chokehold social media has me in... i think it will work. this is fun......</p>
-            <br>
-            <p>
-                here you'll find things like my blog (more like a diary?) where i'll write about what's happening as a way to practice html coding. i also got a shrine page in progress if you want to read allll my super cool, correct, factual, and incredibly fascinating thoughts on the media i love to consume. as of early 2023, i'm working on a library section where i'll be updating / posting about the books i read sorta like goodreads but way uglier...
-            </p>
-<br>
-            <div>
-                <p style="float: left; padding: 20px;"><iframe width="314;" height="321;" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=Silly&dob=1673812827&gender=b&element=Fire&pet=frog.gif&map=hills.jpg&background=pink.gif&tablecolor=white&textcolor=white" frameborder="0;"></iframe></p>
-                <p>sAY heLLO TO sIlly THE FROG! be nICe!! XxX XxX</p>
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                <a style="background-color: hotpink;"  href="https://www.youtube.com/watch?v=jX3iLfcMDCw&t=3s"><img src="images/cat_diva5.gif" height="300px"></a>
-            </div>
-            
-            <marquee bgcolor=aqua>im not sure yet</marquee>
-            <br>
-            <br>
-            <div id="statuscafe"><div style="color: #ff69b4" id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script style="color: #ff69b4 !important;" src="https://status.cafe/current-status.js?name=cybersabrin" defer></script>
-            <br>
-            <p>where does this go? oh nice! that's where i want u, words!</p>
-            <div id="box" style="float: right; padding: 10px; background-color: greenyellow; width: 150px; height: 200px;">
-                <p>
-                    <marquee><strong>website to-do list:</strong></marquee>
-                </p>
-                <p>
-                    <ul>
-                        <li style="margin-left: 15px;">
-                            new sidebar with space for more links
-                        </li>
-                        <li style="margin-left: 15px;">
-                            build library page
-                        </li>
-                        <li style="margin-left: 15px;">
-                        world domination
-                        </li>
-                        <li style="margin-left: 15px;">
-                        pet 2 puppies</li>
-                        <li style="margin-left: 15px;">
-                        eat 1 raw egg</li>
-                    </ul>
-                </p>
-            </div>
-
-        </main>
-        <aside id="rightsidebar" style="margin-left: 10px;height: 1200px;">
-            
-            <img src="/images/lain icon.png"
-                width="160"
-                height="140">
-            <h2 style="font-family:'Times New Roman', Times, serif;">wh@ are u still dOIn HEre XxX</h2>
-            <br>
-            <p style="text-align: left; font-size: small;"><strong>currently feeling: </strong><a href="https://www.imood.com/users/cybersabrin"><img src="https://moods.imood.com/display/uname-cybersabrin/fg-#ADFF2/bg-#FF00F/imood.gif" alt="The current mood of cybersabrin at www.imood.com" border="0"></a></p> 
-            <br>
-            <ul>
-                <li>oooh ahh a list! a list is here!</li>
-                <li>a bullet point! so important yeah</li>
-            <br>
-             <!-- FC2 Counter  Starts here -->
-<strong>page hit counter:</strong><script display="inline" language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=38847796&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=38847796&main=1" /></noscript>
-<!-- FC2 Counter  Ends here -->
-<br>
-<!-- FC2 Counter  Starts here -->
-<strong>currently online:</strong><script language="javascript" type="text/javascript" src="//counter1.fc2.com/views.php?id=38847796&main=1"></script><noscript><img src="//counter1.fc2.com/counter_now.php?id=38847796&main=1" /></noscript>
-<!-- FC2 Counter  Ends here -->
-<br>
-            <br>
-            <p style="text-align: center; background-color: limegreen;"><a href="/library.html">LIBRARY</a> <img src="https://i3.glitter-graphics.org/pub/945/945573xdyjypio0j.gif"></a></p>
-            <br>
-            <p><a href="https://gifypet.neocities.org/"> <img src="/images/GIFYPETbadge.gif"></a>
-            <a href="http://www.diabellalovescats.com/graphics.htm "><img src="images/buttons/diabella-button.jpg" height="60px"></a>
-            <a href="https://graphic.neocities.org/"><img src="https://graphic.neocities.org/Button2.png"></a>
-            <a href="https://status.cafe"><img src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
-        </p>
-            
-        </aside>
-    </div>
+<body background="/images/backgrounds/back-008.gif" >
     <br>
     <br>
-    <div class="results">
-        <p style="font-family: 'Times New Roman', Times, serif; color: black; font-size: 11pt; margin: 0; font-weight: lighter; text-align: center;">This page is protected by a</p>
-        <h1 class="title" style="font-family: 'Times New Roman', Times, serif; color: black; font-size: 16pt; margin: 0; font-weight: bold; text-align: center margin: 0">TAPIR</h1>
-        <img class="image" style="max-width: 180px;border: 1px solid; border-color: black; align-items: center;" alt="TAPIR" src="https://i.ibb.co/10FV850/tapir.jpg">
-        <p style="font-family: 'Times New Roman', Times, serif; color: black; font-size: 10pt; margin: 0; font-weight: lighter; text-align: justify;" class="description">Tapirs have changed very little over the past 20 million years.</p>
+    <p style="text-align: center; background-color: hotpink; color:#FFFF5C;"><strong>hello and welcome to my super cool webpage</strong></p>
+    <div id="wobble" style="font-family: 'redsema'; text-align: center; font-size: 74px; -webkit-text-fill-color: #FFFF5C; -webkit-text-stroke: 3px; -webkit-text-stroke-color: #FF5CAD;">cybersabrin</div>
+    <p style="text-align: center; background-color: hotpink; color:#FFFF5C"><strong><marquee>♡ best viewed on desktop ♡ click on the puter to head on in ♡</marquee></strong></p>
+<div id="flex">
+    <table style="padding: 20px; align-items: center; margin: auto;">
+        <tr>
+            <td>
+                <p style="text-align: center;"><img src="/images/moon24twirling.gif" height="105"></p>
+            </td>
+            <td style="width: 600px;">
+                <p style="text-align: center;"><a href="/home.html"><img src="/images/enter-gif.gif"></a></p>
+            </td>
+            <td>
+                <p style="text-align: center;"><img src="/images/sun.gif"></p>
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- Do you need a date too?  To get a born-on date for
+ your website, simply go to http://www.jwp.bc.ca/saulm/html/bornon.htm
+-->
+    <table style="border-color: #FFFF5C; margin: auto; padding: 6; font-family: 'rainyhearts'; font-weight: bold; font-size: larger; color: #FFFF5C;" cellspacing=0 cellpadding=6>
+        <tr><td style="background-color: #5C5CFF">
+        <center>
+        <script language="JavaScript">
+        <!--
+        document.write(document.title);
+        //-->
+        </script>
+        </td></tr>
+        <tr><td style="background-color: #FFFF5C; color: #5C5CFF; font-family: 'rainyhearts';">
+        <span style=color:#FF5CAD>born on:</span> January 14, 2023
         <br>
-        <small>
-          <a style="font-family: 'Times New Roman', Times, serif; color: black; font-size: 11pt; margin: 0; font-weight: lighter; text-align: center;" href="https://hekate.neocities.org">Want your own? Visit hekate.neocities.org!</a>
-        </small>
-      </div>
-        </small>
-      </div>
-      <br>
-      <br>
-      <br>
+        <script language="JavaScript">
+    
+    <!--
+    
+    // please keep these lines on when you copy the source
+    
+    // made by: Nicolas - http://www.geocities.com/ResearchTriangle/1500
+    
+    
+    function getCookieVal (offset) {
+    
+      var endstr = document.cookie.indexOf (";", offset);
+    
+      if (endstr == -1)
+    
+        endstr = document.cookie.length;
+    
+      return unescape(document.cookie.substring(offset, endstr));
+    
+    }
+    
+    
+    function GetCookie (name) {
+    
+      var arg = name + "=";
+    
+      var alen = arg.length;
+    
+      var clen = document.cookie.length;
+    
+      var i = 0;
+    
+      while (i < clen) {
+    
+        var j = i + alen;
+    
+        if (document.cookie.substring(i, j) == arg)
+    
+          return getCookieVal (j);
+    
+        i = document.cookie.indexOf(" ", i) + 1;
+    
+        if (i == 0) break; 
+    
+      }
+    
+      return null;
+    
+    }
+    
+    
+    
+    function SetCookie (name, value) {
+    
+      var argv = SetCookie.arguments;
+    
+      var argc = SetCookie.arguments.length;
+    
+      var expires = (argc > 2) ? argv[2] : null;
+    
+      var path = (argc > 3) ? argv[3] : null;
+    
+      var domain = (argc > 4) ? argv[4] : null;
+    
+      var secure = (argc > 5) ? argv[5] : false;
+    
+      document.cookie = name + "=" + escape (value) +
+    
+        ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +
+    
+        ((path == null) ? "" : ("; path=" + path)) +
+    
+        ((domain == null) ? "" : ("; domain=" + domain)) +
+    
+        ((secure == true) ? "; secure" : "");
+    
+    }
+    
+    
+    
+    function DeleteCookie(name) {
+    
+      var exp = new Date();
+    
+      FixCookieDate (exp);
+    
+      exp.setTime (exp.getTime() - 1);
+    
+      var cval = GetCookie (name);
+    
+      if (cval != null)
+    
+        document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+    
+    }
+    
+    
+    
+    
+    var cookie_date=new Date(document.lastModified);
+    
+    var expdate = new Date();
+    
+    expdate.setTime(expdate.getTime()+(5*24*60*60*1000));
+    
+    
+    
+    
+    document.write("<Font color=hotpink>" + "last updated: "+ "</font>" +document.lastModified);
+    
+    
+    document.write("");
+    
+    if (!(cookie_date == GetCookie("cookie_date"))){
+    
+      SetCookie("cookie_date",cookie_date,expdate);
+    
+      document.write("<font color='#5C5CFF'><br>Site has changed since last visit!</font><br>");
+    
+    }
+    
+    //-->
+    
+    </script>
+    </font>
+    </td></tr>
+    </table>
+    
+    
 </body>
 </html>

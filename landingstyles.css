@@ -1,0 +1,29 @@
+@font-face {
+    font-family: rainyhearts;
+    src: url(/fonts/rainyhearts.ttf) format('truetype');
+
+    font-family: redsema;
+    src: url(/fonts/redsema.ttf) format('truetype');
+
+    font-family: duality;
+    src: url(/fonts/duality.ttf) format('truetype');
+}
+
+body {
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: 'redsema';
+    color: white;
+}
+
+p {
+    font-family: 'rainyhearts';
+    font-size: large;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#flex {
+    display: flex;

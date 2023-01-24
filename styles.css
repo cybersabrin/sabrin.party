@@ -244,6 +244,9 @@ table {
   @font-face {
     font-family: rainyhearts;
     src: url(/fonts/rainyhearts.ttf);
+
+    font-family: duality;
+    src: url(/fonts/duality.ttf) format('truetype');
   }
 
   .results {
