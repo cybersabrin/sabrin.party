@@ -52,7 +52,6 @@
 }
 
 #navbar li a {
-    color: aquamarine;
     font-weight: 800;
     text-decoration: none;
     font-family: '04b03', sans-serif;
@@ -126,8 +125,6 @@ p {
 
 a {
   text-decoration: underline;
-  color: #ED64F5;
-  background-color: aqua;
 }
 
 h2 {
