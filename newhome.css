@@ -113,3 +113,15 @@ ul {
     margin: 0 10px 10px 10px;
     font-size: large;
 }
+
+.results {
+    width: 250px;
+    background-color: #f2d6bf;
+    color: black;
+    display: block;
+    border: 1px solid;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-size: 15pt;
+    
+      }
