@@ -1,12 +1,22 @@
 @font-face {
-    font-family: rainyhearts;
-    src: url(/fonts/rainyhearts.ttf) format('truetype');
+    font-family: 'rainyheartsmedium';
+    src: url('rainyhearts-webfont.woff2') format('woff2'),
+         url('rainyhearts-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-    font-family: redsema;
-    src: url(/fonts/redsema.ttf) format('truetype');
+}
 
-    font-family: duality;
-    src: url(/fonts/duality.ttf) format('truetype');
+
+
+
+@font-face {
+    font-family: 'dualityregular';
+    src: url('duality-webfont.woff2') format('woff2'),
+         url('duality-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 body {
@@ -14,12 +24,12 @@ body {
 }
 
 h1 {
-    font-family: 'redsema';
+    font-family: 'rainyheartsmedium';
     color: white;
 }
 
 p {
-    font-family: 'rainyhearts';
+    font-family: 'rainyheartsmedium';
     font-size: large;
     line-height: 1.5;
     text-align: justify;
