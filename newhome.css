@@ -6,13 +6,23 @@
 }
 
 @font-face {
-    font-family: rainyhearts;
-    src: url(/fonts/rainyhearts.ttf);
-  
-    font-family: duality;
-    src: url(/fonts/duality.ttf) format('truetype');
-  }
+    font-family: 'rainyheartsmedium';
+    src: url('rainyhearts-webfont.woff2') format('woff2'),
+         url('rainyhearts-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
+
+
+@font-face {
+    font-family: 'dualityregular';
+    src: url('duality-webfont.woff2') format('woff2'),
+         url('duality-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
   #flex {
     display: flex;
 }
