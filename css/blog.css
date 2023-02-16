@@ -1,0 +1,30 @@
+.container {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.collapsible {
+    background-color: #d43b45;
+    color: white;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 18px;
+    width: 500px;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+  }
+
+  .content {
+    padding: 18px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+    width: 464px;
+  }
+
+  h1 {
+    background-color: white;
+  }
