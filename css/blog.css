@@ -5,8 +5,8 @@
 }
 
 .collapsible {
-    background-color: #d43b45;
-    color: white;
+    background: url(/images/backgrounds/back-008.gif);
+    color: black;
     cursor: pointer;
     font-family: 'Times New Roman', Times, serif;
     padding: 18px;
