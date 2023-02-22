@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Charleston';
-  src:url('Charleston.ttf.woff') format('woff'),
-      url('Charleston.ttf.svg#Charleston') format('svg'),
-      url('Charleston.ttf.eot'),
-      url('Charleston.ttf.eot?#iefix') format('embedded-opentype'); 
+  src:url('/fonts/Charleston.ttf.woff') format('woff'),
+      url('/fonts/Charleston.ttf.woff') format('svg'),
+      url('/fonts/Charleston.ttf.eot'),
+      url('/fonts/Charleston.ttf.eot') format('embedded-opentype'); 
   font-weight: normal;
   font-style: normal;
 }
