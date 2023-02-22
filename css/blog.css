@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Charleston';
+  src:url('Charleston.ttf.woff') format('woff'),
+      url('Charleston.ttf.svg#Charleston') format('svg'),
+      url('Charleston.ttf.eot'),
+      url('Charleston.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
 .container {
   position: relative;
   align-items: center;
