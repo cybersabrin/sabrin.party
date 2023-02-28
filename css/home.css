@@ -15,9 +15,9 @@ body {
 
 }
 
-audio {
-    background-color: #fceaff;
-    ;
+table, td, tr {
+    border: 1px solid #9480bf;
+    padding: 10px;
 }
 
 * {
@@ -56,6 +56,8 @@ main {
     flex: 1;
     padding: 20px;
     order: 2;
+    height: 710px;
+    overflow: auto;
 }
 
 */ #leftSidebar {
@@ -80,7 +82,7 @@ h1,
 h2,
 h3 {
     color: #d0b6d9;
-    font-family: times 'Times New Roman', Times, serif;
+    font-family:  'Times New Roman', Times, serif;
 }
 
 h1 {
@@ -95,6 +97,7 @@ strong {
     background-color: black;
     border: 1px solid #d0b6d9;
     padding: 10px;
+    font-size: small;
 }
 
 /* for blog down below */
@@ -102,6 +105,8 @@ strong {
     position: relative;
     align-items: center;
     justify-content: center;
+    width: 500px;
+
   }
   
   .collapsible {
