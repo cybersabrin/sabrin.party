@@ -1,17 +1,11 @@
 @font-face {
-    font-family: 'rainyheartsmedium';
-    src: url('rainyhearts-webfont.woff2') format('woff2'),
-         url('rainyhearts-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-    font-family: 'dualityregular';
-    src: url('duality-webfont.woff2') format('woff2'),
-         url('duality-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
+    @font-face {
+        font-family: 'holidayregular';
+        src: url('/fonts/holiday-webfont.woff2') format('woff2'),
+             url('/fonts/holiday-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
 
 body {
     line-height: 1.5;
