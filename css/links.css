@@ -23,16 +23,16 @@ h3 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-p, ul, li {
+p, ul, li, marquee {
     font-family: Tahoma;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 13px;
     font-weight: lighter;
 }
 
 a {
     font-family: Tahoma;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 13px;
     text-decoration: none;
     color: #EF7C8E;
@@ -42,14 +42,21 @@ a:hover {
     color: #88CA5E;
 }
 
+ul {
+    list-style: url("https://sadgrl.online/images/lyts/not-mine/hearth_rosa.gif");
+
+}
+
+
 #container {
     max-width: 900px;
     margin: 0 auto;
+    
 }
 
 aside {
     background-color: #B2D2A4;
-    width: 200px;
+    width: 160px;
     padding: 20px;
     font-size: smaller;
 }
@@ -63,13 +70,15 @@ main {
     flex: 1;
     padding: 20px;
     order: 2;
+    background-image: radial-gradient(#b49d81 50%, transparent 10%);
+    background-size: 4px 4px;
 }
 
 footer {
     background-color: #f9f7f5;
     font-family: Tahoma;
-    font-size: 10px;
-    width: 100%;
+    font-size: 12px;
+    width: 877px;
     height: 30px;
     padding: 10px;
     text-align: center;
@@ -79,11 +88,12 @@ footer {
 .box {
     background-color: #F1C0B9;
     border: 1px solid #88CA5E;
-    padding: 10px;
+    padding: 10px;    
 }
 
 #topBar {
-    width: 100%;
+    font-family: Tahoma;
+    width: 877px;
     height: 10px;
     padding: 10px;
     font-size: smaller;
