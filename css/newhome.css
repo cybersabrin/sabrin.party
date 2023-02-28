@@ -5,19 +5,24 @@
     font-family: 'rainyheartsmedium'
 }
 
+body {
+    background-color: black;
+}
+
+#sidebar {
+    background-color: black;
+    float: left;
+    background-image: url(/images/newhome/1-1422621832.png);
+    background-repeat: repeat;
+    background-size: 160%;
+    width: 220px;
+    height: 670px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+}
+
 @font-face {
-    font-family: 'rainyheartsmedium';
-    src: url('/fonts/rainyhearts-webfont.woff2') format('woff2'),
-         url('/fonts/rainyhearts-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-    font-family: 'dualityregular';
-    src: url('/fonts/duality-webfont.woff2') format('woff2'),
-         url('/fonts/duality-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
     font-family: 'magazine_letter_by_brntlbrnRg';
     src: url('/fonts/magazineletterbybrntlbrnl-regular-webfont.woff2') format('woff2'),
          url('/fonts/magazineletterbybrntlbrnl-regular-webfont.woff') format('woff');
@@ -33,6 +38,15 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'holidayregular';
+    src: url('/fonts/holiday-webfont.woff2') format('woff2'),
+         url('/fonts/holiday-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 #flex {
     display: flex;
 }
@@ -45,10 +59,14 @@ div {
     padding: 10px;
 }
 
+p, h1, h2, h3, marquee, a, ul, li {
+    color: white;
+}
+
 h1 {
-    font-family: 'dualityregular';
+    font-family: Tahoma,;
     padding: 15px;
-    color: #d43b45;
+    color: white;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -56,31 +74,21 @@ h1 {
 }
 
 h2 {
-    font-family: 'dualityregular';
-    padding: 15px;
-    color: #f2d6bf;
-    margin-left: 20px;
-    margin-right: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-size: large;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 15px;
 }
 
 p {
     padding: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: large;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: small;
     text-align: justify;
-}
-
-#sidebar {
-    width: 220px;
-    height: 670px;
-    background-color: #f2d6bf;
-    padding: 15px;
-    float: left;
-    margin-left: 20px;
-    margin-right: 20px;
-    
 }
 
 a {
@@ -104,7 +112,7 @@ ul {
 }
 
 li {
-    font-size: large;
+    font-size: medium;
 }
 
 #statuscafe {
@@ -119,7 +127,6 @@ li {
     text-decoration: none;
     font-weight: bold;
     font-size: large;
-    
 
 }
 #statuscafe-content {
@@ -154,3 +161,5 @@ figure {
     width: 100%;
     height: auto;
   }
+
+  
