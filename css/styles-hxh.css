@@ -26,11 +26,11 @@
 body {
     margin: 0;
     background-color: black;
-    color: #fceaff;
+    color: white;
 }
 
 table, td, tr {
-    border: 1px solid #9480bf;
+    border: 1px solid #98bf80;
     padding: 10px;
     font-family: 'MS PGothic';
 }
@@ -39,9 +39,14 @@ table, td, tr {
     box-sizing: border-box;
 }
 
+p {
+    text-align: justify;
+    color: white;
+}
+
 a {
-    background-color: #9480bf;
-    color: #fceaff;
+    background-color: #759263c8;
+    color: white;
     text-decoration: none;
 }
 
@@ -51,8 +56,8 @@ a {
 }
 
 #container a {
-    background-color: #43256E;
-    color: #d1cce4;
+    background-color: #8bc567bf;
+    color: white;
     font-weight: bold;
     text-decoration: none;
     line-height: 20px;
@@ -74,7 +79,7 @@ aside {
 
 main {
     background-color: black;
-    border: 2pt dotted #d0b6d9;
+    border: 2pt dotted #98bf80;
     flex: 1;
     padding: 20px;
     order: 2;
@@ -87,23 +92,25 @@ main {
 }
 
 h1,
-h2,
-h3 {
-    color: #d0b6d9;
+h2 {
+    color: #759263c8;
     font-family:  'Times New Roman', Times, serif;
 }
+
+h3 {
+    color: #f1d976;}
 
 h1 {
     font-size: 25px;
 }
 
 strong {
-    color: #9480bf;
+    color: #759263c8;
 }
 
 .box {
     background-color: black;
-    border: 1px solid #d0b6d9;
+    border: 1px solid #689581;
     padding: 10px;
     font-size: small;
 }
@@ -142,9 +149,9 @@ strong {
         /* Style the tab */
         .tab {
             overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
-            width: 600px;
+            border: 1px solid #f1d976;
+            background-color: #759263c8;
+            width: 626px;
           }
           
           /* Style the buttons inside the tab */
@@ -161,19 +168,21 @@ strong {
           
           /* Change background color of buttons on hover */
           .tab button:hover {
-            background-color: #ddd;
+            background-color: #f1d976;
           }
           
           /* Create an active/current tablink class */
           .tab button.active {
-            background-color: #ccc;
+            background-color: #f1d976;
           }
           
           /* Style the tab content */
           .tabcontent {
             display: none;
             padding: 6px 12px;
-            border: 1px solid #ccc;
+            border: 1px solid #f1d976;
             border-top: none;
-            width: 600px;
+            width: 626px;
+            height: 335px;
+            overflow: auto;
           }
