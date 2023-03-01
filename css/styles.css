@@ -39,6 +39,11 @@ table, td, tr {
     box-sizing: border-box;
 }
 
+a {
+    background-color: #9480bf;
+    color: #fceaff;
+    text-decoration: none;
+}
 
 #container {
     max-width: 900px;
