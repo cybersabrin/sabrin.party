@@ -1,74 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>☆ sabrin.party ☆</title>
+    <title>sabrin.party</title>
     <link rel="icon" type="image/gif" sizes="16x16" href="/images/enter-gif.gif">
     <link rel="stylesheet" href="/css/index.css">
-<!-- wobbly text effect -->
-<script type="text/javascript">
-    // <![CDATA[
-    var speed=100; // speed of wobbling, lower is faster
-    var height=3; // height of wobbling in pixels
-    var alink=""; // page to link text to (set to ="" for no link)
-    
-    /****************************
-    *    Wobbly Text Effect     *
-    *(c) 2003-6 mf2fm web-design*
-    *  http://www.mf2fm.com/rv  *
-    * DON'T EDIT BELOW THIS BOX *
-    ****************************/
-    var wobtxt, wobble, wobcnt=0;
-    window.onload=function() { if (document.getElementById) {
-      var i, wobli;
-      wobble=document.getElementById("wobble");
-      wobtxt=wobble.firstChild.nodeValue;
-      while (wobble.childNodes.length) wobble.removeChild(wobble.childNodes[0]);
-      for (i=0; i<wobtxt.length; i++) {
-        wobli=document.createElement("span");
-        wobli.setAttribute("id", "wobb"+i);
-        wobli.style.position="relative";
-        wobli.appendChild(document.createTextNode(wobtxt.charAt(i)));
-        if (alink) {
-          wobli.style.cursor="pointer";
-          wobli.onclick=function() { top.location.href=alink; }
-        }
-        wobble.appendChild(wobli);
-      }
-      setInterval("wobbler()", speed);
-    }}
-    
-    function wobbler() {
-      for (var i=0; i<wobtxt.length; i++) document.getElementById("wobb"+i).style.top=Math.round(height*Math.sin(i+wobcnt))+"px"
-      wobcnt++;
-    }
-    // ]]>
-    </script>
-
 </head>
-<body background="/images/backgrounds/back-008.gif">
-    <p style="text-align: center; background-color: #5C5CFF; color:#FFFF5C; margin-top: 40px;">hello and welcome to my super cool webpage</p>
-    <div id="wobble" style="font-family: 'holidayregular'; text-align: center; font-size: 74px; -webkit-text-fill-color: #FFFF5C; -webkit-text-stroke: 3px; -webkit-text-stroke-color: hotpink; font-weight: bolder;">cybersabrin</div>
+<body>
     <br>
-    <p style=" text-align: center; background-color: #5C5CFF; color:#FFFF5C; margin-top: -10px;">♡ this looks ass on mobile just grab your puter and come on in... ♡</p>
-    <br>
-    <div style="margin: 0 auto; width: 240px;">
-      <a href="/home.html"><img src="/images/enter-gif.gif" style="width: 240px;"></a>
+    <div style="margin: 0 auto; margin-top: 160px; width: min-content;">
+      <a href="/home.html"><img src="/images/mewo.gif" style="height: 130px;"></a>
     </div>
+    <p style="text-align: center; margin-top: -55px;"><img src="/images/mewotext.png" style="height: 170px;"></p>
 
   <br>
 <!-- Do you need a date too?  To get a born-on date for
  your website, simply go to http://www.jwp.bc.ca/saulm/html/bornon.htm
 -->
-    <table style="text-align: center; border-color: #FFFF5C; margin: auto; padding: 6; font-family: 'rainyhearts'; font-weight: bold; font-size: medium; color: #FFFF5C;" cellspacing=0 cellpadding=6>
-        <tr><td style="background-color: hotpink;">
+    <table style="text-align: center; font-family: 'MS PGothic'; font-weight: bold; font-size: medium; color: white; width: 100%; position: fixed; bottom: 0; margin-left: -8px;" cellspacing=0 cellpadding=6>
+        <tr><td style="background-color: black;">
         <script language="JavaScript">
         <!--
         document.write(document.title);
         //-->
         </script>
         </td></tr>
-        <tr><td style="background-color: #FFFF5C; color: #5C5CFF; font-family: 'rainyhearts';">
-        <span style=color:#FF5CAD>born on:</span> January 14, 2023
+        <tr><td style="color: black; font-family: 'MS PGothic';">
+        <span>born on:</span> January 14, 2023
         <br>
         <script language="JavaScript">
     
@@ -175,7 +132,7 @@
     
     
     
-    document.write("<Font color=hotpink>" + "last updated: "+ "</font>" +document.lastModified);
+    document.write("<Font color=black>" + "last updated: "+ "</font>" +document.lastModified);
     
     
     document.write("");
@@ -184,7 +141,7 @@
     
       SetCookie("cookie_date",cookie_date,expdate);
     
-      document.write("<font color='#5C5CFF'><br>Site has changed since last visit!</font><br>");
+      document.write("<font color='black'><br>Site has changed since last visit!</font><br>");
     }
     //-->
     </script>

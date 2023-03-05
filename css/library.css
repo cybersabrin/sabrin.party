@@ -6,6 +6,19 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'MS PGothic';
+  src: url('/fonts/MS-PGothic.eot');
+  src: url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/MS-PGothic.woff2') format('woff2'),
+      url('/fonts/MS-PGothic.woff') format('woff'),
+      url('/fonts/MS-PGothic.ttf') format('truetype'),
+      url('/fonts/MS-PGothic.svg#MS-PGothic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
     background-image: url(/images/backgrounds/battleback_ow_xsbf.png);
     background-size: cover;
@@ -25,7 +38,8 @@ a {
 
 p {
     text-align: justify;
-    font-family: 'MS PGothic'
+    font-family: 'MS PGothic';
+    line-height: 1.43;
 }
 
 h1,
