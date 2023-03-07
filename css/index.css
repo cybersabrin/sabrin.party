@@ -38,3 +38,10 @@ p {
 #flex {
     display: flex;
 }
+
+a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
