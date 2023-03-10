@@ -190,3 +190,11 @@ strong {
             display: table;
             clear: both;
           }
+
+          .hide {
+            display: none;
+          }
+          
+          .myDIV:hover + .hide {
+            display: block;
+          }
