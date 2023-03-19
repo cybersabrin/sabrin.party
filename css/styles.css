@@ -80,6 +80,7 @@ main {
     order: 2;
     height: 550px;
     overflow: auto;
+    position: relative;
 }
 
 */ #leftSidebar {
