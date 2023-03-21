@@ -58,6 +58,16 @@ a {
     line-height: 20px;
 }
 
+#header {
+  width: 100%;
+  background-color: #d0b6d9;
+  /* header color here! */
+  height: 150px;
+
+  background-image: url(/images/backgrounds/Battlebacks_dw_jawsum1.png);
+  background-size: 100%;
+}
+
 #flex {
     display: flex;
 }
@@ -91,12 +101,16 @@ h1,
 h2,
 h3 {
     color: #d0b6d9;
-    font-family:  'Times New Roman', Times, serif;
-    text-align: center;
+    font-family: 'MS PGothic';
+    text-align: left;
 }
 
 h1 {
     font-size: 25px;
+}
+
+p {
+  text-align: justify;
 }
 
 strong {
@@ -270,3 +284,4 @@ strong {
   from {opacity: .4}
   to {opacity: 1}
 }
+
