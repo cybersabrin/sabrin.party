@@ -27,6 +27,7 @@ body {
     margin: 0;
     background-color: black;
     color: white;
+    cursor: url(/mooncursor.cur), pointer;
 }
 
 table, td, tr {
@@ -48,6 +49,10 @@ a {
     background-color: #759263c8;
     color: white;
     text-decoration: none;
+}
+
+a:hover {
+    cursor: url(/mooncursor.cur), pointer;
 }
 
 #container {

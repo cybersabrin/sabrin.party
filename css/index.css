@@ -21,6 +21,11 @@
 
 body {
     line-height: 1.5;
+    cursor: url(/cursor.cur), pointer;
+}
+
+a:hover {
+    cursor: url(/cursor.cur), pointer;
 }
 
 h1 {
@@ -45,3 +50,6 @@ a {
     text-decoration: none;
     font-weight: bold;
 }
+
+
+

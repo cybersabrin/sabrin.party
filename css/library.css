@@ -24,6 +24,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     font-family: 'MS PGothic';
+    cursor: url(/mooncursor.cur), pointer;
 }
 
 center {
@@ -34,6 +35,10 @@ a {
     color: #9480bf;
     font-weight: bold;
     text-decoration: underline;
+}
+
+a:hover {
+  cursor: url(/mooncursor.cur), pointer;
 }
 
 p {

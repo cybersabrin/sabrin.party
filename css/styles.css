@@ -21,6 +21,7 @@
 
 * {
     font-family: 'MS PGothic';
+    cursor: url(/mooncursor.cur), pointer;
 }
 
 body {
@@ -43,6 +44,10 @@ a {
     background-color: #9480bf;
     color: #fceaff;
     text-decoration: none;
+}
+
+a:hover {
+  cursor: url(/mooncursor.cur), pointer;
 }
 
 #container {
