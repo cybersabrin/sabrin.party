@@ -4,9 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>☆ jjk shrine ☆</title>
+    <link rel="stylesheet" href="css/styles-jjk.css">
+    <title>downtown shibuya</title>
 </head>
 <body>
-    this does not exist yet...
+    <div class="main">
+        <h1 style="margin-top: -4px; z-index: 2;">JUJUTSU</h1>
+        <h1 style="margin-top: -60px; margin-left: 280px; z-index: 2; font-size: 80pt;">kaisen</h1>
+        <img style="z-index: 1; height: 160px; float: right; margin-top: -227px;" src="/images/jjk-shrine/shibuya.gif">
+        <p style="margin-top: -93px; position: absolute;"><a href="shrines.html">back</a> ⋆｡°<a href="home.html">home</a></p>
+
+        <div class="navi" style="margin-top: -55px;">
+            <h2>table of contents...</h2>
+            <ul>
+                <li><a href="jjkwelcome.html" target="jjkiframe">an intro of sorts?</a></li>
+                <li><a href="getoruma.html" target="jjkiframe">getoruma bible</a></li>
+                <li>that's all for now</li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <iframe src="jjkwelcome.html" name="jjkiframe" style="margin-top: -55px;">
+            </iframe>
+        </div>
+        
+        <div class="countdown">
+            <h2 style="text-align: center; font-size: medium;">GOJO UNBOXING PARTY</h2>
+            <p style="text-align: center;"><img src="/images/jjk-shrine/prisonrealm.webp" style="height: 80px; margin-top: -8px; margin-bottom: -15px;"></p>
+            <p style="text-align: center;" id="demo"></p>
+
+            <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("Apr 26, 2023 17:00:00").getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "FREE AT LAST";
+            }
+            }, 1000);
+            </script>
+        </div>
+
+    </div>
 </body>
 </html>
