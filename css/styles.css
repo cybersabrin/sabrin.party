@@ -78,6 +78,7 @@ a:hover {
     display: flex;
 }
 
+
 aside {
     background: black url(/images/backgrounds/battleback_ow_xsbf.png);
     background-size: cover;
@@ -92,11 +93,19 @@ main {
     background-color: black;
     border: 2pt dotted #d0b6d9;
     flex: 1;
-    padding: 30px;
     order: 2;
     height: 550px;
     overflow: auto;
     position: relative;
+}
+
+iframe {
+  display: flex;
+  float: right;
+  width: 660px;
+  height: 550px;
+  padding: 20px;
+  border: 0px;
 }
 
 */ #leftSidebar {
