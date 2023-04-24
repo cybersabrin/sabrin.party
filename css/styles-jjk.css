@@ -25,6 +25,10 @@
     cursor: url(/mooncursor.cur), pointer;
 }
 
+p {
+    text-align: justify;
+}
+
 .main {
     width: 860px;
     height: 600px;
