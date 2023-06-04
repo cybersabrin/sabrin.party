@@ -282,3 +282,47 @@ iframe.main {
 .myDIV:hover + .hide {
     display: block;
 }
+
+.libwelcome {
+    width: 92%;
+    border: #9b6ba9 2px dashed;
+    height: max-content;
+    background-color: #e5d5fd;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+/*Inside/main text of window boxes.*/
+.inner {
+    padding: 10px;
+    padding-bottom: 5px;
+    padding-top: 0px;
+    }
+  
+/*The title bar at the top of window boxes.*/
+.libbox-title-bar {
+    background-color: #9b6ba9;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+    
+/*For the symbol in the top right corner.*/
+.right {
+    float: right;
+    margin-right: 5px;
+    font-family: "Arial", sans-serif;
+    line-height: 12px;
+}
+
+/*Main body text boxes.*/
+.libbox {
+    margin-top: 25px;
+    width: 490px;
+    margin-bottom: 25px;
+    background-color: #e5d6fd;
+    border: 2px #9b6ba9 dashed;
+}
