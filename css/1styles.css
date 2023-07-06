@@ -38,7 +38,7 @@ body {
     margin-top: 100px;
     display: flex;
     padding: 20px;
-    background-image: url(https://sadhost.neocities.org/images/tiles/page_background_animated_04.gif);
+    background-image: url(/images/backgrounds/page_background_animated_04.gif);
     z-index: 1;
     height: 960px;
     margin-bottom: 140px;
