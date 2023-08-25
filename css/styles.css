@@ -41,7 +41,7 @@ body {
     padding: 20px;
     background-image: url(/images/backgrounds/page_background_animated_04.gif);
     z-index: 1;
-    height: 960px;
+    height: 1150px;
     margin-bottom: 140px;
 }
 
@@ -96,7 +96,6 @@ div.sotw {
 }
 
 a {
-    background-color: #5fbfee;
     color: white;
     font-weight: bold;
 }
@@ -183,6 +182,32 @@ iframe.main {
     margin-bottom: 20px;
     font-size: small;
 }
+
+.mybutton {
+    width: 350px;
+    position: absolute;
+    border: 2px #72d8d0 dashed;
+    height: 120px;
+    margin-top: 980px;
+    margin-left: 12px;
+    background-image: url(/images/backgrounds/basil_border.png);
+    background-size: 100% 100%;
+    padding-top: 40px;
+}
+
+.webrings {
+    height: 110px;
+    padding: 10px;
+    position: absolute;
+    width: 478px;
+    margin-top: 980px;
+    border: 2px pink dashed;
+    margin-left: 400px;
+    background-image: url(/images/backgrounds/hearts.gif);
+    overflow: scroll;
+    padding-top: 40px;
+}
+
 
 /* for blog down below */
 .cont {
