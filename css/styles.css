@@ -41,7 +41,7 @@ body {
     padding: 20px;
     background-image: url(/images/backgrounds/page_background_animated_04.gif);
     z-index: 1;
-    height: 1150px;
+    height: 1300px;
     margin-bottom: 140px;
 }
 
@@ -155,7 +155,7 @@ a.linkspage {
     display: flex;
     position: absolute;
     width: 200px;
-    height: 400px;
+    height: 540px;
     border: black 1px solid;
     margin-top: 520px;
     margin-left: 10px;
@@ -170,7 +170,7 @@ iframe.main {
     margin-top: 520px;
     margin-left: 280px;
     position: absolute;
-    height: 430px;
+    height: 570px;
     width: 618px;
     border: 2px #ed709c dashed;
 }
@@ -188,7 +188,7 @@ iframe.main {
     position: absolute;
     border: 2px #72d8d0 dashed;
     height: 120px;
-    margin-top: 980px;
+    margin-top: 1120px;
     margin-left: 12px;
     background-image: url(/images/backgrounds/basil_border.png);
     background-size: 100% 100%;
@@ -200,7 +200,7 @@ iframe.main {
     padding: 10px;
     position: absolute;
     width: 478px;
-    margin-top: 980px;
+    margin-top: 1120px;
     border: 2px pink dashed;
     margin-left: 400px;
     background-image: url(/images/backgrounds/hearts.gif);
@@ -286,7 +286,7 @@ iframe.main {
     width: 456px;
     background-color: white;
     border: #b2cb7f 2px dashed;
-    height: 320px;
+    height: 440px;
 }
 
 .column {
