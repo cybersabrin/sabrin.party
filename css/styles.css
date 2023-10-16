@@ -186,7 +186,7 @@ iframe.main {
 .mybutton {
     width: 350px;
     position: absolute;
-    border: 2px #72d8d0 dashed;
+    border: 2px pink dashed;
     height: 120px;
     margin-top: 1120px;
     margin-left: 12px;
@@ -201,9 +201,9 @@ iframe.main {
     position: absolute;
     width: 478px;
     margin-top: 1120px;
-    border: 2px pink dashed;
+    border: 2px #fd9684 dashed;
     margin-left: 400px;
-    background-image: url(/images/backgrounds/hearts.gif);
+    background-image: url(/images/backgrounds/roesbudtrelbg.gif);
     overflow: scroll;
     padding-top: 40px;
 }
