@@ -31,18 +31,31 @@ body {
     margin: 0 auto;
 }
 
-
 .container {
-    width: 900px;
+    width: 1130px;
     border: 1px dashed green;
-    margin: 0 auto;
-    margin-top: 100px;
+    float: left;
     display: flex;
     padding: 20px;
     background-image: url(/images/backgrounds/page_background_animated_04.gif);
     z-index: 1;
     height: 1300px;
     margin-bottom: 140px;
+    margin-left: -70px;
+}
+
+.sidebar {
+    border: 2px dashed #ffd472;
+    display: flexbox;
+    position: absolute;
+    background-color: lightgoldenrodyellow;
+    float: right;
+    z-index: 1;
+    margin-left: 920px;
+    margin-top: 170px;
+    width: 187px;
+    height: 1091px;
+    padding: 10px;
 }
 
 .welcome {
