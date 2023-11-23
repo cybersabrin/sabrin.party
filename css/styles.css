@@ -119,7 +119,7 @@ a.linknavi {
     color: #549f0e;
     position: absolute;
     padding: 3px;
-    width: 194px;
+    width: 170px;
 }
 
 a.linknavi:hover {
@@ -128,7 +128,7 @@ a.linknavi:hover {
     color: #ed709c;
     position: absolute;
     padding: 3px;
-    width: 194px;
+    width: 170px;
 }
 
 a.linkspage {
@@ -167,7 +167,7 @@ a.linkspage {
     float: left;
     display: flex;
     position: absolute;
-    width: 200px;
+    width: 180px;
     height: 540px;
     border: black 1px solid;
     margin-top: 520px;
@@ -181,10 +181,10 @@ a.linkspage {
 iframe.main {
     display: flexbox;
     margin-top: 520px;
-    margin-left: 280px;
+    margin-left: 257px;
     position: absolute;
     height: 570px;
-    width: 618px;
+    width: 640px;
     border: 2px #ed709c dashed;
 }
 
