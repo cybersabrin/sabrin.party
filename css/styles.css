@@ -1,11 +1,4 @@
 @font-face {
-    font-family: 'malindaregular';
-    src: url('/fonts/malinda-webfont.woff2') format('woff2'),
-         url('/fonts/malinda-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
     font-family: 'MS PGothic';
     src: url('/fonts/MS-PGothic.eot');
     src: url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'),

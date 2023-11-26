@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('/fonts/EBGaramond-Regular.woff2') format('woff2'),
+        url('/fonts/EBGaramond-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-image: url(/images/backgrounds/cloud1anim.gif);
+}
+
+h1 {
+    font-family: 'EB Garamond';
+    font-size: 8em;
+    line-height: .8em;
+    transform: rotate(-6deg);
+    margin: 20px 0px 70px;
+}
+
+.title {
+    width: 800px;
+    height: 220px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 3px outset rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+p, a, h3 {
+    font-family: 'EB Garamond';
+}
+
+a {
+    font-weight: bold;
+}
+
+.boxL {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    border: 0;
+    margin-left: 60px;
+    margin-top: 26px;
+}
+
+.boxL .img-top {
+    display: none;
+    position: absolute;
+    top: 2;
+    left: 0;
+    margin-left: 0px;
+    z-index: 99;
+}
+.boxL:hover .img-top {
+    display: inline;
+}
+
+.BL {
+    width: 500px;
+    height: 350px;
+    background-image: url(/images/shrine-birds/paper.png);
+    background-size: contain;
+    padding: 10px;
+    margin-top: 20px;
+    float: left;
+}
+
+
+.BR {
+    width: 500px;
+    height: 270px;
+    background-image: url(/images/shrine-birds/paper2.png);
+    background-size: contain;
+    padding: 10px;
+    margin-top: 20px;
+    float: right;
+}
+
+.boxR {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    border: 0;
+    margin-left: 66px;
+    margin-top: 60px;
+}
+
+.boxR .img-top {
+    display: none;
+    position: absolute;
+    top: 2;
+    left: 0;
+    margin-left: 0px;
+    z-index: 99;
+}
+.boxR:hover .img-top {
+    display: inline;
+}
