@@ -70,7 +70,7 @@ img.polaroid {
     position: absolute;
 }
 
-iframe.updates {
+div.updates {
     width: 156px;
     border: 2px darkseagreen dashed;
     height: 200px;
@@ -81,12 +81,23 @@ iframe.updates {
     margin-left: 740px;
     overflow: hidden;
     z-index: 2;
+    font-size: small;
+    background: url(/images/backgrounds/roesbudtrelbg.png);
 }
 
-iframe.fanclubs {
+li.updates {
+    margin-left: -34px;
+    margin-bottom: 4px;
+    padding: 2px;
+}
+
+div.fanclubs {
     position: absolute;
+    margin-top: 430px;
+    margin-left: 10px;
+    width: 887px;
+    height: 62px;
     z-index: 1;
-    src: url(/fanclubs.html);
     border: 2px plum dashed;
 }
 
@@ -354,6 +365,7 @@ iframe.main {
 .libbox {
     margin-top: 25px;
     width: 490px;
+    height: max-content;
     margin-bottom: 25px;
     background-color: #e5d6fd;
     border: 2px #9b6ba9 dashed;
