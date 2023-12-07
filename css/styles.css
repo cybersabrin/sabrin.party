@@ -25,14 +25,14 @@ body {
 }
 
 .container {
-    width: 1130px;
+    width: 1160px;
     border: 1px dashed green;
     float: left;
     display: flex;
     padding: 20px;
     background-image: url(/images/backgrounds/page_background_animated_04.gif);
     z-index: 1;
-    height: 1300px;
+    height: 1100px;
     margin-bottom: 140px;
     margin-left: -70px;
 }
@@ -46,8 +46,8 @@ body {
     z-index: 1;
     margin-left: 920px;
     margin-top: 170px;
-    width: 187px;
-    height: 1091px;
+    width: 220px;
+    height: 900px;
     padding: 10px;
 }
 
@@ -201,28 +201,36 @@ iframe.main {
 }
 
 .mybutton {
-    width: 350px;
-    position: absolute;
-    border: 2px pink dashed;
-    height: 120px;
-    margin-top: 1120px;
-    margin-left: 12px;
+    width: 218px;
+    position: relative;
+    border: 2px #71d8d1 dashed;
+    height: 80px;
     background-image: url(/images/backgrounds/basil_border.png);
     background-size: 100% 100%;
-    padding-top: 40px;
+    padding-top: 50px;
+    margin-bottom: 20px;
+}
+
+p.button {
+    font-size: 10pt;
+    text-align: center;
+    margin-top: -20px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .webrings {
-    height: 110px;
+    height: 240px;
     padding: 10px;
+    width: 200px;
     position: absolute;
-    width: 478px;
-    margin-top: 1120px;
+    bottom: 0;
+    margin-bottom: 10px;
+    z-index: 10;
     border: 2px #fd9684 dashed;
-    margin-left: 400px;
-    background-image: url(/images/backgrounds/roesbudtrelbg.gif);
+    background-image: url(/images/backgrounds/namiyy.png);
     overflow: scroll;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 
