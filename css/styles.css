@@ -224,6 +224,67 @@ p.button {
     box-shadow: 0px 0px 20px #6fa1ff;
 }
 
+img.webringtitle {
+    height: 48px;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: -24px;
+}
+
+img.olaf {
+    height: 84px;
+    margin-left: -40px;
+    margin-top: 32px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px lightsteelblue;
+}
+
+img.wwgif {
+    height: 84px;
+    margin-left: 20px;
+    margin-top: 32px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px lightpink;
+}
+
+img.ot3 {
+    height: 84px;
+    margin-left: 20px;
+    margin-top: 32px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px rosybrown;
+}
+
+img.trainercard {
+    position: absolute;
+    border-radius: 10px;
+    width: 238px;
+    margin-left: 308px;
+    margin-top: -140px;
+    box-shadow: 0px 0px 20px rgb(141, 127, 180);
+}
+
+.quizzes {
+    width: 380px;
+    height: 200px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 20px gold;
+    background-image: url(/images/backgrounds/startile.png);
+    background-size: 20%;
+    margin-left: 160px;
+    margin-top: 90px;
+    overflow: scroll;
+    padding-top: 24px;
+}
+
+img.quiztitle {
+    position: absolute;
+    height: 46px;
+    margin-left: 180px;
+    margin-top: 20px;
+}
+
 .stats {
     width: 278px;
     height: 144px;
@@ -249,20 +310,21 @@ p.button {
     background-image: url(/images/backgrounds/bgif096.gif);
 }
 
-img.webring1 {
-    z-index: 9;
-    position: absolute;
-    height: 180px;
-    margin-top: 1237px;
-    margin-left: -54px;
+.email {
+    width: 170px;
+    height: 120px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 20px lightpink;
+    background-image: url(/images/backgrounds/heart.gif);
+    margin-left: -40px;
+    margin-top: -228px;
 }
 
-img.webring2 {
-    z-index: 9;
-    position: absolute;
-    height: 180px;
-    margin-top: 1237px;
-    margin-left: 265px;
+img.emailgif {
+    height: 80px;
+    margin-top: -16px;
+    margin-left: 34px;
 }
 
 /* for blog down below */
