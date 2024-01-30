@@ -356,6 +356,7 @@ img.emailgif {
 
 .content {
     padding-left: 18px;
+    padding-right: 18px;
     display: none;
     overflow: hidden;
     width: 470px;
