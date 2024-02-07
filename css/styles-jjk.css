@@ -22,7 +22,11 @@
 * {
     font-family: 'MS PGothic';
     box-sizing: border-box;
-    cursor: url(/mooncursor.cur), pointer;
+    cursor: url(/yellow.cur), auto!important;
+}
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
 }
 
 p {
@@ -73,6 +77,10 @@ iframe {
     padding-bottom: 10px;
 }
 
+span {
+    background-color: #ffffcc;
+    font-family: 'MS PGothic';
+}
 
 h1 {
     font-family: 'Times New Roman', Times, serif;
@@ -81,15 +89,16 @@ h1 {
     line-height: .75;
 }
 
-h2 {
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    line-height: .75;
-}
-
 li {
     margin-left: -20px;
     margin-top: 6px;
+    list-style-type: disc;
+}
+
+.indent1 {
+  margin-left: 5px;
+  list-style-type: circle;
+  margin-top: 2px
 }
 
 a {
@@ -97,14 +106,12 @@ a {
     color: black;
 }
 
-a.link {
+.link {
     background-color: transparent;
     color: blue;
 
-
-
 /* photo collage */
-.row {
+  .row {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
@@ -137,4 +144,5 @@ a.link {
       flex: 100%;
       max-width: 100%;
     }
-  }}
+  }
+  

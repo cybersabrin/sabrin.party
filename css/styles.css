@@ -8,12 +8,8 @@
         url('/fonts/MS-PGothic.svg#MS-PGothic') format('svg');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 
-* {
-    cursor: url(/mooncursor.cur), pointer;
-}
 
 body {
     font-family: 'MS PGothic';
@@ -50,13 +46,13 @@ body {
     background: url(https://sadhost.neocities.org/images/tiles/Background064.gif);
 }
 
-img.polaroid {
+.polaroid {
     z-index: 1000;
     display: flex;
     position: absolute;
 }
 
-div.updates {
+div.piclog {
     width: 156px;
     border: 2px darkseagreen dashed;
     height: 200px;
@@ -67,17 +63,15 @@ div.updates {
     margin-left: 740px;
     overflow: hidden;
     z-index: 2;
-    font-size: small;
-    background: url(/images/backgrounds/roesbudtrelbg.png);
 }
 
-li.updates {
-    margin-left: -34px;
-    margin-bottom: 4px;
-    padding: 2px;
+img.piclog {
+  width: 100%;
+  height: auto;
 }
 
-div.fanclubs {
+
+.fanclubs {
     position: absolute;
     margin-top: 430px;
     margin-left: 10px;
@@ -87,7 +81,7 @@ div.fanclubs {
     border: 2px plum dashed;
 }
 
-div.sotw {
+.sotw {
     border: 2px hotpink dashed;
     width: 620px;
     height: 121px;
@@ -121,7 +115,7 @@ a.linknavi:hover {
     width: 170px;
 }
 
-a.linkspage {
+.linkspage {
     background-color: transparent;
     text-decoration: underline;
     font-weight: bold;
@@ -159,17 +153,17 @@ a.linkspage {
     position: absolute;
     width: 180px;
     height: 540px;
-    border: black 1px solid;
     margin-top: 520px;
     margin-left: 10px;
     padding: 15px;
-    background-image: url(/images/home/navi_background.png);
+    background-image: url(/images/backgrounds/rainbow.png);
+    opacity: 0.80;
     background-size: cover;
     border: 2px #549f0e dashed;
 }
 
-iframe.main {
-    display: flexbox;
+.main {
+    display: flex;
     margin-top: 520px;
     margin-left: 257px;
     position: absolute;
@@ -201,7 +195,7 @@ iframe.main {
     margin-bottom: 40px;
 }
 
-p.button {
+.button {
     font-size: 10pt;
     text-align: center;
     margin-top: -20px;
@@ -224,14 +218,14 @@ p.button {
     box-shadow: 0px 0px 20px #6fa1ff;
 }
 
-img.webringtitle {
+.webringtitle {
     height: 48px;
     position: absolute;
     margin-top: 8px;
     margin-left: -24px;
 }
 
-img.olaf {
+.olaf {
     height: 84px;
     margin-left: -40px;
     margin-top: 32px;
@@ -239,7 +233,7 @@ img.olaf {
     box-shadow: 0px 0px 20px lightsteelblue;
 }
 
-img.wwgif {
+.wwgif {
     height: 84px;
     margin-left: 20px;
     margin-top: 32px;
@@ -247,7 +241,7 @@ img.wwgif {
     box-shadow: 0px 0px 20px lightpink;
 }
 
-img.ot3 {
+.ot3 {
     height: 84px;
     margin-left: 20px;
     margin-top: 32px;
@@ -255,7 +249,7 @@ img.ot3 {
     box-shadow: 0px 0px 20px rosybrown;
 }
 
-img.trainercard {
+.trainercard {
     position: absolute;
     border-radius: 10px;
     width: 238px;
@@ -278,7 +272,7 @@ img.trainercard {
     padding-top: 24px;
 }
 
-img.quiztitle {
+.quiztitle {
     position: absolute;
     height: 46px;
     margin-left: 180px;
@@ -321,7 +315,7 @@ img.quiztitle {
     margin-top: -228px;
 }
 
-img.emailgif {
+.emailgif {
     height: 80px;
     margin-top: -16px;
     margin-left: 34px;
@@ -340,7 +334,6 @@ img.emailgif {
     background-size: auto;
     color: white;
     font-weight: bolder;
-    cursor: pointer;
     font-family: 'MS PGothic';
     padding: 18px;
     width: 500px;
@@ -391,7 +384,7 @@ img.emailgif {
 }
           
 /* Create an active/current tablink class */
-.tab button.active {
+.tab .active {
     background-color: #b2cb7f;
 }
           
@@ -472,3 +465,5 @@ img.emailgif {
     background-color: #e5d6fd;
     border: 2px #9b6ba9 dashed;
 }
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/games/gam-1/gam18.ani), url(https://cur.cursors-4u.net/games/gam-1/gam18.png), auto !important;} /* End https://www.cursors-4u.com */
