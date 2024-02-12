@@ -126,7 +126,8 @@ p, ul, li, a {
 .tabcontent {
     display: none;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 50px;
     padding-left: 40px;
     padding-right: 50px;
     padding-top: 10px;
@@ -135,7 +136,7 @@ p, ul, li, a {
     border: #12596e 2px dashed;
     overflow: auto;
     background-image: url(/images/shrine-bg3/wood.png);
-    height: 630px;
+    height: 740px;
 }
 
 .squadimg {

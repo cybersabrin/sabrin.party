@@ -11,12 +11,12 @@
     <img src="/images/toybox/toybox_title.png" style="height: 80px; position: absolute; margin-left: 300px; margin-top: -30px;">
 
       <div class="tab" style="margin-top: 20px;">
-      <button class="tablinks" onclick="openCity(event, 'buttons')" id="defaultOpen">buttons</button>
-      <button class="tablinks" onclick="openCity(event, 'creations')" >creations</button>
-      <button class="tablinks" onclick="openCity(event, 'pets')">pets</button>
+      <button class="TBtablinks" onclick="openBox(event, 'buttons')" id="defaultOpen">buttons</button>
+      <button class="TBtablinks" onclick="openBox(event, 'creations')" >creations</button>
+      <button class="TBtablinks" onclick="openBox(event, 'pets')">pets</button>
       </div>
                 
-      <div id="buttons" class="tabcontent" style="overflow: auto;">
+      <div id="buttons" class="TBtabcontent" style="overflow: auto;">
         <h3 style="text-align: center;">internet neighbors!</h3>
         <p style="text-align: center;"><a style="background-color: transparent;" target="_blank" href="https://purplehello98.neocities.org/"><img src="/images/buttons/purplehello98.gif"></a> <a style="background-color: transparent;" target="_blank" href="https://sunmiflowers.neocities.org/"><img src="/images/buttons/sunmiflowers.png"></a> <a target="_blank" href="https://jeith.neocities.org/"><img src="images/buttons/jeith.jpg"></a> <a style="background-color: transparent;" target="_blank" href="https://sioned.neocities.org/"><img src="/images/buttons/sitebtn.gif"></a> <a style="background-color: transparent;" target="_blank" href="https://snals.neocities.org"><img src="/images/buttons/buttonwip.png"></a></p>
         <h3 style="text-align: center;">sites i enjoy</h3>
@@ -30,7 +30,7 @@
         </p>
       </div>
 
-      <div id="creations" class="tabcontent" style="overflow: scroll;">
+      <div id="creations" class="TBtabcontent" style="overflow: scroll;">
       <p>sometimes i doodle or make silly things. now they all have a home...</p>
       <br>
 
@@ -101,7 +101,7 @@
                                  
     </div>
                 
-    <div id="pets" class="tabcontent" style="overflow: scroll;">
+    <div id="pets" class="TBtabcontent" style="overflow: scroll;">
       <br>
       <p style="text-align: center;">this is thomas click to feed him</p>
       <p style="text-align: center;"><a target="_blank" href="https://tamanotchi.world/6042c"><img src="https://tamanotchi.world/i2/6042" alt="It's tamaNOTchi! Click to feed!"></a></p>
@@ -112,17 +112,17 @@
     </div>
                 
                 <script>
-                function openCity(evt, cityName) {
-                  var i, tabcontent, tablinks;
-                  tabcontent = document.getElementsByClassName("tabcontent");
-                  for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
+                function openBox(evt, boxName) {
+                  var i, TBtabcontent, TBtablinks;
+                  TBtabcontent = document.getElementsByClassName("TBtabcontent");
+                  for (i = 0; i < TBtabcontent.length; i++) {
+                    TBtabcontent[i].style.display = "none";
                   }
-                  tablinks = document.getElementsByClassName("tablinks");
-                  for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                  TBtablinks = document.getElementsByClassName("TBtablinks");
+                  for (i = 0; i < TBtablinks.length; i++) {
+                    TBtablinks[i].className = TBtablinks[i].className.replace(" active", "");
                   }
-                  document.getElementById(cityName).style.display = "block";
+                  document.getElementById(boxName).style.display = "block";
                   evt.currentTarget.className += " active";
                 }
                 
@@ -131,7 +131,49 @@
                 </script>
             
         </div>
-
+<style>
+  /* Style the tab */
+.TBtab {
+    overflow: hidden;
+    background-color: #d0e7a2;
+    width: 100%;
+}
+          
+/* Style the buttons inside the tab */
+.TBtab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.3s;
+    font-size: small;
+    height: 30px;
+}
+          
+/* Change background color of buttons on hover */
+.TBtab button:hover {
+    background-color: #b2cb7f;
+}
+          
+/* Create an active/current tablink class */
+.TBtab .active {
+    background-color: #b2cb7f;
+}
+          
+/* Style the tab content */
+.TBtabcontent {
+    display: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: -20px;
+    border-top: none;
+    width: 456px;
+    background-color: white;
+    border: #b2cb7f 2px dashed;
+    height: 440px;
+}
+</style>
 
 </body>
 </html>
