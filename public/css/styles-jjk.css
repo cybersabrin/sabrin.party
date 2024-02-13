@@ -1,148 +1,347 @@
-@font-face {
-    font-family: 'holidayregular';
-    src: url('/fonts/holiday-webfont.woff2') format('woff2'),
-         url('/fonts/holiday-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'MS PGothic';
-    src: url('/fonts/MS-PGothic.eot');
-    src: url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/MS-PGothic.woff2') format('woff2'),
-        url('/fonts/MS-PGothic.woff') format('woff'),
-        url('/fonts/MS-PGothic.ttf') format('truetype'),
-        url('/fonts/MS-PGothic.svg#MS-PGothic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
+@font-face {
+  font-family: 'MS PGothic';
+  src: url('/public/fonts/MS-PGothic.eot');
+  src: url('/public/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'),
+      url('/public/fonts/MS-PGothic.woff2') format('woff2'),
+      url('/public/fonts/MS-PGothic.woff') format('woff'),
+      url('/public/fonts/MS-PGothic.ttf') format('truetype'),
+      url('/public/fonts/MS-PGothic.svg#MS-PGothic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
-    font-family: 'MS PGothic';
-    box-sizing: border-box;
-    cursor: url(/yellow.cur), auto!important;
+  font-family: 'MS PGothic';
+  box-sizing: border-box;
 }
+
+.title1 {
+  margin-top: -4px;
+  z-index: 2;
+}
+
+.title2 {
+  margin-top: -60px;
+  margin-left: 280px;
+  z-index: 2;
+  font-size: 80pt;
+}
+
+.tojigif {
+  z-index: 1;
+  height: 160px;
+  float: right;
+  margin-top: -227px;
+}
+
 h2 {
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
 }
 
 p {
-    text-align: justify;
+  text-align: justify;
 }
 
 .main {
-    width: 1160px;
-    height: 810px;
-    background-image: url(/images/jjk-shrine/jjkbackground.jpg);
-    border: 1px solid black;
-    margin: 0 auto;
-    padding: 10px;
-    margin-top: 2%;
+  width: 1160px;
+  height: 810px;
+  background-image: url(/public/images/jjk-shrine/jjkbackground.jpg);
+  border: 1px solid black;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 2%;
 }
 
-.navi {
-    width: 180px;
-    height: 615px;
-    border: 1px solid black;
-    background-color: white;
-    float: left;
-    padding: 10px;
+.kennywave {
+  height: 366px;
+  float: left;
+  padding-right: 10px;
+  position: absolute;
+  margin-left: 15px;
 }
 
-.countdown {
-    width: 260px;
-    height: 160px;
-    border: 1px black solid;
-    background-color: white;
-    padding: 10px;
-    z-index: 5;
-    position: absolute;
-    margin-top: 390px;
-    margin-left: -60px;
+.welcometext {
+  margin-left: 260px;
+  width: 600px;
 }
 
-iframe {
-    display: flex;
-    border: 1px solid black;
-    background-color: white;
-    float: right;
-    width: 920px;
-    height: 615px;
-    padding-left: 0px;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+.suguhirotitle {
+  color: white;
+  background-color: black;
+  padding: 3px;
+}
+
+.sghr1 {
+  float: right; padding: 10px; width: 220px;
+}
+
+.sghr2 {
+  padding: 10px; width: 140px;
+}
+
+.sghr3 {
+  padding: 10px; width: 160px;
+}
+
+.sghr4 {
+  float: left; width: 220px; padding-top: 8px;
+}
+
+.sghr5 {
+  width: 260px; float: right; padding: 10px;
+}
+
+.sghr6 {
+  float: left; padding-right: 10px; width: 200px;
+}
+
+.sghrTable {
+  float: left;
+  padding-right: 8px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+/* Style the tab */
+.tab {
+  width: 180px;
+  height: 615px;
+  border: 1px solid black;
+  background-color: white;
+  float: left;
+  padding: 10px;
+  margin-top: -54px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  text-align: center;
+  background-color: #ffffcc;
+  color: #000;
+  width: 160px;
+  height: 26px;
+  margin-right: -6px;
+  border: none;
+  font-size: medium;
+  box-sizing: border-box;
+  position: absolute;
+  text-decoration: underline;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  text-align: center;
+  background-color: #ebccff;
+  color: #000;
+  width: 160px;
+  height: 26px;
+  margin-right: -6px;
+  border: none;
+  font-size: medium;
+  box-sizing: border-box;
+  position: absolute;
+  text-decoration: underline;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  text-align: center;
+  background-color: #ebccff;
+  color: #000;
+  width: 160px;
+  height: 26px;
+  margin-right: -6px;
+  border: none;
+  font-size: medium;
+  box-sizing: border-box;
+  position: absolute;
+  text-decoration: underline;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: flex;
+  border: 1px solid black;
+  background-color: white;
+  float: right;
+  width: 920px;
+  height: 615px;
+  padding-left: 26px;
+  padding-top: 10px;
+  padding-right: 26px;
+  padding-bottom: 10px;
+  margin-top: -54px;
 }
 
 span {
-    background-color: #ffffcc;
-    font-family: 'MS PGothic';
+  background-color: #ffffcc;
+  font-family: 'MS PGothic';
 }
 
 h1 {
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 74pt;
-    line-height: .75;
-}
-
-li {
-    margin-left: -20px;
-    margin-top: 6px;
-    list-style-type: disc;
-}
-
-.indent1 {
-  margin-left: 5px;
-  list-style-type: circle;
-  margin-top: 2px
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 74pt;
+  line-height: .75;
 }
 
 a {
-    background-color: #ffffcc;
-    color: black;
+  background-color: #ffffcc;
+  color: black;
 }
 
 .link {
-    background-color: transparent;
-    color: blue;
+  background-color: transparent;
+  color: blue;
 
 /* photo collage */
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-  }
-  
-  /* Create four equal columns that sits next to each other */
-  .column {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
-  }
-  
-  .column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-  }
-  
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 800px) {
-    .column {
-      flex: 50%;
-      max-width: 50%;
-    }
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column {
-      flex: 100%;
-      max-width: 100%;
-    }
-  }
-  
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  width: 20%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+}
+
+.marqueediv a {
+  width: 100%;
+  height: 260px;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.marqueeimg {
+  height: 260px;
+}
+
+.jjktabtitles {
+  color: white; background-color: black; padding: 3px;
+}
+
+li.indent1 {margin-left: 5px; list-style-type: circle; margin-top: 2px;}
+
+li.indent2 {
+  margin-left: 30px; list-style-type: square;
+}
+/* down here is tab styling */
+/* Style the tab */
+.jjktab {
+  overflow: hidden;
+  background-color: #ffffcc;
+  width: 100%;
+}
+        
+/* Style the buttons inside the tab */
+.jjktab button {
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: 0.3s;
+  height: 30px;
+  background-color: #ffffcc;
+  font-size: medium;
+}
+        
+/* Change background color of buttons on hover */
+.jjktab button:hover {
+  background-color: #CCCCFF;
+}
+        
+/* Create an active/current tablink class */
+.jjktab .active {
+  background-color: black;
+  color: white;
+}
+        
+/* Style the tab content */
+.jjktabcontent {
+  display: none;
+}
+
+.leftidborder {
+  border: 1px black solid;
+  width: 370px;
+  height: 190px;
+  padding: 16px;
+  display: flex;
+  float: left;
+  margin-right: 24px;
+  margin-bottom: 10px;
+}
+
+.rightidborder {
+  border: 1px black solid; width: 370px; height: 190px; padding: 14px; display: flex; float: right; margin-bottom: 10px;
+}
+
+.idimage {
+  border: 1px black dotted;
+  width: 140px;
+  height: 160px;
+}
+
+.yorozuidimage {
+  border: 1px black dotted; width: 132px; height: 161px; padding: 20px;
+}
+
+.idbio {
+  height: 160px; width: 200px; padding: 0px;
+}
+
+.idtitle {
+  background-color: black; color: white; padding: 3px; margin-left: 6px; margin-top: 0px; font-size: 10pt; text-align: left;
+}
+
+.idsince {
+  margin-left: 6px;  margin-top: -6px; font-size: 10pt; text-decoration: underline;
+}
+
+.idstats {
+  font-size: 10pt; margin-left: 6px; text-align: left; margin-top: -5px;
+}
+
+.idhighlight {
+  background-color: #ffffcc; font-size: 10pt;
+}
+
+li {
+  margin-left: -20px;
+  margin-top: 6px;
+  list-style-type: disc;
+}
+
+.indent1 {
+margin-left: 5px;
+list-style-type: circle;
+margin-top: 2px
+}
+
+.galleryrow {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.gallerycol {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.galleryImg {
+  background-color: transparent;
+}
