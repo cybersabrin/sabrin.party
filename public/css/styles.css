@@ -150,7 +150,7 @@ a.linknavi:hover {
 .mybutton {
     width: 230px;
     height: 80px;
-    background-image: url(/images/backgrounds/basil_border.png);
+    background-image: url(/images/backgrounds/basil_border.webp);
     background-size: 100% 100%;
     padding-top: 50px;
     position: absolute;
@@ -231,7 +231,7 @@ a.linknavi:hover {
     border-radius: 25px;
     border: 2px solid transparent;
     box-shadow: 0px 0px 20px gold;
-    background-image: url(/images/backgrounds/startile.png);
+    background-image: url(/images/backgrounds/startile.webp);
     background-size: 20%;
     margin-left: 160px;
     margin-top: 90px;
@@ -255,7 +255,7 @@ a.linknavi:hover {
     margin-top: 44px;
     box-shadow: 0px 0px 20px gold;
     padding-left: 20px;
-    background-image: url(/images/backgrounds/stars.gif);
+    background-image: url(/images/backgrounds/stars.webp);
 }
 
 .myblurb {
@@ -268,7 +268,7 @@ a.linknavi:hover {
     box-shadow: 0px 0px 20px rgb(136, 192, 136);
     padding-left: 20px;
     padding-right: 20px;
-    background-image: url(/images/backgrounds/bgif096.gif);
+    background-image: url(/images/backgrounds/bgif096.webp);
 }
 
 .email {
@@ -277,7 +277,7 @@ a.linknavi:hover {
     border-radius: 25px;
     border: 2px solid transparent;
     box-shadow: 0px 0px 20px lightpink;
-    background-image: url(/images/backgrounds/heart.gif);
+    background-image: url(/images/backgrounds/heart.webp);
     margin-left: -40px;
     margin-top: -228px;
 }
@@ -395,7 +395,7 @@ a.linknavi:hover {
 }
 
 .btn:hover {
-    background-image: url(/images/backgrounds/heartswallpaper.png);
+    background-image: url(/images/backgrounds/heartswallpaper.webp);
     background-position: top;
   }
 
@@ -409,7 +409,7 @@ a.linknavi:hover {
   
 /*The title bar at the top of window boxes.*/
 .libbox-title-bar {
-    background-image: url(/images/backgrounds/heartswallpaper.png);
+    background-image: url(/images/backgrounds/heartswallpaper.webp);
     background-position: 740px;
     color: white;
     font-weight: bold;
@@ -450,11 +450,6 @@ a.linknavi:hover {
     -webkit-filter: drop-shadow(5px 5px 5px #d380e1);
   filter: drop-shadow(5px 5px 5px #d380e1);
 }
-
-
-/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/games/gam-1/gam18.ani), url(https://cur.cursors-4u.net/games/gam-1/gam18.png), auto !important;} /* End https://www.cursors-4u.com */
-
-
 
 .fanclubTitle {
     padding: 5px;
@@ -497,7 +492,7 @@ a.homeNotelink {
     margin-top: 520px;
     margin-left: 10px;
     padding: 15px;
-    background-image: url(/images/backgrounds/rainbow.png);
+    background-image: url(/images/backgrounds/rainbow.webp);
     opacity: 0.9;
     background-size: cover;
     border: 2px #549f0e dashed;
