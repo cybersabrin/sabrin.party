@@ -324,12 +324,6 @@ li {
   list-style-type: disc;
 }
 
-.indent1 {
-margin-left: 5px;
-list-style-type: circle;
-margin-top: 2px
-}
-
 .galleryrow {
   display: flex;
   flex-wrap: wrap;
