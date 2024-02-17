@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url(/images/backgrounds/cloud1anim.gif);
+    background-image: url(/pics/backgrounds/cloud1anim.gif);
 }
 
 h1 {
@@ -66,7 +66,7 @@ a {
 .BL {
     width: 500px;
     height: 350px;
-    background-image: url(/images/shrine-birds/paper.png);
+    background-image: url(/pics/shrine-birds/paper.png);
     background-size: contain;
     padding: 10px;
     margin-top: 20px;
@@ -77,7 +77,7 @@ a {
 .BR {
     width: 500px;
     height: 270px;
-    background-image: url(/images/shrine-birds/paper2.png);
+    background-image: url(/pics/shrine-birds/paper2.png);
     background-size: contain;
     padding: 10px;
     margin-top: 20px;
