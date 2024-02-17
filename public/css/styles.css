@@ -598,3 +598,17 @@
 .bloglink {
     background-color: #886bef; color: white; font-weight: bold; text-decoration: underline;
 }
+
+.zineimgR {
+    transform: rotate(8deg);
+}
+
+.zineimgL {
+    transform: rotate(-10deg);
+}
+
+.zinetxt {
+    width: 140px;
+    text-align: center;
+    padding: 10px;
+}
