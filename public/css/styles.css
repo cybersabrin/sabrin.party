@@ -612,3 +612,16 @@
     text-align: center;
     padding: 10px;
 }
+
+.drawme {
+    background-color:#ffc0cb;
+    border-radius:10px;
+    position:absolute;
+    padding:6px;
+    margin-top:888px;
+    margin-left:10px;
+    text-align:center;
+    color:white;
+    font-weight:bold;
+    font-size:11pt;
+}
