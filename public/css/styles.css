@@ -280,5 +280,32 @@ a.homeNotelink {
     z-index: 9;
     margin-left: 760px;
     position: absolute;
-    height:260px;
+    height: 260px;
+}
+
+.sotwTable {
+    float: right;
+    border: 0;
+    width: 440px;
+    margin-top: -16px;
+    padding-right: 10px;
+}
+
+.sotwH {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.sotwMarquee {
+    width: 100%;
+    background-color: lightpink;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.butterfly {
+    position: absolute;
+    margin-left: 744px;
+    margin-top: 300px;
+    z-index: 2;
 }
