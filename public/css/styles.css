@@ -243,6 +243,7 @@ a.homeNotelink {
 .fakead {
     position: absolute;
     height: 124px;
+    width: 220px;
     padding: 3px;
     box-sizing: border-box;
     margin-top: 1100px;
