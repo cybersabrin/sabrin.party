@@ -463,3 +463,33 @@ body {
     height: 600px;
     margin-left: 30px;
 }
+
+.miiring {
+    width: 135px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.blinkees {
+    width: 330px;
+    margin-top: -10px;
+    margin-left: -40px;
+    position: absolute;
+    direction: rtl;
+}
+
+.JFFdiv {
+    margin: auto;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.JFFlink {
+    background-color: #6797ed;
+    color: #c9e9fc;
+    text-align: center;
+}
+
+.quizImg {
+    width: 226px;
+}
