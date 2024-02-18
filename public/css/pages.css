@@ -125,8 +125,12 @@ body {
 .quiztitle {
     position: absolute;
     height: 46px;
-    margin-left: 80px;
+    margin-left: 350px;
     margin-top: 20px;
+}
+
+.quizImg {
+    width: 240px;
 }
 
 .stats {
@@ -147,7 +151,7 @@ body {
     border-radius: 25px;
     border: 2px solid transparent;
     margin-left: 300px;
-    margin-top: -470px;
+    margin-top: -480px;
     box-shadow: 0px 0px 20px rgb(136, 192, 136);
     padding-left: 20px;
     padding-right: 20px;
@@ -176,6 +180,7 @@ body {
     width: 300px;
     margin-left: -40px;
     box-shadow: 0 0 20px pink;
+    margin-top: 40px;
 }
 
 .mobwebring {
@@ -490,6 +495,3 @@ body {
     text-align: center;
 }
 
-.quizImg {
-    width: 226px;
-}
