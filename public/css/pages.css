@@ -397,3 +397,49 @@ body {
     text-align: center;
     padding: 10px;
 }
+
+.toyboxTitle {
+    height: 80px;
+    position: absolute;
+    margin-left: 330px;
+    margin-top: -30px;
+}
+
+.TBtab {
+    overflow: hidden;
+    background-color: #d0e7a2;
+    width: 530px;
+    margin-left: 30px
+}
+
+.TBtab button {
+    background-color: inherit;
+    float: left;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: .3s;
+    font-size: small;
+    height: 30px
+}
+
+.TBtab button:hover {
+    background-color: #b2cb7f;
+}
+
+.TBtab .active {
+    background-color: #b2cb7f;
+}
+
+.TBtabcontent {
+    display: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: -20px;
+    border-top: 0;
+    width: 486px;
+    background-color: white;
+    border: #b2cb7f 2px dashed;
+    height: 260px;
+    margin-left: 30px;
+}

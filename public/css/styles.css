@@ -240,6 +240,16 @@ a.homeNotelink {
     filter: drop-shadow(5px 5px 15px #e6ff8a);
 }
 
+.fakead {
+    position: absolute;
+    height: 124px;
+    width: 220px;
+    padding: 3px;
+    box-sizing: border-box;
+    margin-top: 1100px;
+    margin-left: 10px;
+}
+
 .drawbox {
     position: absolute;
     border: #6fa1ff 2px dashed;
