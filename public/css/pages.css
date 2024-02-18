@@ -171,6 +171,26 @@ body {
     margin-left: 34px;
 }
 
+.hakaseImg {
+    border-radius: 25px;
+    width: 300px;
+    margin-left: -40px;
+    box-shadow: 0 0 20px pink;
+}
+
+.mobwebring {
+    margin-top: 15px;
+    margin-left: 58px;
+    margin-bottom: 20px;
+}
+
+.aboutFavs {
+    height: 50px;
+    position: absolute;
+    margin-top: 176px;
+    margin-left: -140px;
+}
+
 /* for blog down below */
 .cont {
     position: relative;
@@ -440,6 +460,6 @@ body {
     width: 486px;
     background-color: white;
     border: #b2cb7f 2px dashed;
-    height: 660px;
+    height: 620px;
     margin-left: 30px;
 }
