@@ -319,14 +319,6 @@ img.piclog {
     clear: both;
 }
 
-.hide {
-    display: none;
-}
-
-.myDIV:hover+.hide {
-    display: block;
-}
-
 .cover {
     float: left;
     padding-left: 0px;
@@ -536,7 +528,6 @@ a.homeNotelink {
     border: 2px #ed709c dashed;
     box-sizing: border-box;
     overflow: scroll;
-    padding: 20px;
     border-radius: 15px 15px 15px 15px;
 }
 
