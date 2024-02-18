@@ -658,3 +658,11 @@ a.homeNotelink {
     font-weight: bold;
     font-size: 11pt;
 }
+
+.kittycat {
+    margin-top: 1070px;
+    z-index: 9;
+    margin-left: 760px;
+    position: absolute;
+    height:260px;
+}
