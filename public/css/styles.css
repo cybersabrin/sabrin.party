@@ -482,7 +482,7 @@ a.homeNotelink {
 }
 
 /* Style the buttons that are used to open the tab content */
-.naviLink button {
+.naviLink {
     text-align: center;
     background-color: #e5fe89;
     color: #549f0e;
@@ -497,7 +497,7 @@ a.homeNotelink {
 }
 
 /* Change background color of buttons on hover */
-.naviLink button:hover {
+.naviLink:hover {
     text-align: center;
     background-color: #ffd3e8;
     color: #ed709c;
@@ -512,7 +512,7 @@ a.homeNotelink {
 }
 
 /* Create an active/current "tab button" class */
-.naviLink button.active {
+.naviLink.active {
     text-align: center;
     background-color: #ffd3e8;
     color: #ed709c;
