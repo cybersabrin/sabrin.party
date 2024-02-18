@@ -77,6 +77,13 @@ img.piclog {
     height: 200px;
 }
 
+.piclogTitle {
+    height: 40px;
+    position: absolute;
+    z-index: 5;
+    margin-top: 154px;
+    margin-left: 823px;
+}
 .fanclubs {
     position: absolute;
     margin-top: 430px;
