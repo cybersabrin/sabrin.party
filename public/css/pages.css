@@ -186,7 +186,7 @@ body {
     font-weight: bolder;
     font-family: 'MS PGothic';
     padding: 18px;
-    width: 500px;
+    width: 100%;
     border: none;
     text-align: center;
     outline: none;
@@ -203,7 +203,7 @@ body {
     padding-right: 18px;
     display: none;
     overflow: hidden;
-    width: 470px;
+    width: 100%;
     text-align: justify;
     font-size: medium;
     background-color: #efefff;
