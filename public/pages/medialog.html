@@ -28,6 +28,21 @@
     </div>
     <script>function filterSelection(d) { var a, b; a = document.getElementsByClassName("filterDiv"); if (d == "all") { d = "" } for (b = 0; b < a.length; b++) { w3RemoveClass(a[b], "show"); if (a[b].className.indexOf(d) > -1) { w3AddClass(a[b], "show") } } } function w3AddClass(e, c) { var d, b, a; b = e.className.split(" "); a = c.split(" "); for (d = 0; d < a.length; d++) { if (b.indexOf(a[d]) == -1) { e.className += " " + a[d] } } } function w3RemoveClass(e, c) { var d, b, a; b = e.className.split(" "); a = c.split(" "); for (d = 0; d < a.length; d++) { while (b.indexOf(a[d]) > -1) { b.splice(b.indexOf(a[d]), 1) } } e.className = b.join(" ") } var btnContainer = document.getElementById("myBtnContainer"); var btns = btnContainer.getElementsByClassName("btn"); for (var i = 0; i < btns.length; i++) { btns[i].addEventListener("click", function () { var a = document.getElementsByClassName("active"); a[0].className = a[0].className.replace(" active", ""); this.className += " active" }) } document.addEventListener("DOMContentLoaded", function () { filterSelection("all"); document.querySelector(".btn.active").classList.remove("active"); document.querySelector(".btn:nth-child(1)").classList.add("active") });</script>
 
+    <div class="filterDiv game">
+        <div class="libbox">
+            <div class="libbox-title-bar"># videogame <div class="right">x</div>
+            </div>
+            <div class="inner">
+                <br>
+                <p style="margin:0"><strong>date:</strong> feb 19th 2024</p>
+                <strong>status:</strong> completed
+                <p>EVA 4 DATING SIM RPG</p>
+                <img src="/pics/library/eva4sim.png" class="cover">
+                <p>this game was so ridiculous i feel silly just including it here but i literally have to. also it's iconic. the only screenshot i've seen before playing this game is this one where asuka's like <span style="font-weight: bold;">Fuck! My IQ was decreased today at school I HATE that school it doens't work correctly. (Smashes a coffee cup over her own head) Ahh that feels better I think I might go to bed now.</span> and it still is my favorite moment in the whole game. that and the various ways in which the girls kill you dead when you call them stupid bitches. asuka is so relatable... anyways. i got all 4 endings. you can play it too if you'd like <a href="https://www.minigamers.com/games/eva-4-dating-sim-rpg~724/" target="_blank">here</a>...</p>
+            </div>
+        </div>
+    </div>
+
     <div class="filterDiv movie">
         <div class="libbox">
             <div class="libbox-title-bar"># tv/film <div class="right">x</div>
