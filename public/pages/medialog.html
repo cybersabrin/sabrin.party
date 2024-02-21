@@ -28,6 +28,21 @@
     </div>
     <script>function filterSelection(d) { var a, b; a = document.getElementsByClassName("filterDiv"); if (d == "all") { d = "" } for (b = 0; b < a.length; b++) { w3RemoveClass(a[b], "show"); if (a[b].className.indexOf(d) > -1) { w3AddClass(a[b], "show") } } } function w3AddClass(e, c) { var d, b, a; b = e.className.split(" "); a = c.split(" "); for (d = 0; d < a.length; d++) { if (b.indexOf(a[d]) == -1) { e.className += " " + a[d] } } } function w3RemoveClass(e, c) { var d, b, a; b = e.className.split(" "); a = c.split(" "); for (d = 0; d < a.length; d++) { while (b.indexOf(a[d]) > -1) { b.splice(b.indexOf(a[d]), 1) } } e.className = b.join(" ") } var btnContainer = document.getElementById("myBtnContainer"); var btns = btnContainer.getElementsByClassName("btn"); for (var i = 0; i < btns.length; i++) { btns[i].addEventListener("click", function () { var a = document.getElementsByClassName("active"); a[0].className = a[0].className.replace(" active", ""); this.className += " active" }) } document.addEventListener("DOMContentLoaded", function () { filterSelection("all"); document.querySelector(".btn.active").classList.remove("active"); document.querySelector(".btn:nth-child(1)").classList.add("active") });</script>
 
+    <div class="filterDiv movie">
+        <div class="libbox">
+            <div class="libbox-title-bar"># film <div class="right">x</div>
+            </div>
+            <div class="inner">
+                <br>
+                <p style="margin:0"><strong>date:</strong> feb 20th 2024</p>
+                <strong>status:</strong> completed
+                <p>killer klowns from outer space (1988)</p>
+                <img src="/pics/library/killerklowns.png" class="cover">
+                <p>the title of this movie is a complete plot summary. this movie was actually so fun to watch i sort of want a physical copy for myself... with my new and growing cd/dvd collection. like. pretty incredible watch experience. the opening theme song????? fuck me that was a BANGER. listen to <a href="https://youtu.be/IQeTZKI43rY?si=dCuvqfSXn4MknMwT&t=55" target="_blank">this shit.</a> i was genuinely (pleasantly, might i add) surprised to see very little if any at all of the typical bigoted jokes in this movie? no underlying anti-communist propaganda or like weird homophobic AIDS themes that were so prevalent during the 80s? so i was like woah! this is an honest to god movie about killer clowns from outer space. it was so silly. and so funny. and you can tell the creators of the movie, cast and crew, just had so much fun with it. i love that everyone was just wrapped into cotton candy cocoons. my favorite characters were obviously the ice cream guys. they came out on top, i think. everybody in the entire unnamed town was fighting for their lives meanwhile these two guys were fucking a couple of Hot Alien Clowns. sure the acting was bad, the college students(?) looked 35, terrible stuntwork, but nothing will make me hate this movie.</p>
+            </div>
+        </div>
+    </div>
+    
     <div class="filterDiv game">
         <div class="libbox">
             <div class="libbox-title-bar"># videogame <div class="right">x</div>
