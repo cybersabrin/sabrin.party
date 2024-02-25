@@ -28,6 +28,21 @@
     </div>
     <script>function filterSelection(d) { var a, b; a = document.getElementsByClassName("filterDiv"); if (d == "all") { d = "" } for (b = 0; b < a.length; b++) { w3RemoveClass(a[b], "show"); if (a[b].className.indexOf(d) > -1) { w3AddClass(a[b], "show") } } } function w3AddClass(e, c) { var d, b, a; b = e.className.split(" "); a = c.split(" "); for (d = 0; d < a.length; d++) { if (b.indexOf(a[d]) == -1) { e.className += " " + a[d] } } } function w3RemoveClass(e, c) { var d, b, a; b = e.className.split(" "); a = c.split(" "); for (d = 0; d < a.length; d++) { while (b.indexOf(a[d]) > -1) { b.splice(b.indexOf(a[d]), 1) } } e.className = b.join(" ") } var btnContainer = document.getElementById("myBtnContainer"); var btns = btnContainer.getElementsByClassName("btn"); for (var i = 0; i < btns.length; i++) { btns[i].addEventListener("click", function () { var a = document.getElementsByClassName("active"); a[0].className = a[0].className.replace(" active", ""); this.className += " active" }) } document.addEventListener("DOMContentLoaded", function () { filterSelection("all"); document.querySelector(".btn.active").classList.remove("active"); document.querySelector(".btn:nth-child(1)").classList.add("active") });</script>
 
+    <div class="filterDiv game">
+        <div class="libbox">
+            <div class="libbox-title-bar"># videogame <div class="right">x</div>
+            </div>
+            <div class="inner">
+                <br>
+                <p style="margin:0"><strong>date:</strong> feb 19th 2024</p>
+                <strong>status:</strong> in progress
+                <p>final fantasy vii remake - intergrade</p>
+                <img src="/pics/library/ff7.png" class="cover">
+                <p>i've finally begun my final fantasy journey. i've been wanting to play these games forever, and my friend carlea is obsessed with it. and does life even have a purpose if i'm not consuming each and every single one of carlea's media recs? i don't think so. i only just started, but i am really loving it so far. i'm planning on being as thorough as possible with this play-through. because i don't think i'll have it in me to replay this big of a game. i am a plot driven gamer but at the same time.. i do love being the errand boy... and doing things like help little girls find her lost cats. great stuff. super cute. cloud is such an angsty guy. always with his hand on his hip complaining about something. i also just met sephiroth and he is like if millions knives and illumi zoldyck were put into a blender. so obviously i love him. i plan to update this as i continue playing.</p>
+            </div>
+        </div>
+    </div>
+
     <div class="filterDiv movie">
         <div class="libbox">
             <div class="libbox-title-bar"># film <div class="right">x</div>
@@ -54,6 +69,8 @@
                 <p>teeth (2007)</p>
                 <img src="/pics/library/teeth.png" class="cover">
                 <p>lmfaoooooooooo. this movie was so unserious. it was also really bad. like, not in the funny way but also not bad enough for me to turn it off? good on her for chomping the dick off every guy that tries to assault her. but like. it's so weird? very disappointed to see the step-brother end up being such a freak. i sorta liked him. and his uh. piercing. wish he was normaler and not obsessed with fucking his step-sister. anyways this movie was a movie. that exists. i don't think i'll really remember it. shrugs.</p>
+                <br>
+                <br>
             </div>
         </div>
     </div>
