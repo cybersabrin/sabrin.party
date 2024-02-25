@@ -28,19 +28,50 @@
     </div>
     <script>function filterSelection(d) { var a, b; a = document.getElementsByClassName("filterDiv"); if (d == "all") { d = "" } for (b = 0; b < a.length; b++) { w3RemoveClass(a[b], "show"); if (a[b].className.indexOf(d) > -1) { w3AddClass(a[b], "show") } } } function w3AddClass(e, c) { var d, b, a; b = e.className.split(" "); a = c.split(" "); for (d = 0; d < a.length; d++) { if (b.indexOf(a[d]) == -1) { e.className += " " + a[d] } } } function w3RemoveClass(e, c) { var d, b, a; b = e.className.split(" "); a = c.split(" "); for (d = 0; d < a.length; d++) { while (b.indexOf(a[d]) > -1) { b.splice(b.indexOf(a[d]), 1) } } e.className = b.join(" ") } var btnContainer = document.getElementById("myBtnContainer"); var btns = btnContainer.getElementsByClassName("btn"); for (var i = 0; i < btns.length; i++) { btns[i].addEventListener("click", function () { var a = document.getElementsByClassName("active"); a[0].className = a[0].className.replace(" active", ""); this.className += " active" }) } document.addEventListener("DOMContentLoaded", function () { filterSelection("all"); document.querySelector(".btn.active").classList.remove("active"); document.querySelector(".btn:nth-child(1)").classList.add("active") });</script>
 
+    <div class="filterDiv movie">
+        <div class="libbox">
+            <div class="libbox-title-bar"># film <div class="right">x</div>
+        </div>
+        <div class="inner">
+            <br>
+            <p style="margin:0"><strong>date:</strong> feb 25th 2024</p>
+            <strong>status:</strong> completed
+            <p>cannibal hookers (1987)</p>
+            <img src="/pics/library/cannibalhookers.png" class="cover">
+            <p>now <i>this</i> is what i'd call Hot Garbage! but in a good way. the silliness in the dialogue was so entertaining. it was just the right amount of stupid and funny for my liking. there was so much hairspray in the making of this movie i am certain it is the sole cause of the climate change crisis we are facing today. was it worth it? maybe. i was actually really into the plot. i just had a good time watching these girls succumb to the social pressures of joining the most batshit sorority known to man. these girls are here to have some Fun and kill some Dudes and drink some Blood and i'm here for it! also I LOVED LOBO! LOBO DO GOOD! BE NICE TO LOBO! my favorite tv cannibal. also i think this movie had so much potential to be gay but it wasn't :/</p>
+            <p>also also. there was one 3 minute scene towards the end that just. replayed? i think it was taped wrong or something. super charming. i did not skip past it when i realized the scene was repeating. lmfao.</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="filterDiv movie">
+        <div class="libbox">
+            <div class="libbox-title-bar"># film <div class="right">x</div>
+        </div>
+        <div class="inner">
+            <br>
+            <p style="margin:0"><strong>date:</strong> feb 25th 2024</p>
+            <strong>status:</strong> completed
+            <p>space zombie bingo!!! (1993)</p>
+            <img src="/pics/library/spacezombiebingo.png" class="cover">
+            <p>this had such a strong start. the first 10 or so minutes were actually kinda funny, got a couple of laughs from me. i liked the kill tv bit at first and i thought it was smart. but it started to go in and out where it'd drag on with a monologue about atomic whatevers and stuff and not enough funny jokes to keep me engaged as the movie went on. so i just started to get bored. i did like the soundtrack though. and my favorite characters were the suicidal all-american girl next door barbie-q and her boyfriend kent bendover. they were fun. the movie poster is misleading there was no bingo and not enough hot babes.</p>
+        </div>
+    </div>
+    </div>
+
     <div class="filterDiv game">
         <div class="libbox">
             <div class="libbox-title-bar"># videogame <div class="right">x</div>
-            </div>
-            <div class="inner">
-                <br>
-                <p style="margin:0"><strong>date:</strong> feb 19th 2024</p>
-                <strong>status:</strong> in progress
-                <p>final fantasy vii remake - intergrade</p>
-                <img src="/pics/library/ff7.png" class="cover">
-                <p>i've finally begun my final fantasy journey. i've been wanting to play these games forever, and my friend carlea is obsessed with it. and does life even have a purpose if i'm not consuming each and every single one of carlea's media recs? i don't think so. i only just started, but i am really loving it so far. i'm planning on being as thorough as possible with this play-through. because i don't think i'll have it in me to replay this big of a game. i am a plot driven gamer but at the same time.. i do love being the errand boy... and doing things like help little girls find her lost cats. great stuff. super cute. cloud is such an angsty guy. always with his hand on his hip complaining about something. i also just met sephiroth and he is like if millions knives and illumi zoldyck were put into a blender. so obviously i love him. i plan to update this as i continue playing.</p>
-            </div>
         </div>
+        <div class="inner">
+            <br>
+            <p style="margin:0"><strong>date:</strong> feb 19th 2024</p>
+            <strong>status:</strong> in progress
+            <p>final fantasy vii remake - intergrade</p>
+            <img src="/pics/library/ff7.png" class="cover">
+            <p>i've finally begun my final fantasy journey. i've been wanting to play these games forever, and my friend carlea is obsessed with it. and does life even have a purpose if i'm not consuming each and every single one of carlea's media recs? i don't think so. i only just started, but i am really loving it so far. i'm planning on being as thorough as possible with this play-through. because i don't think i'll have it in me to replay this big of a game. i am a plot driven gamer but at the same time.. i do love being the errand boy... and doing things like help little girls find her lost cats. great stuff. super cute. cloud is such an angsty guy. always with his hand on his hip complaining about something. i also just met sephiroth and he is like if millions knives and illumi zoldyck were put into a blender. so obviously i love him. i plan to update this as i continue playing.</p>
+        </div>
+    </div>
     </div>
 
     <div class="filterDiv movie">
@@ -116,7 +147,7 @@
                 <p style="margin:0"><strong>date:</strong> feb 23rd 2024</p>
                 <strong>status:</strong> completed
                 <p>nathan for you: finding frances</p>
-                <a href="https://archive.org/details/airplanepillows" target="_blank"><img src="/pics/library/findingfrancis.png" class="cover"></a>
+                <img src="/pics/library/findingfrancis.png" class="cover">
                 <p>nathan for you always seems to bring out a weird mix of emotions that make me feel a little bit more human than i did before... it's weird because i don't like this guy. bill. he's a narcissist. weird with women a lot of the time. wants trump for president. watches fox news. so like i don't like him as a person. but watching this movie still made me super emotional? it's not that i really wanted a happy ending for him, but i dunno... something about helping someone reconnect with someone they knew decades ago... and talking to them and seeing that they're happy after all this time... and stuff. well. i liked the movie. even if i don't like bill. it was so weird. i wanna know what happened with nathan and that escort... that was so weird. ???</p>
             </div>
         </div>
@@ -264,7 +295,7 @@
 
     <div class="filterDiv movie">
         <div class="libbox">
-            <div class="libbox-title-bar"># tv/film <div class="right">x</div>
+            <div class="libbox-title-bar"># film <div class="right">x</div>
             </div>
             <div class="inner">
                 <br>
@@ -279,7 +310,7 @@
 
     <div class="filterDiv movie">
         <div class="libbox">
-            <div class="libbox-title-bar"># tv/film <div class="right">x</div>
+            <div class="libbox-title-bar"># film <div class="right">x</div>
             </div>
             <div class="inner">
                 <br>
@@ -294,7 +325,7 @@
 
     <div class="filterDiv movie">
         <div class="libbox">
-            <div class="libbox-title-bar"># tv/film <div class="right">x</div>
+            <div class="libbox-title-bar"># film <div class="right">x</div>
             </div>
             <div class="inner">
                 <br>
@@ -345,7 +376,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -375,7 +406,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -442,7 +473,7 @@
     </div>
     <div class="filterDiv tv">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -476,7 +507,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -575,7 +606,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -600,7 +631,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -625,7 +656,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -648,7 +679,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -670,7 +701,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -689,7 +720,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -710,7 +741,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -731,7 +762,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -758,7 +789,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -777,7 +808,7 @@
     </div>
     <div class="filterDiv tv">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -798,7 +829,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -844,7 +875,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -917,7 +948,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -937,7 +968,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -958,7 +989,7 @@
     </div>
     <div class="filterDiv tv">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -978,7 +1009,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -999,7 +1030,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1025,7 +1056,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1044,7 +1075,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1064,7 +1095,7 @@
     </div>
     <div class="filterDiv movie fav">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1134,7 +1165,7 @@
     </div>
     <div class="filterDiv tv">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1157,7 +1188,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1183,7 +1214,7 @@
     </div>
     <div class="filterDiv tv">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1229,7 +1260,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1284,7 +1315,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1298,7 +1329,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1319,7 +1350,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1341,7 +1372,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1364,7 +1395,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1391,7 +1422,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1491,7 +1522,7 @@
     </div>
     <div class="filterDiv tv">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1520,7 +1551,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1551,7 +1582,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1571,7 +1602,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1597,7 +1628,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1621,13 +1652,12 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
                 <p style=margin:0><strong>date:</strong> nov 21 2023</p>
                 <strong>status:</strong> completed
-                <p style=margin:0><strong>rating:</strong> ? ? ? ? ?</p>
                 <p>things (1989)</p>
                 <img src=/pics/library/things.png class=cover>
                 <p>this was the. movie i've ever seen in my life but. but i don't hate it. i think i might
@@ -1645,7 +1675,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1667,7 +1697,7 @@
     </div>
     <div class="filterDiv tv currently">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1687,7 +1717,7 @@
     </div>
     <div class="filterDiv tv">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1717,7 +1747,7 @@
     </div>
     <div class="filterDiv tv current">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1773,7 +1803,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1798,7 +1828,7 @@
     </div>
     <div class="filterDiv tv current">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -1821,7 +1851,7 @@
     </div>
     <div class="filterDiv tv">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -2010,7 +2040,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -2032,7 +2062,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -2057,7 +2087,7 @@
     </div>
     <div class="filterDiv movie fav">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -2115,7 +2145,6 @@
                 <br>
                 <p style=margin:0><strong>date:</strong> aug. 23rd 2023</p>
                 <strong>status:</strong> currently reading & watching
-                <p style=margin:0><strong>rating:</strong> - - - - -</p>
                 <p>jujutsu kaisen</p>
                 <a style=background-color:transparent target=_blank
                     href="https://myanimelist.net/manga/113138/Jujutsu_Kaisen?q=jujutsu%20kaisen&cat=manga"><img
@@ -2164,7 +2193,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -2210,7 +2239,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -2279,13 +2308,12 @@
     </div>
     <div class="filterDiv tv current">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
                 <p style=margin:0><strong>date:</strong> aug 15th 2023</p>
                 <strong>status:</strong> currently watching
-                <p style=margin:0><strong>rating:</strong> - - - - -</p>
                 <p>hello, my twenties!</p>
                 <img src=/pics/library/twenties.png class=cover>
                 <p>i started the first two episodes of hello, my twenties! on the plane and i'm hooked!
@@ -2307,7 +2335,6 @@
                 <br>
                 <p style=margin:0><strong>date:</strong> aug 3rd 2023</p>
                 <strong>status:</strong> currently reading
-                <p style=margin:0><strong>rating:</strong> - - - - -</p>
                 <p>the summer hikaru died</p>
                 <img src=/pics/library/hikaru.png class=cover>
                 <p>i'm now all caught up on the summer hikaru died and i am a <i>huge</i> fan of it already!
@@ -2332,7 +2359,6 @@
                 <br>
                 <p style=margin:0><strong>date:</strong> aug 3rd 2023</p>
                 <strong>status:</strong> completed
-                <p style=margin:0><strong>rating:</strong> ★ ★ ★ ☆ ☆</p>
                 <p>trigun (1998)</p>
                 <img src=/pics/library/trigun98.png class=cover>
                 <p>i literally just started this but i already have a couple thoughts. firstly, i just read
@@ -2377,7 +2403,6 @@
                 <br>
                 <p style=margin:0><strong>date:</strong> july 12th 2023</p>
                 <strong>status:</strong> currently watching
-                <p style=margin:0><strong>rating:</strong> - - - - -</p>
                 <p>slam dunk</p>
                 <img src=/pics/library/slamdunk.png class=cover>
                 <p>after seeing mizu's posts about slam dunk i've decided to finally start it. i've been
@@ -2394,13 +2419,12 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
                 <p style=margin:0><strong>date:</strong> july 9th 2023</p>
                 <strong>status:</strong> completed
-                <p style=margin:0><strong>rating:</strong> ★ ★ ★ ☆ ☆</p>
                 <p>the babysitter: killer queen</p>
                 <img src=/pics/library/babysitter.png class=cover>
                 <p>i watched the first babysitter movie several years ago and thought it was really fun. i
@@ -2423,7 +2447,6 @@
                 <br>
                 <p style=margin:0><strong>date:</strong> july 10th 2023</p>
                 <strong>status:</strong> completed
-                <p style=margin:0><strong>rating:</strong> ★ ★ ★ ★ ★</p>
                 <p>trigun maximum by Yasuhiro Nightow</p>
                 <a href="https://myanimelist.net/manga/703/Trigun?q=trigun&cat=manga" target=_blank
                     style=background-color:transparent><img src=/pics/library/trimax.png class=cover></a>
@@ -2576,13 +2599,12 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
                 <p style=margin:0><strong>date:</strong> jun. 25th 2023</p>
                 <strong>status:</strong> completed
-                <p style=margin:0><strong>rating:</strong> ★ ★ ★ ★ ★</p>
                 <p>do revenge</p>
                 <img src=/pics/library/dorevenge.png class=cover>
                 <p>i was debating whether or not to give this 4 or 5 stars. i couldn't come up with a reason
@@ -2629,7 +2651,6 @@
                 <br>
                 <p style=margin:0><strong>date:</strong> jun. 21st 2023</p>
                 <strong>status:</strong> completed
-                <p style=margin:0><strong>rating:</strong> ★ ★ ★ ★ ★</p>
                 <p>trigun by Yasuhiro Nightow</p>
                 <a href="https://myanimelist.net/manga/703/Trigun?q=trigun&cat=manga" target=_blank
                     style=background-color:transparent><img src=/pics/library/trigunmanga.png class=cover></a>
@@ -2675,7 +2696,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -2743,7 +2764,6 @@
                 <br>
                 <p style=margin:0><strong>date:</strong> jun. 16th 2023</p>
                 <strong>status:</strong> completed
-                <p style=margin:0><strong>rating:</strong> ★ ★ ★ ★ ★</p>
                 <p>trigun stampede</p>
                 <a href="https://myanimelist.net/anime/52093/Trigun_Stampede?q=tri&cat=anime" target=_blank
                     style=background-color:transparent><img src=/pics/library/trigun.png class=cover></a>
@@ -2818,7 +2838,6 @@
                 <br>
                 <p style=margin:0><strong>date:</strong> jun. 12th 2023</p>
                 <strong>status:</strong> completed
-                <p style=margin:0><strong>rating:</strong> ★ ★ ★ ★ ★</p>
                 <p>spider-man & venom: double trouble</p>
                 <img src=/pics/library/spidervenom.png class=cover>
                 <p>stopped by the comic place on my way home from work today to pick up some spider-punk
@@ -2849,14 +2868,12 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
                 <p style=margin:0><strong>date:</strong> jun. 8th 2023</p>
                 <strong>status:</strong> completed
-                <p style=margin:0;width:900px><strong>rating:</strong> ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
-                    ★</p>
                 <p>spider-man: across the spider-verse</p>
                 <img src=/pics/library/atsv.png class=cover>
                 <p>i watched into the spider-verse when it first came out in theaters a few years ago, and i
@@ -2927,13 +2944,12 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
                 <p style=margin:0><strong>date:</strong> jun. 3rd 2023</p>
                 <strong>status:</strong> completed
-                <p style=margin:0><strong>rating:</strong> ★ ★ ★ ★ ★</p>
                 <p>emergency declaration</p>
                 <img src=/pics/library/ed.png class=cover>
                 <p>out of all the disaster movies like this i've seen before, this was actually the best of
@@ -2959,7 +2975,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -2984,13 +3000,12 @@
     </div>
     <div class="filterDiv tv">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
                 <p style=margin:0><strong>date:</strong> jun. 1st 2023</p>
                 <strong>status:</strong> completed
-                <p style=margin:0><strong>rating:</strong> ★ ★ ★ ★ ★</p>
                 <p>the bear</p>
                 <img src=/pics/library/thebear.png class=cover>
                 <p>THIS IS SUCH A GREAT SHOW. i originally saw a video edit a year ago with this guy yelling
@@ -3022,13 +3037,12 @@
     </div>
     <div class="filterDiv tv">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
                 <p style=margin:0><strong>date:</strong> may 29th 2023</p>
                 <strong>status:</strong> completed
-                <p style=margin:0><strong>rating:</strong> ★ ★ ★ ★ ★</p>
                 <p>succession</p>
                 <img src=/pics/library/succession.png class=cover>
                 <p>i feel like i'm definitely going to have to come back to this when i am more able to put
@@ -3051,7 +3065,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -3074,7 +3088,7 @@
     </div>
     <div class="filterDiv movie">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># film <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -3104,7 +3118,6 @@
                 <br>
                 <p style=margin:0><strong>date:</strong> may 5th 2023</p>
                 <strong>status:</strong> completed
-                <p style=margin:0><strong>rating:</strong> ★ ★ ★ ★ ★</p>
                 <p>frankenstein by mary shelly</p>
                 <a style=background-color:transparent target=_blank
                     href=https://www.gutenberg.org/files/84/84-h/84-h.htm><img src=/pics/library/frankenstein.png
@@ -3199,7 +3212,6 @@
                 <br>
                 <p style=margin:0><strong>date:</strong> apr. 24th 2023</p>
                 <strong>status:</strong> completed
-                <p style=margin:0><strong>rating:</strong> ★ ★ ★ ★ ★</p>
                 <p>the sucker by elle shivers</p>
                 <a style=background-color:transparent target=_blank href=https://elleshivers.com/The-sucker><img
                         src=/pics/library/thesucker.png class=cover></a>
@@ -3219,13 +3231,12 @@
     </div>
     <div class="filterDiv tv">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
                 <p style=margin:0><strong>date:</strong> apr. 20th 2023</p>
                 <strong>status:</strong> completed
-                <p style=margin:0><strong>rating:</strong> ★ ★ ★ ★ ★</p>
                 <p>abbott elementary</p>
                 <a style=background-color:transparent target=_blank href=https://abc.com/shows/abbott-elementary><img
                         src=/pics/library/ae.png class=cover></a>
@@ -3242,7 +3253,7 @@
     </div>
     <div class="filterDiv tv">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
             </div>
             <div class=inner>
                 <br>
@@ -3305,7 +3316,6 @@
                 <br>
                 <p style=margin:0><strong>date:</strong> mar. 19th 2023</p>
                 <strong>status:</strong> currently reading
-                <p style=margin:0><strong>rating:</strong> - - - - -</p>
                 <p>blue lock</p>
                 <a style=background-color:transparent target=_blank
                     href="https://myanimelist.net/manga/114745/Blue_Lock?q=blue%20lock%20manga&cat=manga"><img
@@ -3333,7 +3343,6 @@
                 <br>
                 <p style=margin:0><strong>date:</strong> mar. 25th 2023</p>
                 <p style=margin:0><strong>status:</strong> completed</p>
-                <p style=margin:0><strong>rating:</strong> ★ ★ ★ ☆ ☆</p>
                 <p>thistlefoot by gennarose nethercott</p>
                 <a style=background-color:transparent target=_blank
                     href=https://www.penguinrandomhouse.com/books/673386/thistlefoot-by-gennarose-nethercott /><img
@@ -3354,146 +3363,74 @@
     </div>
     <div class="filterDiv tv">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
-            </div>
-            <div class=inner>
-                <br>
-                <p style=margin:0><strong>date:</strong> mar. 18th 2023</p>
-                <p style=margin:0><strong>status:</strong> completed</p>
-                <p>swarm</p>
-                <a style=background-color:transparent target=_blank
-                    href=https://en.wikipedia.org/wiki/Swarm_(TV_series)><img src=/pics/library/swarm.png
-                        class=cover></a>
-                <p><strong>update (04-02-2023):</strong> a friend told me apparently it's not based on real
-                    events at all really and i was tricked by the internet again. which means i can give it
-                    a star rating heheee. i feel so silly but i'll keep up my insane little rant below
-                    because although my larger ideas might not apply to swarm anymore, i think i make good
-                    points in general. i feel strangely embarrassed but also its okay because who cares</p>
-                <p>i think Swarm was beautifully crafted and the acting was incredible. however. the more i
-                    think and talk about this show the more i am bothered by this strange feeling i have
-                    about what this show actually is. it's hard to describe but it feels a little lost in
-                    it's purpose. watching the show, it really feels like it's a fiction thriller show
-                    (despite it saying "this is not fiction" in the beginning of every episode), but it's
-                    not. now, i don't know much about the actual events this show is based on, but i know it
-                    is based on both real life events and rumors, calling itself Not Fiction. this really
-                    bothers me. i worry about what it means to take real life events and portray them in a
-                    way that feels? fictional? hm. i feel like i'm not doing a great job of expressing what
-                    i mean. this just didn't feel as serious as it was, i feel, supposed to be. when reading
-                    this show as a non-fiction piece, it feels like another one of those serial killer
-                    documentary that glamorizes and makes a spectacle of real killers. which is not great.
-                    it also makes me feel weird as a viewer, enjoying what feels like a fun Fictional
-                    thriller, and then remembering that this is not fictional and real people were hurt by
-                    these events. this is the biggest issue i have with the show, and this exactly is also
-                    what makes its commentary on stan culture feel really shallow. now, if this was indeed
-                    fiction, i wouldn't mind the shallow commentary because this show doesn't feel like it
-                    was that serious to begin with. it's really artistic and beautiful and emotionally
-                    engaging and visually appealing, but i think it was missing the more serious undertones
-                    it needs. like, those serial killer documentaries are <i>documentaries</i>, so (despite
-                    those shows being terrible and incredibly harmful) at least you would know what you're
-                    going into before you start watching.</p>
-                <p>maybe i'm totally wrong and stupid about this. but i just think this kind of uncertainty?
-                    whatever the missing piece is here that's bugging me so much.. is really important to
-                    have and without it i feel like it can send weird messages to viewers who are struggling
-                    enough with media literacy today. idk man.... the implications are weird. i feel weird!
-                </p>
-            </div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
+        </div>
+        <div class=inner>
+            <br>
+            <p style=margin:0><strong>date:</strong> mar. 18th 2023</p>
+            <p style=margin:0><strong>status:</strong> completed</p>
+            <p>swarm</p>
+            <a style=background-color:transparent target=_blank href=https://en.wikipedia.org/wiki/Swarm_(TV_series)><img src=/pics/library/swarm.png class=cover></a>
+            <p><strong>update (04-02-2023):</strong> a friend told me apparently it's not based on real events at all really and i was tricked by the internet again. i feel so silly but i'll keep up my insane little rant below because although my larger ideas might not apply to swarm anymore, i think i make good points in general. i feel strangely embarrassed but also its okay because who cares</p>
+            <p>i think Swarm was beautifully crafted and the acting was incredible. however. the more i think and talk about this show the more i am bothered by this strange feeling i have about what this show actually is. it's hard to describe but it feels a little lost in it's purpose. watching the show, it really feels like it's a fiction thriller show (despite it saying "this is not fiction" in the beginning of every episode), but it's not. now, i don't know much about the actual events this show is based on, but i know it is based on both real life events and rumors, calling itself Not Fiction. this really bothers me. i worry about what it means to take real life events and portray them in a way that feels? fictional? hm. i feel like i'm not doing a great job of expressing what i mean. this just didn't feel as serious as it was, i feel, supposed to be. when reading this show as a non-fiction piece, it feels like another one of those serial killer documentary that glamorizes and makes a spectacle of real killers. which is not great. it also makes me feel weird as a viewer, enjoying what feels like a fun Fictional thriller, and then remembering that this is not fictional and real people were hurt by these events. this is the biggest issue i have with the show, and this exactly is also what makes its commentary on stan culture feel really shallow. now, if this was indeed fiction, i wouldn't mind the shallow commentary because this show doesn't feel like it was that serious to begin with. it's really artistic and beautiful and emotionally engaging and visually appealing, but i think it was missing the more serious undertones it needs. like, those serial killer documentaries are <i>documentaries</i>, so (despite those shows being terrible and incredibly harmful) at least you would know what you're going into before you start watching.</p>
+            <p>maybe i'm totally wrong and stupid about this. but i just think this kind of uncertainty? whatever the missing piece is here that's bugging me so much.. is really important to have and without it i feel like it can send weird messages to viewers who are struggling enough with media literacy today. idk man.... the implications are weird. i feel weird!</p>
         </div>
     </div>
+</div>
+
     <div class="filterDiv tv">
         <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
-            </div>
-            <div class=inner>
-                <br>
-                <p style=margin:0><strong>date:</strong> mar. 13th 2023</p>
-                <strong>status:</strong> completed
-                <p style=margin:0><strong>rating:</strong> ★ ★ ★ ★ ★</p>
-                <p>the last of us (season 1)</p>
-                <a style=background-color:transparent target=_blank href=https://www.hbo.com/the-last-of-us><img
-                        src=/pics/library/tlou.png class=cover></a>
-                <p>after watching the entire first season what i have to say is: man this show is just so
-                    beautifully written. and amazingly produced. i think the scene in the season finale
-                    where joel is killing everyone in the hospital but the audio is muffled almost like
-                    you're putting your hands over your ears was so powerful to me. chefs kiss absolutely
-                    brilliant. that will stick with me forever. the worldbuilding is just so cool. i've been
-                    seeing side by side comparisons of the show and the game and i am so impressed by how
-                    true to the source material they are. i haven't played the games but i know many who
-                    have and they all have told me that even though they know what will happen they are
-                    still hooked and excited to see what each episode brings. i love joel ellie so much.
-                    best duo to ever duo.</p>
-            </div>
+            <div class=libbox-title-bar># tv <div class=right>x</div>
+        </div>
+        <div class=inner>
+            <br>
+            <p style=margin:0><strong>date:</strong> mar. 13th 2023</p>
+            <strong>status:</strong> completed
+            <p>the last of us (season 1)</p>
+            <a style=background-color:transparent target=_blank href=https://www.hbo.com/the-last-of-us><img src=/pics/library/tlou.png class=cover></a>
+            <p>after watching the entire first season what i have to say is: man this show is just so beautifully written. and amazingly produced. i think the scene in the season finale where joel is killing everyone in the hospital but the audio is muffled almost like you're putting your hands over your ears was so powerful to me. chefs kiss absolutely brilliant. that will stick with me forever. the worldbuilding is just so cool. i've been seeing side by side comparisons of the show and the game and i am so impressed by how true to the source material they are. i haven't played the games but i know many who have and they all have told me that even though they know what will happen they are still hooked and excited to see what each episode brings. i love joel ellie so much. best duo to ever duo.</p>
         </div>
     </div>
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># tv/film <div class=right>x</div>
-            </div>
-            <div class=inner>
-                <br>
-                <p style=margin:0><strong>date:</strong> mar. 11th 2023</p>
-                <p style=margin:0><strong>status:</strong> completed</p>
-                <p>every single scream movie</p>
-                <img src=/pics/library/scream.png class=cover>
-                <p>i have taken it upon myself to watch every single scream movie in a row, and i will
-                    compile my little Thoughts all into one post because having 6 boxes on SCREAM feels
-                    insane. plus i don't think i'll have much to say on each individual one. we'll see
-                    though.</p>
-                <p><strong>(3/8/23) scream 1:</strong> loved it. too many breaking 4th wall jokes about
-                    Horror Movie Structure <i>but</i> the scene where that nerd guy was like "behind you!"
-                    and the freaks in the van were watching him and screaming "behind you!" was really
-                    funny.</p>
-                <p><strong>(3/10/23) scream 2:</strong> i see that the fourth wall thing is a Bit now. i get
-                    it. it's fun i do enjoy it now a lot more. i started to get bored halfway though because
-                    i just don't care about dewey and Monica (who i know is not actually named monica). but
-                    then the end got exciting again. even though i wasn't a fan of the killers this time.
-                    felt like something was missing...</p>
-                <p><strong>scream 3:</strong> what is sid's kill count at this point my god! they can't let
-                    her keep getting away with this!!!!</p>
-                <p><strong>(3/11/23) scream 4:</strong> alright we're starting to pick up. better than 3,
-                    pretty good. i did get a little bored halfway through tho. again. i loved emma roberts
-                    though. i think i would have disliked this one a lot more without her performance. she
-                    carried!!!</p>
-                <p><strong>scream 5:</strong> i think this one might be my favorite so far. i suddenly care
-                    more about dewey and monica now. i've started to love the movie structure monologues
-                    they do every time it makes me feel like i'm taking film 101. amber has been my favorite
-                    killer so far besides the originals i'd say. the fact that it's all in the same house is
-                    a detail i loved. ugh! everything was done so much better.</p>
-                <p><strong>scream 6:</strong> an incredible movie!!! i'm so glad i got to see this one in
-                    theaters. i absolutely love the killers in this one, the acting was incredible and tbh i
-                    supported them! i'll be vague to avoid spoilers since this one is so new, but ahh!!! the
-                    twist?! so good. i totally didn't see you-know-who coming back. and then the thing!!!
-                    and then he made it!!!!! wow. haha. 5/5. my official ranking as of my Feelings right now
-                    are 1, 4+5 all tied for first. then its 4, 2, and then 3. what a great franchise.
-                    <s>scream7 now!!!!!!!!!!</s>
-                </p>
-            </div>
-        </div>
+</div>
+    
+<div class="filterDiv movie">
+    <div class=libbox>
+        <div class=libbox-title-bar># film <div class=right>x</div>
     </div>
+    <div class=inner>
+        <br>
+        <p style=margin:0><strong>date:</strong> mar. 11th 2023</p>
+        <p style=margin:0><strong>status:</strong> completed</p>
+        <p>every single scream movie</p>
+        <img src=/pics/library/scream.png class=cover>
+        <p>i have taken it upon myself to watch every single scream movie in a row, and i will compile my little Thoughts all into one post because having 6 boxes on SCREAM feels insane. plus i don't think i'll have much to say on each individual one. we'll see though.</p>
+        <p><strong>(3/8/23) scream 1:</strong> loved it. too many breaking 4th wall jokes about Horror Movie Structure <i>but</i> the scene where that nerd guy was like "behind you!" and the freaks in the van were watching him and screaming "behind you!" was really funny.</p>
+        <p><strong>(3/10/23) scream 2:</strong> i see that the fourth wall thing is a Bit now. i get it. it's fun i do enjoy it now a lot more. i started to get bored halfway though because i just don't care about dewey and Monica (who i know is not actually named monica). but then the end got exciting again. even though i wasn't a fan of the killers this time. felt like something was missing...</p>
+        <p><strong>scream 3:</strong> what is sid's kill count at this point my god! they can't let her keep getting away with this!!!!</p>
+        <p><strong>(3/11/23) scream 4:</strong> alright we're starting to pick up. better than 3, pretty good. i did get a little bored halfway through tho. again. i loved emma roberts though. i think i would have disliked this one a lot more without her performance. she carried!!!</p>
+        <p><strong>scream 5:</strong> i think this one might be my favorite so far. i suddenly care more about dewey and monica now. i've started to love the movie structure monologues they do every time it makes me feel like i'm taking film 101. amber has been my favorite killer so far besides the originals i'd say. the fact that it's all in the same house is a detail i loved. ugh! everything was done so much better.</p>
+        <p><strong>scream 6:</strong> an incredible movie!!! i'm so glad i got to see this one in theaters. i absolutely love the killers in this one, the acting was incredible and tbh i supported them! i'll be vague to avoid spoilers since this one is so new, but ahh!!! the twist?! so good. i totally didn't see you-know-who coming back. and then the thing!!! and then he made it!!!!! wow. haha. 5/5. my official ranking as of my Feelings right now are 1, 4+5 all tied for first. then its 4, 2, and then 3. what a great franchise.<s>scream7 now!!!!!!!!!!</s></p>
+    </div>
+</div>
+</div>
+
     <div class="filterDiv anime">
         <div class=libbox>
             <div class=libbox-title-bar># animanga <div class=right>x</div>
-            </div>
-            <div class=inner>
-                <br>
-                <p style=margin:0><strong>date:</strong> mar. 6th 2023</p>
-                <p style=margin:0><strong>status:</strong> completed</p>
-                <p>cardcaptor sakura </p>
-                <a style=background-color:transparent target=_blank
-                    href="https://myanimelist.net/anime/232/Cardcaptor_Sakura?q=cardca&cat=anime"><img
-                        src=/pics/library/ccs.png class=cover></a>
-                <p>i love how adorable this show is. i did enjoy the first season a lot more than the
-                    second. especially towards the end with the yue Development and also just getting more
-                    growth out of sakura and li. i feel like the pacing was just more to my liking than it
-                    was in the second season. but!! i didn't <i>dislike</i> season 2 or anything, it's super
-                    cute and i am living for all the yukino and tomoya moments... (the best part of the
-                    entire series tbh) they mean so much to me (´｡• ω •｡`) ♡</p>
-                <br>
-                <br>
-                <br>
-            </div>
+        </div>
+        <div class=inner>
+            <br>
+            <p style=margin:0><strong>date:</strong> mar. 6th 2023</p>
+            <p style=margin:0><strong>status:</strong> completed</p>
+            <p>cardcaptor sakura </p>
+            <a style=background-color:transparent target=_blank href="https://myanimelist.net/anime/232/Cardcaptor_Sakura?q=cardca&cat=anime"><img src=/pics/library/ccs.png class=cover></a>
+            <p>i love how adorable this show is. i did enjoy the first season a lot more than the second. especially towards the end with the yue Development and also just getting more growth out of sakura and li. i feel like the pacing was just more to my liking than it was in the second season. but!! i didn't <i>dislike</i> season 2 or anything, it's super cute and i am living for all the yukino and tomoya moments... (the best part of the entire series tbh) they mean so much to me (´｡• ω •｡`) ♡</p>
+            <br>
+            <br>
         </div>
     </div>
-    </div>
+</div>
+</div>
 </body>
 
 </html>
