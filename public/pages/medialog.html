@@ -28,6 +28,23 @@
     </div>
     <script>function filterSelection(d) { var a, b; a = document.getElementsByClassName("filterDiv"); if (d == "all") { d = "" } for (b = 0; b < a.length; b++) { w3RemoveClass(a[b], "show"); if (a[b].className.indexOf(d) > -1) { w3AddClass(a[b], "show") } } } function w3AddClass(e, c) { var d, b, a; b = e.className.split(" "); a = c.split(" "); for (d = 0; d < a.length; d++) { if (b.indexOf(a[d]) == -1) { e.className += " " + a[d] } } } function w3RemoveClass(e, c) { var d, b, a; b = e.className.split(" "); a = c.split(" "); for (d = 0; d < a.length; d++) { while (b.indexOf(a[d]) > -1) { b.splice(b.indexOf(a[d]), 1) } } e.className = b.join(" ") } var btnContainer = document.getElementById("myBtnContainer"); var btns = btnContainer.getElementsByClassName("btn"); for (var i = 0; i < btns.length; i++) { btns[i].addEventListener("click", function () { var a = document.getElementsByClassName("active"); a[0].className = a[0].className.replace(" active", ""); this.className += " active" }) } document.addEventListener("DOMContentLoaded", function () { filterSelection("all"); document.querySelector(".btn.active").classList.remove("active"); document.querySelector(".btn:nth-child(1)").classList.add("active") });</script>
 
+    <!--media logs start here-->
+
+    <div class="filterDiv movie">
+        <div class="libbox">
+            <div class="libbox-title-bar"># film <div class="right">x</div>
+        </div>
+        <div class="inner">
+            <br>
+            <p style="margin:0"><strong>date:</strong> feb 25th 2024</p>
+            <strong>status:</strong> completed
+            <p>machine girl (2008)</p>
+            <img src="/pics/library/machinegirl.png" class="cover">
+            <p>this was a pretty fun watch actually. kinda yuri also. tween girls get amputated and replaced limbs with sick machine guns and other weapons. the gore special effects were so goofy it gave it made the whole thing seem more Fun and less of an attempt at horror. the drill bra was incredible!!! my chosen method of death tbh. who wouldn't want to get shredded by a hot mafia milf? i also watched the sequel (?) the twenty minute spin-off called <u>shyness machine girl</u> which was even sillier and more ridiculous. but i loved it. new girl has a machine gun that pops out of her butt. how embarrassing! you can see why she's so shy about it. something to be said about weaponizing the shame girls are supposed to feel about their own bodies and such. very enjoyable. might force my friends to watch this one with me later.</p>
+        </div>
+    </div>
+    </div>
+
     <div class="filterDiv movie fav anime">
         <div class="libbox">
             <div class="libbox-title-bar"># film <div class="right">x</div>
