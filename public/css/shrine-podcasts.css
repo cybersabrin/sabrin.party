@@ -1,8 +1,8 @@
 @font-face{font-family:'MS PGothic';src:url(/fonts/MS-PGothic.eot);src:url(/fonts/MS-PGothic.eot?#iefix) format("embedded-opentype"),url(/fonts/MS-PGothic.woff2) format("woff2"),url(/fonts/MS-PGothic.woff) format("woff"),url(/fonts/MS-PGothic.ttf) format("truetype"),url(/fonts/MS-PGothic.svg#MS-PGothic) format("svg");font-weight:400;font-style:normal}
 @font-face{font-family:'DOS';src:url(/fonts/perfect_dos_vga_437-webfont.woff2) format("woff2"),url(/fonts/perfect_dos_vga_437-webfont.woff) format("woff");font-weight:400;font-style:normal}
 *{box-sizing:border-box;font-family:'MS PGothic'}
-.container{position:relative;max-width:900px;height:720px;margin:auto;margin-top:50px;border:2px dashed #e49a79;padding:20px;background-image:url(https://boything.neocities.org/pics/backgrounds/page_background_animated_04.gif);border-radius:25px}
-.title{position:relative;height:160px;border-radius:10px 10px 0 0;border:dashed #42858d 2px;padding-left:160px;padding-right:160px;background-image:url(https://boything.neocities.org/pics/shrine-pods/cats.png);background-position:center;opacity:.75}
+.container{position:relative;max-width:900px;height:720px;margin:auto;margin-top:50px;border:2px dashed #e49a79;padding:20px;background-image:url(/pics/backgrounds/page_background_animated_04.gif);border-radius:25px}
+.title{position:relative;height:160px;border-radius:10px 10px 0 0;border:dashed #42858d 2px;padding-left:160px;padding-right:160px;background-image:url(/pics/shrine-pods/cats.png);background-position:center;opacity:.75}
 .titlePNG{height:100px;-webkit-filter:drop-shadow(10px 10px 10px #e5f07b);filter:drop-shadow(10px 10px 10px #e5f07b)}
 h1{font-family:'Times New Roman',Times,serif;font-size:60pt;line-height:30px;margin-top:20px;color:#fff;-webkit-filter:drop-shadow(5px 5px 5px #a87c48);filter:drop-shadow(5px 5px 5px #a87c48)}
 h2{margin-top:-5px}

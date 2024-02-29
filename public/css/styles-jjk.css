@@ -47,7 +47,7 @@ p {
 .main {
   width: 1160px;
   height: 810px;
-  background-image: url(https://boything.neocities.org/pics/jjk-shrine/jjkbackground.jpg);
+  background-image: url(/pics/jjk-shrine/jjkbackground.jpg);
   border: 1px solid black;
   margin: 0 auto;
   padding: 10px;
