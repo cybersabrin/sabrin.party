@@ -21,7 +21,7 @@ body {
     float: left;
     display: flex;
     padding: 20px;
-    background-image: url(/pics/backgrounds/page_background_animated_04.gif);
+    background-image: url(https://boything.neocities.org/pics/backgrounds/page_background_animated_04.gif);
     z-index: 0;
     height: 1230px;
     margin-bottom: 140px;
@@ -168,7 +168,7 @@ a.homeNotelink {
     margin-top: 520px;
     margin-left: 10px;
     padding: 15px;
-    background-image: url(/pics/backgrounds/rainbow.webp);
+    background-image: url(https://boything.neocities.org/pics/backgrounds/rainbow.webp);
     opacity: 0.9;
     background-size: cover;
     border: 2px #549f0e dashed;

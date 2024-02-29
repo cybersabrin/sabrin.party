@@ -73,7 +73,7 @@ a:hover {
 }
 
 aside {
-    background: black url(/pics/backgrounds/battleback_ow_xsbf.png);
+    background: black url(https://boything.neocities.org/pics/backgrounds/battleback_ow_xsbf.png);
     background-size: cover;
     width: 230px;
     padding: 20px;
@@ -130,7 +130,7 @@ strong {
   }
   
   .collapsible {
-      background: url(/pics/backgrounds/battleback_dw_abbi.png);
+      background: url(https://boything.neocities.org/pics/backgrounds/battleback_dw_abbi.png);
       color: white;
       cursor: pointer;
       font-family: 'MS PGothic';
