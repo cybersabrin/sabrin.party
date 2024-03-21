@@ -48,6 +48,7 @@ p {
   width: 1160px;
   height: 810px;
   background-image: url(/pics/jjk-shrine/jjkbackground.jpg);
+  background-repeat: repeat;
   border: 1px solid black;
   margin: 0 auto;
   padding: 10px;
