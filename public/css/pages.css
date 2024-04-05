@@ -257,6 +257,7 @@ p {
     padding-right: 8px;
     width: 123px;
     height: 185px;
+    position: relative;
 }
 
 .libwelcome {
@@ -333,11 +334,12 @@ p {
     line-height: 12px;
 }
 
+
 /*Main body text boxes.*/
 .libbox {
     margin: 0 auto;
     width: 100%;
-    min-height: 325px;
+    min-height: 320px;
     padding-bottom: 3px;
     margin-bottom: 25px;
     background-color: #fef8ff;
@@ -345,6 +347,7 @@ p {
     padding-right: 5px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px #e9c3f1;
+    
 }
 
 .libtitle {
