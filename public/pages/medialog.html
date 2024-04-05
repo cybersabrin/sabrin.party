@@ -9,26 +9,85 @@
 </head>
 
 <body style="width: 600px; background-image: url(/pics/backgrounds/heartswallpaper.webp);">
-    <h1 class=libtitle><i>media log</i></h1>
-    <div class=libwelcome>
-        <p style=margin-top:10px>i have lots of thoughts on the media i consume. some of these entries are
+    <h1 class="libtitle"><i>media log</i></h1>
+    <div class="libwelcome">
+        <p style="margin-top:10px">i have lots of thoughts on the media i consume. some of these entries are
             Super Great.. others are boring. it depends on how crazed i am feeling at the time of writing
             them. enjoy!</p>
-        <div id=myBtnContainer>
-            <button class="btn active" onclick="filterSelection('all')"> all</button>
-            <button class=btn onclick="filterSelection('current')"> current</button>
-            <button class=btn onclick="filterSelection('fav')"> favs</button>
-            <button class=btn onclick="filterSelection('game')"> games</button>
-            <button class=btn onclick="filterSelection('tv')"> tv shows</button>
-            <button class=btn onclick="filterSelection('movie')"> movies</button>
-            <button class=btn onclick="filterSelection('manga')"> manga</button>
-            <button class=btn onclick="filterSelection('anime')"> anime</button>
-            <button class=btn onclick="filterSelection('lit')"> books</button>
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')">all</button>
+            <button class="btn" onclick="filterSelection('current')">currently consuming</button>
+            <button class="btn" onclick="filterSelection('fav')">favs</button>
+            <button class="btn" onclick="filterSelection('game')">games</button>
+            <button class="btn" onclick="filterSelection('tv')">tv shows</button>
+            <button class="btn" onclick="filterSelection('movie')">movies</button>
+            <button class="btn" onclick="filterSelection('manga')">manga</button>
+            <button class="btn" onclick="filterSelection('anime')">anime</button>
+            <button class="btn" onclick="filterSelection('lit')">books</button>
         </div>
     </div>
-    <script>function filterSelection(d) { var a, b; a = document.getElementsByClassName("filterDiv"); if (d == "all") { d = "" } for (b = 0; b < a.length; b++) { w3RemoveClass(a[b], "show"); if (a[b].className.indexOf(d) > -1) { w3AddClass(a[b], "show") } } } function w3AddClass(e, c) { var d, b, a; b = e.className.split(" "); a = c.split(" "); for (d = 0; d < a.length; d++) { if (b.indexOf(a[d]) == -1) { e.className += " " + a[d] } } } function w3RemoveClass(e, c) { var d, b, a; b = e.className.split(" "); a = c.split(" "); for (d = 0; d < a.length; d++) { while (b.indexOf(a[d]) > -1) { b.splice(b.indexOf(a[d]), 1) } } e.className = b.join(" ") } var btnContainer = document.getElementById("myBtnContainer"); var btns = btnContainer.getElementsByClassName("btn"); for (var i = 0; i < btns.length; i++) { btns[i].addEventListener("click", function () { var a = document.getElementsByClassName("active"); a[0].className = a[0].className.replace(" active", ""); this.className += " active" }) } document.addEventListener("DOMContentLoaded", function () { filterSelection("all"); document.querySelector(".btn.active").classList.remove("active"); document.querySelector(".btn:nth-child(1)").classList.add("active") });</script>
+    <script>function filterSelection(d) {
+        var a, b;
+        a = document.getElementsByClassName("filterDiv");
+        if (d == "all") {
+            d = ""
+        }
+        for (b = 0; b < a.length; b++) {
+            w3RemoveClass(a[b], "show");
+            if (a[b].className.indexOf(d) > -1) {
+                w3AddClass(a[b], "show")
+            }
+        }
+    }
+    
+    function w3AddClass(e, c) {
+        var d, b, a;
+        b = e.className.split(" ");
+        a = c.split(" ");
+        for (d = 0; d < a.length; d++) {
+            if (b.indexOf(a[d]) == -1) {
+                e.className += " " + a[d]
+            }
+        }
+    }
+    
+    function w3RemoveClass(e, c) {
+        var d, b, a;
+        b = e.className.split(" ");
+        a = c.split(" ");
+        for (d = 0; d < a.length; d++) {
+            while (b.indexOf(a[d]) > -1) {
+                b.splice(b.indexOf(a[d]), 1)
+            }
+        }
+        e.className = b.join(" ")
+    }
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var a = document.getElementsByClassName("active");
+            a[0].className = a[0].className.replace(" active", "");
+            this.className += " active"
+        })
+    };</script>
 
     <!--media logs start here-->
+
+    <div class="filterDiv anime current">
+        <div class=libbox>
+            <div class=libbox-title-bar># film <div class=right>x</div>
+        </div>
+        <div class=inner>
+            <br>
+            <p style=margin:0><strong>date:</strong> apr 4th 2024</p>
+            <strong>status:</strong> currently watching
+            <p>flip flappers</p>
+            <img src=/pics/library/flipflappers.png class=cover>
+            <p>it's me and the magical girl yuri until the end of time...</p>
+        </div>
+    </div>
+    </div>
 
     <div class="filterDiv movie">
         <div class=libbox>
@@ -2093,7 +2152,7 @@
     </div>
     </div>
 
-    <div class="filterDiv tv current">
+    <div class="filterDiv current tv">
         <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div></div>
         <div class=inner>
             <br>
