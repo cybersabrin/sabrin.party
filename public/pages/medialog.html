@@ -4,84 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/public/css/pages.css">
     <title>media log.</title>
 </head>
 
-<body style="width: 600px; background-image: url(/pics/backgrounds/heartswallpaper.webp);">
+<body style="width: 600px; background-image: url(/public/pics/backgrounds/heartswallpaper.webp);">
     <h1 class="libtitle"><i>media log</i></h1>
     <div class="libwelcome">
-        <marquee>sorry guys idk why this looks so wonky and terrible on firefox it looks fine on chrome but i hate chrome ugh. ugh!! i don't know how to fix this lmao i'll try to get to the bottom of this in the summer... sorry again lmao.</marquee>
-        <p style="margin-top:10px">i have lots of thoughts on the media i consume. some of these entries are
-            Super Great.. others are boring. it depends on how crazed i am feeling at the time of writing
-            them. enjoy!</p>
-        <div id="myBtnContainer">
-            <button class="btn active" onclick="filterSelection('all')">all</button>
-            <button class="btn" onclick="filterSelection('current')">currently consuming</button>
-            <button class="btn" onclick="filterSelection('fav')">favs</button>
-            <button class="btn" onclick="filterSelection('game')">games</button>
-            <button class="btn" onclick="filterSelection('tv')">tv shows</button>
-            <button class="btn" onclick="filterSelection('movie')">movies</button>
-            <button class="btn" onclick="filterSelection('manga')">manga</button>
-            <button class="btn" onclick="filterSelection('anime')">anime</button>
-            <button class="btn" onclick="filterSelection('lit')">books</button>
-        </div>
+        <p style="margin-top:15px">my best attempt at a comprehensive log of all the media i've consumed since i made this page... sometimes i have cool valuable things to say. other times i don't. it is what it is.</p>
     </div>
-    <script>function filterSelection(d) {
-        var a, b;
-        a = document.getElementsByClassName("filterDiv");
-        if (d == "all") {
-            d = ""
-        }
-        for (b = 0; b < a.length; b++) {
-            w3RemoveClass(a[b], "show");
-            if (a[b].className.indexOf(d) > -1) {
-                w3AddClass(a[b], "show")
-            }
+    <div id="myBtnContainer" style="text-align: center;">
+        <button class="btn active" onclick="filterObjects('all')"> all</button>
+        <button class="btn" onclick="filterObjects('current')">current</button>
+        <button class="btn" onclick="filterObjects('fav')">favs</button>
+        <button class="btn" onclick="filterObjects('game')">games</button>
+        <button class="btn" onclick="filterObjects('tv')">tv shows</button>
+        <button class="btn" onclick="filterObjects('movie')">movies</button>
+        <button class="btn" onclick="filterObjects('manga')">manga</button>
+        <button class="btn" onclick="filterObjects('anime')">anime</button>
+        <button class="btn" onclick="filterObjects('lit')">books</button>
+    </div>
+    <script>
+        filterObjects("all");
+
+function filterObjects(c) {
+    var x, i;
+    x = document.getElementsByClassName("log");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+        removeClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+    }
+}
+
+function addClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
         }
     }
-    
-    function w3AddClass(e, c) {
-        var d, b, a;
-        b = e.className.split(" ");
-        a = c.split(" ");
-        for (d = 0; d < a.length; d++) {
-            if (b.indexOf(a[d]) == -1) {
-                e.className += " " + a[d]
-            }
+}
+
+function removeClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
         }
     }
-    
-    function w3RemoveClass(e, c) {
-        var d, b, a;
-        b = e.className.split(" ");
-        a = c.split(" ");
-        for (d = 0; d < a.length; d++) {
-            while (b.indexOf(a[d]) > -1) {
-                b.splice(b.indexOf(a[d]), 1)
-            }
-        }
-        e.className = b.join(" ")
-    }
-    var btnContainer = document.getElementById("myBtnContainer");
-    var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function() {
-            var a = document.getElementsByClassName("active");
-            a[0].className = a[0].className.replace(" active", "");
-            this.className += " active"
-        })
-    };</script>
+    element.className = arr1.join(" ");
+}
+    </script>
 
     <!--media logs start here-->
 
-    <div class="filterDiv anime current">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> apr 4th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> apr 5th 2024</p>
+            <strong>status:</strong> completed
+            <p>lance lizardi (2017)</p>
+            <img src=/pics/library/lancelizardi.png class=cover>
+            <p>this is a fantastic little short film about a guy who loves lizards so much he becomes one. or was he a lizard this whole time? doesn't matter. love is love.</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="log anime now">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
+        </div>
+        <div class="logtxt">
+            <br>
+            <p style="margin: 0;"><strong>date:</strong> apr 4th 2024</p>
             <strong>status:</strong> currently watching
             <p>flip flappers</p>
             <img src=/pics/library/flipflappers.png class=cover>
@@ -90,13 +93,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> apr 4th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> apr 4th 2024</p>
             <strong>status:</strong> completed
             <p>horrorgirl (1995)</p>
             <img src=/pics/library/horrorgirl.png class=cover>
@@ -105,13 +108,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> apr 4th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> apr 4th 2024</p>
             <strong>status:</strong> completed
             <p>banned from broadcast: saiko! the large family (2009)</p>
             <img src=/pics/library/saiko.png class=cover>
@@ -120,13 +123,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> apr 3rd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> apr 3rd 2024</p>
             <strong>status:</strong> completed
             <p>the raspberry reich (2004)</p>
             <img src=/pics/library/trr.png class=cover>
@@ -135,13 +138,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie fav">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie fav">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> apr 1st 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> apr 1st 2024</p>
             <strong>status:</strong> completed
             <p>guinea pig: mermaid in the manhole (1988)</p>
             <img src=/pics/library/gpm.png class=cover>
@@ -151,13 +154,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> apr 1st 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> apr 1st 2024</p>
             <strong>status:</strong> completed
             <p>baby cat (2023)</p>
             <img src=/pics/library/babycat.png class=cover>
@@ -166,13 +169,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 31st 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 31st 2024</p>
             <strong>status:</strong> completed
             <p>flaming creatures (1963)</p>
             <img src=/pics/library/flamingcreatures.png class=cover>
@@ -181,13 +184,13 @@
     </div>
     </div>
 
-    <div class="filterDiv game current">
-        <div class=libbox>
-            <div class=libbox-title-bar># videogame <div class=right>x</div>
+    <div class="log game now">
+        <div class="logmain">
+            <div class="titlebar"># videogame <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 30th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 30th 2024</p>
             <strong>status:</strong> currently playing
             <p>life is strange 2</p>
             <img src=/pics/library/lis2.png class=cover>
@@ -196,13 +199,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 30th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 30th 2024</p>
             <strong>status:</strong> completed
             <p>steve.oedekerk.com (1997)</p>
             <img src=/pics/library/stevedotoedekerk.png class=cover>
@@ -211,13 +214,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 29th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 29th 2024</p>
             <strong>status:</strong> completed
             <p>chainsaw scumfuck (1988)</p>
             <img src=/pics/library/cssf.png class=cover>
@@ -226,13 +229,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie fav">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie fav">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 29th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 29th 2024</p>
             <strong>status:</strong> completed
             <p>good dick (2008)</p>
             <img src=/pics/library/gooddick.png class=cover>
@@ -241,13 +244,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 28th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 28th 2024</p>
             <strong>status:</strong> completed
             <p>bitch (2017)</p>
             <img src=/pics/library/bitch.png class=cover>
@@ -257,13 +260,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 28th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 28th 2024</p>
             <strong>status:</strong> completed
             <p>dare (2005) & the dare project (2018)</p>
             <img src=/pics/library/dare.png class=cover>
@@ -272,13 +275,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 25th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 25th 2024</p>
             <strong>status:</strong> completed
             <p>how to have cyber sex on the internet (1996)</p>
             <img src=/pics/library/hthcsoti.png class=cover>
@@ -287,13 +290,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 25th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 25th 2024</p>
             <strong>status:</strong> completed
             <p>amityville karen (2022)</p>
             <img src=/pics/library/ak.png class=cover>
@@ -302,13 +305,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie fav">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie fav">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 24th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 24th 2024</p>
             <strong>status:</strong> completed
             <p>waiting for dracula (2012)</p>
             <img src=/pics/library/waitingfordracula.png class=cover>
@@ -317,13 +320,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 22nd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 22nd 2024</p>
             <strong>status:</strong> completed
             <p>the body papers by grade talusan</p>
             <img src=/pics/library/thebodypapers.png class=cover>
@@ -332,13 +335,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 22nd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 22nd 2024</p>
             <strong>status:</strong> completed
             <p>dream scenario (2023)</p>
             <img src=/pics/library/ds.png class=cover>
@@ -347,13 +350,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 22nd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 22nd 2024</p>
             <strong>status:</strong> completed
             <p>scorpio rising (1963)</p>
             <img src=/pics/library/scorpiorising.png class=cover>
@@ -362,13 +365,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 22nd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 22nd 2024</p>
             <strong>status:</strong> completed
             <p>nocturna artificialia (1979)</p>
             <img src=/pics/library/nocturnaa.png class=cover>
@@ -377,13 +380,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 22nd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 22nd 2024</p>
             <strong>status:</strong> completed
             <p>microwave massacre (1979)</p>
             <img src=/pics/library/mm.png class=cover>
@@ -392,13 +395,13 @@
     </div>
     </div>
 
-    <div class="filterDiv tv">
-        <div class=libbox>
-            <div class=libbox-title-bar># tv <div class=right>x</div>
+    <div class="log tv">
+        <div class="logmain">
+            <div class="titlebar"># tv <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 22nd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 22nd 2024</p>
             <strong>status:</strong> completed
             <p>quiet on set: the dark side of kid's tv</p>
             <img src=/pics/library/quietonset.png class=cover>
@@ -407,13 +410,13 @@
     </div>
     </div>
 
-    <div class="filterDiv game">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log game">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 20th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 20th 2024</p>
             <strong>status:</strong> completed
             <p>grimm's hollow</p>
             <img src=/pics/library/grimmshollow.png class=cover>
@@ -422,13 +425,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie fav">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie fav">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 19th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 19th 2024</p>
             <strong>status:</strong> completed
             <p>red lips (1995)</p>
             <img src=/pics/library/redlips.png class=cover>
@@ -437,13 +440,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 18th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 18th 2024</p>
             <strong>status:</strong> completed
             <p>gorotica (1993)</p>
             <img src=/pics/library/gorotica.png class=cover>
@@ -452,13 +455,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 18th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 18th 2024</p>
             <strong>status:</strong> completed
             <p>vampz (2004)</p>
             <img src=/pics/library/vampz.png class=cover>
@@ -467,13 +470,13 @@
     </div>
     </div>
 
-    <div class="filterDiv game">
-        <div class=libbox>
-            <div class=libbox-title-bar># videogame <div class=right>x</div>
+    <div class="log game">
+        <div class="logmain">
+            <div class="titlebar"># videogame <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 17th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 17th 2024</p>
             <strong>status:</strong> completed
             <p>detroit: become human</p>
             <img src=/pics/library/dbh.png class=cover>
@@ -482,13 +485,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 17th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 17th 2024</p>
             <strong>status:</strong> completed
             <p>deceived by my mother-in-law (2021)</p>
             <img src=/pics/library/motherinlaw.png class=cover>
@@ -497,13 +500,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 17th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 17th 2024</p>
             <strong>status:</strong> completed
             <p>anatomy of a fall (2023)</p>
             <img src=/pics/library/aoaf.png class=cover>
@@ -512,13 +515,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 16th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 16th 2024</p>
             <strong>status:</strong> completed
             <p>lisa frankenstein (2024)</p>
             <img src=/pics/library/lisafrankenstein.png class=cover>
@@ -527,13 +530,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 15th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 15th 2024</p>
             <strong>status:</strong> completed
             <p>she-devils on wheels (1968)</p>
             <img src=/pics/library/shedevils.png class=cover>
@@ -542,13 +545,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 15th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 15th 2024</p>
             <strong>status:</strong> completed
             <p>beach volleyball detectives parts 1 & 2 (2007)</p>
             <img src=/pics/library/bvd.png class=cover>
@@ -558,13 +561,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 14th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 14th 2024</p>
             <strong>status:</strong> completed
             <p>robowoman (2019)</p>
             <img src=/pics/library/robowoman.png class=cover>
@@ -573,13 +576,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 14th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 14th 2024</p>
             <strong>status:</strong> completed
             <p>female prisoner #701: scorpion (1972)</p>
             <img src=/pics/library/scorpion.png class=cover>
@@ -588,13 +591,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 13th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 13th 2024</p>
             <strong>status:</strong> completed
             <p>jesus christ vampire hunter (2001)</p>
             <img src=/pics/library/jcvamphunter.png class=cover>
@@ -603,13 +606,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 13th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 13th 2024</p>
             <strong>status:</strong> completed
             <p>the legacy (2022)</p>
             <img src=/pics/library/thelegacy.png class=cover>
@@ -618,13 +621,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 13th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 13th 2024</p>
             <strong>status:</strong> completed
             <p>attack of the meth gator (2023)</p>
             <img src=/pics/library/methgator.png class=cover>
@@ -633,13 +636,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 12th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 12th 2024</p>
             <strong>status:</strong> completed
             <p>cocaine shark (2023)</p>
             <img src=/pics/library/cocaineshark.png class=cover>
@@ -649,13 +652,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 12th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 12th 2024</p>
             <strong>status:</strong> completed
             <p>aliens on crack (2009)</p>
             <img src=/pics/library/aoc.png class=cover>
@@ -665,13 +668,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 12th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 12th 2024</p>
             <strong>status:</strong> completed
             <p>an erotic vampire in london (2002)</p>
             <img src=/pics/library/mmvamp.png class=cover>
@@ -680,13 +683,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 11th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 11th 2024</p>
             <strong>status:</strong> completed
             <p>dark angel: the ascent (1994)</p>
             <img src=/pics/library/darkangel.png class=cover>
@@ -695,13 +698,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 10th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 10th 2024</p>
             <strong>status:</strong> completed
             <p>kuroko's basketball the movie: last game (2017)</p>
             <img src=/pics/library/knbmovie.png class=cover>
@@ -711,13 +714,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 10th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 10th 2024</p>
             <strong>status:</strong> completed
             <p>woman at the wheel (1985)</p>
             <img src=/pics/library/watw.png class=cover>
@@ -727,13 +730,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 9th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 9th 2024</p>
             <strong>status:</strong> completed
             <p>the erotic misadventures of the invisible man (2003)</p>
             <img src=/pics/library/invisibleman.png class=cover>
@@ -742,13 +745,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 9th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 9th 2024</p>
             <strong>status:</strong> completed
             <p>female trouble (1974)</p>
             <img src=/pics/library/femaletrouble.png class=cover>
@@ -757,13 +760,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 9th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 9th 2024</p>
             <strong>status:</strong> completed
             <p>spiderbabe (2003)</p>
             <img src=/pics/library/spiderbabe.png class=cover>
@@ -773,13 +776,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 7th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 7th 2024</p>
             <strong>status:</strong> completed
             <p>theatre of blood (1973)</p>
             <img src=/pics/library/tob.png class=cover>
@@ -789,13 +792,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 7th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 7th 2024</p>
             <strong>status:</strong> completed
             <p>werewolf in a women's prison (2006)</p>
             <img src=/pics/library/wwip.png class=cover>
@@ -805,13 +808,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 7th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 7th 2024</p>
             <strong>status:</strong> completed
             <p>dark classics (2022)</p>
             <img src=/pics/library/darkclassics.png class=cover>
@@ -821,13 +824,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 7th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 7th 2024</p>
             <strong>status:</strong> completed
             <p>horse camp (2014)</p>
             <img src=/pics/library/horsecamp.png class=cover>
@@ -836,13 +839,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 7th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 7th 2024</p>
             <strong>status:</strong> completed
             <p>space girls in beverly hills (2009)</p>
             <img src=/pics/library/sgibh.png class=cover>
@@ -851,13 +854,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 6th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 6th 2024</p>
             <strong>status:</strong> completed
             <p>all of us strangers (2023)</p>
             <img src=/pics/library/aous.png class=cover>
@@ -866,13 +869,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 6th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 6th 2024</p>
             <strong>status:</strong> completed
             <p>los angeles lifers (2019)</p>
             <img src=/pics/library/lal.png class=cover>
@@ -881,13 +884,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 6th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 6th 2024</p>
             <strong>status:</strong> completed
             <p>after school massacre (2014)</p>
             <img src=/pics/library/asm.png class=cover>
@@ -896,13 +899,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 5th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 5th 2024</p>
             <strong>status:</strong> completed
             <p>slumber party massacre II (1987)</p>
             <img src=/pics/library/spm2.png class=cover>
@@ -911,13 +914,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 5th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 5th 2024</p>
             <strong>status:</strong> completed
             <p>slumber party massacre (1982)</p>
             <img src=/pics/library/spm.png class=cover>
@@ -926,13 +929,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 5th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 5th 2024</p>
             <strong>status:</strong> completed
             <p>gwank (2005)</p>
             <img src=/pics/library/gwank.png class=cover>
@@ -941,13 +944,13 @@
     </div>
     </div>
 
-    <div class="filterDiv tv">
-        <div class=libbox>
-            <div class=libbox-title-bar># tv <div class=right>x</div>
+    <div class="log tv">
+        <div class="logmain">
+            <div class="titlebar"># tv <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar 5th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 5th 2024</p>
             <strong>status:</strong> completed
             <p>leverage</p>
             <img src=/pics/library/leverage.png class=cover>
@@ -956,13 +959,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> mar 4th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 4th 2024</p>
             <strong>status:</strong> completed
             <p>pumpkinhead (1986)</p>
             <img src="/pics/library/pumpkinhead.png" class="cover">
@@ -971,13 +974,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> mar 4th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 4th 2024</p>
             <strong>status:</strong> completed
             <p>lords of chaos (2019)</p>
             <img src="/pics/library/loc.png" class="cover">
@@ -987,13 +990,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> mar 3rd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 3rd 2024</p>
             <strong>status:</strong> completed
             <p>cheerleader massacre (2003)</p>
             <img src="/pics/library/cheerleadermassacre.png" class="cover">
@@ -1003,13 +1006,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> mar 3rd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 3rd 2024</p>
             <strong>status:</strong> completed
             <p>club lingerie (2014)</p>
             <img src="/pics/library/clublingerie.png" class="cover">
@@ -1018,13 +1021,13 @@
     </div>
     </div>
 
-    <div class="filterDiv tv">
-        <div class="libbox">
-            <div class="libbox-title-bar"># tv <div class="right">x</div>
+    <div class="log tv">
+        <div class="logmain">
+            <div class="titlebar"># tv <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> mar 3rd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 3rd 2024</p>
             <strong>status:</strong> completed
             <p>hannibal</p>
             <img src="/pics/library/hannibal.png" class="cover">
@@ -1040,13 +1043,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> mar 2nd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 2nd 2024</p>
             <strong>status:</strong> completed
             <p>eaten alive! a tasteful revenge (1999)</p>
             <img src="/pics/library/eatenalive.png" class="cover">
@@ -1055,13 +1058,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> mar 2nd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> mar 2nd 2024</p>
             <strong>status:</strong> completed
             <p>geteven (1993)</p>
             <img src="/pics/library/geteven.png" class="cover">
@@ -1070,13 +1073,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 29th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 29th 2024</p>
             <strong>status:</strong> completed
             <p>horndogs beach party (2018)</p>
             <img src="/pics/library/horndogbeachparty.png" class="cover">
@@ -1086,13 +1089,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie fav">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie fav">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 29th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 29th 2024</p>
             <strong>status:</strong> completed
             <p>down and out in vampire hills (2023)</p>
             <img src="/pics/library/vamphills.png" class="cover">
@@ -1101,13 +1104,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 29th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 29th 2024</p>
             <strong>status:</strong> completed
             <p>monster in paris (2011)</p>
             <img src="/pics/library/monsterinparis.png" class="cover">
@@ -1116,13 +1119,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 29th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 29th 2024</p>
             <strong>status:</strong> completed
             <p>slink (2013)</p>
             <img src="/pics/library/slink.png" class="cover">
@@ -1131,13 +1134,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 28th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 28th 2024</p>
             <strong>status:</strong> completed
             <p>showgirls (1995)</p>
             <img src="/pics/library/showgirls.png" class="cover">
@@ -1146,11 +1149,11 @@
     </div>
     </div>
 
-    <div class="filterDiv anime">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log anime">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> feb 26th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 26th 2024</p>
             <strong>status:</strong> dropped :(
             <p>stop!! hibari-kun!</p>
             <img src=/pics/library/stophibarikun.png class=cover>
@@ -1160,13 +1163,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 27th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 27th 2024</p>
             <strong>status:</strong> completed
             <p>poor things (2023)</p>
             <img src="/pics/library/poorthings.png" class="cover">
@@ -1175,13 +1178,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 25th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 25th 2024</p>
             <strong>status:</strong> completed
             <p>machine girl (2008)</p>
             <img src="/pics/library/machinegirl.png" class="cover">
@@ -1190,13 +1193,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie fav anime">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie fav anime">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 25th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 25th 2024</p>
             <strong>status:</strong> completed
             <p>perfect blue (1997)</p>
             <img src="/pics/library/perfectblue.png" class="cover">
@@ -1206,13 +1209,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 25th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 25th 2024</p>
             <strong>status:</strong> completed
             <p>virtual sexuality (1999)</p>
             <img src="/pics/library/virtualsexuality.png" class="cover">
@@ -1221,13 +1224,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 25th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 25th 2024</p>
             <strong>status:</strong> completed
             <p>cannibal hookers (1987)</p>
             <img src="/pics/library/cannibalhookers.png" class="cover">
@@ -1237,13 +1240,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox">
-            <div class="libbox-title-bar"># film <div class="right">x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 25th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 25th 2024</p>
             <strong>status:</strong> completed
             <p>space zombie bingo!!! (1993)</p>
             <img src="/pics/library/zombiespacebingo.png" class="cover">
@@ -1252,13 +1255,13 @@
     </div>
     </div>
 
-    <div class="filterDiv game">
-        <div class="libbox">
-            <div class="libbox-title-bar"># videogame <div class="right">x</div>
+    <div class="log game">
+        <div class="logmain">
+            <div class="titlebar"># videogame <div class="x">x</div>
         </div>
-        <div class="inner">
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 19th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 19th 2024</p>
             <strong>status:</strong> in progress
             <p>final fantasy vii remake - intergrade</p>
             <img src="/pics/library/ff7.png" class="cover">
@@ -1267,11 +1270,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox"><div class="libbox-title-bar"># film <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 24th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 24th 2024</p>
             <strong>status:</strong> completed
             <p>wishman (1983)</p>
             <img src="/pics/library/wishman.png" class="cover">
@@ -1280,11 +1283,11 @@
     </div>
     </div>
     
-    <div class="filterDiv movie">
-        <div class="libbox"><div class="libbox-title-bar"># film <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 24th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 24th 2024</p>
             <strong>status:</strong> completed
             <p>teeth (2007)</p>
             <img src="/pics/library/teeth.png" class="cover">
@@ -1293,11 +1296,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox"><div class="libbox-title-bar"># film <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 23rd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 23rd 2024</p>
             <strong>status:</strong> completed
             <p>noriko's dinner table (2005)</p>
             <a href="https://www.youtube.com/watch?v=BAhE_M__39E" target="_blank"><img src="/pics/library/ndt.png" class="cover"></a>
@@ -1308,11 +1311,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie fav">
-        <div class="libbox"><div class="libbox-title-bar"># film <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log movie fav">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 23rd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 23rd 2024</p>
             <strong>status:</strong> completed
             <p>garbanzo gas (2007)</p>
             <a href="https://archive.org/details/garbanzogas2007" target="_blank"><img src="/pics/library/garbanzogas.png" class="cover"></a>
@@ -1321,11 +1324,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox"><div class="libbox-title-bar"># film <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 23rd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 23rd 2024</p>
             <strong>status:</strong> completed
             <p>nathan for you: finding frances</p>
             <img src="/pics/library/findingfrancis.png" class="cover">
@@ -1334,11 +1337,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox"><div class="libbox-title-bar"># film <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 23rd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 23rd 2024</p>
             <strong>status:</strong> completed
             <p>airplane pillows (2008)</p>
             <a href="https://archive.org/details/airplanepillows" target="_blank"><img src="/pics/library/airplanepillows.png" class="cover"></a>
@@ -1347,11 +1350,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox"><div class="libbox-title-bar"># film <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 23rd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 23rd 2024</p>
             <strong>status:</strong> completed
             <p>cemetery sisters (1987)</p>
             <img src="/pics/library/cemeterysisters.png" class="cover">
@@ -1360,11 +1363,11 @@
     </div>
     </div>
 
-    <div class="filterDiv lit">
-        <div class="libbox"><div class="libbox-title-bar"># literature <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log lit">
+        <div class="logmain"><div class="titlebar"># literature <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 23rd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 23rd 2024</p>
             <strong>status:</strong> completed sorta
             <p>sophocles ii</p>
             <img src="/pics/library/sophocles2.png" class="cover">
@@ -1373,11 +1376,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox"><div class="libbox-title-bar"># film <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 22nd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 22nd 2024</p>
             <strong>status:</strong> completed
             <p>dickshark (2016)</p>
             <img src="/pics/library/dickshark.png" class="cover">
@@ -1386,11 +1389,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox"><div class="libbox-title-bar"># film <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 22nd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 22nd 2024</p>
             <strong>status:</strong> completed
             <p>valerie and her week of wonders (1970)</p>
             <img src="/pics/library/valerie.png" class="cover">
@@ -1399,11 +1402,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox"><div class="libbox-title-bar"># film <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 20th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 20th 2024</p>
             <strong>status:</strong> completed
             <p>pigeon kings</p>
             <img src="/pics/library/pigeonkings.png" class="cover">
@@ -1412,11 +1415,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox"><div class="libbox-title-bar"># film <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 20th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 20th 2024</p>
             <strong>status:</strong> completed
             <p>liverleaf (2018)</p>
             <img src="/pics/library/liverleaf.png" class="cover">
@@ -1430,11 +1433,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox"><div class="libbox-title-bar"># film <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 20th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 20th 2024</p>
             <strong>status:</strong> completed
             <p>killer klowns from outer space (1988)</p>
             <img src="/pics/library/killerklowns.png" class="cover">
@@ -1443,11 +1446,11 @@
     </div>
     </div>
     
-    <div class="filterDiv game">
-        <div class="libbox"><div class="libbox-title-bar"># videogame <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log game">
+        <div class="logmain"><div class="titlebar"># videogame <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 19th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 19th 2024</p>
             <strong>status:</strong> completed
             <p>EVA 4 DATING SIM RPG</p>
             <img src="/pics/library/eva4sim.png" class="cover">
@@ -1456,11 +1459,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox"><div class="libbox-title-bar"># film <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 19th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 19th 2024</p>
             <strong>status:</strong> completed
             <p>intimate confessions of a chinese courtesan</p>
             <img src="/pics/library/intimateconfessions.png" class="cover">
@@ -1469,11 +1472,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox"><div class="libbox-title-bar"># film <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 17th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 17th 2024</p>
             <strong>status:</strong> completed
             <p>love on a leash</p>
             <img src="/pics/library/loveonaleash.png" class="cover">
@@ -1482,11 +1485,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class="libbox"><div class="libbox-title-bar"># film <div class="right">x</div></div>
-        <div class="inner">
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style="margin:0"><strong>date:</strong> feb 17th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 17th 2024</p>
             <strong>status:</strong> completed
             <p>the paradise motel (2022)</p>
             <img src="/pics/library/paradisemotel.png" class="cover">
@@ -1495,11 +1498,11 @@
     </div>
     </div>
 
-    <div class="filterDiv lit">
-        <div class=libbox><div class=libbox-title-bar># literature <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log lit">
+        <div class="logmain"><div class="titlebar"># literature <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> feb 13th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 13th 2024</p>
             <strong>status:</strong> completed
             <p>bunny by mona awad</p>
             <img src=/pics/library/bunny.png class=cover>
@@ -1508,11 +1511,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> feb 11th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 11th 2024</p>
             <strong>status:</strong> completed
             <p>dogtooth (2009)</p>
             <img src=/pics/library/dogtooth.png class=cover>
@@ -1521,11 +1524,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie fav">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie fav">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> feb 11th 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 11th 2024</p>
             <strong>status:</strong> completed
             <p>pink flamingos (1972)</p>
             <img src=/pics/library/pinkflamingos.png class=cover>
@@ -1535,11 +1538,11 @@
     </div>
     </div>
 
-    <div class="filterDiv game">
-        <div class=libbox><div class=libbox-title-bar># videogame <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log game">
+        <div class="logmain"><div class="titlebar"># videogame <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> feb 2nd 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> feb 2nd 2024</p>
             <strong>status:</strong> completed
             <p>dead plate</p>
             <img src=/pics/library/deadplate.png class=cover>
@@ -1548,24 +1551,24 @@
     </div>
     </div>
 
-    <div class="filterDiv tv">
-        <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log tv">
+        <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 31 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 31 2024</p>
             <strong>status:</strong> completed
             <p>euphoria</p>
             <img src=/pics/library/euphoria.png class=cover>
-            <p>finally got around to watching this, and i ended up enjoying it way more than i thought i would. i went into this with low expectations, especially because i've heard about how awful the writer of the show is to the actresses behind the scenes. but the writing itself, was actually pretty good. i thought the show was really well made, they had moneyyy!! at first, my opinion of the show was that it's like riverdale but way less fun. and i think it's sort of true, euphoria takes itself way more seriously, but it pays off. i adore rue's musical scenes that follow her along the different parts of her journey with addiction. and i also love how they play with visualizing intrusive thoughts sometimes, like when rue and jules had nate tied up to a chair and on Fire, or the scene when cal shot himself in the head when his wife was like "dinner's ready" but the camera panned and cal just left his bedroom as if nothing happened (because nothing did happen). i think i described that awfully but whatever you know what i mean. i thought that was cool. my favorites are jules, rue, fez, and lexi has recently climbed her way up to the favorite character list. these guys carry the series. i love the rest of the characters too they just don't make me as emotional as those guys. i think my main beef with the story is that i don't like how they try to "humanize" or attempt to make nate and cal more likeable throughout the show because the way they do it feels... flat? just wrong. i wanted nate to be more likeable to me, but i just don't like him. so maybe that's not even a fault of the writing. i'm just mad i don't like him when i wanted to like him. i just really like villains who i hate but like at the same time, and nate is not that for me. anywho, i will most likely tune in for  season 3.</p>
+            <p>finally got around to watching this, and i ended up enjoying it way more than i thought i would. i went into this with low expectations, especially because i've heard about how awful the writer of the show is to the actresses behind the scenes. but the writing itself, was actually pretty good. i thought the show was really well made, they had moneyyy!! at first, my opinion of the show was that it's like riverdale but way less fun. and i think it's sort of true, euphoria takes itself way more seriously, but it pays off. i adore rue's musical scenes that follow her along the different parts of her journey with addiction. and i also love how they play with visualizing intrusive thoughts sometimes, like when rue and jules had nate tied up to a chair and on Fire, or the scene when cal shot himself in the head when his wife was like "dlogtxt's ready" but the camera panned and cal just left his bedroom as if nothing happened (because nothing did happen). i think i described that awfully but whatever you know what i mean. i thought that was cool. my favorites are jules, rue, fez, and lexi has recently climbed her way up to the favorite character list. these guys carry the series. i love the rest of the characters too they just don't make me as emotional as those guys. i think my main beef with the story is that i don't like how they try to "humanize" or attempt to make nate and cal more likeable throughout the show because the way they do it feels... flat? just wrong. i wanted nate to be more likeable to me, but i just don't like him. so maybe that's not even a fault of the writing. i'm just mad i don't like him when i wanted to like him. i just really like villains who i hate but like at the same time, and nate is not that for me. anywho, i will most likely tune in for  season 3.</p>
         </div>
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 26 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 26 2024</p>
             <strong>status:</strong> completed
             <p>monster's inc. (2001)</p>
             <img src=/pics/library/monstersinc.png class=cover>
@@ -1576,11 +1579,11 @@
     </div>
     </div>
     
-    <div class="filterDiv manga fav">
-        <div class=libbox><div class=libbox-title-bar># manga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log manga fav">
+        <div class="logmain"><div class="titlebar"># manga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 19 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 19 2024</p>
             <strong>status:</strong> completed
             <p>inside mari by shūzō oshimi</p>
             <img src=/pics/library/insidemari.png class=cover>
@@ -1590,11 +1593,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 15 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 15 2024</p>
             <strong>status:</strong> completed
             <p>la sociedad de la nieve (2024)</p>
             <img src=/pics/library/lanieve.png class=cover>
@@ -1603,11 +1606,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 15 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 15 2024</p>
             <strong>status:</strong> completed
             <p>frankenhooker (1990)</p>
             <img src=/pics/library/frankenhooker.png class=cover>
@@ -1616,11 +1619,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 14 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 14 2024</p>
             <strong>status:</strong> completed
             <p>freddy got fingered (2001)</p>
             <img src=/pics/library/freddy.png class=cover>
@@ -1629,11 +1632,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 14 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 14 2024</p>
             <strong>status:</strong> completed
             <p>nekromantik (1987)</p>
             <img src=/pics/library/nekromantik.png class=cover>
@@ -1642,11 +1645,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 14 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 14 2024</p>
             <strong>status:</strong> completed
             <p>repligator (1998)</p>
             <img src=/pics/library/repligator.png class=cover>
@@ -1655,11 +1658,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 13 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 13 2024</p>
             <strong>status:</strong> completed
             <p>traitors (2013)</p>
             <img src=/pics/library/traitors.png class=cover>
@@ -1668,11 +1671,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 13 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 13 2024</p>
             <strong>status:</strong> completed
             <p>the last roommate (2020)</p>
             <img src=/pics/library/lastroommate.png class=cover>
@@ -1681,11 +1684,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 12 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 12 2024</p>
             <strong>status:</strong> completed
             <p>the man who stole the sun (1979)</p>
             <img src=/pics/library/stolethesun.png class=cover>
@@ -1694,11 +1697,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 12 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 12 2024</p>
             <strong>status:</strong> completed
             <p>the flying luna clipper</p>
             <img src=/pics/library/flyingluna.png class=cover>
@@ -1707,11 +1710,11 @@
     </div>
     </div>
 
-    <div class="filterDiv tv">
-        <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log tv">
+        <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 11 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 11 2024</p>
             <strong>status:</strong> completed
             <p>shiny happy people</p>
             <img src=/pics/library/shiny.png class=cover>
@@ -1720,11 +1723,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 10 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 10 2024</p>
             <strong>status:</strong> completed
             <p>greener grass</p>
             <img src=/pics/library/greenergrass.png class=cover>
@@ -1735,11 +1738,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 10 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 10 2024</p>
             <strong>status:</strong> completed
             <p>repo chick</p>
             <img src=/pics/library/repochick.png class=cover>
@@ -1748,11 +1751,11 @@
     </div>
     </div>
     
-    <div class="filterDiv manga">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log manga">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> dec 22 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> dec 22 2023</p>
             <strong>status:</strong> completed
             <p>smoking behind the supermarket with you</p>
             <img src=/pics/library/supermarket.png class=cover>
@@ -1761,11 +1764,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-            <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+            <div class="logtxt">
                 <br>
-                <p style=margin:0><strong>date:</strong> jan 08 2024</p>
+                <p style="margin: 0;"><strong>date:</strong> jan 08 2024</p>
                 <strong>status:</strong> completed
                 <p>twisted pair</p>
                 <img src=/pics/library/twistedpair.png class=cover>
@@ -1774,11 +1777,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 07 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 07 2024</p>
             <strong>status:</strong> completed
             <p>antfarm dickhole</p>
             <img src=/pics/library/antfarm.png class=cover>
@@ -1787,11 +1790,11 @@
     </div>
     </div>
 
-    <div class="filterDiv tv">
-        <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log tv">
+        <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 08 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 08 2024</p>
             <strong>status:</strong> completed
             <p>fleabag</p>
             <img src=/pics/library/fleabag.png class=cover>
@@ -1800,11 +1803,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 07 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 07 2024</p>
             <strong>status:</strong> completed
             <p>attack of the killer refrigerator</p>
             <img src=/pics/library/killerfridge.png class=cover>
@@ -1813,11 +1816,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 06 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 06 2024</p>
             <strong>status:</strong> completed
             <p>suicide club (2001)</p>
             <img src=/pics/library/suicideclub.png class=cover>
@@ -1826,11 +1829,11 @@
     </div>
     </div>
     
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 06 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 06 2024</p>
             <strong>status:</strong> completed
             <p>oldboy</p>
             <img src=/pics/library/oldboy.png class=cover>
@@ -1839,11 +1842,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 06 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 06 2024</p>
             <strong>status:</strong> completed
             <p>the brain that wouldn't die</p>
             <img src=/pics/library/brain.png class=cover>
@@ -1852,11 +1855,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie fav">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie fav">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 06 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 06 2024</p>
             <strong>status:</strong> completed
             <p>love exposure (2008)</p>
             <img src=/pics/library/loveexposure.png class=cover>
@@ -1867,11 +1870,11 @@
     </div>
     </div>
 
-    <div class="filterDiv tv">
-        <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log tv">
+        <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 03 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 03 2024</p>
             <strong>status:</strong> completed
             <p>gen v</p>
             <img src=/pics/library/genv.png class=cover>
@@ -1880,11 +1883,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jan 02 2024</p>
+            <p style="margin: 0;"><strong>date:</strong> jan 02 2024</p>
             <strong>status:</strong> completed
             <p>city of god</p>
             <img src=/pics/library/cityofgod.png class=cover>
@@ -1893,11 +1896,11 @@
     </div>
     </div>
 
-    <div class="filterDiv tv">
-        <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log tv">
+        <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> dec 31 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> dec 31 2023</p>
             <strong>status:</strong> completed
             <p>the boys</p>
             <img src=/pics/library/theboys.png class=cover>
@@ -1910,11 +1913,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> dec 30 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> dec 30 2023</p>
             <strong>status:</strong> completed
             <p>saltburn</p>
             <img src=/pics/library/saltburn.png class=cover>
@@ -1923,11 +1926,11 @@
     </div>
     </div>
 
-    <div class="filterDiv anime">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log anime">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> dec 25 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> dec 25 2023</p>
             <strong>status:</strong> completed
             <p>my new boss is goofy</p>
             <img src=/pics/library/newboss.png class=cover>
@@ -1938,11 +1941,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> dec 25 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> dec 25 2023</p>
             <strong>status:</strong> completed
             <p>better days</p>
             <img src=/pics/library/betterdays.png class=cover>
@@ -1951,11 +1954,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> dec 24 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> dec 24 2023</p>
             <strong>status:</strong> completed
             <p>the grinch (2018)</p>
             <img src=/pics/library/grinch2018.png class=cover>
@@ -1964,11 +1967,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> dec 18 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> dec 18 2023</p>
             <strong>status:</strong> completed
             <p>bodies bodies bodies</p>
             <img src=/pics/library/bodies3.png class=cover>
@@ -1977,11 +1980,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> dec 16 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> dec 16 2023</p>
             <strong>status:</strong> completed
             <p>may december</p>
             <img src=/pics/library/maydecember.png class=cover>
@@ -1990,11 +1993,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> dec 15 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> dec 15 2023</p>
             <strong>status:</strong> completed
             <p>angel guts: nami</p>
             <img src=/pics/library/nami.png class=cover>
@@ -2003,11 +2006,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> dec 10 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> dec 10 2023</p>
             <strong>status:</strong> completed
             <p>belladonna of sadness</p>
             <img src=/pics/library/belladonna.png class=cover>
@@ -2018,11 +2021,11 @@
     </div>
     </div>
 
-    <div class="filterDiv lit">
-        <div class=libbox><div class=libbox-title-bar># literature <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log lit">
+        <div class="logmain"><div class="titlebar"># literature <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> dec 8 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> dec 8 2023</p>
             <strong>status:</strong> completed
             <p>my year of rest of relaxation by ottessa moshfegh</p>
             <img src=/pics/library/yearofrest.png class=cover>
@@ -2031,11 +2034,11 @@
     </div>
     </div>
 
-    <div class="filterDiv lit">
-        <div class=libbox><div class=libbox-title-bar># literature <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log lit">
+        <div class="logmain"><div class="titlebar"># literature <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> dec 6 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> dec 6 2023</p>
             <strong>status:</strong> completed
             <p>milk fed by melissa broder</p>
             <img src=/pics/library/milkfed.png class=cover>
@@ -2044,11 +2047,11 @@
     </div>
     </div>
 
-    <div class="filterDiv tv">
-        <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log tv">
+        <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> dec 2 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> dec 2 2023</p>
             <strong>status:</strong> completed
             <p>escaping twin flames</p>
             <img src=/pics/library/twinflames.png class=cover>
@@ -2057,11 +2060,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> nov 26 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> nov 26 2023</p>
             <strong>status:</strong> completed
             <p>revenge</p>
             <img src=/pics/library/revenge.png class=cover>
@@ -2070,11 +2073,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> nov 25 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> nov 25 2023</p>
             <strong>status:</strong> completed
             <p>ed (1996)</p>
             <img src=/pics/library/ed1996.png class=cover>
@@ -2083,11 +2086,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div>/div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div>/div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> nov 23 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> nov 23 2023</p>
             <strong>status:</strong> completed
             <p>the last vampire on earth</p>
             <img src=/pics/library/lastvamp.png class=cover>
@@ -2097,11 +2100,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> nov 22 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> nov 22 2023</p>
             <strong>status:</strong> completed
             <p>coneheads</p>
             <img src=/pics/library/coneheads.png class=cover>
@@ -2111,11 +2114,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> nov 21 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> nov 21 2023</p>
             <strong>status:</strong> completed
             <p>things (1989)</p>
             <img src=/pics/library/things.png class=cover>
@@ -2125,11 +2128,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> nov 20 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> nov 20 2023</p>
             <strong>status:</strong> completed
             <p>sharktopus vs. whalewolf</p>
             <img src=/pics/library/sharktopusVSwhalewolf.png class=cover>
@@ -2138,11 +2141,11 @@
     </div>
     </div>
 
-    <div class="filterDiv tv">
-        <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div> </div>
-        <div class=inner>
+    <div class="log tv">
+        <div class="logmain"><div class="titlebar"># tv <div class="x">x</div> </div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> nov 15 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> nov 15 2023</p>
             <strong>status:</strong> dropped
             <p>river monsters</p>
             <img src=/pics/library/rivermonsters.png class=cover>
@@ -2153,24 +2156,26 @@
     </div>
     </div>
 
-    <div class="filterDiv current tv">
-        <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log tv now">
+        <div class="logmain">
+            <div class="titlebar"># tv <div class="x">x</div>
+        </div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> nov 8 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> nov 8 2023</p>
             <strong>status:</strong> currently watching
             <p>glee</p>
-            <img src=/pics/library/glee.png class=cover>
+            <img src="/pics/library/glee.png" class="cover">
             <p>i regret being such a hater about this show without having ever watched it. i always used to say i wouldn't like glee because of the singing. because i had assumed the singing would be bad or average like how it is on riverdale. but no. i was so wrong. the singing is incredible i am baffled at how Actually Good this entire cast is. glee is incredible. glee is everything. it's camp. it's hilarious. it's so gay. sue sylvester is my favorite woman. she is funny and cruel and evil and she hates will as much as i do. we're soulmates, in a way. she also reminds me so much of mundane!au kenny it's hilarious. also she got ordained and married herself to herself? i did that in 2018 before i knew what glee even was. that's a kind of spiritual resonance i will never achieve with anyone else ever. i'm on season 3 now... enjoying it a lot so far. i'm watching it as i write this actually.</p>
         </div>
     </div>
     </div>
 
-    <div class="filterDiv anime fav">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log anime fav">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> nov 4 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> nov 4 2023</p>
             <strong>status:</strong> completed
             <p>lycoris recoil</p>
             <img src=/pics/library/lycorisrecoil.png class=cover>
@@ -2179,11 +2184,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> nov 1 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> nov 1 2023</p>
             <strong>status:</strong> completed
             <p>five nights at freddie's (2023)</p>
             <img src=/pics/library/fnaf.png class=cover>
@@ -2192,11 +2197,11 @@
     </div>
     </div>
 
-    <div class="filterDiv tv current">
-        <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log tv now">
+        <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> oct 21 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> oct 21 2023</p>
             <strong>status:</strong> currently watching
             <p>alice in borderland</p>
             <img src=/pics/library/aib.png class=cover>
@@ -2205,11 +2210,11 @@
     </div>
     </div>
 
-    <div class="filterDiv tv">
-        <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log tv">
+        <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> oct 19 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> oct 19 2023</p>
             <strong>status:</strong> completed
             <p>suits</p>
             <img src=/pics/library/suits.png class=cover>
@@ -2220,11 +2225,11 @@
     </div>
     </div>
 
-    <div class="filterDiv anime">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log anime">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> oct 09 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> oct 09 2023</p>
             <strong>status:</strong> completed
             <p>noragami (anime)</p>
             <img src=/pics/library/noragami.png class=cover>
@@ -2233,11 +2238,11 @@
     </div>
     </div>
 
-    <div class="filterDiv manga current">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log manga now">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> oct 09 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> oct 09 2023</p>
             <strong>status:</strong> currently reading
             <p>gambling apocalypse: kaiji</p>
             <img src=/pics/library/kaiji.png class=cover>
@@ -2246,11 +2251,11 @@
     </div>
     </div>
 
-    <div class="filterDiv lit fav">
-        <div class=libbox><div class=libbox-title-bar># literature <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log lit fav">
+        <div class="logmain"><div class="titlebar"># literature <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> sept 27 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> sept 27 2023</p>
             <strong>status:</strong> completed
             <p>the secret history by donna tartt</p>
             <img src=/pics/library/tsh.png class=cover>
@@ -2259,10 +2264,10 @@
     </div>
     </div>
 
-    <div class="filterDiv lit fav">
-        <div class=libbox><div class=libbox-title-bar># literature <div class=right>x</div></div><div class=inner>
+    <div class="log lit fav">
+        <div class="logmain"><div class="titlebar"># literature <div class="x">x</div></div><div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> sept 21 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> sept 21 2023</p>
             <strong>status:</strong> completed
             <p>boy parts by eliza clark</p>
             <img src=/pics/library/boyparts.png class=cover>
@@ -2272,11 +2277,11 @@
     </div>
     </div>
 
-    <div class="filterDiv lit">
-        <div class=libbox><div class=libbox-title-bar># literature <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log lit">
+        <div class="logmain"><div class="titlebar"># literature <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> sept 15 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> sept 15 2023</p>
             <strong>status:</strong> completed
             <p>black foam by sawad hussain</p>
             <img src=/pics/library/blackfoam.png class=cover>
@@ -2285,11 +2290,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> sept 2nd 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> sept 2nd 2023</p>
             <strong>status:</strong> completed
             <p>the fly 2 (1989)</p>
             <img src=/pics/library/thefly2.png class=cover>
@@ -2298,11 +2303,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> sept 2nd 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> sept 2nd 2023</p>
             <strong>status:</strong> completed
             <p>bottoms</p>
             <img src=/pics/library/bottoms.png class=cover>
@@ -2311,11 +2316,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie fav">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie fav">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> sept 1st 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> sept 1st 2023</p>
             <strong>status:</strong> completed
             <p>the fly (1986)</p>
             <img src=/pics/library/thefly.png class=cover>
@@ -2324,11 +2329,11 @@
     </div>
     </div>
 
-    <div class="filterDiv game">
-        <div class=libbox><div class=libbox-title-bar># videogame <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log game">
+        <div class="logmain"><div class="titlebar"># videogame <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> aug 26th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> aug 26th 2023</p>
             <strong>status:</strong> completed
             <p>little nightmares (1)</p>
             <img src=/pics/library/littlenightmares.png class=cover>
@@ -2337,11 +2342,11 @@
     </div>
     </div>
 
-    <div class="filterDiv anime manga current">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log anime manga now">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> aug. 23rd 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> aug. 23rd 2023</p>
             <strong>status:</strong> currently reading & watching
             <p>jujutsu kaisen</p>
             <img src=/pics/library/jjk.png class=cover>
@@ -2353,11 +2358,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> aug 22nd 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> aug 22nd 2023</p>
             <strong>status:</strong> completed
             <p>20th century girl</p>
             <img src=/pics/library/20thcenturygirl.png class=cover>
@@ -2366,11 +2371,11 @@
     </div>
     </div>
 
-    <div class="filterDiv lit">
-        <div class=libbox><div class=libbox-title-bar># literature <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log lit">
+        <div class="logmain"><div class="titlebar"># literature <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> aug 21st 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> aug 21st 2023</p>
             <strong>status:</strong> completed
             <p>the scum villain's self-saving system (1) by mo xiang tong xiu</p>
             <img src=/pics/library/scumvillain1.png class=cover>
@@ -2379,11 +2384,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> aug 19th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> aug 19th 2023</p>
             <strong>status:</strong> completed
             <p>the handmaiden (extended version)</p>
             <img src=/pics/library/handmaiden.png class=cover>
@@ -2396,11 +2401,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie anime">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie anime">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> aug 17th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> aug 17th 2023</p>
             <strong>status:</strong> completed
             <p>trigun: badlands rumble</p>
             <img src=/pics/library/badlands.png class=cover>
@@ -2409,11 +2414,11 @@
     </div>
     </div>
 
-    <div class="filterDiv tv current">
-        <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log tv now">
+        <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> aug 15th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> aug 15th 2023</p>
             <strong>status:</strong> currently watching
             <p>hello, my twenties!</p>
             <img src=/pics/library/twenties.png class=cover>
@@ -2422,11 +2427,11 @@
     </div>
     </div>
 
-    <div class="filterDiv manga current">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log manga now">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> aug 3rd 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> aug 3rd 2023</p>
             <strong>status:</strong> currently reading
             <p>the summer hikaru died</p>
             <img src=/pics/library/hikaru.png class=cover>
@@ -2436,11 +2441,11 @@
     </div>
     </div>
 
-    <div class="filterDiv anime">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log anime">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> aug 3rd 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> aug 3rd 2023</p>
             <strong>status:</strong> completed
             <p>trigun (1998)</p>
             <img src=/pics/library/trigun98.png class=cover>
@@ -2466,11 +2471,11 @@
     </div>
     </div>
 
-    <div class="filterDiv anime current">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log anime now">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> july 12th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> july 12th 2023</p>
             <strong>status:</strong> currently watching
             <p>slam dunk</p>
             <img src=/pics/library/slamdunk.png class=cover>
@@ -2480,11 +2485,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> july 9th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> july 9th 2023</p>
             <strong>status:</strong> completed
             <p>the babysitter: killer queen</p>
             <img src=/pics/library/babysitter.png class=cover>
@@ -2493,18 +2498,18 @@
     </div>
     </div>
 
-    <div class="filterDiv manga fav">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log manga fav">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> july 10th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> july 10th 2023</p>
             <strong>status:</strong> completed
             <p>trigun maximum by Yasuhiro Nightow</p>
             <img src=/pics/library/trimax.png class=cover>
             <p>i downloaded over twelve hours of television to keep me entertained on my six hour flight. instead i read three volumes of trimax and knocked out. enjoy my silly little blurbs as i read each volume throughout the summer.</p>
             <p><strong>trimax #1:</strong> I wonder how many times Vash will accidentally destroy half a planet and ghost everyone for a few years. I loved seeing Old Man Vash in this trying to live the simple life. Very enjoyable vashwood interactions in this. They're both just sooo weird they were made for each other. Wolfwood is feeling very girlcrush right now. Okay I think we just landed in New York I have no more thoughts.</p>
             <p><strong>trimax #2:</strong> For someone who calls himself a priest and the devil in the same breath, Wolfwood sure does have a way of acting real omnipresent the way he's always around when Vash is in trouble (though his help is rarely ever actually needed lmfao). I've never seen anyone lose the idgaf war (chainsmoking while replaying the memory of vash calling him a coward over and over again in the middle of the night) so badly and that's <i>a lot</i> coming from me. The reference to their first conversation about Vash's genuine smile and Wolfwood trying to make himself a bigger demon than he actually is “while his own heart cries out” was really good. I had to pause. I think my favorite part of their dynamic is how they just see right through each other! For the most part. From the moment they laid eyes on each other. I think that's pretty neat. Leonof is definitely the most fucked up of the Gung-ho-gun gang.. the puppets of Vash's family falling apart in his hands is just so cruel.. I love the themes of Family in this series. Vash and the family he dedicates his life to honoring, Wolfwood and his kids he kills to be there for (nico niiiiii), Millie and her monthly newsletter to every single one of her extended family members, Knives dedicating his entire life to getting Vash to be by his side. It's all just so good. No real thoughts just Good.</p>
-            <p><strong>trimax #3:</strong> I think it's interesting how the main point of contention between Wolfwood and Vash right now is whether or not it is inevitable to kill. And I think I'm starting to understand both of them and the Issue at large here. I think what pisses Wolfwood off so much— how Vash seems to recklessly sacrifices himself every fight— is that he seems to be able to do this from a point of privilege (I don't think this, I think this is what Wolfwood thinks). I'm starting to see that more with the repetition of WW's inner monologue questioning if Vash is Human or Monster. I think the fact that Vash has the abilities to make it through these situations in which he definitely should have died, can be read in one way as he can afford to risk more. Because he knows he'll make it out alive. And Wolfwood is frustrated with his seemingly lack of self-preservation. This might be stupid but that's sorta what I'm getting from his whole "do you not even care what happens to you" vibe. I'm okay with being wrong about this. Also, I like how Wolfwood hasn't realized yet that Vash has no regard for his own well-being. So he's always shaking his fists like Vash whyyy do you do this to yourself and he's like. ☆⌒ヽ(*'､^*)chu I Deserve This. Yeaaaah these guys have got some real issues i love them so much.</p>
+            <p><strong>trimax #3:</strong> I think it's interesting how the main point of contention between Wolfwood and Vash right now is whether or not it is inevitable to kill. And I think I'm starting to understand both of them and the Issue at large here. I think what pisses Wolfwood off so much— how Vash seems to recklessly sacrifices himself every fight— is that he seems to be able to do this from a point of privilege (I don't think this, I think this is what Wolfwood thinks). I'm starting to see that more with the repetition of WW's logtxt monologue questioning if Vash is Human or Monster. I think the fact that Vash has the abilities to make it through these situations in which he definitely should have died, can be read in one way as he can afford to risk more. Because he knows he'll make it out alive. And Wolfwood is frustrated with his seemingly lack of self-preservation. This might be stupid but that's sorta what I'm getting from his whole "do you not even care what happens to you" vibe. I'm okay with being wrong about this. Also, I like how Wolfwood hasn't realized yet that Vash has no regard for his own well-being. So he's always shaking his fists like Vash whyyy do you do this to yourself and he's like. ☆⌒ヽ(*'､^*)chu I Deserve This. Yeaaaah these guys have got some real issues i love them so much.</p>
             <p><strong>trimax #4:</strong> wolfwood has gotten more time to shine this volume and i'm loving it. I really enjoyed watching him beat Nine Lives to death. I was wondering when they'd let him do that after all his monologuing about the necessity of murder and killing to survive and blah blah blah. Loved that! And the hospital scenes!! These were my friend's favorite chapters and I can totally see why. They're mine too so far. Wolfwood is finally starting to Conscioulsly (as opposed to subconsciously) understand Vash and why he does what he does. He's so attached it's really fun. Vash loves him a lot clearly, and Wolfwood is just always around and pretending to not enjoy it like “you need me so bad it's embarrassing” (he's projecting). I'm really excited to see more of Knives and his evil plan to uhhhh convince Vash that he was right all along? I love Knives so much he's so silly and so amusing I love every panel that he's in and I hope she shows up more in the next volume. I would love to see more interactions between him and Vash and maybe even Wolfwood too..</p>
             <p><strong>trimax #5:</strong> Knives will always be such a funny villain because he genuinely thinks Traumatizing Vash even more will surely work in his favor. If his main goal is for him and his brother to work together and be One Team, you'd think he'd be more open to compromise... or at least. Not Traumatizing him every chance he gets. My favorite moment in this volume was this small scene towards the end when Vash claps his hands and bows to pray at the cross, and Wolfwood makes a comment about being in the wrong faith, which reminded me so much of what <a href=https://www.simonandschuster.com/books/The-Bleeding-of-the-Stone/Ibrahim-al-Koni/9781566564175 target=_blank>the bleeding of the stone by ibrahim al-koni</a> is all about. The different ways to pray and worship, the commentary about the “right” and “wrong” way to worship, what the difference it makes as long as you can put “more feeling into it” as Vash says.. I actually thought that moment was really cool. There are lots of connections to be made between Vash as a character and this book actually. I wish I had my book with my notes with me so I could go more in-depth on this... The main character & Vash share similar values on Life and carry radically opposing beliefs to their surrounding character's Kill Maim Destroy (being dramatic here) mindset. Asouf's veganism & Vash's pacifism. Oh wow there's actually so many similarities. Religious themes... struggle between what is good and evil... the twins... Redemption... for Vash and for Cain... I hope I remember these thoughts when I get back home and have the energy to write a paper on this.</p>
             <p><strong>trimax #6:</strong> vash's struggle with self-forgiveness and guilt reminds me a lot of yuuji's struggles in jujutsu kaisen. i was so excited for livio's introduction in this volume! except we didn't see him much. but i think he'll be around more soon. at least, he better. sped through this one so it feels like a blur.</p>
@@ -2520,11 +2525,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jun. 25th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> jun. 25th 2023</p>
             <strong>status:</strong> completed
             <p>do revenge</p>
             <img src=/pics/library/dorevenge.png class=cover>
@@ -2533,11 +2538,11 @@
     </div>
     </div>
 
-    <div class="filterDiv manga">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log manga">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jun. 23rd 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> jun. 23rd 2023</p>
             <strong>status:</strong> completed
             <p>shiver by junji ito</p>
             <a href=https://myanimelist.net/manga/136793/Itou_Junji_Jisen_Kessakushuu target=_blank style=background-color:transparent><img src=/pics/library/shiver.png class=cover></a>
@@ -2546,11 +2551,11 @@
     </div>
     </div>
 
-    <div class="filterDiv manga">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log manga">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jun. 21st 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> jun. 21st 2023</p>
             <strong>status:</strong> completed
             <p>trigun by Yasuhiro Nightow</p>
             <a href="https://myanimelist.net/manga/703/Trigun?q=trigun&cat=manga" target=_blank style=background-color:transparent><img src=/pics/library/trigunmanga.png class=cover></a>
@@ -2560,13 +2565,13 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
             </div>
-            <div class=inner>
+            <div class="logtxt">
                 <br>
-                <p style=margin:0><strong>date:</strong> jun. 19th 2023</p>
+                <p style="margin: 0;"><strong>date:</strong> jun. 19th 2023</p>
                 <strong>status:</strong> completed
                 <p>but i'm a cheerleader!</p>
                 <img src=/pics/library/cheerleader.png class=cover></a>
@@ -2575,11 +2580,11 @@
     </div>
     </div>
 
-    <div class="filterDiv anime fav">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log anime fav">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jun. 18th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> jun. 18th 2023</p>
             <strong>status:</strong> completed
             <p>no. 6 (anime)</p>
             <a href="https://4anime.gg/watch/no-6-1293?ep=18785" target=_blank style=background-color:transparent><img src=/pics/library/no6.png class=cover></a>
@@ -2588,11 +2593,11 @@
     </div>
     </div>
 
-    <div class="filterDiv anime fav">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log anime fav">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jun. 16th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> jun. 16th 2023</p>
             <strong>status:</strong> completed
             <p>trigun stampede</p>
             <a href="https://myanimelist.net/anime/52093/Trigun_Stampede?q=tri&cat=anime" target=_blank style=background-color:transparent><img src=/pics/library/trigun.png class=cover></a>
@@ -2606,11 +2611,11 @@
     </div>
     </div>
 
-    <div class="filterDiv manga">
-        <div class=libbox><div class=libbox-title-bar># comic <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log manga">
+        <div class="logmain"><div class="titlebar"># comic <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jun. 12th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> jun. 12th 2023</p>
             <strong>status:</strong> completed
             <p>spider-man & venom: double trouble</p>
             <img src=/pics/library/spidervenom.png class=cover>
@@ -2619,11 +2624,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jun. 8th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> jun. 8th 2023</p>
             <strong>status:</strong> completed
             <p>spider-man: across the spider-verse</p>
             <img src=/pics/library/atsv.png class=cover>
@@ -2636,11 +2641,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jun. 3rd 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> jun. 3rd 2023</p>
             <strong>status:</strong> completed
             <p>emergency declaration</p>
             <img src=/pics/library/ed.png class=cover>
@@ -2649,11 +2654,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jun. 3rd 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> jun. 3rd 2023</p>
             <strong>status:</strong> completed
             <p>the little mermaid</p>
             <img src=/pics/library/mermaid.png class=cover>
@@ -2662,11 +2667,11 @@
     </div>
     </div>
 
-    <div class="filterDiv tv">
-        <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log tv">
+        <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> jun. 1st 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> jun. 1st 2023</p>
             <strong>status:</strong> completed
             <p>the bear</p>
             <img src=/pics/library/thebear.png class=cover>
@@ -2676,13 +2681,13 @@
     </div>
     </div>
 
-    <div class="filterDiv tv">
-        <div class=libbox>
-            <div class=libbox-title-bar># tv <div class=right>x</div>
+    <div class="log tv">
+        <div class="logmain">
+            <div class="titlebar"># tv <div class="x">x</div>
             </div>
-            <div class=inner>
+            <div class="logtxt">
                 <br>
-                <p style=margin:0><strong>date:</strong> may 29th 2023</p>
+                <p style="margin: 0;"><strong>date:</strong> may 29th 2023</p>
                 <strong>status:</strong> completed
                 <p>succession</p>
                 <img src=/pics/library/succession.png class=cover>
@@ -2691,11 +2696,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> may 27th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> may 27th 2023</p>
             <strong>status:</strong> completed
             <p>star wars: episode iv</p>
             <img src=/pics/library/starwars4.png class=cover>
@@ -2704,11 +2709,11 @@
     </div>
     </div>
 
-    <div class="filterDiv movie">
-        <div class=libbox><div class=libbox-title-bar># film <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log movie">
+        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> may 24th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> may 24th 2023</p>
             <strong>status:</strong> completed
             <p>the matrix</p>
             <img src=/pics/library/thematrix.png class=cover>
@@ -2717,11 +2722,11 @@
     </div>
     </div>
 
-    <div class="filterDiv lit fav">
-        <div class=libbox><div class=libbox-title-bar># literature <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log lit fav">
+        <div class="logmain"><div class="titlebar"># literature <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> may 5th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> may 5th 2023</p>
             <strong>status:</strong> completed
             <p>frankenstein by mary shelly</p>
             <a style=background-color:transparent target=_blank href=https://www.gutenberg.org/files/84/84-h/84-h.htm><img src=/pics/library/frankenstein.png class=cover></a>
@@ -2739,11 +2744,11 @@
     </div>
     </div>
 
-    <div class="filterDiv manga">
-        <div class=libbox><div class=libbox-title-bar># comic <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log manga">
+        <div class="logmain"><div class="titlebar"># comic <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> apr. 24th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> apr. 24th 2023</p>
             <strong>status:</strong> completed
             <p>the sucker by elle shivers</p>
             <a style=background-color:transparent target=_blank href=https://elleshivers.com/The-sucker><img src=/pics/library/thesucker.png class=cover></a>
@@ -2752,11 +2757,11 @@
     </div>
     </div>
 
-    <div class="filterDiv tv">
-        <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log tv">
+        <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> apr. 20th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> apr. 20th 2023</p>
             <strong>status:</strong> completed
             <p>abbott elementary</p>
             <a style=background-color:transparent target=_blank href=https://abc.com/shows/abbott-elementary><img src=/pics/library/ae.png class=cover></a>
@@ -2764,11 +2769,11 @@
         </div>
     </div>
     </div>
-    <div class="filterDiv tv">
-        <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log tv">
+        <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> apr. 15th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> apr. 15th 2023</p>
             <strong>status:</strong> completed
             <p>DARK</p>
             <a style=background-color:transparent target=_blank href=https://dark.netflix.io/en><img src=/pics/library/dark.png class=cover></a>
@@ -2777,12 +2782,12 @@
     </div>
     </div>
 
-    <div class="filterDiv lit">
-        <div class=libbox><div class=libbox-title-bar># literature <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log lit">
+        <div class="logmain"><div class="titlebar"># literature <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar. 26th 2023</p>
-            <p style=margin:0><strong>status:</strong> completed</p>
+            <p style="margin: 0;"><strong>date:</strong> mar. 26th 2023</p>
+            <p style="margin: 0;"><strong>status:</strong> completed</p>
             <p>i'm glad my mom died by jennette mccurdy</p>
             <a style=background-color:transparent target=_blank href=https://www.penguinrandomhouse.com/books/673386/thistlefoot-by-gennarose-nethercott /><img src=/pics/library/jm.png class=cover></a>
             <p>i read this entire book in one sitting yesterday. i read along with the audiobook CDs i got after seeing jennette speak at my school a few weeks ago. i usually don't enjoy reading memoirs (they bore me) but this is the exception to that. my God was it the most beautifully written work i've read in a while. i simply could not put it down. it was so immersive and emotional (i did tear up a little towards the end...) but also so funny at times. her story is so important and resonated with me in ways i didn't think it would. i honestly think Anyone no matter what books they like to read would enjoy this. so much love in my heart for jennette i am so happy for her and how far she's come. her experiences with the Healing process is something i hold dear to my heart. ah! just such a good book.</p>
@@ -2790,11 +2795,11 @@
     </div>
     </div>
 
-    <div class="filterDiv manga current">
-        <div class=libbox><div class=libbox-title-bar># animanga <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log manga now">
+        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar. 19th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> mar. 19th 2023</p>
             <strong>status:</strong> currently reading
             <p>blue lock</p>
             <a style=background-color:transparent target=_blank href="https://myanimelist.net/manga/114745/Blue_Lock?q=blue%20lock%20manga&cat=manga"><img src=/pics/library/bl.png class=cover></a>
@@ -2803,24 +2808,24 @@
     </div>
     </div>
 
-    <div class="filterDiv lit">
-        <div class=libbox><div class=libbox-title-bar># literature <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log lit">
+        <div class="logmain"><div class="titlebar"># literature <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar. 25th 2023</p>
-            <p style=margin:0><strong>status:</strong> completed</p>
+            <p style="margin: 0;"><strong>date:</strong> mar. 25th 2023</p>
+            <p style="margin: 0;"><strong>status:</strong> completed</p>
             <p>thistlefoot by gennarose nethercott</p>
             <a style=background-color:transparent target=_blank href=https://www.penguinrandomhouse.com/books/673386/thistlefoot-by-gennarose-nethercott /><img src=/pics/library/thistlefoot.png class=cover></a>
             <p>i impulsively bought this book during my last trip to my local bookstore because i was very curious about this house with chicken legs... it took me a while to get through the book because the pacing was too slow for me to stay hooked for too long. i considered putting it on pause and reading something else for a bit, but i am really glad i didn't do that. i loved the story it had to tell! i am a big fan of stories about stories and generational tales and this book was very much that. plus it was the first time reading a story based in Jewish folklore and I really loved it. isaac was my favorite character, and his past with benji was very fun to read about. i love the way the ending was told.. i'm really attached to that house. overall, a good read. i think i would have got through it sooner if i could listen along to the audiobook, but i couldn't find it anywhere for free...</p>
         </div>
     </div>
     </div>
-    <div class="filterDiv tv">
-        <div class=libbox><div class=libbox-title-bar># tv <div class=right>x</div></div>
-        <div class=inner>
+    <div class="log tv">
+        <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar. 18th 2023</p>
-            <p style=margin:0><strong>status:</strong> completed</p>
+            <p style="margin: 0;"><strong>date:</strong> mar. 18th 2023</p>
+            <p style="margin: 0;"><strong>status:</strong> completed</p>
             <p>swarm</p>
             <a style=background-color:transparent target=_blank href=https://en.wikipedia.org/wiki/Swarm_(TV_series)><img src=/pics/library/swarm.png class=cover></a>
             <p><strong>update (04-02-2023):</strong> a friend told me apparently it's not based on real events at all really and i was tricked by the internet again. i feel so silly but i'll keep up my insane little rant below because although my larger ideas might not apply to swarm anymore, i think i make good points in general. i feel strangely embarrassed but also its okay because who cares</p>
@@ -2830,13 +2835,13 @@
     </div>
     </div>
 
-    <div class="filterDiv tv">
-        <div class=libbox>
-            <div class=libbox-title-bar># tv <div class=right>x</div>
+    <div class="log tv">
+        <div class="logmain">
+            <div class="titlebar"># tv <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar. 13th 2023</p>
+            <p style="margin: 0;"><strong>date:</strong> mar. 13th 2023</p>
             <strong>status:</strong> completed
             <p>the last of us (season 1)</p>
             <a style=background-color:transparent target=_blank href=https://www.hbo.com/the-last-of-us><img src=/pics/library/tlou.png class=cover></a>
@@ -2845,14 +2850,14 @@
     </div>
     </div>
     
-    <div class="filterDiv movie">
-        <div class=libbox>
-            <div class=libbox-title-bar># film <div class=right>x</div>
+    <div class="log movie">
+        <div class="logmain">
+            <div class="titlebar"># film <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar. 11th 2023</p>
-            <p style=margin:0><strong>status:</strong> completed</p>
+            <p style="margin: 0;"><strong>date:</strong> mar. 11th 2023</p>
+            <p style="margin: 0;"><strong>status:</strong> completed</p>
             <p>every single scream movie</p>
             <img src=/pics/library/scream.png class=cover>
             <p>i have taken it upon myself to watch every single scream movie in a row, and i will compile my little Thoughts all into one post because having 6 boxes on SCREAM feels insane. plus i don't think i'll have much to say on each individual one. we'll see though.</p>
@@ -2866,16 +2871,16 @@
     </div>
     </div>
 
-    <div class="filterDiv anime">
-        <div class=libbox>
-            <div class=libbox-title-bar># animanga <div class=right>x</div>
+    <div class="log anime">
+        <div class="logmain">
+            <div class="titlebar"># animanga <div class="x">x</div>
         </div>
-        <div class=inner>
+        <div class="logtxt">
             <br>
-            <p style=margin:0><strong>date:</strong> mar. 6th 2023</p>
-            <p style=margin:0><strong>status:</strong> completed</p>
+            <p style="margin: 0;"><strong>date:</strong> mar. 6th 2023</p>
+            <p style="margin: 0;"><strong>status:</strong> completed</p>
             <p>cardcaptor sakura </p>
-            <a style=background-color:transparent target=_blank href="https://myanimelist.net/anime/232/Cardcaptor_Sakura?q=cardca&cat=anime"><img src=/pics/library/ccs.png class=cover></a>
+            <img src="/pics/library/ccs.png" class="cover">
             <p>i love how adorable this show is. i did enjoy the first season a lot more than the second. especially towards the end with the yue Development and also just getting more growth out of sakura and li. i feel like the pacing was just more to my liking than it was in the second season. but!! i didn't <i>dislike</i> season 2 or anything, it's super cute and i am living for all the yukino and tomoya moments... (the best part of the entire series tbh) they mean so much to me (´｡• ω •｡`) ♡</p>
         </div>
     </div>

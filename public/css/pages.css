@@ -257,7 +257,7 @@ p {
     padding-right: 8px;
     width: 123px;
     height: 185px;
-    position: relative;
+    display: block;
 }
 
 .libwelcome {
@@ -273,7 +273,7 @@ p {
     border-radius: 10px;
 }
 
-.filterDiv {
+.log {
     width: 100%;
     position: relative;
     height: auto;
@@ -340,6 +340,7 @@ p {
     margin: 0 auto;
     width: 100%;
     min-height: 320px;
+    height: fit-content;
     padding-bottom: 3px;
     margin-bottom: 25px;
     background-color: #fef8ff;
