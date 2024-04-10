@@ -265,7 +265,7 @@ p {
     margin: 0 auto;
     margin-top: -50px;
     border: #d380e1 2px dashed;
-    height: 70px;
+    height: 100px;
     background-image: url(/pics/backgrounds/page_background_animated_04.gif);
     padding-left: 10px;
     padding-right: 10px;
@@ -505,3 +505,112 @@ p {
     text-align: center;
 }
 
+.medialogHeader {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 50pt;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 10px;
+    -webkit-filter: drop-shadow(5px 5px 5px #d380e1);
+    filter: drop-shadow(5px 5px 5px #d380e1);
+}
+
+.medialogDesc {
+    width: 98%;
+    margin: 0 auto;
+    margin-top: -50px;
+    border: #d380e1 2px dashed;
+    height: 70px;
+    background-image: url(/pics/backgrounds/page_background_animated_04.gif);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+}
+
+.buttonContainer {
+    text-align: center;
+    margin-top: -60px;
+    padding-bottom: 15px;
+    display: block;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+.btn {
+    margin-top: 10px;
+    text-align: center;
+    background-color: white;
+    padding: 3px;
+    height: 26px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    box-sizing: border-box;
+    text-decoration: underline;
+}
+
+.btn:hover {
+    background-image: url(/pics/backgrounds/heartswallpaper.webp);
+    background-position: top;
+}
+
+/*Inside/main text of window boxes.*/
+.logtxt {
+    padding: 10px;
+    padding-bottom: 5px;
+    padding-top: 0px;
+    height: fit-content;
+}
+
+/*The title bar at the top of window boxes.*/
+.titlebar {
+    background-image: url(/pics/backgrounds/heartswallpaper.webp);
+    background-position: 740px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 99%
+}
+
+/*For the symbol in the top right corner.*/
+.x {
+    float: right;
+    margin-right: 5px;
+    margin-top: 4px;
+    font-family: "Arial", sans-serif;
+    line-height: 12px;
+    color: #d384e1;
+}
+
+
+/*Main body text boxes.*/
+.logmain {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 320px;
+    height: fit-content;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    background-color: #fef8ff;
+    border: 2px #d380e1 dashed;
+    padding-right: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #e9c3f1;
+}
+
+.cover {
+    float: left;
+    padding-left: 0px;
+    padding-right: 8px;
+    width: 123px;
+    height: 185px;
+    display: block;
+}

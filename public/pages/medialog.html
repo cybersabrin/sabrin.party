@@ -4,83 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/pages.css">
+    <link rel="stylesheet" href="/css/pages.css">
     <title>media log.</title>
 </head>
 
-<body style="width: 600px; background-image: url(/public/pics/backgrounds/heartswallpaper.webp);">
+<body style="width: 600px; background-image: url(/pics/backgrounds/heartswallpaper.webp);">
     <h1 class="libtitle"><i>media log</i></h1>
     <div class="libwelcome">
-        <p style="margin-top:15px">my best attempt at a comprehensive log of all the media i've consumed since i made this page... sometimes i have cool valuable things to say. other times i don't. it is what it is.</p>
+        <p style="margin-top:10px">my best attempt at a comprehensive log of all the media i've consumed since i made this page... sometimes i have cool valuable things to say. other times i don't. i also watch a lot of movies (too many) but logging them all on here broke my website. i have a <a href="https://letterboxd.com/cybersabrin/" target="_blank">letterboxd</a> if you want to check out my movie taste...</p>
+        <div id="myBtnContainer" style="text-align: center;">
+            <button class="btn active" onclick="filterObjects('all')"> show all</button>
+            <button class="btn" onclick="filterObjects('now')">current</button>
+            <button class="btn" onclick="filterObjects('fav')">hall of fame</button>
+            <button class="btn" onclick="filterObjects('game')">video-games</button>
+            <button class="btn" onclick="filterObjects('tv')">tv shows</button>
+            <button class="btn" onclick="filterObjects('manga')">manga</button>
+            <button class="btn" onclick="filterObjects('anime')">anime</button>
+            <button class="btn" onclick="filterObjects('lit')">literature</button>
+        </div>
     </div>
-    <div id="myBtnContainer" style="text-align: center;">
-        <button class="btn active" onclick="filterObjects('all')"> all</button>
-        <button class="btn" onclick="filterObjects('current')">current</button>
-        <button class="btn" onclick="filterObjects('fav')">favs</button>
-        <button class="btn" onclick="filterObjects('game')">games</button>
-        <button class="btn" onclick="filterObjects('tv')">tv shows</button>
-        <button class="btn" onclick="filterObjects('movie')">movies</button>
-        <button class="btn" onclick="filterObjects('manga')">manga</button>
-        <button class="btn" onclick="filterObjects('anime')">anime</button>
-        <button class="btn" onclick="filterObjects('lit')">books</button>
-    </div>
-    <script>
-        filterObjects("all");
-
-function filterObjects(c) {
-    var x, i;
-    x = document.getElementsByClassName("log");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        removeClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
-    }
-}
-
-function addClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {
-            element.className += " " + arr2[i];
-        }
-    }
-}
-
-function removeClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
-        }
-    }
-    element.className = arr1.join(" ");
-}
-    </script>
+    
+    <script src="/filter.js"></script>
 
     <!--media logs start here-->
 
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> apr 5th 2024</p>
-            <strong>status:</strong> completed
-            <p>lance lizardi (2017)</p>
-            <img src=/pics/library/lancelizardi.png class=cover>
-            <p>this is a fantastic little short film about a guy who loves lizards so much he becomes one. or was he a lizard this whole time? doesn't matter. love is love.</p>
-        </div>
-    </div>
-    </div>
-
     <div class="log anime now">
         <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
+            <div class="titlebar"># anime <div class="x">x</div>
         </div>
         <div class="logtxt">
             <br>
@@ -89,97 +39,6 @@ function removeClass(element, name) {
             <p>flip flappers</p>
             <img src=/pics/library/flipflappers.png class=cover>
             <p>it's me and the magical girl yuri until the end of time...</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> apr 4th 2024</p>
-            <strong>status:</strong> completed
-            <p>horrorgirl (1995)</p>
-            <img src=/pics/library/horrorgirl.png class=cover>
-            <p>ghetty is always a joy to watch on screen. <i>you can't just enter our space MISTER MAN.</i> get you a girl who knows her tenant's rights! her line delivery is forever ingrained in my mind. slayme was also fun i kinda zoned out in the middle of the movie and next thing i know they're fighting a demon or something. idk. all i know is that i love the band horrorgirl and that $14 is a lot for a pizza. <i>hey wait a minute... you're not a girl.. GRRRRRRRRRRR</i></p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> apr 4th 2024</p>
-            <strong>status:</strong> completed
-            <p>banned from broadcast: saiko! the large family (2009)</p>
-            <img src=/pics/library/saiko.png class=cover>
-            <p>this left me feeling unnerved.... and unsettled... i really loved how this movie had no real conclusion. the way some of these blaring red flags of something more sinister going on were ignored and looked over by the documentary and veronica put it on a new level of absurdity that i really loved. looking through some of the reviews made me love how many different theories people were coming up with about what really happened. i initially left this thinking the mom killed the previous dad and the kids were all being shitty to their new dad as a way to save him from their mother. only when she was in the forever coma were they actually able to have fun together. but there are just so many other things left unanswered in a way that's just sooo unnerving. it's hard to explain.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> apr 3rd 2024</p>
-            <strong>status:</strong> completed
-            <p>the raspberry reich (2004)</p>
-            <img src=/pics/library/trr.png class=cover>
-            <p>this movie was so ridiculous but i loved it. i couldn't find the regular version.. the only edit i found was the uhh hardcore version so there was lots of porn lmfao. but it was so funny! gay communism will always reign supreme. <i>there will be no revolution without sexual revolution. and there will be no sexual revolution without homosexual revolution.</i> our main lady is the original fujoshi the rest of us are just following her example. this was so silly. loved it more than i thought i would.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie fav">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> apr 1st 2024</p>
-            <strong>status:</strong> completed
-            <p>guinea pig: mermaid in the manhole (1988)</p>
-            <img src=/pics/library/gpm.png class=cover>
-            <p>ewwwwwwwww ewwww ew ew ew!!!!!!!!! ewwwwwwwwww omg ewwwwWWWWWWW!!!!!!!!!! i'd give this gorgeous masterpiece forty million stars if i could. EWWWWWWWWW</p>
-            <p>this movie was so nasty in terms of the amazing incredible special effects and gore makeup they did in this. my first guinea pig movie, and i'm debating on whether or not i should watch the rest because i hear this is the best one for sure. but it's so beautiful. such a thoughtful story about women and art and our planet and, as the great philistine poet and letterboxd user <a href="https://letterboxd.com/exmachine/" target="_blank">noma</a> said, "how a third variable (men) always finds a way to fuck things up" which is so true. i love how this touched on grief, how that get mixed up in feelings of ownership. over women over art over land. over beauty. what becomes of that. it was just so good. it's weird to watch a movie like this where you're gagging the whole time but tearing up at the same time because of how Raw and Touching the story really is...</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> apr 1st 2024</p>
-            <strong>status:</strong> completed
-            <p>baby cat (2023)</p>
-            <img src=/pics/library/babycat.png class=cover>
-            <p>i unexpectedly woke up at 4am on my birthday so the first logical thing i thought to do was to turn on baby cat, the best movie ever made. the plot twists were thrilling. the comic sans bdsm zine that kept changing headlines in Dana's head to reflect her gay realizations was top tier. the lesbian cat girl landlord is the only landlord i'd defend.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 31st 2024</p>
-            <strong>status:</strong> completed
-            <p>flaming creatures (1963)</p>
-            <img src=/pics/library/flamingcreatures.png class=cover>
-            <p><i>is there a lipstick that doesn't come off when you suck cock?</i> i have a hard time with movies without a narrative but i actually loved this one. a beautiful cinematic experience featuring queers. lipstick. earth-shattering orgies. anger. ugly in a way that's dazzling. chaos. fun genderplay. limbs and parts. my favorite parts were the scenes where you couldn't tell where one person began and the other ended, and the low quality film that was fucked up by the police when they confiscated this totally added to disorienting feelings i had while watching. oh and zombie (or vampire? couldn't really tell..) marilyn manroe!</p>
         </div>
     </div>
     </div>
@@ -199,112 +58,6 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 30th 2024</p>
-            <strong>status:</strong> completed
-            <p>steve.oedekerk.com (1997)</p>
-            <img src=/pics/library/stevedotoedekerk.png class=cover>
-            <p>i loved that skeleton more than anything. this also gave me some new ideas and inspiration for my personal website that's been begging for a redesign for months...</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 29th 2024</p>
-            <strong>status:</strong> completed
-            <p>chainsaw scumfuck (1988)</p>
-            <img src=/pics/library/cssf.png class=cover>
-            <p>this was a fun little short about a guy with a chainsaw who just murders everyone in this apartment for seven minutes. best opening credits ever, you know a movie is going to be <i>good</i> when the credits are handwritten on paper.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie fav">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 29th 2024</p>
-            <strong>status:</strong> completed
-            <p>good dick (2008)</p>
-            <img src=/pics/library/gooddick.png class=cover>
-            <p>i watched this movie three times. so far. i think it's a comfort movie now? i really like the fucked up dynamic between these two and i love their terrible awful relationship.. but im so surprised to see so many people call this a romance love story? lmfao this reads more as a horror to me… i thought that was the point! this is one of those stories that's just so Weird and Messy that it causes most people to lose all cognitive function when talking about this. half the letterboxd comments are like "god this movie is horrible for depicting horrible things and fuck the writer too" and the other half are like "aw the main couple's relationship is so sweet and romantic and cute" and it's like omg nooo. both of these are wrong. it's weirder than that. anyways regardless. i loved this one a lot and i want 2 kiss marianna palka's fucked up brain <3</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 28th 2024</p>
-            <strong>status:</strong> completed
-            <p>bitch (2017)</p>
-            <img src=/pics/library/bitch.png class=cover>
-            <p>this was so insane i loved it! so jarring and weird and the use of gothic elements in such a Not Gothic environment made everything so much more unsettling and also funny? such a weird mix of moods in this movie, it's great. i was disappointed that the husband never called jill his “bitch wife” like i feel like he had to… it's right there! i don't care if it's too on the nose… i also didn't care for his redemption arc because of how awful he was and still is but he got me when he was like "you can be whatever you need to be" i was like arugh.. okay…. i sympathize with the freak..</p>
-            <p>this is like if greener grass and dogtooth had a baby who came out of the copy machiene wrong.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 28th 2024</p>
-            <strong>status:</strong> completed
-            <p>dare (2005) & the dare project (2018)</p>
-            <img src=/pics/library/dare.png class=cover>
-            <p>the whole time watching this i kept thinking hmm this seems like something that i would have watched at age 11 and would have changed the trajectory of my life forever… then i got to the part where light boy gets kicked into the swimming pool and all my memories came back and turns out this <i>was</i> a movie i watched at around age 11 that changed the trajectory of my life forever... i had completely forgotten about it. but it was this and that "imagine a word where GAY is the NORM and STRAIGHT is the MINORITY" short film that really shaped the man i am today. what was new was the 15 years later short film where they reunite and they're just as weird and cringe as they were when they were 17. heartwarming stuff.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 25th 2024</p>
-            <strong>status:</strong> completed
-            <p>how to have cyber sex on the internet (1996)</p>
-            <img src=/pics/library/hthcsoti.png class=cover>
-            <p>i was not expecting this to be so funny!! these hosts were hilarious. i love how she introduces herself and is like, "i've been on the internet for two years now," like it's a long time. i love seeing people on the internet when it was such a New Thing. but really this "instructional video" was just a couple of girlfriends hanging out typing sexy fanfiction on their computers and giggling about it the whole time. loved it! i also really love the concept of an instructional video about the internet... and some Valuable sex ed from the 90s. just overall great stuff.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 25th 2024</p>
-            <strong>status:</strong> completed
-            <p>amityville karen (2022)</p>
-            <img src=/pics/library/ak.png class=cover>
-            <p>didn't enjoy this one as much, it started off really funny and amusing but i think 2 hours of white woman terrorism just gets boring after a while... the movie could have been shorter. and had wayyy more dawna screen time. loved seeing her here. she should have played karen. i did find the part where karen was covered in blood sitting on her bathroom floor crying about how she didn't get to complete all the tasks on her to-do list very relatable though! <i>this dream is offensive!!</i></p>
-        </div>
-    </div>
-    </div>
-
     <div class="log movie fav">
         <div class="logmain">
             <div class="titlebar"># film <div class="x">x</div>
@@ -320,77 +73,17 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
+    <div class="log lit">
         <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
+            <div class="titlebar"># literature <div class="x">x</div>
         </div>
         <div class="logtxt">
             <br>
             <p style="margin: 0;"><strong>date:</strong> mar 22nd 2024</p>
             <strong>status:</strong> completed
             <p>the body papers by grade talusan</p>
-            <img src=/pics/library/thebodypapers.png class=cover>
+            <img src="/pics/library/thebodypapers.png" class="cover">
             <p>not sure why i read this whole thing.. i always feel bad for not liking memoirs. it was fine, but i wasn't really into it. i did genuinely like the use of photos and letters inserted throughout. but other than that i was just wondering why i was bothering finishing it... i can be more honest here because i'm not worried about the author seeing this like if i had wrote about it on goodreads or something. lmfao. sorry i was bored.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 22nd 2024</p>
-            <strong>status:</strong> completed
-            <p>dream scenario (2023)</p>
-            <img src=/pics/library/ds.png class=cover>
-            <p>ahh yes, nicholas cage. the man of my dreams. this was a fun movie i mostly just felt back for cage's character the whole time. because there was no need for everyone to be so irrationally angry with him because they know he's only terrorizing them in their dreams. but i don't know, i'm not usually plagued with nightmares every night so who am i to say anything... lol.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 22nd 2024</p>
-            <strong>status:</strong> completed
-            <p>scorpio rising (1963)</p>
-            <img src=/pics/library/scorpiorising.png class=cover>
-            <p>this was definitely a weird one but i thought it was really cool! it's just one long music video where songs just play in the background of some gay nazi biker gang hazing antics. there were also some low budget jesus movie scenes weaved in throughout which i really liked too.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 22nd 2024</p>
-            <strong>status:</strong> completed
-            <p>nocturna artificialia (1979)</p>
-            <img src=/pics/library/nocturnaa.png class=cover>
-            <p>this is a stop-motion movie about a guy messing around in a bunch of weird industrial looking rooms. i always struggle with non-narrative movies so i didn't really get this but the feelings of loneliness and disorientation really came though. this is exactly how i feel when i wake up way too early on a saturday.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 22nd 2024</p>
-            <strong>status:</strong> completed
-            <p>microwave massacre (1979)</p>
-            <img src=/pics/library/mm.png class=cover>
-            <p>i thought this was going to be about a sentient microwave that cooks people alive. it wasn't. it was about a guy who doesn't really like his wife and can't get it up unless he can eat people during? after? sex. it was pretty funny though. the main character was endearing. all i know is that if i went around eating people i too would take every opportunity to make cheesy one liners that no one will get except for me!</p>
         </div>
     </div>
     </div>
@@ -412,7 +105,7 @@ function removeClass(element, name) {
 
     <div class="log game">
         <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
+            <div class="titlebar"># videogame <div class="x">x</div>
         </div>
         <div class="logtxt">
             <br>
@@ -425,50 +118,6 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie fav">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 19th 2024</p>
-            <strong>status:</strong> completed
-            <p>red lips (1995)</p>
-            <img src=/pics/library/redlips.png class=cover>
-            <p>i need a couple rewatches to give this my typical 4am-crazed-ramblings-of-a-mad-man essay but oh my god this movie was incredible! i loved it a lot... ghetty chasun is a star... we start off with caroline selling her blood for some cash because she's super broke. and her clinic doctor decides to use her as a test subject for some weird experiment. of course caroline is willing, she's broke and desperate and was just offered $100. talk about how western medicine abuses people living in poverty! that turns her into a vampire basically and she goes around killing people until... she meets lisa. fresh out of a breakup lisa. and they become 4LYFERS. i actually love that we get to see lisa in this already hectic point in her life as she (seemingly) easily slips into the role of supportive girlfriend as she covers up the dead body caroline just consumed. she's such a real one and also felt like a very Likely choice for her to make? the actresses in this just felt so real and gave such genuine performances it gave this movie so much more weight to me. if that makes sense... very random but i was also obsessed with that one-off character (the alien queen actress or whatever) who was just.. delivering her lines in the most unnatural way possible? it was beautiful. i was charmed. the colors in this were so hazy and weird it felt like a dream. i just loved this one so much.. new favorite.. must rewatch soon...</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 18th 2024</p>
-            <strong>status:</strong> completed
-            <p>gorotica (1993)</p>
-            <img src=/pics/library/gorotica.png class=cover>
-            <p>this is my first movie starring ghetty chasun and i understand why people love her so much... she was so charming. i can't describe it but she gave very compelling performances! and yes i'm talking about her performance as a character who fucks dead people! gah. someone on letterboxd said this was like a sexy punk version of nekromantik and it made me laugh because it's true. i did like this one way more and was less grossed out (still grossed out, but nekromantik made me gag!). i just loved watching this woman sit around, chain smoke, and talk to a dead guy about her daddy issues.. and the skull fucking was cool too. the soundtrack to this was also so good? i am thinking of having this play in the background while i work because i couldn't find any soundtrack to this movie in my half-assed google search for it. i'll try again later.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 18th 2024</p>
-            <strong>status:</strong> completed
-            <p>vampz (2004)</p>
-            <img src=/pics/library/vampz.png class=cover>
-            <p>first time watching i was a little distracted throughout but honestly i want to give it another try later on because of how awesome the makeup and special effects were. but honestly i was amazed at the last twenty or so minutes of the movie because when the shit was going down and the vampz were (tragically.. unforuntately.. they deserved better) killed, their deaths were insane! the melting faces and the bloody mess these girls made was super fun to watch. i honestly think the special effects (is that even what you call it? i don't even know..) were incredible. true talent at work here! <i>you know my stomach can't stomach steroids...</i> was just iconic. i gotta re-watch when i'm less sleepy in a couple weeks...</p>
-        </div>
-    </div>
-    </div>
 
     <div class="log game">
         <div class="logmain">
@@ -485,465 +134,6 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 17th 2024</p>
-            <strong>status:</strong> completed
-            <p>deceived by my mother-in-law (2021)</p>
-            <img src=/pics/library/motherinlaw.png class=cover>
-            <p>(rip to the movie poster.. it was so dark the dithering just turned it into a purple blob.. whatever) this was such a silly movie. i loved it. maggie was the star! she's our lovely evil gaslighter con-artist mother-in-law won me over. i was rooting for her the whole time i don't care how awful she was. she was funny. therefore i love her. the acting was really charming, even though the story wasn't very compelling. i really just loved watching maggie be all grumpy and cartoonishly evil. would i recommend this to anyone? no.. did i still enjoy it? yeah... lesson learned: don't EVER get a mother-in-law.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 17th 2024</p>
-            <strong>status:</strong> completed
-            <p>anatomy of a fall (2023)</p>
-            <img src=/pics/library/aoaf.png class=cover>
-            <p>first #real good movie in a while and woah i was blown away! i think what stood out to me most in this movie was the acting. this cast was all absolutely incredible!! messi the dog.. he is a star! playing dead like that! wow. and that kid? so amazing. i almost cried watching him. the story was fun and compelling and i loved the lawyer. my theory is i think she didn't <i>push</i> him in a literal sense but i do think she pushed him to kill himself in the end. but i still don't know for sure! they made sure to leave that open, i think... anyways, i loved that movie. good stuff!</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 16th 2024</p>
-            <strong>status:</strong> completed
-            <p>lisa frankenstein (2024)</p>
-            <img src=/pics/library/lisafrankenstein.png class=cover>
-            <p>lisa frankenstein was such a fun watch!! i immediately fell in love with lisa because she is so weird and unserious and like, developed a situationship with a cole sprouse shaped statue 5 minutes into the movie. i was hooked! kathryn newton was perfect for this role... i missed her from my supernatural days... when i was 14 i tweeted @ her telling her it was my birthday (little me just wanted attention, okay?) and she wished me a happy birthday! i still have the screenshot i think.. even though it's not really a flex. it is to me. anyways. the creature and lisa are actually lesbians! though i am unmedicated right now so i will not explain. take it as it is. also i added this movie to my list of movies that fuel my fear of tanning beds.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 15th 2024</p>
-            <strong>status:</strong> completed
-            <p>she-devils on wheels (1968)</p>
-            <img src=/pics/library/shedevils.png class=cover>
-            <p>this movie was a bit of a bore but i didn't hate it. it was a pretty chill hangout movie, i liked the soundtrack a lot (i ended up doing homework while this was on so this was greatly appreciated) and the gang's funky vests were so fun. they'd make a great halloween group costume idea.. but plot wise there wasn't much going on. just a bunch of gals terrorizing their local men. so it was alright! <i>sex, guts, blood and all men are mothers!</i> or whatever</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 15th 2024</p>
-            <strong>status:</strong> completed
-            <p>beach volleyball detectives parts 1 & 2 (2007)</p>
-            <img src=/pics/library/bvd.png class=cover>
-            <p>it's not a #real volleyball movie if it doesn't have cgi volleyballs and lesbian communism. communist lesbians? yes. these movies were super silly but a lot of fun. i loved the dialogue and just.. the whole premise. detectives who deliver justice via beach volleyball? already iconic. <i>communism rules. hail satan.</i> made me laugh... though i do have to say that i did not appreciate the racism thrown in there for no reason at all.... beach volleyball detectives was almost perfect.. but like what the hell man...</p>
-     
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 14th 2024</p>
-            <strong>status:</strong> completed
-            <p>robowoman (2019)</p>
-            <img src=/pics/library/robowoman.png class=cover>
-            <p>kinda strange how the imdb movie poster for this has some random woman on there that is not dawna lee heising? anyways. this movie was alright. definitely more entertaining plotwise- but the real star of the show was robowoman herself of course. lots of beautifully awkward camerawork and long shots of dawna lee punching the air and going through her training arc. saving the revenge kills for the last ten minutes of the movie. great stuff. i genuinely loved robowoman's <i>have i come to terms with it?</i> monologue, though. she moved me. i think a sequel is in the works? at least i saw it as a search result on google... i will be watching!</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 14th 2024</p>
-            <strong>status:</strong> completed
-            <p>female prisoner #701: scorpion (1972)</p>
-            <img src=/pics/library/scorpion.png class=cover>
-            <p>i watched this after reading that miss scorpion from love expsure is a spoof of nami matsushima in this movie! and wow i'm so glad i watched. this is definitely a sleazy exploitation film but it's also at the same time very artistic and genuine? love me a revenge exploitation film with STYLE! the colors in this movie are gorgeous and also Intentional... makes it all very dramatic which i love. the camerawork was dizzying it made the whole thing feel like a fever dream. very 70s of them to do. i honestly loved this one and am very excited to watch the sequels. i need more meiko kaji death stares in my life.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 13th 2024</p>
-            <strong>status:</strong> completed
-            <p>jesus christ vampire hunter (2001)</p>
-            <img src=/pics/library/jcvamphunter.png class=cover>
-            <p>holy hell this movie is fantastic! i was immediately hooked when the first thing they say in this movie is Where are the lesbians?! and the newspaper headlines all say CRITICAL LESBIAN SHORTAGE. so from the start you know you're walking into a dire situation. jesus christ himself shows up kills vampires and saves the lesbians! because he loves them all. no bury your gays here folks, we got resurrect your gays so they can kiss each other for a little longer. the musical aspects were so fun. i cheered out loud when jesus started dancing and singing. the soundtrack is so great. just so much campy fun!</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 13th 2024</p>
-            <strong>status:</strong> completed
-            <p>the legacy (2022)</p>
-            <img src=/pics/library/thelegacy.png class=cover>
-            <p>i have no idea what this movie was about i watched it for dawna lee heising and zoned out for the rest of the movie. the sound effects were so jarring i got a little freaked out! so eerie... the editing was really charming though i was a big fan of that. otherwise the movie was a bore i was just waiting for it to be over. wasn't for me but i might rewatch later. i can't tell if i really Don't Like a movie or if i just wasn't in the right mood for a movie and watched one anyways... lol. well!</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 13th 2024</p>
-            <strong>status:</strong> completed
-            <p>attack of the meth gator (2023)</p>
-            <img src=/pics/library/methgator.png class=cover>
-            <p>save me tojikuna creature films.. save me.. (i wasn't saved) this one also sucked! but i liked it more than cocaine shark because there was way more meth gator in this which was great. but still, not enough gator. i think the main reason why i'm always so disappointed in these creature films is that they are never actually centered on the creature. don't show me people trying to stop the meth gator i want 80 minutes of gator internal monologue as he grapples with his unexpected drug addiction and hunger for blood. i think out of all the drugged up animal movie's i've seen so far, cocaine bear is still definitely my favorite. i watched it theaters opening weekend cause they were giving out free gummy bears and i loved it.. so much bear and so much silly campy gore.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 12th 2024</p>
-            <strong>status:</strong> completed
-            <p>cocaine shark (2023)</p>
-            <img src=/pics/library/cocaineshark.png class=cover>
-            <p>i don't know what i expected here to be honest.. but whatever it was, it wasn't that. i so desperately wished we got more than 20 seconds of cocaine shark screentime. i think he had a hawaiian shirt on? i know for a fact he had abs. which is hilarious but it was so dark we barely saw any more of the shark. the rest of the movie was pretty boring with some guy talking about how he wants to become a shark.. or that he feels he is a shark? i wasn't really paying attention to be honest.. not enough shark.</p>
-      
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 12th 2024</p>
-            <strong>status:</strong> completed
-            <p>aliens on crack (2009)</p>
-            <img src=/pics/library/aoc.png class=cover>
-            <p>sighs... for the amount of complete and utter nonsense this movie showed me i could not stop watching.. i had so many questions i so desperately wanted answers to. like.. when are the aliens going to show up? will that hat lady ever find jack? did the editor really just use every single iMovie transition animation they had available in the span of 45 seconds? will i ever find love like pooty and baby jizz? maybe not.</p>
-            <p>i loved the use of popeye cartoon clips and the music so loud you can't hear the dialogue and fantastic cinematography at work here. also the big time rush esque sound effects were incredible. pooty was the shining star of the story she is absolutely incredible and hilarious. i wish dakota did not exist. the absurdity of this movie was so captivating i almost forgot about the fact that there are ZERO aliens in this movie. ZERO!!!!!! well like sorta but NOT REALLY!!!!!!</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 12th 2024</p>
-            <strong>status:</strong> completed
-            <p>an erotic vampire in london (2002)</p>
-            <img src=/pics/library/mmvamp.png class=cover>
-            <p>another misty mundae movie for the books. not as good as <i>spiderbabe</i> but i still enjoyed this one a lot. a very unserious movie about caroline who begrudgingly flies to paris after her grandma dies, gets mugged, and then taken in by super hot lesbian isabelle as they fall in love and commit murder-robberies together. isabelle is the vampire of course and she eventually eats caroline. their dynamic was actually so fun in this... some real quality girl yaoi here, which was a very pleasant surprise. i also watched <i>an erotic werewolf in london</i> but i'm not even gonna bother logging it on here because i didn't like it as much. wayyy too much porn not enough plot... there was a lady werewolf. shrugs. i skipped through like the whole thing lmfao.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 11th 2024</p>
-            <strong>status:</strong> completed
-            <p>dark angel: the ascent (1994)</p>
-            <img src=/pics/library/darkangel.png class=cover>
-            <p>this may be another new comfort movie. the vibes of this one were just sooo good. even if the movie bored me at times. it was still a great watch. veronica is fantastic. she just ascended from hell (ran away from home) showed up in like new york city or whatever, watched some tv, immediately saw how fucked everything is and started killing cops on her way to ruin the mayor's life. a demon doing more for justice than our electoral system hell yeah. she was so efficient. so creative. so effective. i loved watching her question our world as she does nothing whatsoever to hide the fact that she is from hell. amazing stuff. and she even finds a hot doctor boyfriend along the way. what more could you possibly ask for?! <i>to turn away from evil is to be an accomplice to evil</i> - veronica</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 10th 2024</p>
-            <strong>status:</strong> completed
-            <p>kuroko's basketball the movie: last game (2017)</p>
-            <img src=/pics/library/knbmovie.png class=cover>
-            <p>i forgot i had never watched the movie after binging the series a couple years ago... this movie was amazing! i forgot how much i missed these basketball guys. kuroko.. aomine.. kagami.. akashi... my beloveds. the game was so absurdly intense i loved every minute of it. i was cheering like i was their coach. nobody can do ridiculous over the top homoerotic melodramatic basketball drama like kuroko no basuke... peak!</p>
-        
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 10th 2024</p>
-            <strong>status:</strong> completed
-            <p>woman at the wheel (1985)</p>
-            <img src=/pics/library/watw.png class=cover>
-            <p>this was such an enjoyable little short film. this woman has two boyfriends, one rich and one poor. which, as i was watching by the way, i forgot this was the 80s so i thought the boyfriend with the silly hat was the rich one at first. because he dressed like a hippie. and then they showed guy #2 with a suit and then it clicked. and both of them refuse to let her drive her own car!! and it's like what the hell are these entitled freaks on about.. let her drive the damn car! and then she does and we learn why she is not allowed to drive the damn car. soooo true! sooo real! the music was really good also. fun style!</p>
-        
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 9th 2024</p>
-            <strong>status:</strong> completed
-            <p>the erotic misadventures of the invisible man (2003)</p>
-            <img src=/pics/library/invisibleman.png class=cover>
-            <p>y'all. i almost didn't put this on here but i need you to know that this movie right here is an overlooked cultural relic. this is a horny movie about an invisible man who is like, great at sex or whatever. who cares that's literally not the point of this entry at all. in this movie, there is a man in a duck costume who walks into a bar, and asks the bartender: Hey! Got any grapes? and the bartender does not have any grapes. mind you, i'm watching this, zooted, sleep-deprived, and i'm just like wow okay. duck song reference. ten minutes later they cut to the bar again and the duck walks in again and asks for grapes. the bartender has no grapes. they basically go through the full story. then i see the year of this movie, 2003, and the year the duck song was released on youtube, 2009. and then i am cursed with the knowledge that <strong>the duck song ripped off the erotic misadventures of the invisible man. they made the song based off this movie.</strong> and my mind was blown. i told everybody i know about it like i'm the village religious fanatic shaking his fists and yelling about god. it's so stupid. but so important. i don't like that i have this information. it feels like cursed information.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 9th 2024</p>
-            <strong>status:</strong> completed
-            <p>female trouble (1974)</p>
-            <img src=/pics/library/femaletrouble.png class=cover>
-            <p>who knew aunty ida was the founder and lead commanding officer of the fujo army?!?! anyways, divine as dawn davenport was absolutely mesmerizing in this movie.. she is so beautiful... i thought this was thrilling.. her life story. fascinating and hilarious. i couldn't take my eyes off the screen this movie didn't father for a second. the dialogue was so smart and funny. i remember listening to a podcast where john waters talked about how as a kid he used to "play car crash" so seeing that here with the beloved miss taffy was great. <i>but my life is a show!</i> was so real coming from dawn... preach! i am just soo in love with how this movie manages to be so deeply serious in its unseriousness. beautiful.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 9th 2024</p>
-            <strong>status:</strong> completed
-            <p>spiderbabe (2003)</p>
-            <img src=/pics/library/spiderbabe.png class=cover>
-            <p>and on the sixth day, sabrin was introduced to misty mundae. spiderbabe is my new favorite Movie this was an absolute masterpiece. i haven't laughed so hard while watching a movie in forever, misty mundae was so fun in this, her line delivery was hilarious! my first words after the movie ended were: Wow.. wow. Wow!!!! Wow. patricia telling her reflection in the mirror, "i'd shag me" was so real i do that!! and the random civilians flashing their boobs as Thanks after she saves them?? iconic. i had so much fun with this i am going to have to re-watch this soon.... spiderbabe new comfort movie?? i think yes.</p>
-        
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 7th 2024</p>
-            <strong>status:</strong> completed
-            <p>theatre of blood (1973)</p>
-            <img src=/pics/library/tob.png class=cover>
-            <p>the premise of this one was more amusing than the movie itself overall, but i didn't hate it. i was bored during most of it but had the most fun watching the theatrical murders take place. i was watching on the big tv and my mom walked in during the moment one guy's dead was being decapitated while he slept and my mother was horrified. she asked me why i was laughing... it was funny! i totally understand why this guy would completely lose his mind and kill everyone who disagrees with his work. i feel like him at least 2x a week.</p>
-      
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 7th 2024</p>
-            <strong>status:</strong> completed
-            <p>werewolf in a women's prison (2006)</p>
-            <img src=/pics/library/wwip.png class=cover>
-            <p>i actually had so much fun with this one. at least, more than i was expecting. i had to skip through a lot of the porn to really enjoy it. but it was actually a great werewolf movie! it was really goofy, the dead boyfriend was <i>actually</i> funny (rare) and i loved seeing him pop in to give sarah some tips on how to kill herself as his body slowly deteriorated... "let me leave before i... lose face" as his face was melting off was just great. plus the gore and special effects were so fun! and the werewolf transformation sequence was gnarly. would i re-watch? maybe? yeah. yeah i would.</p>
-        
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 7th 2024</p>
-            <strong>status:</strong> completed
-            <p>dark classics (2022)</p>
-            <img src=/pics/library/darkclassics.png class=cover>
-            <p>this was just a five minute video of dawna lee heising doing a monologue from macbeth as lady macbeth. i'm adding it here because i loved it. i'd do anything to see a full showing of macbeth with her as lady macbeth. she nailed it. at the end she was talking about the character and said "her humanity was what made her go crazy in the end, and i like that about her" she just gets it. great stuff.</p>
-          
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 7th 2024</p>
-            <strong>status:</strong> completed
-            <p>horse camp (2014)</p>
-            <img src=/pics/library/horsecamp.png class=cover>
-            <p>this one was pretty bad but i still liked it. i feel like this movie would definitely be something pre-teen me would have latched onto in an obsessive way. it was super homoerotic and the friendship breakup was so intense. but the movie was just so much longer than it needed to be. the repeated camp counsellor announcement (and the song that goes with it) made it feel like i was actually spending the summer there-- and that's not a good thing. there were so many songs with like. lyrics. where you'd expect instrumental music? it was so strange. this is definitely something i'd re-watch though, i think. i like it in a weird way. i mean. who wouldn't sorta enjoy horse girl lesbian brokeback mountain?</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 7th 2024</p>
-            <strong>status:</strong> completed
-            <p>space girls in beverly hills (2009)</p>
-            <img src=/pics/library/sgibh.png class=cover>
-            <p>i had high expectations for this one and was a little disappointed. very disappointed... it was cute and camp and i loved the space girls' hair. it was so big and colorful and amazing. wish a planet full of hot aliens like that existed in irl. they were all so gorgeous. but the movie totally missed the opportunity to be even more fun and gay. the lady planet needs men to repopulate so they accidentally land in earth (ugh!) and settle for this awful playboy guy instead. which is like, fine. i wouldn't have minded that at all if the narrative wasn't so focused on this man. i didn't care about him at all. he wasn't funny or interesting. i wanted more space girls screen time and more sisterhood and more girl love.... so. disappointing but visually pleasing, at least.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 6th 2024</p>
-            <strong>status:</strong> completed
-            <p>all of us strangers (2023)</p>
-            <img src=/pics/library/aous.png class=cover>
-            <p>a real movie this time. this one was sad. i didn't <i>love</i> it, not for any serious reason but it didn't particularly yank at my heartstrings the way other tragedies do, but it was still pretty good. honestly my favorite part of the movie were the transitions. they were sooo fluid and so seamless it did a great job at blurring the line between memories and reality. and when the memories of his parents or of harry went away and we see that the main guy is alone again the feelings of loss are sooo strong. the transitions just do a great job with that. beautifully done. i do think it's hilarious that i knew harry would kill himself that night precisely 10 minutes into the movie. flo tried to redirect me but i knew... i called it. </p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 6th 2024</p>
-            <strong>status:</strong> completed
-            <p>los angeles lifers (2019)</p>
-            <img src=/pics/library/lal.png class=cover>
-            <p>i couldn't tell if this was a tv show pilot or a movie. but i this this was the one that had a lot of the same actors that were in horndog beach party so that was fun. i don't remember much about this movie other than it was about some struggling actors and that the sound effects were hilarious. the guy in charge of the soundboard was playing the laugh track after every other sentence spoken it was great. and when dawna lee heising appeared the crowd went WILD which was very fitting. it's what she deserves. so overall a fun watch. even though i don't remember what happens.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 6th 2024</p>
-            <strong>status:</strong> completed
-            <p>after school massacre (2014)</p>
-            <img src=/pics/library/asm.png class=cover>
-            <p>hell yeah another movie with dawna lee heising in it. this is so healing. miss perkins is beautiful and gorgeous i love her. the only other jared masters movie i've seen (i think?) was slink which was great because so many of the actors reappeared here. it's fun recognizing them lmfao. first of all i wanted to point out how actually incredibly cute and creative the opening credits were?? the handwritten burn book esque concept was so fun i loved it! the dialogue here was also so absurd i couldn't stop laughing. for the first like half hour? hour? or so i was like <i>THIS</i> is my kinda brainrot film.. <i><strong>what was that? uh i dunno some psycho mass murderer killer?</strong></i> like.. yea man. the beginning was pretty great and i was loving it but i started to get bored during the actual massacre part which is... telling, i think. i really could have done without the existence of that fucking freak boyfriend guy who literally sexually assaulted a girl that was passed out? and no one gave a fuck obviously and it was treated as if they were hooking up. when she was. unconscious. gross! literally so gross and unnecessary. ew. also i'm pretty sure this movie had a lesbian subplot too but it's too homophobic to tell... i ♡ 2014!</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 5th 2024</p>
-            <strong>status:</strong> completed
-            <p>slumber party massacre II (1987)</p>
-            <img src=/pics/library/spm2.png class=cover>
-            <p>i liked this one way more! now that i have something to compare it to i can safely say the first slumber party massacre was kinda dogshit. i was absolutely obsessed with the girl who cannot read the room for the life of her and keeps talking about her zits when her friend is clearly going through a bad time. sally. love her. she's just living in her own world! that's all! i also think the rockstar that's been torturing courtney about Going All The Way was really funny. made use of the whole drilling bit. if you're gonna make a slasher about the devilish act of premarital penetrative sex you might as well be funny about it! and the performance he gave?! incredible! lets buzz! <i>i can't get no... satisfaction</i> was hilarious. maybe my sense of humor is absolute garbage. but i don't care.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 5th 2024</p>
-            <strong>status:</strong> completed
-            <p>slumber party massacre (1982)</p>
-            <img src=/pics/library/spm.png class=cover>
-            <p>this was a really fun movie. very simple in a lot of ways but i thought it was cute. a very 80s camp slasher horror. i had it on the background as i was cleaning my room because i didn't think it would be serious but i did get into it. it wasn't the story that was necessarily interesting moreso the characters themselves. so it was fun! i did eventually need to start cleaning my room so i wasn't paying much attention but i still think it counts. i'm gonna watch the second one too. i read some people were saying this was gay and i don't think i was paying attention by that point, whoops. maybe i should rewatch? and not clean my room this time... i also saw there's a 2021 remake so i want to watch that too. i'm invested in the slumber party massacre franchise i guess.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 5th 2024</p>
-            <strong>status:</strong> completed
-            <p>gwank (2005)</p>
-            <img src=/pics/library/gwank.png class=cover>
-            <p>giuseppe andrews is one weird dude. i liked this one though. there's something really touching about this functionally dysfunctional family living together as they cope with their abandoned dreams and also a murder. kitty the singing 20 year old and her failed rapper boyfriend Richard formerly known as PO Box were especially charming. my favorite scene was the tangent where richard was talking about cryogenics and miss kitty was like thats fucking stupid and richard was like well duh its stupid but that's just how those rich people think! i love a moment taken to make fun of rich people. it was great. i still don't know what Gwank is and quite frankly, i really don't give a fuck either.</p>
-        </div>
-    </div>
-    </div>
-
     <div class="log tv">
         <div class="logmain">
             <div class="titlebar"># tv <div class="x">x</div>
@@ -955,68 +145,6 @@ function removeClass(element, name) {
             <p>leverage</p>
             <img src=/pics/library/leverage.png class=cover>
             <p>basically if the phantom troupe from hxh was not really into murder. also, parker is quite literally the best most well written most perfect fictional character in the entire world. or at least, out of everything i've ever watched in my life. this was such an enjoyable watch. it's light, it's silly, but the characters are so loveable i haven't been attached to characters like this in so long. they are just the perfect comfort characters. hardison parker eliot (OT3) dynamic is something so special. they take care of each other. they just make me so happy. sophie took a bit to warm up to me in the early seasons but she's literally my wife and i will kill nate for her. just saying. this entry isn't as thorough as i wanted it to be because i'm sleepy but. this was such a feel good show. i loved it. i love these characters. i love parker's rise to power. i'd die for her. top ten characters of all time.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 4th 2024</p>
-            <strong>status:</strong> completed
-            <p>pumpkinhead (1986)</p>
-            <img src="/pics/library/pumpkinhead.png" class="cover">
-            <p>surprisingly charming with some beautiful cinematography, which i really wasn't expecting. i loved the red lighting they used indoors it gave the feeling that nowhere was safe. i feel like if i watched this as a kid it would have really stuck with me. my one complaint is that i wish this movie was gloopier and gloppier, but i think the lack of gore is due to the fact that they probably used up their entire budget on making this sick ass pumpkinhead monster creature, so i'll forgive it. some great dialogue too, like: "only god can save us from what's out there, kim" and then kim goes to the kitchen to grab two butcher knives and says, "in case god doesn't show up." an icon. hilarious. this feels like it should be a movie i ritualistically watch every halloween.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 4th 2024</p>
-            <strong>status:</strong> completed
-            <p>lords of chaos (2019)</p>
-            <img src="/pics/library/loc.png" class="cover">
-            <p>this movie is so many levels of fucked up lmao. looking at the letterboxd reviews a lot of people hated it because of its awful misrepresentation of black metal, and that the guys this movie was based off are sensationalized and made to represent the entire community. which like is totally valid idk anything about black metal but i know it's not whatever they were doing in this movie. and i think this is the same thing they do with like, tv shows or movies about real serial killers and stuff. so like it sucks that this movie is continuing these harmful narratives about real shitty people. i don't know how much of the movie was real and how much was fake. so i don't know how seriously to take this movie lmao. i do think the two main guys would have saved so much time and energy if they just kissed each other instead of committing acts of terrorism but who am i to say anything. the movie was alright i guess?</p>
-            <p>rory culkin was the perfect casting choice for the main character tho the movie poster is beautiful. it's sort of hard to describe but he looks so beautifully sad. this makeup art is incredible it's what made me watch the movie in the first place. that and my friend roisin told me to lmao. that is one good sad face on this lad. i also think the guy who plays varg did an incredible job at making me hate him. the scene where the reporter was like "so you're a paganist.. and a satanist... and a. nazi? that's a pretty broad belief system..." cracked me up. but otherwise yeah it was alright i guess, moral issues aside. I HATE THAT THEY CUT RORY CULKIN'S HAIR.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 3rd 2024</p>
-            <strong>status:</strong> completed
-            <p>cheerleader massacre (2003)</p>
-            <img src="/pics/library/cheerleadermassacre.png" class="cover">
-            <p>i had this on the background while i was getting a ton of my work done but i don't think i would have liked it even if i had paid attention to the whole thing. i'm still including it here though because i technically did watch the whole thing. the picture-in-picture feature is a blessing to all. i love technology. the cover seemed cool i thought it would be like <i>Bottoms</i> but bad.. but i don't think it was funny enough. the girl with the pixie cut had some good horror screams though. i appreciated that.</p>
-         
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 3rd 2024</p>
-            <strong>status:</strong> completed
-            <p>club lingerie (2014)</p>
-            <img src="/pics/library/clublingerie.png" class="cover">
-            <p>i am starting to get what they mean when they call something a 'hangout movie' now. honestly this movie was cute i have nothing bad to really say. i zoned in and out while watching but it was only cause i had it on while i was working. i loved the monster puppet creature thing and the lesbian dawna lee heising with her trans gf wife. i also really enjoyed watching these girls put on the most obscure acting performances i've seen in a while. i couldn't tell you what this movie was about but i loved it. i might have to re-watch while i'm <i>not</i> working soon because i really liked the vibes of this one.</p>
         </div>
     </div>
     </div>
@@ -1043,52 +171,7 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 2nd 2024</p>
-            <strong>status:</strong> completed
-            <p>eaten alive! a tasteful revenge (1999)</p>
-            <img src="/pics/library/eatenalive.png" class="cover">
-            <p><strong>"nah, i'm not an ass-kisser anymore. i'm an ass-eater."</strong> this movie is a gem. absolutely fucking hilarious. i mean. this woman gets called ugly at work so she shrinks (with a shrink gun) and eats every single woman who's prettier than her. this is incredible. stacy is so funny. and the scene inside stacy's stomach was actually pretty good? you know. didn't see it coming. the special effects are great. i love how bored all the women sound about getting shrunk and eaten alive. the acting was (terrible) phenomenal. i was a big fan of this one. update: i just found out this is like a kink movie. i had no idea i thought this was just a silly funny movie... what. wow. we live in a strange world. i thought this movie was so funny and unsexy i did not register this as a fetish movie at all. how strange. that in itself is also hilarious. let it be known i still liked that movie but just.. not in the way it was supposed to be enjoyed i guess. lmfaooooo.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> mar 2nd 2024</p>
-            <strong>status:</strong> completed
-            <p>geteven (1993)</p>
-            <img src="/pics/library/geteven.png" class="cover">
-            <p>mister wings hauser was the star of the show and really the only guy keeping me interested in the movie. otherwise the movie was pretty boring. i wasn't that interested in the main couple and their story itself. they could have had more fun with the satanism bit. but i still want to note that nothing in any movie ever can top huck finney shooting his electricity, gas, and credit card bills with a gun and then asking for his landlord next. truly iconic. incredible performance. my favorite part of the movie.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 29th 2024</p>
-            <strong>status:</strong> completed
-            <p>horndogs beach party (2018)</p>
-            <img src="/pics/library/horndogbeachparty.png" class="cover">
-            <p>there's something really amusing about watching people in their mid to late 20s throw water balloons at people while yelling NERDS!! like they are in the fifth grade. i really appreciated the sexy dom film host's commentary throughout the movie. i thought she was hilarious. whether or not she was actually funny i'm not sure. all i'll say is that it's 9am i've pulled an accidental all-nighter so her interludes are timed perfectly with when my attention wavers and she reels me back in every time. so it works. it's entirely possible that under different circumstances i would not have enjoyed this feature. bonus points for dawna lee heising's presence i wish i was her boytoy.</p>
-        </div>
-        
-    </div>
-    </div>
-
+    
     <div class="log movie fav">
         <div class="logmain">
             <div class="titlebar"># film <div class="x">x</div>
@@ -1104,50 +187,6 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 29th 2024</p>
-            <strong>status:</strong> completed
-            <p>monster in paris (2011)</p>
-            <img src="/pics/library/monsterinparis.png" class="cover">
-            <p>miraç's favorite childhood movie and i can see why... this movie was sooo adorable. francœur the oversized flea is so lovely... who would have thought a flea could have such complex and compelling emotions? the soundtrack to this was actually great. i love charles the very stressed out monkey i resonated a lot with him. and thank god for raoul and lucille #endgame. i was hoping they'd end up together since the moment they were shown on screen and proceed to bully each other nonstop for Minutes.... this movie is just so cute!</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 29th 2024</p>
-            <strong>status:</strong> completed
-            <p>slink (2013)</p>
-            <img src="/pics/library/slink.png" class="cover">
-            <p>i've always had a fear of tanning beds ever since i watched this one horror movie in morocco with my cousins where the bed caught on fire and a broom fell on the beds so they couldn't be opened and two women burned alive inside. anyways this movie wasn't about that but it definitely didn't help with my anxieties about tanning beds. dawna lee heising hits some girl with a hammer to help her crazy husband make man-made (human skin) designer handbags. so obviously this movie was made for me. it was a dazzling load of garbage. the acting was so bad but so enjoyable to watch. the one girl in the beginning who told her friend to just, "max out that credit card already, who cares!" she gets it. i also love that this movie just had no conclusion at all. girl escapes and runs away but it just immediately starts rolling the end credits and we know nothing. i mean who cares really. we don't need to know. i don't care what happened to her i just am glad i had a good time. so silly. so entertaining.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 28th 2024</p>
-            <strong>status:</strong> completed
-            <p>showgirls (1995)</p>
-            <img src="/pics/library/showgirls.png" class="cover">
-            <p>like, okay. i get this movie. i get it. it's a sorta campy (intentional camp, which is what makes it weird) story about the absurdity of the entertainment industry. i get it. it's a cool idea. but for some reason (i know the reason) it took me three days to get through this movie. i could not stay engaged for more than 10 minutes at a time, and i think it's because the story felt like it was going nowhere? visually it was Dazzling but everything else felt so colorless. i didn't care about any of the characters. the potential for girl yaoi fell flat when there was no real emotion behind nomi pushing cristal down the stairs. they could had something weird and twisted and fun but it was like... an empty wet sad cardboard box instead of emotion. i don't know if i'm making much sense. so i didn't really like this one. but i was so determined to see it through the end. i just let it play in the background while i cleaned my room.</p>
-        </div>
-    </div>
-    </div>
 
     <div class="log anime">
         <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
@@ -1159,36 +198,6 @@ function removeClass(element, name) {
             <img src=/pics/library/stophibarikun.png class=cover>
             <p>starting an entry before i even finish this series because oh my GOD. i honestly cannot believe i haven't heard about this absolute gem of an animanga until now?! our lovely main character, hibari is the coolest funniest prettiest most perfectest (trans!!) girl in the world. and this was written in the 80s! i'm about 5 eps in so far and am constantly overwhelmed by how cute and wonderful and amazing this show is. i'm also reading the manga alongside it because i literally can't get enough of this girl. though its still important to note that because this was made in the 80s, there are unfortunate instances of gross racist caricatures here and there which are pretty upsetting.. besides the casual transphobia from her family, hibari passes as a girl at school so everyone loves her and her love interest (kosaku) really actually likes her! and he knows she's trans! as of now he's still processing lol but i love the little moments he has where he's like "for some strange reason i'm really glad hibari didn't change..." its just. so cute and so healing. and watching this after just having seen love exposure is great. i am now officially on a roll of consuming trans girl media. 2024 is off to a great start.</p>
             <p><u>update as of late february:</u> the racism got so bad it's actually unwatchable so i think we're just going to stop. it's actually so unfortunate because the show had such a promising start. i've been reading a little bit of the manga to compare the two and it's insane how wildly different they are. the original manga is way better, way less racist. i still have more to read but a majority of the gross racist bits were added onto the anime, not originally written by the mangaka. so that's something i guess.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 27th 2024</p>
-            <strong>status:</strong> completed
-            <p>poor things (2023)</p>
-            <img src="/pics/library/poorthings.png" class="cover">
-            <p>a real movie for once! woah! i liked poor things a lot. the funny thing is throughout this whole movie i was constantly being reminded of dogtooth and told my friend flo we needed to watch that next. and turns out poor things and dogtooth were made by the same guy! i had no idea but i feel smart for making this connection anyways. everything about this movie was so much fun! the doll-like house interior and the set of portugal and the old-timey frankenstein themes were a joy to see. i also loved the chimera-fication of every aspect of this movie from the language (switching from the old timey to the doll esque to the modern talk) to the costumes (mishmash of eras all in one setting). it was great. the only thing i didn't love was the whole ex-husband story arc it felt like it was shoved to the end at the last minute and rushed to conclude. felt like it came out of nowhere. this is my issue with like, every real movie ever. that's why i started watching shit movies. they're just better...</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 25th 2024</p>
-            <strong>status:</strong> completed
-            <p>machine girl (2008)</p>
-            <img src="/pics/library/machinegirl.png" class="cover">
-            <p>this was a pretty fun watch actually. kinda yuri also. tween girls get amputated and replaced limbs with sick machine guns and other weapons. the gore special effects were so goofy it gave it made the whole thing seem more Fun and less of an attempt at horror. the drill bra was incredible!!! my chosen method of death tbh. who wouldn't want to get shredded by a hot mafia milf? i also watched the sequel (?) the twenty minute spin-off called <u>shyness machine girl</u> which was even sillier and more ridiculous. but i loved it. new girl has a machine gun that pops out of her butt. how embarrassing! you can see why she's so shy about it. something to be said about weaponizing the shame girls are supposed to feel about their own bodies and such. very enjoyable. might force my friends to watch this one with me later.</p>
         </div>
     </div>
     </div>
@@ -1209,51 +218,6 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 25th 2024</p>
-            <strong>status:</strong> completed
-            <p>virtual sexuality (1999)</p>
-            <img src="/pics/library/virtualsexuality.png" class="cover">
-            <p>[old man smoker voice reminiscing about his glory days] haven't been queerbaited like this since destiel my god.. this movie was almost so good. AUGH. no maybe it still is. i am shaking my head in disappointment as i type this. this was starting to become like, if 'inside mari' was a shitty british movie. the way it had the body swap but the other body is still intact so it's really just the main character is trans. and it was. that bloke was a messy bisexual trans hot mess. but then they KILLED HIM. they had him dive headfirst in a will they won't they homoerotic slowburn only to then KILL HIM. they killed that clone guy for being too transgender and too sexy and too gay for her own good. life is miserable. i can't believe they actually deleted him. ugh. i enjoyed this movie so much but it broke my heart. i need some real yaoi to recover from this blow.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 25th 2024</p>
-            <strong>status:</strong> completed
-            <p>cannibal hookers (1987)</p>
-            <img src="/pics/library/cannibalhookers.png" class="cover">
-            <p>now <i>this</i> is what i'd call Hot Garbage! but in a good way. the silliness in the dialogue was so entertaining. it was just the right amount of stupid and funny for my liking. there was so much hairspray in the making of this movie i am certain it is the sole cause of the climate change crisis we are facing today. was it worth it? maybe. i was actually really into the plot. i just had a good time watching these girls succumb to the social pressures of joining the most batshit sorority known to man. these girls are here to have some Fun and kill some Dudes and drink some Blood and i'm here for it! also I LOVED LOBO! LOBO DO GOOD! BE NICE TO LOBO! my favorite tv cannibal. also i think this movie had so much potential to be gay but it wasn't :/</p>
-            <p>also also. there was one 3 minute scene towards the end that just. replayed? i think it was taped wrong or something. super charming. i did not skip past it when i realized the scene was repeating. lmfao.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-        </div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 25th 2024</p>
-            <strong>status:</strong> completed
-            <p>space zombie bingo!!! (1993)</p>
-            <img src="/pics/library/zombiespacebingo.png" class="cover">
-            <p>this had such a strong start. the first 10 or so minutes were actually kinda funny, got a couple of laughs from me. i liked the kill tv bit at first and i thought it was smart. but it started to go in and out where it'd drag on with a monologue about atomic whatevers and stuff and not enough funny jokes to keep me engaged as the movie went on. so i just started to get bored. i did like the soundtrack though. and my favorite characters were the suicidal all-american girl next door barbie-q and her boyfriend kent bendover. they were fun. the movie poster is misleading there was no bingo and not enough hot babes.</p>
-        </div>
-    </div>
-    </div>
 
     <div class="log game">
         <div class="logmain">
@@ -1266,32 +230,6 @@ function removeClass(element, name) {
             <p>final fantasy vii remake - intergrade</p>
             <img src="/pics/library/ff7.png" class="cover">
             <p>i've finally begun my final fantasy journey. i've been wanting to play these games forever, and my friend carlea is obsessed with it. and does life even have a purpose if i'm not consuming each and every single one of carlea's media recs? i don't think so. i only just started, but i am really loving it so far. i'm planning on being as thorough as possible with this play-through. because i don't think i'll have it in me to replay this big of a game. i am a plot driven gamer but at the same time.. i do love being the errand boy... and doing things like help little girls find her lost cats. great stuff. super cute. cloud is such an angsty guy. always with his hand on his hip complaining about something. i also just met sephiroth and he is like if millions knives and illumi zoldyck were put into a blender. so obviously i love him. i plan to update this as i continue playing.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 24th 2024</p>
-            <strong>status:</strong> completed
-            <p>wishman (1983)</p>
-            <img src="/pics/library/wishman.png" class="cover">
-            <p style="margin-bottom: 120px;">i'm pretty sure the website i watched this on cut off the last fifteen minutes of the movie. oh well. it was fun and silly. i loved the little alien freak thing. i wish i could keep him as a pet. his charming bug eyes captivated me. lol. otherwise i honestly have nothing of substance to say about this movie it was very 80s. kindof boring but not so much of a snoozefest that i felt like turning it off. the alien was a joy to be around. the humans were alright. i can hardly remember their names. not memorable. i think if i had watched this on tv when i was younger i'd think it was a weird dream now.</p>
-        </div>
-    </div>
-    </div>
-    
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 24th 2024</p>
-            <strong>status:</strong> completed
-            <p>teeth (2007)</p>
-            <img src="/pics/library/teeth.png" class="cover">
-            <p>lmfaoooooooooo. this movie was so unserious. it was also really bad. like, not in the funny way but also not bad enough for me to turn it off? i hate seeing super-religious teens they always give me bad vibes. they either remind me too much of my own not-so-good religious experiences or they're like, made fun of by the narrative which also doesn't make me feel great lmao. but like, good on her for chomping the dick off every guy that tries to assault her. but it's so weird? such a weird movie i don't know what to make of it really. very disappointed to see the step-brother end up being such a freak. i sorta liked him. and his uh. piercing. i wish he was normaler and not obsessed with fucking his step-sister. anyways this movie was a movie. that exists. i don't think i'll really remember it. shrugs.</p>
         </div>
     </div>
     </div>
@@ -1324,45 +262,6 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 23rd 2024</p>
-            <strong>status:</strong> completed
-            <p>nathan for you: finding frances</p>
-            <img src="/pics/library/findingfrancis.png" class="cover">
-            <p>nathan for you always seems to bring out a weird mix of emotions that make me feel a little bit more human than i did before... it's weird because i don't like this guy. bill. he's a narcissist. weird with women a lot of the time. wants trump for president. watches fox news. so like i don't like him as a person. but watching this movie still made me super emotional? it's not that i really wanted a happy ending for him, but i dunno... something about helping someone reconnect with someone they knew decades ago... and talking to them and seeing that they're happy after all this time... and stuff. well. i liked the movie. even if i don't like bill. it was so weird. i wanna know what happened with nathan and that escort... that was so weird. ???</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 23rd 2024</p>
-            <strong>status:</strong> completed
-            <p>airplane pillows (2008)</p>
-            <a href="https://archive.org/details/airplanepillows" target="_blank"><img src="/pics/library/airplanepillows.png" class="cover"></a>
-            <p>this... this movie was magical. apparently there are more movies directed by this guy. i plan to see them all. i couldn't tell you if there was a real plot to this one. but it was beautiful. baby swiss spoke to me. she is real. she is me. she does speed and stays up for days on end rewatching her favorite movie about a human who befriends an alien. she writes fan letters begging for an autograph and also can't spell her own name. she is perfect. i love her beautiful friendship(?) with her neighbor. the sweetest, tannest man she's ever met. this movie was so strange. i loved it so much. god bless the internet archive.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 23rd 2024</p>
-            <strong>status:</strong> completed
-            <p>cemetery sisters (1987)</p>
-            <img src="/pics/library/cemeterysisters.png" class="cover">
-            <p>i was absolutely loving this movie sooo much up until the last fifteen minutes when they started saying racial slurs and it was just. ugh. big thumbs down. what the hell man. i didn't even want to see the deranged killer sisters get their happy cemetery ending after that. up until that point it was really fun-- the sisters lure single men with money to their homes and stab them a ton and steal their money, which like! ugh. auntie ingrid stole the show she was incredible. my favorite character. her scene where she's just calling everyone on her contact list to set up back to back booty calls was the best moment of the entire movie. "oh auntie ingrid, you're terrible!" "i know, but not in bed" like she deserves several awards. i am auntie ingrid's number one fan.</p>
-        </div>
-    </div>
-    </div>
-
     <div class="log lit">
         <div class="logmain"><div class="titlebar"># literature <div class="x">x</div></div>
         <div class="logtxt">
@@ -1376,76 +275,6 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 22nd 2024</p>
-            <strong>status:</strong> completed
-            <p>dickshark (2016)</p>
-            <img src="/pics/library/dickshark.png" class="cover">
-            <p>this was awful. two hours and thirty minutes of misery. i did not enjoy this. my brain felt like it was sizzling the whole time. like it was eggs i was frying. this movie sucks. why did i watch it all. this movie made me hate myself. never watching another bill zebub movie again. the only time i laughed while watching this was during the 10 or so total minutes they were actually talking. some funny jokes. lots of boring science rants while bill awkwardly palms some boobs. otherwise the entire film was naked ladies. like just, two full hours of naked ladies in slo mo with heavy metal in the background. i wouldn't mind a scene or two or even three like this. but the entire movie?! and bill has the audacity to say this isn't porn. it was. and the fact that there's a seven hour version of this!? seven hours of dickshark? i hate everything. this made me feel so braindead i just went to sleep at 6:00pm... for five hours. antfarm dickhole was like a masterpiece compared to this... i miss antfarm dickhole.. bring me back....</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 22nd 2024</p>
-            <strong>status:</strong> completed
-            <p>valerie and her week of wonders (1970)</p>
-            <img src="/pics/library/valerie.png" class="cover">
-            <p>this movie was a weird one! i will preface by saying i found it very concerning that the movie had such a sexual narrative around an actual thirteen year-old actress. i don't know anything about the behind the scenes environment.. so i can only hope that actress was actually safe! ugh. but like besides that i did actually love the movie... valerie is a fascinating character! she's living in this world of absurdity and she acknowledges it as Strange and is like "this is a dream, i'm asleep" and proceeds to just experience the weird world she's in soo casually. she's reading a note from her brother that's super urgent like 'i fear for your life!" and she's just like. unfazed. eating berries like in those paintings. and burns it with a magnifying glass. the surrealist moments of the movie are so theatrical it's beautiful. it makes it all seem so dreamy. it made me feel the same way i felt while watching that marching band in paprika. my favorite scene though was when the town tries to burn her at the stake for being a witch and she sticks her tongue out, makes a silly mustache with her hair, turns into a bird and flies away. it's perfect. there's nothing in this world stronger than a tweenage girl laughing in your face as you try to destroy her. i think for as weird as this movie is, she does have a lot of agency in her story. at least, that scene showed that to me. also lots of lesbians in this movie it's pretty great.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 20th 2024</p>
-            <strong>status:</strong> completed
-            <p>pigeon kings</p>
-            <img src="/pics/library/pigeonkings.png" class="cover">
-            <p>i didn't learn much about competitive pigeon flying really, i had to look up a cool article to get the social/historical context which is fascinating, btw. but i still ended up really enjoying this documentary movie. it honestly just felt like i was hanging out with these super chill guys and listen to them as they talk about how much they love their birds. it was a very soothing watch. i love the guy that names his birds based on their personalities. thug, the bird that bullies everyone, grandson of bill clinton. it's just great. as a pigeon lover i really enjoyed this. i'm not sure if they're actually having seizures in the air, it is a little sad. but i'm choosing to believe those birds are happy...</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 20th 2024</p>
-            <strong>status:</strong> completed
-            <p>liverleaf (2018)</p>
-            <img src="/pics/library/liverleaf.png" class="cover">
-            <p>what the fuck? i don't think i've ever had a movie make me go what the FUCK so many times as this? which i feel like is saying a lot if you just click on the movie tab and see what the fuck kinda movies i watch? i just went through the most ever emotional rollercoaster ever? what the hell?</p>
-            <p>god okay so. the first 40 minutes were slow. girl gets bullied. i took a break to eat and i come back and shit immediately hits the fan. and i'm loving it. nozaki is killing all her bullies. the one guy she had on her side in school (aiba) really falls for her, he visits her often after she stops coming to school, he promises her dad that he will protect her. and we know he's a little bit insane too because he's totally chill with the fact that she just murdered five classmates. but like that's still in the realm of normal. my absolute favorite scene of the entire movie was when she's going on a walk with her guy friend with the camera. she's in red, he's in black, walking in the snow. and she breaks down in front of him and starts crying, and with all the tension in her body she bites her lip so hard she bleeds, so her lips are a blood red. and it's just so visually intense and compelling and then he kisses her, and his lips are covered in her blood. and i was just like woah. amazing.</p>
-            <p>after this point the characters just get more and more balls to the wall batshit insane. the tiny mastermind, rumi, is like a yandere lesbian for the leader(?) of the bullies, taeko. taeko is important i'll come back to her later. rumi escalates these. crimes. and kills nozaki's entire family. she loses it and tries to kill taeko herself too. and this is the point where i was kinda feeling.. not as pleased with this movie? it was just sooo insane so fast and in my head i just kept coming back to the fact that these characters are like, 12? they're graduating middle school in two months. so like. it was just A Lot. a lot of insanity for literally no reason. nozaki is like the most normal character we have so far and she just killed 5 kids. she has a reason to be this way. these guys don't.</p>
-            <p>but then i started to slowly come back once nozaki and aiba had their final showdown (after rumi stabs her in the gut), he's now balls to the wall insane (seriously i think there was something in the water supply that made these kids go nuts) he's also a yandere now i guess. they tussle. she shoots an arrow through his camera lens into his skull. she dies.</p>
-            <p>but what really fucking got me. was the final scene. where we see taeko again, graduating middle school all by herself. and she's looking at the empty classrooms remembering her <s>friendship</s> crush on nozaki. there are no words spoken in this scene at all. all we see is taeko cutting her hair, looking through their classroom window giggling, her chin on nozaki's shoulder, while the song that she stole from her, during the time she bullied her, is playing in the background that sings the lyrics: I won't lie to myself anymore / ... / The things were echoing in my heart, will keep being there forever. (the rest of the song was also just so explicitly romantic i just forgot to write down the rest i was too busy picking up my jaw from the floor) and you realize. taeko was in love with her. she started bullying her when she felt that she left her for aiba. it was never jealousy over him, but jealousy and hurt and betrayal from her. but not even in the yandere way like rumi and aiba. she was like... normal. still awful, for letting it get as far as it did-- even if she couldn't stop them. she enabled them. but it clicks that it was rumi and her gang of sociopathic tweens that escalated everything to this point. i was just... in awe. that ending scene was beautifully done.</p>
-            <p>i felt like i gave too much of a plot summary here but i wanted to outline how much of a whiplash this movie gave me. it was way gorier than i expected it to be too. it was insane. it was intense. it was yuri. it was also yaoi. i still don't know if i would call it good? would i? what did i even watch? what is anything?</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 20th 2024</p>
-            <strong>status:</strong> completed
-            <p>killer klowns from outer space (1988)</p>
-            <img src="/pics/library/killerklowns.png" class="cover">
-            <p>the title of this movie is a complete plot summary. this movie was actually so fun to watch i sort of want a physical copy for myself... with my new and growing cd/dvd collection. like. pretty incredible watch experience. the opening theme song????? fuck me that was a BANGER. listen to <a href="https://youtu.be/IQeTZKI43rY?si=dCuvqfSXn4MknMwT&t=55" target="_blank">this shit.</a> i was genuinely (pleasantly, might i add) surprised to see very little of the typical bigoted jokes in this movie? (edit: there was one scene where mike was making some bad sexist jokes i almost forgot) no underlying anti-communist propaganda or like weird homophobic AIDS themes that were so prevalent during the 80s? so i was like woah! this is an honest to god movie about killer clowns from outer space. it was so silly. and so funny. and you can tell the creators of the movie, cast and crew, just had so much fun with it. i love that everyone was just wrapped into cotton candy cocoons. my favorite characters were obviously the ice cream guys. they came out on top, i think. everybody in the entire unnamed town was fighting for their lives meanwhile these two guys were fucking a couple of Hot Alien Clowns. sure the acting was bad, the college students(?) looked 35, terrible stunt work, but nothing will make me hate this movie.</p>
-        </div>
-    </div>
-    </div>
-    
     <div class="log game">
         <div class="logmain"><div class="titlebar"># videogame <div class="x">x</div></div>
         <div class="logtxt">
@@ -1455,45 +284,6 @@ function removeClass(element, name) {
             <p>EVA 4 DATING SIM RPG</p>
             <img src="/pics/library/eva4sim.png" class="cover">
             <p>this game was so ridiculous i feel silly just including it here but i literally have to. also it's iconic. the only screenshot i've seen before playing this game is this one where asuka's like <span style="font-weight: bold;">Fuck! My IQ was decreased today at school I HATE that school it doesn't work correctly. (Smashes a coffee cup over her own head) Ahh that feels better I think I might go to bed now.</span> and it still is my favorite moment in the whole game. that and the various ways in which the girls kill you dead when you call them stupid bitches. asuka is so relatable... anyways. i got all 4 endings. you can play it too if you'd like <a href="https://www.minigamers.com/games/eva-4-dating-sim-rpg~724/" target="_blank">here</a>...</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 19th 2024</p>
-            <strong>status:</strong> completed
-            <p>intimate confessions of a chinese courtesan</p>
-            <img src="/pics/library/intimateconfessions.png" class="cover">
-            <p>i actually ended up liking this movie way more than i thought i would. i think i've said this about every 70s movie i ever watched. not sure what i subconsciously have against 70s movies... though i will say my favorite parts were the beginning and end. ainu's introduction and tragic background was beautifully done, despite the overall cheesy feel to it? it's an exploitation film, after all. but a really good one. madam chun my beloved! an awful person, batshit insane, a sickening human being, but yet... i love her so. nothing can make me hate her after watching the scene where she was licking the wounds on ainu's back. she means something to me.. i also loved how ainu's last revenge kill, the one she saved for last, her most important and most daunting confrontation was with madam chun. it felt really validating? i guess, i don't know how to fully describe it. despite all the horrors, their relationship mattered. and how it ended, and the fact that it <i>did</i> end, matters too. you know? not in the right brain space for this. just know. good movie.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 17th 2024</p>
-            <strong>status:</strong> completed
-            <p>love on a leash</p>
-            <img src="/pics/library/loveonaleash.png" class="cover">
-            <p>this one was mildly disappointing. i still enjoyed it though, the set up made me think it would be a lesbian movie (woman has three boyfriends doesn't feel emotionally fulfilled by any man despite her family and friend's pressures to get her married and she rejects them all for her dog while saying 'no more men! from now on, it'll just be us') but when the dog turned into a guy like 20 minutes in i was very confused. dog by day human by night is funny though. and also still gay tbh.. having to hide her relationship with him.. etc etc. just not the gay i wanted. somebody get this dog some doggy prozac he's been begging for it for the entire movie...</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 17th 2024</p>
-            <strong>status:</strong> completed
-            <p>the paradise motel (2022)</p>
-            <img src="/pics/library/paradisemotel.png" class="cover">
-            <p>this movie is pretty hard to write about in a way that accurately captures my feelings on this. because it's a strange one. the dialogue is so alien and unnatural but at the same time so weirdly emotionally comforting? this movie is comforting. with all the weird ai generated nonsense going around i want to make a distinction between saying something was made by aliens vs. something made by stupid ai. this movie feels like it was written by aliens. this movie has a soul. it's so beautiful. it's about a woman who flees her abusive husband and goes on a journey West to the paradise motel. which is not a paradise because that place sucks too. but she is a baddie with a knife and no one will hurt her again. the motel manager runs the place with his mom who's voice is text-to-speech. lots of the dialogue is dubbed over at times i think. it's so charming. it's so wonderful. also oh my god the soundtrack to this is actually incredible i need to find it or make the playlist myself. absolute bangers. okay i just went on letterboxd and i'm seeing people the music some of the worst country music you have ever heard. okay well i loved it so do with that as you will. god bless dawna lee heising.</p>
         </div>
     </div>
     </div>
@@ -1511,19 +301,7 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> feb 11th 2024</p>
-            <strong>status:</strong> completed
-            <p>dogtooth (2009)</p>
-            <img src=/pics/library/dogtooth.png class=cover>
-            <p>this took me a full day to write my entry for this movie. partly because i needed to sit with it but mostly because i had a lot of other work to do.. this movie was so beautiful. i love the faded colors of the greens outside and how naked the inside of their home looks. it gives the entire movie a feeling of uneasiness from the start while at the same time making it all feel like a memory of your own? if that means anything to anyone at all. it’s such good story. man turns his family into a super high controlled group where the kids don’t know about anything that exists outside their home. they do such a good job at writing how these siblings grow up under these strange conditions, like. they all think airplanes are toy planes because they look small when they're in the air. they have no concept of sexuality whatsoever so they lick each other (on the knee.. or the shoulder.. or the arm) as a new form of currency. (although this movie does have accidental incest so be warned) (i say accidental because these guys have been so brainwashed they don't know what sex is it is supposed to be) (they don't even know the concept of a name). the ways in which this man brainwashes them is so absurd. and the ways in which they respond to this conditioning makes perfect sense. my words still aren't properly conveying what i feel for this movie but just ugh! it's so strange it's so fascinating it's so beautifully told i love would absolutely watch it again.</p>
-        </div>
-    </div>
-    </div>
-
+   
     <div class="log movie fav">
         <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
         <div class="logtxt">
@@ -1564,20 +342,7 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 26 2024</p>
-            <strong>status:</strong> completed
-            <p>monster's inc. (2001)</p>
-            <img src=/pics/library/monstersinc.png class=cover>
-            <p>man this movie was so good as an idea but pixar manages to find a way to fuck it all up in a way that's just so uniquely.. Pixar. i love the idea that this movie is all about re-learning to trust adults after growing up in an abusive household. and on the other side, what it means to parent when you think you're not good enough. just. kids who are traumatized by the adults in their lives can sometimes lash out on all adults, for boo they're all monsters. but she learns to trust some of the monsters like sully.. but especially not the lizard monster who's name i forget. and they have this whole conflict where lizard is desperate to get boo back and control her and exploit her fears for his gain. and sully just wants her to be safe.. the "she's not scared of you anymore" sealed the deal for me. that's when i was like this is about abuse and trying to give kids a better home. and when sully was put on the spot and asked to scare the robot tester kid, which ended up really scaring boo, made me sooo emotional. she was visibly triggered by sully being actually scary and she's going through a lot of conflicting feelings about who to trust anymore right now. and she's like, not even 2, probably. the guilt sully feels for scaring her like that, overwhelmed w feelings of incompetence i'm sure many actually good parents struggle with.. they only scratched the surface on this & dealing with ptsd i'm upset they didn't even try to explore it more genuinely..</p>
-            <p>also mike and sully are literally gay. like, seriously. they are written like a straight couple, but it's fun because they swap the gender roles when it's just them vs when it's time for them to parent. it's silly but i liked it. mike is the nagging wife (relationship wise) with all the times he's rambling on and on while sully is preoccupied and mike is frustrated he's not being listened to. and hes charming and flirty and all that. very socialized. way too comfortable talking to sully's mom and the phone and slapping his ass. but when it comes to parenting hes the distant reluctant father who's not down to do any work but will tell bad jokes and step in when it gets really bad. whereas sully is more of the chill guy, laid back, when it's just him and mike. but when he's parenting, he is the primary caretaker and the one doing all the emotional labor.</p>
-            <p>so, this movie was fine. it could have been insanely better given the concepts they were playing with. also if they bothered to put in an ounce of effort into the soundtrack and leaned into the jazz they used in the intro they could have given more depth to their evil capitalism underlying theme.. but no! fuck pixar, man..</p>
-        </div>
-    </div>
-    </div>
+   
     
     <div class="log manga fav">
         <div class="logmain"><div class="titlebar"># manga <div class="x">x</div></div>
@@ -1593,123 +358,7 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 15 2024</p>
-            <strong>status:</strong> completed
-            <p>la sociedad de la nieve (2024)</p>
-            <img src=/pics/library/lanieve.png class=cover>
-            <p>now <i>this</i> is how you make a movie about real life events. i had read a bunch of articles about this case a while ago, so i knew a lot about this plane crash and what came of it. but this movie told their story in a more beautiful and truthful way than any words printed on paper. my friend flo had some trivia facts she pointed out to me (like when some of the survivors appeared as background characters) which also added to my watch experience. god, this movie was just so well made. it's made me realize one of my favorite thing about a movie (or tv show, tbh) and it's how they play with sound. i don't know how else to explain it, but i just loved the moments of pure silence, which made the softer noises seem explosive. it's something they do a lot in The Bear too, which is what made me love that show so much. anyways. incredible movie. so nice to know that the survivors actually had control over how their story was told, how they gave life to the ones that died in those 72 days, and actually got to participate in it.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 15 2024</p>
-            <strong>status:</strong> completed
-            <p>frankenhooker (1990)</p>
-            <img src=/pics/library/frankenhooker.png class=cover>
-            <p>this movie started off kinda bad but only got better and better. the premise of it all seems nearly identical to The Brain That Wouldn't Die, but i should have known better than to have expectations. because at first it's like, alright. society is fatphobic. let elizabeth eat her damn pretzels. but then it's like woah. i kinda like how this movie exposed the value hierarchy placed on women. like how jeffery's first plan of action was to kill a bunch of sex workers (who are de-valued by society) for their body parts to use for his dead girlfriend (who is a virgin and therefore 'pure') who he is Forcing back to life. like, no woman (dead or alive) has any sort of bodily autonomy and the narrative portrays it like the bad thing it is. lots to say about how bodies are used to define people, and how horrifying that can be (hence, jeffery's end, when he got a taste of his own... medicine) lmao. anyways i totally loved this movie. next year's halloween costume?</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 14 2024</p>
-            <strong>status:</strong> completed
-            <p>freddy got fingered (2001)</p>
-            <img src=/pics/library/freddy.png class=cover>
-            <p>i spent the first forty or so minutes of this movie debating if i should turn it off. but then.. but then i started to like it. not sure if it's because it was 5 in the morning and i hadn't yet slept. or whatever. but i unfortunately thought it was really good. my favorite part was when gordy finally made the tv show about the zebras in america. the 'my dad was weird back home, but america made him crazy!' line was just too real. gordy is just like me i hate to say it. this movie perfectly captured what it's like to be the eldest son and be constantly at war with your father who's slowly losing his mind due to capitalism and stuff. also his bad spending habits were just too real. i too would stumble upon a million dollars stupidly and lose it all in under twelve hours. sounds legit.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 14 2024</p>
-            <strong>status:</strong> completed
-            <p>nekromantik (1987)</p>
-            <img src=/pics/library/nekromantik.png class=cover>
-            <p>watched this movie in 2x speed because Multiple Reviews mentioned to do that lmao. it was a good choice. the scenes are sooo long. found it hilarious that our main lady made sure to use a condom.. good for her. anyways this was definitely a movie that i have seen. it was so gross. why was the skeletonized corpse so wet and gooey!!!! why did the guy slurp up the eyeball!!!! just ewwwwww. so many diseases!! are these people not worried about getting sick?! i was cringing from the grossness of it all the while time but the END!!! what an ending. actually incredible. the image of that heel digging the shovel into the freshly buried grave will stay with me forever, i think. also, the music was super good. at least it sounds really good at 2x speed. so, lots of redeeming qualities.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 14 2024</p>
-            <strong>status:</strong> completed
-            <p>repligator (1998)</p>
-            <img src=/pics/library/repligator.png class=cover>
-            <p>so extremely stupid. so hilariously enjoyable, sadly. transgenderism (real, not just in my head). some prehistoric orgasms. alligator bimbos. lots of boobs. gay zombies. lots of lasers. this movie pushes the boundaries of cinema. this movie is probably homophobic. but i just watched this movie so i simply do not have the cognitive capabilities to think about this now. it's also camp. would have been a perfect movie if it was shorter. repligator did not need to be 86 minutes long.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 13 2024</p>
-            <strong>status:</strong> completed
-            <p>traitors (2013)</p>
-            <img src=/pics/library/traitors.png class=cover>
-            <p>this was the very first moroccan movie i've chosen, sat down, and watched on my own. i don't really count whatever was on the tv growing up because i never paid much attention to those. still crazy it took me this long. this movie seemed really cool because punks! in morocco! woah! except i was tricked. bamboozled. overall the movie was fine. not bad, very average i guess. i just really wished it was more punk. the traitors themselves (name of malika's punk band) were present for like a good give minutes of the whole movie. i do love that we got to see some mountain folk (i love the mountains) and that malika and amal had a sorta gay moment if you're delusional enough..</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 13 2024</p>
-            <strong>status:</strong> completed
-            <p>the last roommate (2020)</p>
-            <img src=/pics/library/lastroommate.png class=cover>
-            <p>i think this movie was made during covid times which makes the experience that much more eerie and fun. i had a blast watching this. idk why i didn't expect this to be a toxic yuri movie but it was, and for that i am eternally thankful. the relationship between charlotte and sarah made no sense. how they went from roommates to the most weirdly toxic couple with an assumed long history in 4 hours is something i will never understand. but i loved the twists. my one crit was that some of the scenes were so long it was painful to watch. the producers of this film were just dying to use their bird and lake footage, i guess. i liked it.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 12 2024</p>
-            <strong>status:</strong> completed
-            <p>the man who stole the sun (1979)</p>
-            <img src=/pics/library/stolethesun.png class=cover>
-            <p>you know i'll be totally honest.. the main thing that kept me engaged throughout all two and a half hours of this movie was how absolutely stunning the main character is... Kenji Sawada is so pretty and gorgeous in this movie.. it was good though, i didn't hate it. considering how interesting the movie poster is, i thought the movie would be funkier. but it was just regular good. loooove the wardrobe for this movie. made me appreciate 70s fashion way more. i do think our main guy is balls to the wall insane. not because of the whole bomb thing, but because if it were me and i was making an atomic bomb for literally no reason, and had the most beautiful woman in the world flirt with me, i'd drop everything to be with her. but like, whatever man. he threw her into the ocean because he wanted to go home and cuddle with his plutonium! like, come on! smh.. gay people... also the last ten minutes of this movie were actually so ridiculous. why didn't the cop die after being shot fifty million times. why did kido survive the fall off the top of that building by... swinging on a cut telephone line. what. what. whatever. BOOM!</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 12 2024</p>
-            <strong>status:</strong> completed
-            <p>the flying luna clipper</p>
-            <img src=/pics/library/flyingluna.png class=cover>
-            <p>one of the most visually beautiful short films i've ever seen with one of the most weirdly mundane plots ever. it really is just about a bunch of anthropomorphic fruits on a flight to hawaii or something. and then there's volcano gods. but it's just like, whatever. some people died. i think. it's a stunning movie though, and the music is incredible. i think this was a demo of sorts? originally? not sure, and i'm too lazy to look it up right now. but i liked it. everyone should watch this. at some point.</p>
-        </div>
-    </div>
-    </div>
-
+    
     <div class="log tv">
         <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
         <div class="logtxt">
@@ -1723,7 +372,7 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
+    <div class="log movie fav">
         <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
         <div class="logtxt">
             <br>
@@ -1734,19 +383,6 @@ function removeClass(element, name) {
             <p>this movie was absolutely mind boggling. when i finished it the first time i immediately re-watched it again with my friend lola because what the fuck. this movie was so good it's shocking. i am just so amazed at how these women wrote this story and all its surrealism. it's incredible. this movie is about a lot of things but the main themes that stood out to me the most were. what it means to be a woman. and the colonial hellscape that is suburbia. jill the people pleaser is a character that was just soo relatable. the way she bent over backwards to make everyone around her happy, and how the neglect of her own feelings are reinforced by everyone around her (when she's struggling to cope with her son becoming a dog and her husband is like.. can you not make this about yourself?) telling that one lady she named her daughter madison after the neighbor's mother when she literally didn't... she just wanted to make her feel good when jill was the one who needed to be consoled. it's so well done it's a little heartbreaking.</p>
             <p>colonialism as the other underlying theme in this movie was so fascinating.. with the two classroom scenes on the western expansion, the 'i don't mean to be an indian giver', lisa stealing jill's baby, little helen stealing jill's house, playing soccer on a graveyard, the horse skeleton found in her backyard... throughout the entire movie we're given glimpses of the death and the irreversible aftermath of what american colonialism did to indigenous communities. it's like. suburbia is hell because of capitalism & colonialism and this culture of needing to conform and be better than everyone else at the same time. but it's void and empty at its heart because it's built on death and carnage. and it's enough to drive anybody mad. ugh there's just so much to this movie i want to write a more structured Thing about it but i don't think i will. too tired lmao. but like. god this movie was Insanely incredible.</p>
             <p>also that fucking ending?! probably the best ending to a movie i've ever seen in my entire life. jill goes through this entire experience where it feels like she's breaking free from the cycle of hollow absurdity that is her suburban life (something to be said about the 'mating in captivity' book she reads/recommends in the movie) but she ultimately ends up going back to where she came from. but not in the same social position. it's probably the only time i've actually really liked a pessimistic? ending to a story. because at the end of the day, while she went back to this life she tried to leave, it's still a pretty great fuckign life. materially speaking? i don't really know. that's why i love this movie so much.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 10 2024</p>
-            <strong>status:</strong> completed
-            <p>repo chick</p>
-            <img src=/pics/library/repochick.png class=cover>
-            <p>this was such a fun movie to watch. i started it on my own and stopped watching 10 minutes in because i realized i'd rather watch this with my friend so i did. which was a great choice. i absolutely adored the fact that it was mostly shot in tiny sets where all the buildings and props and cars were literal toys. it had such a fun DIY feel to it which made watching it sooo enjoyable for me. also, i was so shocked by the radical environmentalism in the movie? like yeah, fuck golf courses they're killing the planet and the indigenous people who are kicked out of their homes to build them on. and the one moment where they talked about the pinnacle of communist societies being their reliable public transit and universal free healthcare? i was so very pleasantly surprised. i only wish the eco terrorists got the happy ending they deserved lmfao.</p>
         </div>
     </div>
     </div>
@@ -1764,32 +400,6 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-            <div class="logtxt">
-                <br>
-                <p style="margin: 0;"><strong>date:</strong> jan 08 2024</p>
-                <strong>status:</strong> completed
-                <p>twisted pair</p>
-                <img src=/pics/library/twistedpair.png class=cover>
-                <p>my first ever neil breen film. can't believe i haven't heard of this guy sooner. i literally had no idea what was going on nearly the entire time. not knowing anything made the experience better, i think. could not take my eyes off the screen, despite the many awkward quiet pauses throughout the movie. i am a big fan of the editing over stock videos, the special effects, and the voice over during parts of the dialogue. and i'm not even being sarcastic. i had so much fun watching this movie and i intend on watching the rest of his works soon... </p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 07 2024</p>
-            <strong>status:</strong> completed
-            <p>antfarm dickhole</p>
-            <img src=/pics/library/antfarm.png class=cover>
-            <p>christ this movie was so bad. i did love it, though. it was funny. watching this 30 year old man fight off his bullies with the ants in his pants was so amusing... love the fact that he lives on Dick St i think that's amazing.. the objectification of women in this movie was crazy but it was also so silly i couldn't even be mad about it? my favorite girl is the news reporter who sunbathed in the woods and talked about terrorists. nothing she said made any sense. besides that, i loved the ant puns. and i appreciate how anti-cop the movie is. overall, it's exactly what i expected from a movie called antfarm dickhole.</p>
-        </div>
-    </div>
-    </div>
-
     <div class="log tv">
         <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
         <div class="logtxt">
@@ -1803,57 +413,6 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 07 2024</p>
-            <strong>status:</strong> completed
-            <p>attack of the killer refrigerator</p>
-            <img src=/pics/library/killerfridge.png class=cover>
-            <p>a very silly and fun little watch. a bunch of teens beat up a refrigerator and the refrigerator fights back. the little meow meow didn't deserve that, though... the fact that this movie was 15 minutes long was literally the perfect choice because in that time, three people and a cat were eaten alive before one of the characters realized she could end it all by unplugging the appliance. and then the movie ended! so realistic. my favorite part was when the fridge started breathing (?) fire before eating one of the roommates. the lesson learned is that you should take good care of your kitchen appliances lest they hold any grudges...</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 06 2024</p>
-            <strong>status:</strong> completed
-            <p>suicide club (2001)</p>
-            <img src=/pics/library/suicideclub.png class=cover>
-            <p>another sino sono film.... this was unintentional. i've seen the 'hey! let's all kill ourselves' gif used as a meme online and i was curious to see what it was from.. only to find out it's made by the same guy who made love exposure, which is what i've been obsessing over all day. well. anyways, i wasn't the biggest fan of this one. i guess i just wasn't as engaged. besides the initial scene at the train station, i wasn't drawn to the story. it was too cop thriller mystery for my taste. i appreciated the early internet culture, though. and i will say the most interesting part of the movie for me was when genesis showed up in his shimmery black suit, his bejeweled belt and platform heels, and his electric guitar. i just thought he was neat. i actually <i>do</i> think it might be worth coming back to this movie later, though. i could reference this movie if i ever want to write about celebrity culture or weird relationships people develop with media. but yeah. it's not bad, just not my cup of tea. but i'd be willing to give it another chance...</p>
-        </div>
-    </div>
-    </div>
-    
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 06 2024</p>
-            <strong>status:</strong> completed
-            <p>oldboy</p>
-            <img src=/pics/library/oldboy.png class=cover>
-            <p>what the actual hell. wow this movie was.. really good. incredibly well made. i really liked a lot of the shots throughout the movie. that one hallway scene? with dae-su fighting off ten guys as he was trying to escape? insane. it took a while for me to really get into it. but once i was locked in, i was fully invested. i.. am sort of speechless. the last twenty minutes of this movie made me want to vomit.. insane twist. dae-su suffered more than jesus. just wow. wooowwwwww.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 06 2024</p>
-            <strong>status:</strong> completed
-            <p>the brain that wouldn't die</p>
-            <img src=/pics/library/brain.png class=cover>
-            <p>lmao it was bad and boring for a Lot of the movie but i did appreciate the frankenstein-esque nature of it all. and conceptually this is one of my favorite things (tropes? idk) in fiction. i'm a big fan of anything that explores the relationships between the mind/soul and body. lots of opportunities to queer code media like this.. i will also say, the title is misleading! 'wouldn't die' implies this lady <i>wanted</i> to stay alive. the whole time the poor woman was begging to die.. it's her silly husband that kept her severed head alive to give her a new hot bod.. but whatever!</p>
-        </div>
-    </div>
-    </div>
 
     <div class="log movie fav">
         <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
@@ -1883,18 +442,7 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jan 02 2024</p>
-            <strong>status:</strong> completed
-            <p>city of god</p>
-            <img src=/pics/library/cityofgod.png class=cover>
-            <p>this was the movie that taught me movies can have style. god i loved this movie so much. i can't believe i hadn't watched it sooner. i think my favorite part of the movie was our lovely narrator. i am obsessed with how skillfully he weaved us through the stories of all these characters and still made sure to keep a sense of cohesion between all of them. never at any point did i feel lost or bored as he was connecting the lives of these people in this movie. the camerawork was also so immersive, and i am a sucker for immersive experiences when it comes to the media i consume. one of my favorite scenes was the one in the beginning where they filmed the years go by as "carrot" (the subtitles translated their names instead of just spelling them out which is... annoying) took over his headquarters. the way so much history was shown in that one room. i have no idea if i worded that right.. there's a lot that i didn't mention because i'm a little sleepy after watching this but wow. if you haven't seen this movie, what are you waiting for??</p>
-        </div>
-    </div>
-    </div>
+
 
     <div class="log tv">
         <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
@@ -1913,18 +461,6 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> dec 30 2023</p>
-            <strong>status:</strong> completed
-            <p>saltburn</p>
-            <img src=/pics/library/saltburn.png class=cover>
-            <p>i loved this movie! oliver was so fun to watch! from the cum bathtub licking to the dirt fucking to the naked dance party. the guy is just having a blast. i was worried i'd get bored of the movie when i saw it was two hours long (if you or a loved one have been affected by shortened attention spans due to excessive social media usage, you may be entitled to financial compensation), but i literally did not feel the time go by. the pacing was perfect. i loved the visuals in the movie too, the summertime shots, the red curtains cloaking the room in red, the funeral scenes, it was just all so visually appealing to me. i very much enjoyed this movie. very fun indeed.</p>
-        </div>
-    </div>
-    </div>
 
     <div class="log anime">
         <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
@@ -1941,71 +477,7 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> dec 25 2023</p>
-            <strong>status:</strong> completed
-            <p>better days</p>
-            <img src=/pics/library/betterdays.png class=cover>
-            <p>maaaaaaan. this movie was so beautiful. i really loved it. sad news is i ran out of adhd meds so my thoughts are very muddled so the next couple thought blurbs will be pure rubbish. my bad. i loved this movie soooo much though. visually it was beautiful. chen nian looking at the fish while beishan was looking at her was so beautiful to look at. among other scenes. nian clawing her way to some semblance of happiness with beishan, her shadow, watching out for her made me so emotional.. the duo just mean so much to me. <strong>"you'll protect the world, i'll protect you"</strong> i'd do anything for them. i liked the ending i was really worried this would have a tragic ending with beishan dying (20th century girl trauma lmfao) but seeing him come back again at the end after all the horrors was so nice to see. ugh. plan to rewatch soon despite the movie being two hours long.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> dec 24 2023</p>
-            <strong>status:</strong> completed
-            <p>the grinch (2018)</p>
-            <img src=/pics/library/grinch2018.png class=cover>
-            <p>watched this with my mom for the first time. very funny. we we're cackling for the entire first half hour. i don't think the grinch was in the wrong he's just neurodivergent and an orphan.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> dec 18 2023</p>
-            <strong>status:</strong> completed
-            <p>bodies bodies bodies</p>
-            <img src=/pics/library/bodies3.png class=cover>
-            <p>this movie was absolutely hilarious the entire time. i loved how horribly toxic this friend group was, it was a perfect recipe for disaster. there was a good, old-fashioned, honest to goodness doomed toxic yuri dynamic between the two main girls. it was great. there was one 5 min sequence where the "gen z" lingo was getting a little too cringe.. stopped feeling natural. as if they last minute had an old man write 1 page of the script and then switched back to the original writer for the rest of the movie. besides that it was great. the ending.. was brilliant, in my humble opinion. of course pete davidson would accidentally kill himself making a tik tok. it was such a funny reveal.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> dec 16 2023</p>
-            <strong>status:</strong> completed
-            <p>may december</p>
-            <img src=/pics/library/maydecember.png class=cover>
-            <p>suuch a beautiful film. i appreciate how it really felt like this movie was done with a lot of thought and care, which is evident. big fan of the eerie camerawork, it really felt like a classic horror movie a lot of the time. the tension was real. what really stood out to me was joe's relationship with his butterflies that gracie wasn't a big fan of.. the thought of him raising butterflies, watching them grow from caterpillars and get their wings, almost like he was wishing he could do that too.. it made me really emotional. and the way he let them go as soon as they were done growing made me think of how he reacted to his son saying he couldn't wait to leave home.. "i think that's good" like he too wants to leave. i just loved how they did that. a tragic story beautifully told, i think..</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> dec 15 2023</p>
-            <strong>status:</strong> completed
-            <p>angel guts: nami</p>
-            <img src=/pics/library/nami.png class=cover>
-            <p>lmfao. was debating on adding this here but you know what. whatever yea i watched it. i think <i>for this genre</i> (which i haven't seen much of, nor do i plan to for the time being) it was surprisingly more sensitive than i thought it would be? i appreciated how seriously the movie seemed to take the depictions of re-traumatization when rape victims in particular are pressured or forced to recount their experiences whether it be for the news, for court, for a movie being made, whatever. i think that part was handled surprisingly well, as shown by our very unlikeable and pushy main character. i thought the way they set up the movie to be about the exploitation of sexual assault victims for public consumption While Literally Being an exploitation film itself was really interesting too, i didn't expect this to be so layered in this way. the end did feel off to me though, i get it sort of tried to go a surrealist route but it felt like more of a last minute thought? would have been cooler if those elements were more recurring throughout the entire movie? made the end fall a bit flat. but then again i am overanalyzing a pinku film so.. overall i thought it was fine</p>
-        </div>
-    </div>
-    </div>
-
+    
     <div class="log movie">
         <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
         <div class="logtxt">
@@ -2060,87 +532,6 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> nov 26 2023</p>
-            <strong>status:</strong> completed
-            <p>revenge</p>
-            <img src=/pics/library/revenge.png class=cover>
-            <p><strong>tw for rape and gore.</strong> i haven't felt my heart beat as fast while watching a movie in forever. holy smokes was this movie good! visually and thematically, this is one of the coolest movies i've seen all year. i loved the bug imagery they had started us off with, i sort of wished they had followed that thread all the way through but it's whatever, it didn't bother me thaat much that they didn't. like when one of the guys pissed on the spider, i would have had the spider come back again to haunt him. given how spiders are used in a lot of literature/stories to represent resistance to colonial and Other types of oppression. i love jen so much, she is brilliant and incredible. i am so happy she killed them all for what they did, but my one critique would be that i wish the revenge killings were more personal. the first killing i thought was absolutely perfect, he saw her get raped and did nothing, she stabbed both his eyes out. i think the second guy she killed totally should have been castrated and died with his dick in his mouth. that would have been fitting for a) what he did but also b) to come back to his whole thing of feeling emasculated by richard. bonus points for postmortem humiliation. the final chase was really great, i enjoyed seeing richard run around completely naked, disoriented, with his intestines spilling out of him. her disappearing act with the tv blasting and the toy car in the pool that sort of made him feel insane was really great. a very satisfying watch.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> nov 25 2023</p>
-            <strong>status:</strong> completed
-            <p>ed (1996)</p>
-            <img src=/pics/library/ed1996.png class=cover>
-            <p>this movie was very disappointing... did not enjoy it as much as i wanted to, as a bad movie enthusiast and monkey appreciator. i was bored for the entire first hour of the movie. honestly, lizzie (the love interest's daughter) and ed carried the movie. they should have been the main characters. they make up for all two stars this movie got. the last half hour was the best, they should have just... made this a 30 minute movie. would have been perfect.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div>/div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> nov 23 2023</p>
-            <strong>status:</strong> completed
-            <p>the last vampire on earth</p>
-            <img src=/pics/library/lastvamp.png class=cover>
-            <p>the vibes of this movie were soooo fun to experience, just overall. an authentic glimpse of 2010. i was a huge fan of the weird filter they put over the entire movie, i could barely see a thing and i loved it. chloe (aka our 'bella') is an anthropology major studying to become a missionary. like what the hell. her church being Against blood transfusions when she has AIDS was a crazy plot development. i really didn't see that coming at all. this movie was so chaotic. even though i don't like chloe, i appreciate her pulling a gun on her dad for trying to burn her vampire boyfriend at the stake like a Witch.</p>
-            <p>one thing i will say is that this movie made me think about how much i missed when people just had fun with making movies and tv shows. i sometimes feel like there's this Pressure to only create art that's Good (by what standards?!) or something. i love that these guys just made a full on twilight rip-off and had so much fun with it. it made me really happy. also Loved the music in this movie too. great stuff.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> nov 22 2023</p>
-            <strong>status:</strong> completed
-            <p>coneheads</p>
-            <img src=/pics/library/coneheads.png class=cover>
-            <p>i thought this movie would be way worse but it was actually pretty good. like a real movie. my favorite character was the wife. when she asked her Mate what he'd do if she died and he said "Ah, my most precious one, I would collapse. I would draw the shades and live in the dark. I would never leave my slar pad. My fluids would coagulate, my cone would shrivel and I would die, miserable and lonely." i knew this was officially a Good movie in my book. she was so happy to hear this. she also thought the bible was a comedy. i love her. i figured this was just a very silly movie about the immigrant parent/first gen experience in america told through coneheads. which was a surprise.</p>
-            <p>the song they played at the end credits was so good i looked it up and found out they had made a <a href="https://youtu.be/NMkaOtvRvVo?si=UIyhNKhXOGfL0qv9" target=_blank style=background-color:#9a6aa9>music video</a> for it, which is sick. go listen.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> nov 21 2023</p>
-            <strong>status:</strong> completed
-            <p>things (1989)</p>
-            <img src=/pics/library/things.png class=cover>
-            <p>this was the. movie i've ever seen in my life but. but i don't hate it. i think i might even like it. i am so confused.</p>
-            <p>the title sequence played twice?? the whole movie was dubbed over. but i could still hear the original audio it was just a quiet echo. so strange. the dialogue? there definitely was. i had no idea what was going on the entire time. guy put his jacket in the freezer. as if it was a closet. it wasn't. it was a freezer. there was random newscaster epilogues that made no sense? anyways. evil experiment gone wrong monster baby birth everywhere. then they kill the monsterous THINGS. one thing i will say. i genuinely enjoyed the movie soundtrack. it was actually Amazing.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> nov 20 2023</p>
-            <strong>status:</strong> completed
-            <p>sharktopus vs. whalewolf</p>
-            <img src=/pics/library/sharktopusVSwhalewolf.png class=cover>
-            <p>this movie could have been five stars. i took off four points because i am not a fan of the racist caricatures used in the movie. added one point back because at least the voodoo witch lady looked beautiful while doing her thing at the end. i just don't understand why you had to add racist caricatures of spiritual practitioners when this movie is supposed to be about a shark-octopus hybrid fighting a whale-wolf hybrid. also it was sad to see so many beautiful queens dying. but alas. hot babes must be eaten by sharktopus for the plot. i did Enjoy a lot of the movie the silliness factor was great the bad acting was great the cgi was great. could have been a blast if it didn't make me so grumpy. i hope the other movies are better.</p>
-        </div>
-    </div>
-    </div>
-
     <div class="log tv">
         <div class="logmain"><div class="titlebar"># tv <div class="x">x</div> </div>
         <div class="logtxt">
@@ -2184,18 +575,7 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> nov 1 2023</p>
-            <strong>status:</strong> completed
-            <p>five nights at freddie's (2023)</p>
-            <img src=/pics/library/fnaf.png class=cover>
-            <p>i'm not going to lie i was drawing while this movie on so i was only half paying attention to what was going on <i>but</i> i enjoyed this so much i don't think it's necessarily a bad thing... i very much enjoyed the use of jumpscares they made me feel nostalgic in a way. back when i was 12 and nearly pissing myself over slenderman and Scary Stories To Tell In The Dark... and that one youtube video that's like a car commercial but it's a scary mutilated lady with no eyes jumpcare. my mother showed me that video cause she thought it would be funny. then she put on shakira's whenever whenever music video to make up for it. i'm not sure why she thought that would work. anyways. i loved that they cast peeta from hunger games. i love that guy. he was great. the movie was very enjoyable. idk anything about fnaf lore but it didn't seem to matter much to me while watching. i will probably watch this movie again with a friend so i actually pay attention the whole time but. overall very fun. good vibes. silly.</p>
-        </div>
-    </div>
-    </div>
+
 
     <div class="log tv now">
         <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
@@ -2290,32 +670,6 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> sept 2nd 2023</p>
-            <strong>status:</strong> completed
-            <p>the fly 2 (1989)</p>
-            <img src=/pics/library/thefly2.png class=cover>
-            <p>i was so excited to see where this sequel to go and i was so disappointed! this movie sucked! they took everything that was good and cool and charming about the first one and just..... fully ignored it. didn't use what made the last movie so good. it didn't feel like as much of a body horror film as the first one did? it felt like a regular horror movie. the horror felt less personal, in a way. i felt no connection to martin, at all. which is really the only person i could have possibly feel connected to given how awfully written every other character in this movie was. and the gore wasn't even that interesting. it wasn't... horrifying! like i'd expected it to be. thumbs down from me on this one.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> sept 2nd 2023</p>
-            <strong>status:</strong> completed
-            <p>bottoms</p>
-            <img src=/pics/library/bottoms.png class=cover>
-            <p>after seeing some clips on my twitter feed, i sort of knew i would really like this movie. it felt like the perfect mixture of campy high school silliness that would appeal to me. and i ended up loving it so much more than i expected! the cast is hilarious, i've seen clips of ayo edebiri and rachel sennott being besties off set and it was so fun to see them as best friends in the movie as well. you could tell. their friendship is really cute. i laughed so much during the movie i cried a little bit (i'm a crying laugher? laughing crier? whatever). every time someone would mention making a bomb i thought it was just a gag, but they actually did it. every time. it was great. the last thing i expected were for people to die in this movie. brilliant twist. honestly, a perfect movie. more or less. i plan to see this movie in theaters again and also own it in DVD. i hope the physical copy comes with a blooper reel. i know the blooper reel must be so funny.</p>
-        </div>
-    </div>
-    </div>
-
     <div class="log movie fav">
         <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
         <div class="logtxt">
@@ -2358,19 +712,6 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> aug 22nd 2023</p>
-            <strong>status:</strong> completed
-            <p>20th century girl</p>
-            <img src=/pics/library/20thcenturygirl.png class=cover>
-            <p>i went into this movie having no idea what to expect. at first i really hated the love triangle trope because seeing their dynamic together made me want them all to be best friends. they were all really cute with each other. but i eventually got over it. i'm giving this a high rating because this movie did such a good job at... appealing to Emotions. i don't really know a better way to describe it, so forgive me. but the end of this movie had me sobbing like a baby, which i really was not expecting. that final scene at the end where we see the videotapes our main guy recorded of his time in korea pushed me over the edge. i hadn't cried like that in so long. i think that scene alone was so good it Made the movie for me. besides that, i was a little disappointed about how they handled the love interest death. we don't even know how he died! so, i would have rated this movie lower if it wasn't that final scene. it was just so perfect and Raw it boosted the movie so much for me. still glad i watched it.</p>
-        </div>
-    </div>
-    </div>
-
     <div class="log lit">
         <div class="logmain"><div class="titlebar"># literature <div class="x">x</div></div>
         <div class="logtxt">
@@ -2397,19 +738,6 @@ function removeClass(element, name) {
             <p>i loved the switching back and forth between korean and japanese, and i think it says a lot about language as a form of intimacy. specifically in regards to how hideko and sookee communicated with each other versus how they each spoke to other people. it was beautifully reflective of not only class but also relationship dynamics too. i wish i had learned more about japanese korean history before watching this (beyond surface level information), i would have liked to see how that was incorporated into the film (as i'm sure it was, it just would have went over my head)... </p>
             <p>my only ick was that the last sex scene felt like it was written by a man who has never spoken to a lesbian in real life. the other ones were great, though. but this wasn't worth taking a star off. the scissoring was just, like, whatever.</p>
             <p>overall i am so happy with this movie and the way the story was told. i seriously didn't think my girls would have a happy ending! but they did! too many years of consuming toxic doomed yaoi had dimmed my hope for happy endings. but yuri always saves the day. god bless.</p>
-        </div>
-    </div>
-    </div>
-
-    <div class="log movie anime">
-        <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> aug 17th 2023</p>
-            <strong>status:</strong> completed
-            <p>trigun: badlands rumble</p>
-            <img src=/pics/library/badlands.png class=cover>
-            <p>okay so i gave this movie a pretty low rating for a couple very unimportant reasons. maybe i just wasn't in the mood to watch this movie because i was really bored for most of it... i also was not a fan of the wolfwood and vash interactions... the way their dynamic was written was not very appealing to me. vash was wayyy too horny brained and wolfwood was just all alone again? when in every other iteration of trigun wolfwood is terribly losing the idgaf war and is always finding a way to be around vash. it just felt very out of character. also was not a fan of the fact that wolfwood looked so pale. who is preventing him from seeing the sun!! let him out!! it's not like i Actively dislike this movie, but it's not something i really care for.</p>
         </div>
     </div>
     </div>
@@ -2485,18 +813,7 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> july 9th 2023</p>
-            <strong>status:</strong> completed
-            <p>the babysitter: killer queen</p>
-            <img src=/pics/library/babysitter.png class=cover>
-            <p>i watched the first babysitter movie several years ago and thought it was really fun. i had no idea there was a sequel until i found it while netflix browsing yesterday. this movie was pretty fun, i did Enjoy watching it. even though the acting was really bad. and the main character was like a jughead jones but less funny. i absolutely loved jenna ortega's performance in this though, she does so well in campy horror movies. i also think that "sex scene" where they had a bunch of... flower blooming videos and dancing while Jump On It by Sugarhill Gang Apache was playing in the background was. Absolutely incredible. Favorite sex scene I've ever watched in a movie. which is probably a strange thing to say, but it's true.</p>
-        </div>
-    </div>
-    </div>
+    
 
     <div class="log manga fav">
         <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
@@ -2525,19 +842,7 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jun. 25th 2023</p>
-            <strong>status:</strong> completed
-            <p>do revenge</p>
-            <img src=/pics/library/dorevenge.png class=cover>
-            <p>this was so enjoyable! i watched this with my cousin and it was so great. visually, the costume designs and the set and the whole Look of the movie was so appealing. i wish i went to a school that had such nice school colors. this was a really simple, cute, and silly movie, i loved the revenge plots and the obnoxious fake woke liberalism of it all. and i loved it especially because i did NOT see that plot twist coming! i predicted a bunch of other smaller things throughout (because i like doing that) but this wowed me. and i love that they got back together in the end and bonded. for most of the movie i was rooting for the revenge duo to become endgame, but i'm glad they didn't. or at least, i'm really happy with their friendship. a very fun watch. would recommend.</p>
-        </div>
-    </div>
-    </div>
-
+   
     <div class="log manga">
         <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
         <div class="logtxt">
@@ -2565,20 +870,7 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain">
-            <div class="titlebar"># film <div class="x">x</div>
-            </div>
-            <div class="logtxt">
-                <br>
-                <p style="margin: 0;"><strong>date:</strong> jun. 19th 2023</p>
-                <strong>status:</strong> completed
-                <p>but i'm a cheerleader!</p>
-                <img src=/pics/library/cheerleader.png class=cover></a>
-                <p>i can't believe i hadn't watched this movie earlier! this is such a cute iconic lesbian movie, putting it right up there with D.E.B.S. it's really funny and silly but at the same time gives us such genuine and sweet moments about accepting yourself and being who you are. "there's not just one way to be a lesbian" truer words have never been spoken. god bless the old man yaoi and the short but sweet old woman yuri appearances in this movie. natasha's performance in this was incredible this is the first movie i've seen of her when she was younger. she was adorable! my one and only complaint (otherwise, it really would have been a perfect movie) is that the characters all seem to not know that trans people exist? poor jan really liked guys the whole time. jan was just a guy. but that thought didn't cross anyone's mind. at all. despite showing up with a buzz-cut and a mustache. i was a little disappointed that jan quit and was never seen again without getting her chance to have gender revelations the same way everyone else had sexuality revelations. but other than mishandling jan's character, i loved everything else about this movie. would totally recommend!</p>
-        </div>
-    </div>
-    </div>
+    
 
     <div class="log anime fav">
         <div class="logmain"><div class="titlebar"># animanga <div class="x">x</div></div>
@@ -2641,31 +933,7 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jun. 3rd 2023</p>
-            <strong>status:</strong> completed
-            <p>emergency declaration</p>
-            <img src=/pics/library/ed.png class=cover>
-            <p>out of all the disaster movies like this i've seen before, this was actually the best of the best. i honestly think this should be like at the Top of whatever this genre of movie is. the way it was shot was sooooooo intense they were playing with my heart rate like a fiddle! i really liked the political aspect of the movie where they showed the US and Japan rejecting the people in the plane and the protests and stuff. and that one moment where the main little girl came to the adults about something (being vague to avoid spoilers lol) and all of the adults listened to her and believed her! which sounds a little silly to point out but it meant a lot to me. and it reminded me of this one <a href="http://whereareyouquetzalcoatl.com/mesofigurineproject/EthnicAndIndigenousStudiesArticles/Simpson2014.pdf" target="_blank">Nishnaabeg story</a> i read for class a few semesters ago.. also, seeing the unnamed characters say their goodbyes to their families was so gut wrenching.... like Wow. it was so well done. i loved the movie a lot. i <i>do</i> think this story would be so much fun as a tv show (rereading this on 4/2/24 i am disagreeing with myself this would not be as good as a tv show...). i just really think it would be cool to explore the Insane emotional rollercoaster of accepting death and then moments later being told you Won't be dying actually... like i'm sure that will fuck up people in many different ways.... a sort of Aftermath story would be cool to have for this movie if that makes sense...</p>
-        </div>
-    </div>
-    </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> jun. 3rd 2023</p>
-            <strong>status:</strong> completed
-            <p>the little mermaid</p>
-            <img src=/pics/library/mermaid.png class=cover>
-            <p>ever since i saw they were doing a live action remake starring halle bailey of my favorite disney movie as a child i've been shivering in my timbers in excitement! fun fact when i was really young i would wake up extra early to watch the little mermaid on VCR and one day i wrote Ariel a letter and drew her a picture of herself to profess my love for her. so i thought it would be really smart for me to stuff my letter in with the VHS tape so that when i press play she would Receive my letter. little me thought this was a brilliant plan.. i broke the VCR and we never got it fixed... that's besides the point. i loved the casting for this movie so much, and i was surprised to find prince eric actually enjoyable in this movie! he was great. i didn't like his song so i took out 1/2 a star..... but that was like the only downside. so glad they made this movie... loved it so much.</p>
-        </div>
-    </div>
-    </div>
 
     <div class="log tv">
         <div class="logmain"><div class="titlebar"># tv <div class="x">x</div></div>
@@ -2709,18 +977,7 @@ function removeClass(element, name) {
     </div>
     </div>
 
-    <div class="log movie">
-        <div class="logmain"><div class="titlebar"># film <div class="x">x</div></div>
-        <div class="logtxt">
-            <br>
-            <p style="margin: 0;"><strong>date:</strong> may 24th 2023</p>
-            <strong>status:</strong> completed
-            <p>the matrix</p>
-            <img src=/pics/library/thematrix.png class=cover>
-            <p>i watched this for the first time last week with my friend during our semi-frequent movie nights!! i felt like i just <i>had</i> to watch this movie at some point in my life, given it's a Classic and is referenced everywhere... and i ended up enjoying it a lot, which surprised me. i will say there was a part in the middle where i zoned out, which i guess means it wasn't that interesting to me but i really loved the concept and i see why everyone went nuts over this when it first came out. i love early 2000s movies about The Internet because they make me nostalgic and i am very interested in how people think of the internet both back in the day and also Now. and this movie itched that spot in my brain. the ending was perfect also i love how he just flew away.. because he Can do that. so silly!</p>
-        </div>
-    </div>
-    </div>
+  
 
     <div class="log lit fav">
         <div class="logmain"><div class="titlebar"># literature <div class="x">x</div></div>
