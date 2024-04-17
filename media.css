@@ -10,39 +10,41 @@ body {
     font-family: 'MS PGothic';
 }
 
-.desc {
-    line-height: 0.25;
+header{
+  text-align:center;
 }
-  header{
-    text-align:center;
-  }
   
-  /* code-div.js */
-  #content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow: scroll;
-  }
-  
-  .item {
-    width: 450px;
-    overflow: scroll;
-  }
+/* code-div.js */
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: scroll;
+}
 
-  .text {
-    overflow: scroll;
-    height: 185px;
-    margin-top: 30px;
-    text-align: justify;
-    padding-right: 20px;
-  }
+
+
   
-  .cover {
-    float: left;
-    padding-left: 0px;
-    padding-right: 8px;
-    width: 123px;
-    height: 185px;
-    display: block;
+.item {
+  width: 450px;
+  overflow: scroll;
+  overflow-y: hidden;
+  padding-right: 20px;
+}
+
+.text {
+  overflow: scroll;
+  height: 185px;
+  margin-top: 10px;
+  text-align: justify;
+  padding-right: 15px;
+}
+  
+.cover {
+  float: left;
+  padding-left: 0px;
+  padding-right: 8px;
+  width: 123px;
+  height: 185px;
+  display: block;
 }

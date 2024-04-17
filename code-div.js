@@ -15,12 +15,13 @@ $(document).ready(function () {
         
         // class is an identifier
         let div = $(`<div class="item">
-          <h3>` + entry.title +`</h3>
-          <p class="desc" style="font-weight: bold;">` +  entry.type + `</p>
-          <p class="desc">` +  entry.date + `</p>
-          <p class="desc">` +  entry.status + `</p>
-          <p class="cover">` +  entry.image + `</p>
-          <p class="text">` +  entry.review + `</p>
+          <div>` + entry.type + `</div>
+            <br>
+            <p style="margin: 0;"><strong>date: </strong>` + entry.date + `</p>
+            <strong>status:</strong> ` + entry.status + `
+            <p>` + entry.title + `</p>
+            <img class=cover src=/pics/library/` + entry.image + `.png>
+            <p class="text">` + entry.review + `</p>
           </div>`)
         .appendTo("#content"); // # refers to div id
     
