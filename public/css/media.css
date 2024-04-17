@@ -8,6 +8,25 @@
 
 body {
     font-family: 'MS PGothic';
+    padding-left: 60px;
+    padding-right: 60px;
+    background-image: url(/pics/backgrounds/page_background_animated_04.gif);
+}
+
+h3 {
+  font-size: medium;
+  text-align: center;
+  font-weight:100 ;
+}
+
+a {
+  font-weight: bold;
+  color: rgb(247, 144, 161);
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
 }
 
 header{
