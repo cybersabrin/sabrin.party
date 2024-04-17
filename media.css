@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'MS PGothic';
+    src: url('/public/fonts/MS-PGothic.eot');
+    src: url('/public/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'), url('/public/fonts/MS-PGothic.woff2') format('woff2'), url('/public/fonts/MS-PGothic.woff') format('woff'), url('/public/fonts/MS-PGothic.ttf') format('truetype'), url('/public/fonts/MS-PGothic.svg#MS-PGothic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MS PGothic';
+}
+
+.desc {
+    line-height: 0.25;
+}
+  header{
+    text-align:center;
+  }
+  
+  /* code-div.js */
+  #content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: scroll;
+  }
+  
+  .item {
+    width: 450px;
+    overflow: scroll;
+  }
+
+  .text {
+    overflow: scroll;
+    height: 185px;
+    margin-top: 30px;
+    text-align: justify;
+    padding-right: 20px;
+  }
+  
+  .cover {
+    float: left;
+    padding-left: 0px;
+    padding-right: 8px;
+    width: 123px;
+    height: 185px;
+    display: block;
+}
