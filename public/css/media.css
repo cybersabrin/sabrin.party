@@ -39,17 +39,20 @@ header{
   flex-wrap: wrap;
   justify-content: center;
   overflow: scroll;
-  margin-bottom: 25px;
 }
 
 
 
   
 .item {
-  width: 450px;
+  width: 250px;
   overflow: scroll;
   overflow-y: hidden;
-  padding-right: 20px;
+  padding: 10px;
+}
+
+.item:hover {
+  -webkit-filter:drop-shadow(5px 10px 5px pink);filter:drop-shadow(5px 5px 10px pink);
 }
 
 .text {
