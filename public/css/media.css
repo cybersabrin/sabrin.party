@@ -40,19 +40,12 @@ header{
   justify-content: center;
   overflow: scroll;
 }
-
-
-
   
 .item {
-  width: 250px;
+  width: 450px;
   overflow: scroll;
   overflow-y: hidden;
   padding: 10px;
-}
-
-.item:hover {
-  -webkit-filter:drop-shadow(5px 10px 5px pink);filter:drop-shadow(5px 5px 10px pink);
 }
 
 .text {
