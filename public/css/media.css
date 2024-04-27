@@ -66,5 +66,6 @@ header{
 }
 
 .libLink:hover {
-  box-shadow: 0px 0px 20px lightpink;
+  -webkit-filter: drop-shadow(5px 15px 5px #ffc0cb);
+    filter: drop-shadow(5px 5px 15px #ffc0cb);
 }
