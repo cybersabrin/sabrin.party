@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'MS PGothic';
+    src: url('/fonts/MS-PGothic.eot');
+    src: url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'), url('/fonts/MS-PGothic.woff2') format('woff2'), url('/fonts/MS-PGothic.woff') format('woff'), url('/fonts/MS-PGothic.ttf') format('truetype'), url('/fonts/MS-PGothic.svg#MS-PGothic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+      font-family: 'MS PGothic';
+      padding-left: 60px;
+      padding-right: 60px;
+      background-image: url(/public/pics/backgrounds/page_background_animated_04.gif);
+  }
+  
+  h3 {
+    font-size: medium;
+    text-align: center;
+    font-weight:100 ;
+  }
+  
+  a {
+    font-weight: bold;
+    color: rgb(206, 144, 247);
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  header{
+    text-align:center;
+  }
+    
+  /* code-div.js */
+  #content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: scroll;
+  }
+    
+  .item {
+    width: 450px;
+    overflow: scroll;
+    overflow-y: hidden;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px black solid;
+    margin: 10px;
+    padding: 15px;
+  }
+
+.img {
+    width: 200px;
+    filter: grayscale(100%);
+    transition: width 2s, height 2s, transform 1s;
+}
+
+.img:hover {
+    transform: rotate(5deg);
+}
