@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'MS PGothic';
-    src: url('/public/fonts/MS-PGothic.eot');
-    src: url('/public/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'), url('/public/fonts/MS-PGothic.woff2') format('woff2'), url('/public/fonts/MS-PGothic.woff') format('woff'), url('/public/fonts/MS-PGothic.ttf') format('truetype'), url('/public/fonts/MS-PGothic.svg#MS-PGothic') format('svg');
+    src: url('/fonts/MS-PGothic.eot');
+    src: url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'), url('/fonts/MS-PGothic.woff2') format('woff2'), url('/fonts/MS-PGothic.woff') format('woff'), url('/fonts/MS-PGothic.ttf') format('truetype'), url('/fonts/MS-PGothic.svg#MS-PGothic') format('svg');
     font-weight: normal;
     font-style: normal;
   }
 
 body {
     width: 600px;
-    background-image: url(/public/pics/backgrounds/bk064.gif);
+    background-image: url(/pics/backgrounds/bk064.gif);
     padding: 20px;
     font-family: 'MS PGothic';
     margin: 0 auto;
