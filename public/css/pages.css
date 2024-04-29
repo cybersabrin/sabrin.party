@@ -222,15 +222,9 @@ p {
     font-size: 15px;
 }
 
-.collapsible:hover {
-    color: #7e75f6;
-    text-decoration: underline;
-}
-
-.content {
+.blogcontent {
     padding-left: 18px;
     padding-right: 18px;
-    display: none;
     overflow: hidden;
     width: 470px;
     text-align: justify;
@@ -410,6 +404,8 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     overflow-y: hidden;
+    width: 520px;
+
   }
 
   
@@ -419,4 +415,5 @@ p {
     overflow-y: hidden;
     padding-right: 20px;
     margin: 20px;
+    width: 520px;
   }
