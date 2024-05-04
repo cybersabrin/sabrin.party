@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'MS PGothic';
-    src: url('/public/fonts/MS-PGothic.eot');
-    src: url('/public/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'), url('/public/fonts/MS-PGothic.woff2') format('woff2'), url('/public/fonts/MS-PGothic.woff') format('woff'), url('/public/fonts/MS-PGothic.ttf') format('truetype'), url('/public/fonts/MS-PGothic.svg#MS-PGothic') format('svg');
+    src: url('/fonts/MS-PGothic.eot');
+    src: url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'), url('/fonts/MS-PGothic.woff2') format('woff2'), url('/fonts/MS-PGothic.woff') format('woff'), url('/fonts/MS-PGothic.ttf') format('truetype'), url('/fonts/MS-PGothic.svg#MS-PGothic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -43,7 +43,7 @@ a:hover {
     top: 50%;
     border-width: 7px;
     border-style: solid;
-    border-image: url(/public/pics/backgrounds/yellowborder.png) 8 fill round;
+    border-image: url(/pics/backgrounds/yellowborder.png) 8 fill round;
     padding: 35px;
 }
 
