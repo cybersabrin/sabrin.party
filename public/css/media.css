@@ -8,9 +8,10 @@
 
 body {
     font-family: 'MS PGothic';
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
     background-image: url(https://sadhost.neocities.org/images/tiles/Background064.gif);
+    padding-top: 10px;
 }
 
 h3 {
@@ -21,7 +22,8 @@ h3 {
 
 a {
   font-weight: bold;
-  color: rgb(247, 144, 161);
+  background-color: #ffffd7;
+  color: #6495ed;
   text-decoration: none;
 }
 
@@ -42,10 +44,16 @@ header{
 }
   
 .item {
-  width: 450px;
+  width: 600px;
   overflow: scroll;
   overflow-y: hidden;
   padding: 10px;
+  border: 2px dashed #6495ed;
+  border-radius: 25px;
+  background-image: url(/public/pics/backgrounds/page_background_animated_04.gif);
+  margin-bottom: 20px;
+  height: 260px;
+  z-index: 0;
 }
 
 .text {
@@ -63,9 +71,29 @@ header{
   width: 123px;
   height: 185px;
   display: block;
+  
 }
 
 .libLink:hover {
-  -webkit-filter: drop-shadow(5px 15px 5px #ffc0cb);
-    filter: drop-shadow(5px 5px 15px #ffc0cb);
+  -webkit-filter: drop-shadow(5px 15px 5px #afcbff);
+    filter: drop-shadow(5px 5px 15px #afcbff);
+    z-index: 4;
+}
+
+.itemHeader {
+  background-color: #ffffd7;
+  position: absolute;
+  margin-top: 0px;
+  width: 560px;
+  z-index: -1;
+}
+
+.medialogTitle {
+  height: 90px;
+}
+
+.medialogTitle:hover {
+  height: 90px;
+  -webkit-filter: drop-shadow(5px 15px 5px #ffffd7);
+    filter: drop-shadow(5px 5px 15px #ffffd7);
 }

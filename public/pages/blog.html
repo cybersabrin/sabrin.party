@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/public/css/pages.css">
     <title>journal entries.</title>
 </head>
 
@@ -13,7 +13,7 @@
     <p>i think for now i'll be using this as a personal blog / journal where i talk about my day as a means to practice html and such. these will probably be boring (or probably not... guess you'll have to read them to find out. i don't make the rules)</p>
     <div class="cont" style="margin:0 auto">
 
-        <button type="button" class="collapsible"><time>2024-04-29</time>: the computer sciencing is not sciencing...</button>
+        <button type="button" class="collapsible"><time>2024-04-29</time>: bored rambles.. a little bit of nothing...</button>
         <div class="content">
             <img src="/pics/blog-posts/2024/muppetsticker.png" style="width: 120px; float: right; padding-right: 10px; padding-bottom: 10px;"><p>ever since learning about sheetsites and how to make a webpage from a googlesheet, i've been incorporating it into different parts of my site. i've been having fun with it but i'm not quite sure on how i really want to use it. right now i'm mostly just in the experimental phase. i'm sorta eeeeeh about what i want to do with my site in general now, i'm starting to get a little bored with it. my next plan project thing is to have a little zine library of all the zines i've read and loved, sorta separate from my media log because zines are just that Special. we'll see how that goes...</p>
         </div>
@@ -621,7 +621,22 @@
             <p>this is looking like a real blog already wow look at that. until next time!</p>
         </div>
     </div>
-    <script>var coll = document.getElementsByClassName("collapsible"); var i; for (i = 0; i < coll.length; i++) { coll[i].addEventListener("click", function () { this.classList.toggle("active"); var a = this.nextElementSibling; if (a.style.display === "block") { a.style.display = "none" } else { a.style.display = "block" } }) }</script>
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var blogcontent = this.nextElementSibling;
+    if (blogcontent.style.display === "block") {
+        blogcontent.style.display = "none";
+    } else {
+        blogcontent.style.display = "block";
+    }
+  });
+} 
+    </script>
 </body>
 
 </html>

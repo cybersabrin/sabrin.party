@@ -21,7 +21,7 @@ body {
     float: left;
     display: flex;
     padding: 20px;
-    background-image: url(/pics/backgrounds/page_background_animated_04.gif);
+    background-image: url(/public/pics/backgrounds/page_background_animated_04.gif);
     z-index: 0;
     height: 1230px;
     margin-bottom: 140px;
