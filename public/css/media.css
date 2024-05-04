@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'MS PGothic';
-  src: url('/fonts/MS-PGothic.eot');
-  src: url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'), url('/fonts/MS-PGothic.woff2') format('woff2'), url('/fonts/MS-PGothic.woff') format('woff'), url('/fonts/MS-PGothic.ttf') format('truetype'), url('/fonts/MS-PGothic.svg#MS-PGothic') format('svg');
+  src: url('/public/fonts/MS-PGothic.eot');
+  src: url('/public/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'), url('/public/fonts/MS-PGothic.woff2') format('woff2'), url('/public/fonts/MS-PGothic.woff') format('woff'), url('/public/fonts/MS-PGothic.ttf') format('truetype'), url('/public/fonts/MS-PGothic.svg#MS-PGothic') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -10,7 +10,7 @@ body {
     font-family: 'MS PGothic';
     padding-left: 60px;
     padding-right: 60px;
-    background-image: url(/pics/backgrounds/page_background_animated_04.gif);
+    background-image: url(https://sadhost.neocities.org/images/tiles/Background064.gif);
 }
 
 h3 {
