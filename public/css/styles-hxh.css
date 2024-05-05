@@ -1,11 +1,4 @@
 @font-face {
-    font-family: 'holidayregular';
-    src: url('/fonts/holiday-webfont.woff2') format('woff2'),
-         url('/fonts/holiday-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
     font-family: 'MS PGothic';
     src: url('/fonts/MS-PGothic.eot');
     src: url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'),
@@ -18,188 +11,222 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'DOS';
+    src: url('/fonts/perfect_dos_vga_437-webfont.woff2') format('woff2'),
+         url('/fonts/perfect_dos_vga_437-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+@keyframes spin2 { 
+    0% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 5px); }
+    100%   { transform: translate(0, -0px); } 
+}
 
 * {
     font-family: 'MS PGothic';
-}
-
-body {
-    margin: 0;
-    background-color: black;
-    color: white;
-    cursor: url(/mooncursor.cur), pointer;
-}
-
-table, td, tr {
-    border: 1px solid #98bf80;
-    padding: 10px;
-    font-family: 'MS PGothic';
-}
-
-* {
     box-sizing: border-box;
-}
-
-p {
     text-align: justify;
-    color: white;
 }
 
 a {
-    background-color: #759263c8;
-    color: white;
-    text-decoration: none;
+    font-weight: bolder;
+    text-decoration: underline;
+    color: #74954f;
 }
 
 a:hover {
-    cursor: url(/mooncursor.cur), pointer;
+    color:rgb(116, 66, 31);
 }
 
-#container {
-    max-width: 900px;
-    margin: 0 auto;
-}
 
-#container a {
-    background-color: #8bc567bf;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    line-height: 20px;
-}
-
-#flex {
-    display: flex;
-}
-
-aside {
-    background: black url(/pics/backgrounds/battleback_ow_xsbf.png);
+body {
+    color:rgb(116, 66, 31);
+    background: url(/pics/backgrounds/kukuroo.png);
     background-size: cover;
-    width: 230px;
-    padding: 20px;
-    font-size: smaller;
-    height: 550px;
-
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow:auto;
 }
 
-main {
-    background-color: black;
-    border: 2pt dotted #98bf80;
-    flex: 1;
-    padding: 20px;
-    order: 2;
+.title {
+    color: #f1d976;
+    text-align: center;
+    font-size: 40pt;
+    margin-bottom: 20px;
+    font-family: 'MS PGothic';
+    text-shadow: 0 -3px #74954f, 3px 0 #74954f, 0 3px #74954f, -3px 0 #74954f;
+}
+
+.intro {
+    text-align: center;
+    font-size: medium;
+    line-height: 20px;
+    color: #74954f;
+    background-color: #f1d976;
+}
+
+.tab {
+    overflow: hidden;
+    border: 2px dashed #f1d976;
+    background-color: #74954f;
+    width: 626px;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tab button:hover {
+    background-color: #f1d976;
+}
+
+.tab button.active {
+    background-color: #f1d976;
+}
+
+.tabcontent {
+    display: none;
+    padding: 10px 40px;
+    border: 1px solid #f1d976;
+    border-top: none;
+    width: 100%;
     height: 550px;
     overflow: auto;
+    background-color: beige;
 }
 
-*/ #leftSidebar {
-    order: 1;
+#home {
+    overflow: scroll;
+    width: 100%;
 }
 
-h1,
+.homeimg1 {
+    float: left;
+    height: 180px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.homeimg2 {
+    float: right;
+    padding-left: 10px;
+    padding-top: 5px;
+    height: 150px;
+}
+
+.homeHeader {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#homeWatch {
+    animation-name: floating;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+img.howto {
+    height: 170px;
+    width: 120px;
+    margin: 0 auto;
+    display: block;
+}
+
+p.howto {
+    text-align: center;
+}
+
 h2 {
-    color: #759263c8;
-    font-family:  'Times New Roman', Times, serif;
+    font-family: 'DOS';
+    color: white;
+    font-weight: bolder;
+    font-size: 38pt;
 }
 
-h3 {
-    color: #f1d976;}
-
-h1 {
-    font-size: 25px;
+.songs1 {
+    text-shadow: 0 -4px #8caf4c, 4px 0 #8caf4c, 0 4px #8caf4c, -4px 0 #8caf4c;
+    animation: floating 2s infinite;
+    margin-top: 10px;
 }
 
-strong {
-    color: #759263c8;
+.songs2 {
+    margin-top: 0px;
+    text-shadow: 0 -4px #f7b322, 4px 0 #f7b322, 0 4px #f7b322, -4px 0 #f7b322;
+    animation: floating 2s infinite;
+    margin-left: 60px;
 }
 
-.box {
-    background-color: black;
-    border: 1px solid #689581;
-    padding: 10px;
-    font-size: small;
+.songs3 {
+    margin-top: 0px;
+    margin-left: 60px;
+    text-shadow: 0 -4px #80c4e4, 4px 0 #80c4e4, 0 4px #80c4e4, -4px 0 #80c4e4;
+    animation: floating 2s infinite;
+    margin-left: 120px;
 }
 
-/* for blog down below */
-.container {
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    width: 500px;
+.songs4 {
+    margin-top: 0px;
+    text-shadow: 0 -4px #bc80e4, 4px 0 #bc80e4, 0 4px #bc80e4, -4px 0 #bc80e4;
+    animation: floating 2s infinite;
+    margin-left: 180px;
+}
 
-  }
-  
-  .collapsible {
-      background: url(/pics/backgrounds/battleback_dw_abbi.png);
-      color: white;
-      cursor: pointer;
-      font-family: 'MS PGothic';
-      padding: 18px;
-      width: 500px;
-      border: none;
-      text-align: center;
-      outline: none;
-      font-size: 15px;
-    }
-  
-    .content {
-      padding: 18px;
-      display: none;
-      overflow: hidden;
-      width: 464px;
-      text-align: justify;
-    }
-  
-/* down here is tab styling */
-        /* Style the tab */
-        .tab {
-            overflow: hidden;
-            border: 1px solid #f1d976;
-            background-color: #759263c8;
-            width: 626px;
-          }
-          
-          /* Style the buttons inside the tab */
-          .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
-          }
-          
-          /* Change background color of buttons on hover */
-          .tab button:hover {
-            background-color: #f1d976;
-          }
-          
-          /* Create an active/current tablink class */
-          .tab button.active {
-            background-color: #f1d976;
-          }
-          
-          /* Style the tab content */
-          .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            border: 1px solid #f1d976;
-            border-top: none;
-            width: 626px;
-            height: 335px;
-            overflow: auto;
-          }
+.songs5 {
+    margin-top: 0px;
+    text-shadow: 0 -4px #ff67b3, 4px 0 #ff67b3, 0 4px #ff67b3, -4px 0 #ff67b3;
+    animation: floating 2s infinite;
+    margin-left: 240px;
+}
 
-          .column {
-            float: left;
-            width: 50%;
-          }
-          
-          /* Clear floats after the columns */
-          .row:after {
-            content: "";
-            display: table;
-            clear: both;
-          }
+.songs6 {
+    margin-top: 0px;
+    text-shadow: 0 -4px #6783ff, 4px 0 #6783ff, 0 4px #6783ff, -4px 0 #6783ff;
+    animation: floating 2s infinite;
+    margin-left: 300px;
+}
+
+.songsLink {
+    font-family: 'DOS';
+    text-decoration: none;
+    color: white;
+}
+
+.songsLink:hover {
+    color: white;
+}
+
+.songImg {
+    animation: spin 4s linear infinite;
+    height: 60px;
+}
+
+.songImg2 {
+    animation: spin2 4s linear infinite;
+    height: 60px;
+}
+
