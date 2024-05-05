@@ -86,7 +86,8 @@ body {
     overflow: hidden;
     border: 2px dashed #f1d976;
     background-color: #74954f;
-    width: 626px;
+    width: 1026px;
+    margin: 0 auto;
 }
 
 .tab button {
@@ -112,15 +113,15 @@ body {
     padding: 10px 40px;
     border: 1px solid #f1d976;
     border-top: none;
-    width: 100%;
+    width: 1026px;
     height: 550px;
     overflow: auto;
     background-color: beige;
+    margin: 0 auto;
 }
 
 #home {
-    overflow: scroll;
-    width: 100%;
+    overflow: hidden;
 }
 
 .homeimg1 {
