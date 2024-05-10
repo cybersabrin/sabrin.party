@@ -41,7 +41,7 @@ p {
     background-size: 100% 100%;
     padding-top: 50px;
     position: absolute;
-    margin-top: -314px;
+    margin-top: -300px;
     margin-left: 310px;
     border-radius: 25px;
     border: 2px solid transparent;
@@ -59,24 +59,32 @@ p {
 
 .webrings {
     height: 240px;
-    width: 300px;
+    width: 278px;
     padding: 10px;
     padding-top: 20px;
     background-image: url(https://sadhost.neocities.org/images/tiles/Background064.gif);
     overflow: scroll;
-    margin-top: 50px;
+    margin-top: -20px;
     margin-left: -42px;
     margin-bottom: 40px;
     border-radius: 25px;
     border: 2px solid transparent;
     box-shadow: 0px 0px 20px #6fa1ff;
+    text-align: center;
+}
+
+.abtLink {
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #ffffc0;
+    color:black;
 }
 
 .webringtitle {
     height: 48px;
     position: absolute;
-    margin-top: 30px;
-    margin-left: -24px;
+    margin-top: -45px;
+    margin-left: -30px;
 }
 
 .olaf {
@@ -124,6 +132,7 @@ p {
     margin-top: 90px;
     overflow: scroll;
     padding-top: 24px;
+    display: block;
 }
 
 .quiztitle {
@@ -139,14 +148,16 @@ p {
 
 .stats {
     width: 278px;
-    height: 144px;
+    max-height: fit-content;
     border-radius: 25px;
     border: 2px solid transparent;
     margin-left: -40px;
     margin-top: 44px;
     box-shadow: 0px 0px 20px gold;
     padding-left: 20px;
+    padding-bottom: 15px;
     background-image: url(/pics/backgrounds/stars.webp);
+    display: block;
 }
 
 .myblurb {
@@ -156,11 +167,13 @@ p {
     border: 2px solid transparent;
     margin-left: 300px;
     margin-top: -480px;
+    margin-bottom: 40px;
     box-shadow: 0px 0px 20px rgb(136, 192, 136);
     padding-left: 20px;
     padding-right: 20px;
     background-image: url(/pics/backgrounds/bgif096.webp);
     padding-bottom: 10px;
+    display: block;
 }
 
 .email {
@@ -172,6 +185,7 @@ p {
     background-image: url(/pics/backgrounds/heart.webp);
     margin-left: -40px;
     margin-top: -228px;
+    display: block;
 }
 
 .emailgif {
@@ -183,6 +197,7 @@ p {
 .hakaseImg {
     border-radius: 25px;
     width: 300px;
+    height: 160px;
     margin-left: -40px;
     box-shadow: 0 0 20px pink;
     margin-top: 40px;
@@ -190,7 +205,7 @@ p {
 
 .mobwebring {
     margin-top: 15px;
-    margin-left: 58px;
+    margin-left: 48px;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -198,8 +213,8 @@ p {
 .aboutFavs {
     height: 50px;
     position: absolute;
-    margin-top: 216px;
-    margin-left: -140px;
+    margin-top: 210px;
+    margin-left: -170px;
 }
 
 /* for blog down below */
