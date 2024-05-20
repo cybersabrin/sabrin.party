@@ -52,13 +52,14 @@ header{
   border-radius: 25px;
   background-image: url(/pics/backgrounds/page_background_animated_04.gif);
   margin-bottom: 20px;
-  height: 260px;
+  height: 300px;
   z-index: 0;
+  margin-left: 20px;
 }
 
 .text {
   overflow: scroll;
-  height: 185px;
+  height: 225px;
   margin-top: 10px;
   text-align: justify;
   padding-right: 15px;
