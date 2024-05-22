@@ -90,10 +90,10 @@ header{
   background-color: #ffffd7;
   position: absolute;
   margin-top: 0px;
-  width: 560px;
+  width: 540px;
   z-index: -1;
 }
 
 .medialogTitle {
-  height: 90px;
+  height: 80px;
 }
