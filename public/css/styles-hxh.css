@@ -144,6 +144,10 @@ body {
     text-align: center;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 #homeWatch {
     animation-name: floating;
     animation-duration: 1.5s;

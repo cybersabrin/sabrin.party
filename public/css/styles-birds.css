@@ -11,6 +11,10 @@ body {
     background-image: url(/pics/backgrounds/cloud1anim.gif);
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 h1 {
     font-family: 'EB Garamond';
     font-size: 8em;
