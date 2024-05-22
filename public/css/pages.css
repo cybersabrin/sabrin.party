@@ -438,7 +438,7 @@ p {
     width: 520px;
 }
   
-.resourcesHeader {
+p.resourcesHeader {
     background-color:#ffada8;
     color:#fff8ed;
     font-weight:bold;
