@@ -6,6 +6,10 @@
   font-style: normal;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
     font-family: 'MS PGothic';
     padding-left: 20px;
@@ -52,16 +56,26 @@ header{
   border-radius: 25px;
   background-image: url(/pics/backgrounds/page_background_animated_04.gif);
   margin-bottom: 20px;
-  height: 260px;
+  height: 300px;
   z-index: 0;
+  margin-left: 20px;
+}
+
+.item::-webkit-scrollbar {
+  display: none;
 }
 
 .text {
   overflow: scroll;
-  height: 185px;
+  height: 225px;
   margin-top: 10px;
   text-align: justify;
   padding-right: 15px;
+  padding-left: 10px;
+}
+
+.text::-webkit-scrollbar {
+  display: none;
 }
   
 .cover {
@@ -73,26 +87,25 @@ header{
   display: block;
 }
 
-.libLink:hover {
-  -webkit-filter: drop-shadow(5px 15px 5px #afcbff);
-    filter: drop-shadow(5px 5px 15px #afcbff);
-    z-index: 4;
+.titleLink:hover {
+  color: #6596ee;
+}
+
+.titleLink {
+  text-decoration: none;
+  background-color: transparent;
+  color: black;
+  font-weight: normal;
 }
 
 .itemHeader {
   background-color: #ffffd7;
   position: absolute;
   margin-top: 0px;
-  width: 560px;
+  width: 540px;
   z-index: -1;
 }
 
 .medialogTitle {
-  height: 90px;
-}
-
-.medialogTitle:hover {
-  height: 90px;
-  -webkit-filter: drop-shadow(5px 15px 5px #ffffd7);
-    filter: drop-shadow(5px 5px 15px #ffffd7);
+  height: 80px;
 }

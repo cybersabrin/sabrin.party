@@ -19,9 +19,9 @@ $(document).ready(function () {
           <div style="float: left; z-index: 2;">` + entry.type + `</div>
           <div style="float: right"><strong>status:</strong> ` + entry.status + `</div>
           <div style="margin: 0 auto; width: 100px;">` + entry.date + `</div>
-          <p>` + entry.title + `</p>
-          <a class="libLink" target="_blank" href="` + entry.link + `"><div><img alt="` + entry.alt + `" class=cover src=/pics/library/` + entry.image + `.png></div></a>
-          <p class="text">` + entry.review + `</p>
+          <p><a class="titleLink" target="_blank" href="` + entry.link + `">` + entry.title + `</a></p>
+          
+          <p class="text"><img alt="` + entry.alt + `" class="cover" src=/pics/library/` + entry.image + `.png>` + entry.review + `</p>
           </div>`)
         .appendTo("#content"); // # refers to div id
     

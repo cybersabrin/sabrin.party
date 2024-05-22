@@ -17,6 +17,10 @@
     margin: 0;
     font-family: 'MS PGothic';
   }
+
+  body::-webkit-scrollbar {
+    display: none;
+}
   
   h3 {
     font-size: medium;

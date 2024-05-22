@@ -6,6 +6,14 @@
     font-style: normal;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+div::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     font-family: 'MS PGothic';
     color: black;
@@ -24,6 +32,13 @@ p {
     text-decoration: underline;
     font-weight: bold;
     color: #ffada8;
+}
+
+.resourcesH3 {
+    background-color:#ffada8;
+    color:#fff8ed;
+    font-weight:bold;
+    text-align:center;
 }
 
 .box {
@@ -436,4 +451,4 @@ p {
     padding-right: 20px;
     margin: 20px;
     width: 520px;
-  }
+}
