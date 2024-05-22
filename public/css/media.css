@@ -63,6 +63,7 @@ header{
   margin-top: 10px;
   text-align: justify;
   padding-right: 15px;
+  padding-left: 10px;
 }
   
 .cover {
@@ -74,10 +75,15 @@ header{
   display: block;
 }
 
-.libLink:hover {
-  -webkit-filter: drop-shadow(5px 15px 5px #afcbff);
-    filter: drop-shadow(5px 5px 15px #afcbff);
-    z-index: 4;
+.titleLink:hover {
+  color: #6596ee;
+}
+
+.titleLink {
+  text-decoration: none;
+  background-color: transparent;
+  color: black;
+  font-weight: normal;
 }
 
 .itemHeader {
@@ -90,10 +96,4 @@ header{
 
 .medialogTitle {
   height: 90px;
-}
-
-.medialogTitle:hover {
-  height: 90px;
-  -webkit-filter: drop-shadow(5px 15px 5px #ffffd7);
-    filter: drop-shadow(5px 5px 15px #ffffd7);
 }
