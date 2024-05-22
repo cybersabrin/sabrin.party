@@ -61,6 +61,10 @@ header{
   margin-left: 20px;
 }
 
+.item::-webkit-scrollbar {
+  display: none;
+}
+
 .text {
   overflow: scroll;
   height: 225px;
@@ -68,6 +72,10 @@ header{
   text-align: justify;
   padding-right: 15px;
   padding-left: 10px;
+}
+
+.text::-webkit-scrollbar {
+  display: none;
 }
   
 .cover {
