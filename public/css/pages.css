@@ -436,4 +436,11 @@ p {
     padding-right: 20px;
     margin: 20px;
     width: 520px;
-  }
+}
+  
+.resourcesHeader {
+    background-color:#ffada8;
+    color:#fff8ed;
+    font-weight:bold;
+    text-align:center
+}
