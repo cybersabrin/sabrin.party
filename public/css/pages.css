@@ -26,6 +26,13 @@ p {
     color: #ffada8;
 }
 
+.resourcesH3 {
+    background-color:#ffada8;
+    color:#fff8ed;
+    font-weight:bold;
+    text-align:center;
+}
+
 .box {
     border: 2px #ffada8 solid;
     background-color: #ffe9e5;
@@ -436,11 +443,4 @@ p {
     padding-right: 20px;
     margin: 20px;
     width: 520px;
-}
-  
-p.resourcesHeader {
-    background-color:#ffada8;
-    color:#fff8ed;
-    font-weight:bold;
-    text-align:center
 }
