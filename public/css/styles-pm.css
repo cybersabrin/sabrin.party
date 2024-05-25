@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Palatino';
+    src: url('/fonts/Palatino-Roman.woff2') format('woff2'),
+        url('/fonts/Palatino-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MS PGothic';
+    src: url('/fonts/MS-PGothic.eot');
+    src: url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'), url('/fonts/MS-PGothic.woff2') format('woff2'), url('/fonts/MS-PGothic.woff') format('woff'), url('/fonts/MS-PGothic.ttf') format('truetype'), url('/fonts/MS-PGothic.svg#MS-PGothic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    background-image: url(/pics/backgrounds/gshegs2.webp);
+    font-family: 'Palatino';
+}
+
+p {
+    font-family: 'MS PGothic';
+}
+
+.grain {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background: url(/pics/shrine-pm/GrainBackround.webp);
+    opacity: .15;
+    z-index: 99999999999999999999999999999999999999;
+}
+
+.header {
+    margin: 0 auto;
+    width: 75%;
+    padding: 10px;
+}
+
+p.title {
+    font-family: 'MS PGothic';
+    color: #b0bc8c;
+    font-style: italic;
+    background-color: white;
+    width: 100%;
+    font-weight: bolder;
+    font-size: 26pt;
+    padding: 5px;
+    text-align: right;
+}
+
+p.intro {
+    background-color: white;
+    text-align: justify;
+    width: 100%;
+    padding: 5px;
+    margin-top: -34px;
+    font-family: 'MS PGothic';
+}
+
+.bodyWrap {
+    margin: 0 auto;
+    margin-top: 0.5em;
+    white-space: nowrap;
+    width: 75%;
+}
+
+#indexWrap {
+    margin: 0 auto;
+}
+
+.indexBox {
+    display: inline-block;
+    padding-bottom: 3.5%;
+    padding-right: 0;
+    width: 25%;
+}
+
+.indexBox img {
+    border-radius: 2px 2px 5px 2px;
+    width: 85%;
+    filter: saturate(80%);
+}
+
+.indexBox img:hover {
+    
+    width: 85%;
+    filter: saturate(140%);
+}
+
+.indexBox p {
+    text-orientation: sideways-right;
+    writing-mode: tb;
+    display: inline-block;
+    margin: 0 0.25em;
+    vertical-align: top;
+    font-size: 1.3em;
+    width: auto;
+    font-family: 'MS PGothic';
+    color: #88a041;
+}
+
+@media only screen and (max-width: 850px) {
+    .indexBox {
+        padding-bottom: 7%;
+        width: 49.5%;
+    }
+}
+
+@media only screen and (max-width: 427px) {
+    .indexBox {
+        padding-bottom: 7%;
+        width: 49.5%;
+    }
+      
+    .indexBox p {
+        font-size: 1.2em;
+        margin: 0;
+    }
+}
+
+.navlinks {
+    font-family: 'MS PGothic';
+    color: #88a041;
+    font-style: italic;
+}
+
+.link {
+    color: #88a041;
+    font-weight: bold;
+}
+
+.link:hover {
+    background-color: #ffffff;
+}
+
+.artist {
+    font-style: italic;
+    color: #a9b17c;
+}
