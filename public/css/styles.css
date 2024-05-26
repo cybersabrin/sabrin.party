@@ -108,7 +108,7 @@ img.piclog {
     margin-left: 100px;
     margin-top: 169px;
     z-index: 2;
-    background-image: url(https://sadhost.neocities.org/images/tiles/greensilk.jpg)
+    background-image: url(/pics/backgrounds/greensilk.webp)
 }
 
 .marquee {
@@ -170,7 +170,7 @@ a.homeNotelink {
     display: flex;
     position: absolute;
     width: 220px;
-    height: 360px;
+    height: 390px;
     margin-top: 520px;
     margin-left: 10px;
     padding: 15px;
