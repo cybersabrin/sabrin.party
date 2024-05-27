@@ -35,6 +35,7 @@ body {
 
 p {
     font-family: 'MS PGothic';
+    text-align: justify;
 }
 
 .grain {
