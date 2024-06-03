@@ -21,7 +21,7 @@ $(document).ready(function () {
           <div style="margin: 0 auto; width: 100px;">` + entry.date + `</div>
           <p><a class="titleLink" target="_blank" href="` + entry.link + `">` + entry.title + `</a></p>
           
-          <p class="text"><img alt="` + entry.alt + `" class="cover" src=/pics/library/` + entry.image + `.png>` + entry.review + `</p>
+          <p class="text"><img alt="` + entry.alt + `" class="cover" src="` + entry.image + `">` + entry.review + `</p>
           </div>`)
         .appendTo("#content"); // # refers to div id
     
