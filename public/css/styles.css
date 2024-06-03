@@ -6,14 +6,28 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Palatino';
+    src: url('/fonts/Palatino-Roman.woff2') format('woff2'),
+        url('/fonts/Palatino-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito-ExtraBold.woff2') format('woff2'),
+        url('/fonts/Nunito-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 body {
     font-family: 'MS PGothic';
-    color: black;
-    font-size: medium;
-    width: 900px;
-    position: relative;
+    width: 800px;
     margin: 0 auto;
 }
 
@@ -22,30 +36,22 @@ body::-webkit-scrollbar {
 }
 
 .container {
-    width: 900px;
+    width: 940px;
     border: 1px dashed green;
     float: left;
-    display: flex;
     padding: 20px;
     background-image: url(/pics/backgrounds/page_background_animated_04.gif);
     z-index: 0;
-    height: 1230px;
+    height: 1140px;
     margin-bottom: 140px;
     margin-left: -70px;
+    table-layout: fixed;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    
 }
 
-.welcome {
-    width: 100%;
-    border: 2px cornflowerblue dashed;
-    z-index: 2;
-    height: 150px;
-    padding-left: 20px;
-    margin-left: 100px;
-    overflow: scroll;
-    padding-left: 65px;
-    padding-right: 20px;
-    background: url(https://sadhost.neocities.org/images/tiles/Background064.gif);
-}
 
 .homeTitle {
     margin-top: 10px;
@@ -58,22 +64,150 @@ body::-webkit-scrollbar {
 }
 
 .polaroid {
-    z-index: 1000;
+    z-index: 80;
     display: flex;
     position: absolute;
     width: 260px;
     margin-left: -100px
 }
 
+.welcome {
+    width: 739px;
+    height: 130px;
+    border: 2px #ffaed9 dashed;
+    border-radius: 10px;
+    z-index: 2;
+    padding-left: 20px;
+    margin-left: 90px;
+    overflow: hidden;
+    padding-left: 65px;
+    background: linear-gradient(0deg, rgba(255, 235, 59, 1) 0%, rgba(255, 59, 0, 0) 80%);
+    display: block;
+}
+
+.wlcmtext {
+    display: inline-block;
+    transform: scale(1, 3);
+        -webkit-transform: scale(1, 3);
+        -moz-transform: scale(1, 3);
+        -o-transform: scale(1, 3);
+        transform-origin: 0% -8%;
+    display: flex;
+    font-family: "Nunito";
+    font-weight: bolder;
+    color: hotpink;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+    z-index: 0;
+    width: 100px;
+    text-decoration: underline;
+    line-height: 11pt;
+    text-align: center;
+    position: relative;
+}
+
+.wlcmimg {
+    height: 130px;
+    display: flex;
+    margin-left: 110px;
+    position: absolute;
+    margin-top: -62px;
+}
+
+.wlcmtext2 {
+    display: flex;
+    margin-left: 220px;
+    margin-top: -60px;
+    position: relative;
+    float: left;
+    width: 180px;
+}
+
+.welcomebutton1 {
+    background-color: white;
+    padding: 7px;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    width: 50px;
+    display: block;
+    position: absolute;
+    margin-left: 400px;
+    text-decoration: underline;
+    font-family: 'Palatino';
+    font-weight: bold;
+    color: deepskyblue;
+    transform: rotate(4deg);
+}
+
+.welcomebutton1:hover {
+    color: hotpink;
+    transform: rotate(-4deg);
+}
+
+.welcomebutton2 {
+    background-color: white;
+    padding: 7px;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    width: 60px;
+    display: block;
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 25px;
+    text-decoration: underline;
+    font-family: 'Palatino';
+    font-weight: bold;
+    color: orange;
+    transform: rotate(-4deg);
+}
+
+.welcomebutton2:hover {
+    color:forestgreen ;
+    transform: rotate(4deg);
+}
+
+.wlcmtext3 {
+    display: flex;
+    margin-left: 516px;
+    position: absolute;
+    margin-top: -10px;
+}
+
+.statuscafe {
+    display: block;
+    position: relative;
+    margin-top: -50px;
+    border: 2px orange solid;
+    border-radius: 0 10px 10px 0;
+    padding: 5px;
+    width: 210px;
+    height: 115px;
+    background-image: url(/pics/home/wa.jpg);
+    background-size: 100% 100%;
+    text-align: center;
+    -moz-box-shadow:inset 0 0 15px rgb(170, 255, 0);
+    -webkit-box-shadow:inset 0 0 15px rgb(170, 255, 0);
+}
+
+#statuscafe-content {
+    font-family: "Nunito";
+    text-decoration: underline;
+    border-radius: 50%;
+    background-color: white;
+    color: #6fa1ff;
+}
+
 div.piclog {
     width: 156px;
-    border: 2px darkseagreen dashed;
     height: 200px;
-    position: absolute;
+    border: 2px hotpink dashed;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: block;
     float: right;
-    margin-top: 169px;
-    display: grid;
-    margin-left: 740px;
     overflow: hidden;
     z-index: 2;
 }
@@ -81,47 +215,23 @@ div.piclog {
 img.piclog {
     width: 100%;
     height: 200px;
+    z-index: 1;
 }
 
 .piclogTitle {
     height: 40px;
     position: absolute;
     z-index: 5;
-    margin-top: 154px;
     margin-left: 823px;
 }
-.fanclubs {
-    position: absolute;
-    margin-top: 430px;
-    margin-left: 10px;
-    width: 887px;
-    height: 62px;
-    z-index: 1;
-    border: 2px plum dashed;
-}
 
-.sotw {
-    border: 2px hotpink dashed;
-    width: 620px;
-    height: 121px;
-    position: absolute;
-    margin-left: 100px;
-    margin-top: 169px;
-    z-index: 2;
-    background-image: url(/pics/backgrounds/greensilk.webp)
-}
 
-.marquee {
-    margin: 0 auto;
-    white-space: nowrap;
-    overflow: hidden;
-    position: absolute;
-}
 
 .naviTitle {
-    position: absolute;
+    position: relative;
+    display: block;
     z-index: 2;
-    margin-top: 500px;
+    margin-top: 10px;
     margin-left: 157px;
 }
 
@@ -133,45 +243,48 @@ img.piclog {
     font-size: small;
 }
 
-.fanclubTitle {
-    padding: 5px;
-    margin-top: -70px;
-    margin-left: 120px;
-    background-color: pink;
-    color: white;
-    z-index: 1;
-    width: 575px;
-    margin-bottom: 50px;
-}
-
-.fanclubTitlebox {
-    position: absolute;
-    margin-top: 440px;
-    margin-left: 20px;
-    width: 870px;
-}
 
 .homeNote {
-    position: absolute;
-    margin-top: 300px;
+    position: relative;
+    display: block;
+    margin-top: -206px;
     margin-left: 120px;
     width: 590px;
 }
 
-a.homeNotelink {
-    color: white;
-    font-weight: bold;
-    background-color: #6495ed;
+.fanclubs {
+    position: relative;
+    margin-top: -8px;
+    margin-left: 90px;
+    width: 630px;
+    height: 60px;
+    z-index: 1;
+    border: 2px plum dashed;
+}
+
+a {
+    font-family: "Nunito";
+    color: hotpink;
+    text-shadow:
+    -2px -2px 0 white,
+    2px -2px 0 white,
+    -2px 2px 0 white,
+    2px 2px 0 white;
+    font-size: small;
+}
+
+a.homeNotelink:hover {
+    color: #539e0f;
 }
 
 /* Style the tab */
 .navi {
     float: left;
-    display: flex;
-    position: absolute;
+    display: block;
+    position: relative;
     width: 220px;
     height: 390px;
-    margin-top: 520px;
+    margin-top: -55px;
     margin-left: 10px;
     padding: 15px;
     background-image: url(/pics/backgrounds/rainbow.webp);
@@ -212,88 +325,117 @@ a.homeNotelink {
     text-decoration: underline;
 }
 
-/* Create an active/current "tab button" class */
-.naviLink.active {
-    text-align: center;
-    background-color: #ffd3e8;
-    color: #ed709c;
-    position: absolute;
-    padding: 3px;
-    width: 187px;
-    height: 26px;
-    border: none;
-    font-weight: bold;
-    box-sizing: border-box;
-    text-decoration: underline;
-}
+
 
 /* Style the tab content */
 .mainbox {
-    margin-top: 520px;
+    margin-top: -710px;
     margin-left: 257px;
-    position: absolute;
-    height: 700px;
+    position: relative;
+    display: block;
+    height: 705px;
     width: 640px;
     border: 2px #ed709c dashed;
     box-sizing: border-box;
     overflow: scroll;
+    overflow-x: hidden;
     border-radius: 15px 15px 15px 15px;
 }
 
-.palestine {
-    position: relative;
-    height: 100px;
-    margin-left: 600px;
-    margin-top: -80px;
-    opacity: 100%;
-}
-
-.palestine:hover {
-    -webkit-filter: drop-shadow(5px 15px 5px #e6ff8a);
-    filter: drop-shadow(5px 5px 15px #e6ff8a);
-}
-
 .fakead {
-    position: absolute;
+    position: relative;
+    display: block;
     height: 124px;
     width: 220px;
     padding: 3px;
     box-sizing: border-box;
-    margin-top: 1100px;
+    margin-top: 10px;
     margin-left: 10px;
 }
 
 .drawbox {
-    position: absolute;
+    position: relative;
+    display: flex;
     border: #6fa1ff 2px dashed;
     border-radius: 15px 15px 15px 15px;
     width: 220px;
     height: 170px;
     padding: 3px;
     box-sizing: border-box;
-    margin-top: 922px;
+    margin-top: 364px;
     margin-left: 10px;
-}
-
-.drawme {
-    background-color: #ffc0cb;
-    border-radius: 10px;
-    position: absolute;
-    padding: 6px;
-    margin-top: 888px;
-    margin-left: 10px;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    font-size: 11pt;
 }
 
 .kittycat {
-    margin-top: 1070px;
+    margin-top: -170px;
     z-index: 9;
-    margin-left: 760px;
+    margin-left: 800px;
     position: absolute;
     height: 260px;
+}
+
+
+.sotw {
+    border: 2px blue dashed;
+    -moz-box-shadow:inset 0 0 15px rgb(255, 255, 255);
+    -webkit-box-shadow:inset 0 0 15px rgb(255, 255, 255);
+    box-shadow:inset 0 0 10px turquoise;
+    width: 620px;
+    height: 80px;
+    position: relative;
+    display: block;
+    margin-top: 15px;
+    margin-right: 10px;
+    float: right;
+    border-radius: 50%;
+    background-image: url(/pics/backgrounds/enlightenment.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+/* Tooltip container */
+.sotwTooltip {
+    position: relative;
+    display: inline-block;
+    height: 80px;
+    
+  }
+  
+  /* Tooltip text */
+  .sotwTooltip .sotwTooltipText {
+    visibility: hidden;
+    width: 120px;
+    background-color: #e6ff8a;
+    border: #539e0f 2px solid;
+    border-radius: 20px;
+    color: hotpink;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 0;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 100;
+    top: -5px;
+    right: 40%; 
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .sotwTooltip:hover .sotwTooltipText {
+    visibility: visible;
+  }
+
+.sotwDance {
+    height: 70%;
+    margin-top: 12px;
+    margin-left: 80px;
+    -webkit-filter: drop-shadow(2px 5px 2px hotpink);
+    filter: drop-shadow(2px 2px 5px hotpink);
+}
+
+.sotwDance:hover {
+    -webkit-filter: drop-shadow(2px 5px 2px #e6ff8a);
+    filter: drop-shadow(2px 2px 5px #e6ff8a);
 }
 
 .sotwTable {
@@ -305,20 +447,134 @@ a.homeNotelink {
 }
 
 .sotwH {
+    font-family: "Nunito";
+    text-decoration: underline;
+    text-shadow:
+    -2px -2px 0 white,
+    2px -2px 0 white,
+    -2px 2px 0 white,
+    2px 2px 0 white; 
+    color: blue;
     margin-bottom: 5px;
     text-align: center;
-}
-
-.sotwMarquee {
-    width: 100%;
-    background-color: lightpink;
-    color: white;
-    margin-bottom: 12px;
+    width: 80%;
+    font-size: larger;
 }
 
 .butterfly {
-    position: absolute;
+    position: relative;
     margin-left: 744px;
-    margin-top: 300px;
+    margin-top: -90px;
     z-index: 2;
+    display: flexbox;
 }
+
+.audio-player {
+    height: 20px;
+    width: 350px;
+    background-image: url(https://i.pinimg.com/564x/24/41/a3/2441a313074ffba44c25ba3eebea7d98.jpg);
+    background-size: 100%;
+    background-position: center;
+    border-radius: 20px;
+    border: rgb(255, 121, 226) 2px solid;
+    color: #fea94c;
+    text-shadow:
+    -2px -2px 0 white,
+    2px -2px 0 white,
+    -2px 2px 0 white,
+    2px 2px 0 white; 
+    font-weight: bold;
+    overflow: hidden;
+    display: grid;
+    margin-left: -40px;
+    margin-top: -2px;
+    grid-template-rows: 5px auto;
+    padding-bottom: 10px;
+  }
+
+.audio-player .timeline {
+    background: greenyellow;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .audio-player .timeline .progress {
+    background: hotpink;
+    width: 0%;
+    height: 100%;
+    transition: 0.25s;
+  }
+
+  .audio-player .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0 20px;
+  }
+  .audio-player .controls > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .audio-player .controls .toggle-play.play {
+    cursor: pointer;
+    position: relative;
+    width: 20px;
+    content: url(/pics/home/play.png);
+  }
+  .audio-player .controls .toggle-play.play:hover {
+    transform: scale(1.1);
+  }
+  .audio-player .controls .toggle-play.pause {
+    width: 20px;
+    cursor: pointer;
+    position: relative;
+    content: url(/pics/home/pause.png);
+  }
+  
+  .audio-player .controls .toggle-play.pause:hover {
+    transform: scale(1.1);
+  }
+
+  .audio-player .controls .time {
+    display: flex;
+  }
+  .audio-player .controls .time > * {
+    padding: 2px;
+  }
+
+  .audio-player .controls .volume-container {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+  .audio-player .controls .volume-container .volume-button {
+    height: 26px;
+    display: flex;
+    align-items: center;
+  }
+  .audio-player .controls .volume-container .volume-button .volume {
+    transform: scale(0.7);
+  }
+
+  .audio-player .controls .volume-container .volume-slider {
+    position: absolute;
+    top: 15px;
+    left: -3px;
+    z-index: -1;
+    width: 0;
+    height: 15px;
+    background: white;
+    transition: 0.25s;
+  }
+  .audio-player .controls .volume-container .volume-slider .volume-percentage {
+    background: white;
+    height: 100%;
+    width: 75%;
+  }
+  .audio-player .controls .volume-container:hover .volume-slider {
+    left: -123px;
+    width: 120px;
+  }
