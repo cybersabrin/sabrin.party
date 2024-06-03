@@ -40,7 +40,7 @@ body::-webkit-scrollbar {
     border: 1px dashed green;
     float: left;
     padding: 20px;
-    background-image: url(/pics/backgrounds/page_background_animated_04.gif);
+    background-image: url(https://i.postimg.cc/8PJRGKDG/whitegrain.gif);
     z-index: 0;
     height: 1140px;
     margin-bottom: 140px;
@@ -185,7 +185,7 @@ body::-webkit-scrollbar {
     padding: 5px;
     width: 210px;
     height: 115px;
-    background-image: url(/pics/home/wa.jpg);
+    background-image: url(https://i.postimg.cc/50Gvj5NF/fridge.jpg);
     background-size: 100% 100%;
     text-align: center;
     -moz-box-shadow:inset 0 0 15px rgb(170, 255, 0);
@@ -262,6 +262,21 @@ img.piclog {
     border: 2px plum dashed;
 }
 
+.fcimg {
+    padding: 10px;
+    height: 60px;
+}
+
+.fcimg2 {
+    margin-top: -38px;
+    padding: 10px;
+    height: 60px;
+}
+
+.reglink {
+    background-color: transparent;
+}
+
 a {
     font-family: "Nunito";
     color: hotpink;
@@ -287,7 +302,7 @@ a.homeNotelink:hover {
     margin-top: -55px;
     margin-left: 10px;
     padding: 15px;
-    background-image: url(/pics/backgrounds/rainbow.webp);
+    background-image: url(https://i.postimg.cc/28Vw6jQP/rainbow.webp);
     opacity: 0.9;
     background-size: cover;
     border: 2px #549f0e dashed;
@@ -388,7 +403,7 @@ a.homeNotelink:hover {
     margin-right: 10px;
     float: right;
     border-radius: 50%;
-    background-image: url(/pics/backgrounds/enlightenment.jpg);
+    background-image: url(https://i.postimg.cc/htm1LC3s/enlightenment.jpg);
     background-size: 100% 100%;
     background-position: center;
 }
@@ -522,7 +537,7 @@ a.homeNotelink:hover {
     cursor: pointer;
     position: relative;
     width: 20px;
-    content: url(/pics/home/play.png);
+    content: url(https://i.postimg.cc/V6f9czsZ/play.png);
   }
   .audio-player .controls .toggle-play.play:hover {
     transform: scale(1.1);
@@ -531,7 +546,7 @@ a.homeNotelink:hover {
     width: 20px;
     cursor: pointer;
     position: relative;
-    content: url(/pics/home/pause.png);
+    content: url(https://i.postimg.cc/R0Q18Wmn/pause.png);
   }
   
   .audio-player .controls .toggle-play.pause:hover {
