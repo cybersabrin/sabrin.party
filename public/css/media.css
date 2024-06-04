@@ -105,7 +105,7 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     background-image: url(https://i.pinimg.com/564x/f5/37/b7/f537b7e055f9d26eb3f994b14d6e5659.jpg);
-    background-size: contain;
+    background-size: 100%;
     padding-top: 10px;
 }
 

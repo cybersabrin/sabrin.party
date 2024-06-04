@@ -358,6 +358,8 @@ p {
     margin-top: -10px;
     -webkit-filter: drop-shadow(2px 5px 2px yellowgreen);
     filter: drop-shadow(2px 2px 5px pink);
+    width: 104px;
+    height: 114px;
 }
 
 /* for blog down below */
