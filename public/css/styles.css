@@ -236,6 +236,8 @@ img.piclog {
     z-index: 2;
     margin-top: 10px;
     margin-left: 157px;
+    height: 60px;
+    width: 96px;
 }
 
 .box {
@@ -488,6 +490,8 @@ a.homeNotelink:hover {
     margin-top: -90px;
     z-index: 2;
     display: flexbox;
+    height: 160px;
+    width: 160px;
 }
 
 .audio-player {
