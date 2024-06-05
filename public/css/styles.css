@@ -96,7 +96,7 @@ body::-webkit-scrollbar {
         -o-transform: scale(1, 3);
         transform-origin: 0% -8%;
     display: flex;
-    font-family: "Nunito";
+    font-family: 'Nunito';
     font-weight: bolder;
     color: hotpink;
     text-shadow:
@@ -197,7 +197,7 @@ body::-webkit-scrollbar {
 }
 
 #statuscafe-content {
-    font-family: "Nunito";
+    font-family: 'Nunito';
     text-decoration: underline;
     border-radius: 50%;
     background-color: white;
@@ -287,7 +287,7 @@ img.piclog {
 }
 
 a {
-    font-family: "Nunito";
+    font-family: 'Nunito';
     color: hotpink;
     text-shadow:
     -2px -2px 0 white,
@@ -473,7 +473,7 @@ a.homeNotelink:hover {
 }
 
 .sotwH {
-    font-family: "Nunito";
+    font-family: 'Nunito';
     text-decoration: underline;
     text-shadow:
     -2px -2px 0 white,
