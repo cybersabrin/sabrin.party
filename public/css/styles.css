@@ -83,6 +83,64 @@ body::-webkit-scrollbar {
     margin-left: -100px;
 }
 
+/* Tooltip container */
+.tt-polaroid {
+    position: absolute;
+    display: inline-block;
+    height: 80px;  
+}
+  
+/* Tooltip text */
+.tt-polaroid .tt-polaroidtext {
+    visibility: hidden;
+    background-image: url(https://i.postimg.cc/XJvjk0PM/tooltipbg.webp);
+    background-size: 100% 100%;
+    border: turquoise 2px solid;
+    border-radius: 20px;
+    color: blue;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+    font-family: 'MS Gothic';
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    height: fit-content;
+    -moz-box-shadow:inset 0 0 15px gold;
+    box-shadow:inset 0 0 15px gold;
+    -webkit-box-shadow:inset 0 0 15px gold;
+    -webkit-filter: drop-shadow(0 0 5px rgb(197, 64, 224));
+    filter: drop-shadow(0 0 5px rgb(197, 64, 224));
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    width: 220px;
+    z-index: 100;
+    top: -64px;
+    right: 40%; 
+    bottom: 100%;
+    left: 80%;
+    margin-left: -60px;
+}
+  
+/* Show the tooltip text when you mouse over the tooltip container */
+.tt-polaroid:hover .tt-polaroidtext {
+    visibility: visible;
+}
+
+.tt-polaroid .tt-polaroidtext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-color: turquoise transparent transparent transparent;
+    border-width: 10px;
+    border-style: solid;
+}
+
 .welcome {
     width: 739px;
     height: 130px;
@@ -438,7 +496,6 @@ a.homeNotelink:hover {
   /* Tooltip text */
   .sotwTooltip .sotwTooltipText {
     visibility: hidden;
-    width: 120px;
     background-color: #e6ff8a;
     border: #539e0f 2px solid;
     border-radius: 20px;
@@ -446,17 +503,33 @@ a.homeNotelink:hover {
     font-weight: bold;
     text-align: center;
     padding: 5px 0;
+    height: 24px;
    
     /* Position the tooltip text - see examples below! */
     position: absolute;
+    width: 120px;
     z-index: 100;
-    top: -5px;
+    top: -36px;
     right: 40%; 
+    bottom: 100%;
+    left: 80%;
+    margin-left: -60px;
   }
   
   /* Show the tooltip text when you mouse over the tooltip container */
   .sotwTooltip:hover .sotwTooltipText {
     visibility: visible;
+  }
+
+  .sotwTooltip .sotwTooltipText::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-color: #539e0f transparent transparent transparent;
+    border-width: 7px;
+    border-style: solid;
   }
 
 .sotwDance {
