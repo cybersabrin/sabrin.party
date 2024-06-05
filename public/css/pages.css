@@ -362,6 +362,10 @@ p {
     height: 114px;
 }
 
+.blogimg {
+    padding: 10px;
+}
+
 /* for blog down below */
 .cont {
     position: relative;
