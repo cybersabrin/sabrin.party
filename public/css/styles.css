@@ -4,6 +4,7 @@
     src: url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'), url('/fonts/MS-PGothic.woff2') format('woff2'), url('/fonts/MS-PGothic.woff') format('woff'), url('/fonts/MS-PGothic.ttf') format('truetype'), url('/fonts/MS-PGothic.svg#MS-PGothic') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: block;
 }
 
 @font-face {
@@ -12,7 +13,7 @@
         url('/fonts/Palatino-Roman.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -21,7 +22,7 @@
         url('/fonts/MS-Gothic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
   }
 
 @font-face {
@@ -30,7 +31,7 @@
         url('/fonts/Nunito-ExtraBold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 
@@ -58,9 +59,7 @@ body::-webkit-scrollbar {
     box-sizing: border-box;
     -webkit-box-sizing:border-box;
     -moz-box-sizing: border-box;
-    
 }
-
 
 .homeTitle {
     margin-top: 10px;
@@ -349,10 +348,6 @@ img.piclog {
     width: 60px;
 }
 
-.reglink {
-    background-color: transparent;
-}
-
 a {
     font-family: 'Nunito';
     color: hotpink;
@@ -484,53 +479,6 @@ a.homeNotelink:hover {
     background-size: 100% 100%;
     background-position: center;
 }
-
-/* Tooltip container */
-.sotwTooltip {
-    position: relative;
-    display: inline-block;
-    height: 80px;
-    
-  }
-  
-  /* Tooltip text */
-  .sotwTooltip .sotwTooltipText {
-    visibility: hidden;
-    background-color: #e6ff8a;
-    border: #539e0f 2px solid;
-    border-radius: 20px;
-    color: hotpink;
-    font-weight: bold;
-    text-align: center;
-    padding: 5px 0;
-    height: 24px;
-   
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    width: 120px;
-    z-index: 100;
-    top: -36px;
-    right: 40%; 
-    bottom: 100%;
-    left: 80%;
-    margin-left: -60px;
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .sotwTooltip:hover .sotwTooltipText {
-    visibility: visible;
-  }
-
-  .sotwTooltip .sotwTooltipText::after {
-    content: " ";
-    position: absolute;
-    top: 100%; /* At the bottom of the tooltip */
-    left: 50%;
-    margin-left: -5px;
-    border-color: #539e0f transparent transparent transparent;
-    border-width: 7px;
-    border-style: solid;
-  }
 
 .sotwDance {
     height: 56px;

@@ -83,7 +83,7 @@ p {
     background-size: 100% 100%;
     padding-top: 50px;
     position: absolute;
-    margin-top: -300px;
+    margin-top: -370px;
     margin-left: 310px;
     border-radius: 25px;
     border: 2px solid transparent;
@@ -100,13 +100,13 @@ p {
 }
 
 .webrings {
-    height: 240px;
+    height: 300px;
     width: 278px;
     padding: 10px;
     padding-top: 20px;
     background-image: url(https://i.postimg.cc/3NMvx73H/babystars.webp);
     overflow: scroll;
-    margin-top: -20px;
+    margin-top: 60px;
     margin-left: -42px;
     margin-bottom: 40px;
     border-radius: 25px;
@@ -125,7 +125,7 @@ p {
 .webringtitle {
     height: 48px;
     position: absolute;
-    margin-top: -45px;
+    margin-top: -05px;
     margin-left: -30px;
 }
 
@@ -137,6 +137,7 @@ p {
 
 .olaf {
     height: 84px;
+    width: auto;
     margin-left: -40px;
     margin-top: 32px;
     border-radius: 25px;
@@ -145,6 +146,7 @@ p {
 
 .wwgif {
     height: 84px;
+    width: auto;
     margin-left: 20px;
     margin-top: 32px;
     border-radius: 25px;
@@ -153,6 +155,7 @@ p {
 
 .ot3 {
     height: 84px;
+    width: auto;
     margin-left: 20px;
     margin-top: 32px;
     border-radius: 25px;
@@ -164,7 +167,7 @@ p {
     border-radius: 10px;
     width: 238px;
     margin-left: 308px;
-    margin-top: -140px;
+    margin-top: -200px;
     box-shadow: 0px 0px 20px rgb(141, 127, 180);
 }
 
@@ -177,7 +180,6 @@ p {
     background-image: url(https://i.postimg.cc/0yGJ5hBT/startile.webp);
     background-size: 20%;
     margin-left: 160px;
-    margin-top: 90px;
     overflow: scroll;
     padding-top: 24px;
     display: block;
@@ -187,7 +189,7 @@ p {
     position: absolute;
     height: 46px;
     margin-left: 350px;
-    margin-top: 20px;
+    margin-top: -30px;
 }
 
 .quizImg {
