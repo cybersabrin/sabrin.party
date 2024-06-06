@@ -274,6 +274,7 @@ p {
     border-radius: 50%;
     transform: rotate(-10deg);
     -moz-box-shadow:inset 0 0 10px #97b429;
+    box-shadow:inset 0 0 10px #97b429;
     -webkit-box-shadow:inset 0 0 10px #97b429;
     border: 2px hotpink dotted;
     font-family: 'Nunito';
@@ -308,6 +309,7 @@ p {
     border-radius: 50%;
     transform: rotate(7deg);
     -moz-box-shadow:inset 0 0 10px turquoise;
+    box-shadow:inset 0 0 10px turquoise;
     -webkit-box-shadow:inset 0 0 10px turquoise;
     border: 2px blue dotted;
     font-family: 'Nunito';
@@ -344,6 +346,7 @@ p {
     border-radius: 50%;
     transform: rotate(2deg);
     -moz-box-shadow:inset 0 0 10px violet;
+    box-shadow:inset 0 0 10px violet;
     -webkit-box-shadow:inset 0 0 10px violet;
     border: 2px orange dotted;
     font-family: 'Nunito';
@@ -398,6 +401,7 @@ p {
     outline: none;
     font-size: 15px;
     -moz-box-shadow:inset 0 0 10px rgb(198, 130, 238);
+    box-shadow:inset 0 0 10px rgb(198, 130, 238);
     -webkit-box-shadow:inset 0 0 10px rgb(198, 130, 238);
 }
 
@@ -416,6 +420,7 @@ p {
     font-size: small;
     background: url(https://i.postimg.cc/8PJRGKDG/whitegrain.gif);
     -moz-box-shadow:inset 0 0 10px #8bcd37;
+    box-shadow:inset 0 0 10px #8bcd37;
     -webkit-box-shadow:inset 0 0 10px #8bcd37;
     transition: max-height 0.2s ease-out;
 }
