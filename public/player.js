@@ -6,7 +6,7 @@
 
 const audioPlayer = document.querySelector(".audio-player");
 const audio = new Audio(
-  "/pics/home/sotw.mp3"
+  "/pics/home/2sotw.mp3"
 );
 
 console.dir(audio);
@@ -17,7 +17,7 @@ audio.addEventListener(
     audioPlayer.querySelector(".time .length").textContent = getTimeCodeFromNum(
       audio.duration
     );
-    audio.volume = .20;
+    audio.volume = .30;
   },
   false
 );
@@ -30,14 +30,6 @@ timeline.addEventListener("click", e => {
   audio.currentTime = timeToSeek;
 }, false);
 
-//click volume slider to change volume
-const volumeSlider = audioPlayer.querySelector(".controls .volume-slider");
-volumeSlider.addEventListener('click', e => {
-  const sliderWidth = window.getComputedStyle(volumeSlider).width;
-  const newVolume = e.offsetX / parseInt(sliderWidth);
-  audio.volume = newVolume;
-  audioPlayer.querySelector(".controls .volume-percentage").style.width = newVolume * 100 + '%';
-}, false)
 
 //check audio percentage and update time accordingly
 setInterval(() => {
@@ -66,17 +58,6 @@ playBtn.addEventListener(
   false
 );
 
-audioPlayer.querySelector(".volume-button").addEventListener("click", () => {
-  const volumeEl = audioPlayer.querySelector(".volume-container .volume");
-  audio.muted = !audio.muted;
-  if (audio.muted) {
-    volumeEl.classList.remove("icono-volumeMedium");
-    volumeEl.classList.add("icono-volumeMute");
-  } else {
-    volumeEl.classList.add("icono-volumeMedium");
-    volumeEl.classList.remove("icono-volumeMute");
-  }
-});
 
 //turn 128 seconds into 2:08
 function getTimeCodeFromNum(num) {
