@@ -8,7 +8,6 @@ const audioPlayer = document.querySelector(".audio-player");
 const audio = new Audio(
   "/pics/home/2sotw.mp3"
 );
-//credit for song: Adrian kreativaweb@gmail.com
 
 console.dir(audio);
 
