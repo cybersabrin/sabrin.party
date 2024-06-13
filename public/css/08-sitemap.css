@@ -1,0 +1,6 @@
+@font-face{font-family:'MS PGothic';src:url('/fonts/MS-PGothic.eot');src:url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'),url('/fonts/MS-PGothic.woff2') format('woff2'),url('/fonts/MS-PGothic.woff') format('woff'),url('/fonts/MS-PGothic.ttf') format('truetype'),url('/fonts/MS-PGothic.svg#MS-PGothic') format('svg');font-weight:400;font-style:normal}@font-face{font-family:'MS Gothic';src:url('/fonts/MS-Gothic.woff2') format('woff2'),url('/fonts/MS-Gothic.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+body {background-image: url(https://i.postimg.cc/rpSvkqbd/sitemapbg.webp); background-size: 100% 710px;font-family: 'MS PGothic'; margin-left: 130px; margin-top: 150px;}
+.indent {margin-left: 80px;}
+.indentLink, .indentLink:visited {color: #ff69b4;}
+a {color: #7aaf0e;}
+a:hover {color: cornflowerblue;}
