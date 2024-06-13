@@ -79,7 +79,7 @@ p, ul, li, a {
     margin-top: 40px;
     border-radius: 25px;
     border: #ffffff 2px dashed;
-    background-image: url(/pics/shrine-bg3/background.png);
+    background-image: url(/assets/shrine-bg3/background.png);
     background-size: cover;
     width: 900px;
     height: 150px;
@@ -138,7 +138,7 @@ p, ul, li, a {
     border-radius: 25px;
     border: #12596e 2px dashed;
     overflow: auto;
-    background-image: url(/pics/shrine-bg3/wood.png);
+    background-image: url(/assets/shrine-bg3/wood.png);
     height: 740px;
 }
 

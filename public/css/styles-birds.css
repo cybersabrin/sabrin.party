@@ -70,7 +70,7 @@ a {
 .BL {
     width: 500px;
     height: 350px;
-    background-image: url(/pics/shrine-birds/paper.png);
+    background-image: url(/assets/shrine-birds/paper.png);
     background-size: contain;
     padding: 10px;
     margin-top: 20px;
@@ -81,7 +81,7 @@ a {
 .BR {
     width: 500px;
     height: 270px;
-    background-image: url(/pics/shrine-birds/paper2.png);
+    background-image: url(/assets/shrine-birds/paper2.png);
     background-size: contain;
     padding: 10px;
     margin-top: 20px;

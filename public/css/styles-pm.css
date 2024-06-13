@@ -43,7 +43,7 @@ p {
     height: 100%;
     width: 100%;
     pointer-events: none;
-    background: url(/pics/shrine-pm/GrainBackround.webp);
+    background: url(/assets/shrine-pm/GrainBackround.webp);
     opacity: .15;
     z-index: 99999999999999999999999999999999999999;
 }
