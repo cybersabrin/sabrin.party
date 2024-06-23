@@ -1,0 +1,50 @@
+@font-face{font-family:'MS Gothic';src:url('/fonts/MS-Gothic.woff2') format('woff2'),url('/fonts/MS-Gothic.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+
+body {
+    background-color: #ffffff;
+    margin: 0 auto;
+    width: 700px;
+    font-family: 'MS Gothic';
+}
+.intro {
+    margin-top: 40px;
+    color: blue;
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 40px;
+    font-family: 'MS Gothic';
+}
+a {color: red; text-decoration: underline;}
+a:hover {background-color: #ffffb0;}
+.large {
+    color: red;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 42pt;
+    text-align: center;
+}
+.ufo {
+    width: 70%; margin-bottom: 60px;
+    margin: 0 auto; display: block;
+}
+
+.linksL {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-top: -400px;
+    list-style-type: none;
+}
+.tableLink {
+    color: blue;
+    text-decoration: underline;
+}
+.tableLink:hover {
+    color: red;
+    background-color: #ffffb0;
+}
+.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;width: 100%;}
+.tg td{border-style:solid;border-width:1px; overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{ border-style:solid;border-width:1px; overflow:hidden; padding:10px 5px; word-break:normal;}
+.tg .tg-vxpu{border-color:#fe0000;font-family:inherit;text-align:left;vertical-align:top}
+.tg .tg-9pw4{background-color:#fffc9e;border-color:#fe0000; color:#fe0000;text-align:left; vertical-align:top; width: -min-content;}
+@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}
