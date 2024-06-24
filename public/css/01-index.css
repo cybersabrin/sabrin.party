@@ -1,7 +1,7 @@
-@font-face{font-family:'MS PGothic';src:url('/fonts/MS-PGothic.eot');src:url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'),url('/fonts/MS-PGothic.woff2') format('woff2'),url('/fonts/MS-PGothic.woff') format('woff'),url('/fonts/MS-PGothic.ttf') format('truetype'),url('/fonts/MS-PGothic.svg#MS-PGothic') format('svg');font-display:block}@font-face{font-family:'MS Gothic';src:url('/fonts/MS-Gothic.woff2') format('woff2'),url('/fonts/MS-Gothic.woff') format('woff');font-display:block}@font-face{font-family:Nunito;src:url('/fonts/Nunito-ExtraBold.woff2') format('woff2'),url('/fonts/Nunito-ExtraBold.woff') format('woff');font-weight:700;font-style:normal;font-display:block}
+@font-face{font-family:'MS PGothic';src:url('/public/fonts/MS-PGothic.eot');src:url('/public/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'),url('/public/fonts/MS-PGothic.woff2') format('woff2'),url('/public/fonts/MS-PGothic.woff') format('woff'),url('/public/fonts/MS-PGothic.ttf') format('truetype'),url('/public/fonts/MS-PGothic.svg#MS-PGothic') format('svg');font-display:block}@font-face{font-family:'MS Gothic';src:url('/public/fonts/MS-Gothic.woff2') format('woff2'),url('/public/fonts/MS-Gothic.woff') format('woff');font-display:block}@font-face{font-family:Nunito;src:url('/public/fonts/Nunito-ExtraBold.woff2') format('woff2'),url('/public/fonts/Nunito-ExtraBold.woff') format('woff');font-weight:700;font-style:normal;font-display:block}
 body {font-family: 'MS PGothic';width: 800px;margin: 0 auto;}
 body::-webkit-scrollbar {display: none;}
-.container {width: 940px;border: 1px dashed green;float: left;padding: 20px;background-image: url(https://i.postimg.cc/8PJRGKDG/whitegrain.gif);z-index: 0;height: 1140px;margin-bottom: 100px;margin-left: -70px; box-sizing: border-box;}
+.container {width: 940px;border: 1px dashed green;float: left;padding: 20px;background-image: url(https://i.postimg.cc/8PJRGKDG/whitegrain.gif);z-index: 0;height: 1250px;margin-bottom: 100px;margin-left: -70px; box-sizing: border-box;}
 .homeTitle {margin-top: 10px; float: right; margin-right: -20px; margin-bottom: -20px; z-index: 500; position: relative; width: 500px; height: auto;}
 .polaroid {z-index: 80; position: absolute; width: 260px; height: auto; margin-left: -100px;}
 .tt-polaroid {position: absolute; display: inline-block; height: 80px;  }
@@ -33,9 +33,10 @@ a.homeNotelink:hover {color: #539e0f;}
 .naviLink {text-align: center; background-color: white; box-shadow: 0px 0px 10px gold; color: blue; padding: 3px; width: 100px; height: 26px; border: 2px  hotpink solid; border-radius: 50%; left: 26%; position: relative; margin-bottom: 11px; text-decoration: underline; font-family: 'MS Gothic';}
 .naviLink:hover {
 box-shadow: 0px 0px 10px white; color: hotpink; border: 2px gold solid;}
-.mainbox {margin-top: -710px; margin-left: 257px; position: relative; display: block; height: 705px; width: 640px; border: 2px #ed709c dashed; box-sizing: border-box; overflow: scroll; overflow-x: hidden; border-radius: 15px;}
-.fakead {height: 124px; width: 220px; padding: 3px; margin-top: 10px; margin-left: 10px;}
-.drawbox {display: flex; border: #6fa1ff 2px dashed; border-radius: 15px; width: 220px; height: 170px; padding: 3px;  box-sizing: border-box; margin-top: 364px; margin-left: 10px;}
+.mainbox {margin-top: -530px; margin-left: 257px; position: absolute; display: block; height: 705px; width: 640px; border: 2px #ed709c dashed; box-sizing: border-box; overflow: scroll; overflow-x: hidden; border-radius: 15px;}
+.fakead {height: 124px; width: 220px; padding: 3px; margin-top: 355px; margin-left: 6px; display: block; }
+.drawbox {
+    display: block; border: #6fa1ff 2px dashed; border-radius: 15px; width: 220px; height: 170px; padding: 3px;  box-sizing: border-box; margin-top: 490px; margin-left: 10px; position: absolute;}
 .kittycat {margin-top: -170px; z-index: 9; margin-left: 800px; position: absolute; height: 260px; width: 179px;}
 .sotw {
     border: 2px blue dashed; box-shadow:inset 0 0 10px turquoise; width: 620px; height: 80px; margin-top: 15px; margin-right: 10px; float: right; border-radius: 50%; background-image: url(https://i.postimg.cc/5N0hZrt3/enlightenment.webp); background-size: 100% 100%;
@@ -46,3 +47,20 @@ box-shadow: 0px 0px 10px white; color: hotpink; border: 2px gold solid;}
 .sotwH { font-family: 'Nunito'; text-decoration: underline; text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white; color: blue; margin-bottom: 5px; text-align: center; width: 80%; font-size: larger; }
 .butterfly {position: relative; margin-left: 744px; margin-top: -90px; z-index: 2; height: 160px; width: 160px;}
 .audio-player{height:20px;width:350px;background-image:url(https://i.postimg.cc/ZRb769Bc/playlistbg.webp);background-position:center;border-radius:20px;border:2px solid #ff79e2;color:#fea94c;text-shadow:-2px -2px 0 #fff,2px -2px 0 #fff,-2px 2px 0 #fff,2px 2px 0 #fff;font-weight:700;overflow:hidden;display:grid;margin-left:-40px;margin-top:-2px;grid-template-rows:5px auto;padding-bottom:10px}.audio-player .timeline{background:#adff2f;width:100%;position:relative;cursor:pointer}.audio-player .timeline .progress{background:#ff69b4;width:0%;height:100%;transition:.25s}.audio-player .controls{display:flex;justify-content:space-between;align-items:stretch;padding:0 20px}.audio-player .controls>*{display:flex;justify-content:center;align-items:center}.audio-player .controls .toggle-play.play{cursor:pointer;position:relative;width:20px;content:url(https://i.postimg.cc/V6f9czsZ/play.png)}.audio-player .controls .toggle-play.pause:hover,.audio-player .controls .toggle-play.play:hover{transform:scale(1.1)}.audio-player .controls .toggle-play.pause{width:20px;cursor:pointer;position:relative;content:url(https://i.postimg.cc/R0Q18Wmn/pause.png)}.audio-player .controls .time{display:flex}.audio-player .controls .time>*{padding:2px}
+.dancead {
+    margin-left: 12px; height: auto; width: auto;
+    margin-top: 190px;
+}
+.nintendoad {
+    display: block; height: auto; width: auto;
+    margin-left: 12px;
+}
+.currentbox {
+    height: 90px; width: 300px;
+    border: 2px #359100 dashed; 
+    box-shadow:inset 0 0 10px #8dfd60;
+    border-radius: 20px;
+    position: absolute; margin-top: -114px;
+    margin-left: 450px; padding: 10px;
+    background-image: url(https://i.postimg.cc/NMYPG6Mh/greenstars.webp); background-size: cover;
+}
