@@ -1,4 +1,4 @@
-@font-face{font-family:'MS PGothic';src:url('/public/fonts/MS-PGothic.eot');src:url('/public/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'),url('/public/fonts/MS-PGothic.woff2') format('woff2'),url('/public/fonts/MS-PGothic.woff') format('woff'),url('/public/fonts/MS-PGothic.ttf') format('truetype'),url('/public/fonts/MS-PGothic.svg#MS-PGothic') format('svg');font-display:block}@font-face{font-family:'MS Gothic';src:url('/public/fonts/MS-Gothic.woff2') format('woff2'),url('/public/fonts/MS-Gothic.woff') format('woff');font-display:block}@font-face{font-family:Nunito;src:url('/public/fonts/Nunito-ExtraBold.woff2') format('woff2'),url('/public/fonts/Nunito-ExtraBold.woff') format('woff');font-weight:700;font-style:normal;font-display:block}
+@font-face{font-family:'MS PGothic';src:url('/fonts/MS-PGothic.eot');src:url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'),url('/fonts/MS-PGothic.woff2') format('woff2'),url('/fonts/MS-PGothic.woff') format('woff'),url('/fonts/MS-PGothic.ttf') format('truetype'),url('/fonts/MS-PGothic.svg#MS-PGothic') format('svg');font-display:block}@font-face{font-family:'MS Gothic';src:url('/fonts/MS-Gothic.woff2') format('woff2'),url('/fonts/MS-Gothic.woff') format('woff');font-display:block}@font-face{font-family:Nunito;src:url('/fonts/Nunito-ExtraBold.woff2') format('woff2'),url('/fonts/Nunito-ExtraBold.woff') format('woff');font-weight:700;font-style:normal;font-display:block}
 body {font-family: 'MS PGothic';width: 800px;margin: 0 auto;}
 body::-webkit-scrollbar {display: none;}
 .container {width: 940px;border: 1px dashed green;float: left;padding: 20px;background-image: url(https://i.postimg.cc/8PJRGKDG/whitegrain.gif);z-index: 0;height: 1250px;margin-bottom: 100px;margin-left: -70px; box-sizing: border-box;}
@@ -37,7 +37,7 @@ box-shadow: 0px 0px 10px white; color: hotpink; border: 2px gold solid;}
 .fakead {height: 124px; width: 220px; padding: 3px; margin-top: 355px; margin-left: 6px; display: block; }
 .drawbox {
     display: block; border: #6fa1ff 2px dashed; border-radius: 15px; width: 220px; height: 170px; padding: 3px;  box-sizing: border-box; margin-top: 490px; margin-left: 10px; position: absolute;}
-.kittycat {margin-top: -170px; z-index: 9; margin-left: 800px; position: absolute; height: 260px; width: 179px;}
+.kittycat {margin-top: -20px; z-index: 9; margin-left: 800px; position: absolute; height: 260px; width: 179px;}
 .sotw {
     border: 2px blue dashed; box-shadow:inset 0 0 10px turquoise; width: 620px; height: 80px; margin-top: 15px; margin-right: 10px; float: right; border-radius: 50%; background-image: url(https://i.postimg.cc/5N0hZrt3/enlightenment.webp); background-size: 100% 100%;
 }
@@ -56,11 +56,24 @@ box-shadow: 0px 0px 10px white; color: hotpink; border: 2px gold solid;}
     margin-left: 12px;
 }
 .currentbox {
-    height: 90px; width: 300px;
+    height: 90px; width: 430px;
     border: 2px #359100 dashed; 
     box-shadow:inset 0 0 10px #8dfd60;
     border-radius: 20px;
     position: absolute; margin-top: -114px;
     margin-left: 450px; padding: 10px;
-    background-image: url(https://i.postimg.cc/NMYPG6Mh/greenstars.webp); background-size: cover;
+    background-image: url(https://i.postimg.cc/NMYPG6Mh/greenstars.webp); background-size: cover; z-index: 1;
+}
+.currentlytitle {
+    width: 150px; height: auto; margin-left: 750px; margin-top: -20px; z-index: 2; position: relative;;
+}
+mark {
+    font-family: 'MS Gothic';
+    background: radial-gradient(yellow, transparent);
+    font-weight: bold; color: white;
+    padding: 3px;
+    text-shadow: 1px 1px gray, -1px -1px gray, -1px 1px gray, 1px -1px gray, 0 0 3px gray;
+}
+.footer {
+    text-align: center; margin-top: -20px;
 }
