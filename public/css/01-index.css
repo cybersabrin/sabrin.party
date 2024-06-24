@@ -1,7 +1,7 @@
 @font-face{font-family:'MS PGothic';src:url('/fonts/MS-PGothic.eot');src:url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'),url('/fonts/MS-PGothic.woff2') format('woff2'),url('/fonts/MS-PGothic.woff') format('woff'),url('/fonts/MS-PGothic.ttf') format('truetype'),url('/fonts/MS-PGothic.svg#MS-PGothic') format('svg');font-display:block}@font-face{font-family:'MS Gothic';src:url('/fonts/MS-Gothic.woff2') format('woff2'),url('/fonts/MS-Gothic.woff') format('woff');font-display:block}@font-face{font-family:Nunito;src:url('/fonts/Nunito-ExtraBold.woff2') format('woff2'),url('/fonts/Nunito-ExtraBold.woff') format('woff');font-weight:700;font-style:normal;font-display:block}
 body {font-family: 'MS PGothic';width: 800px;margin: 0 auto;}
 body::-webkit-scrollbar {display: none;}
-.container {width: 940px;border: 1px dashed green;float: left;padding: 20px;background-image: url(https://i.postimg.cc/8PJRGKDG/whitegrain.gif);z-index: 0;height: 1250px;margin-bottom: 100px;margin-left: -70px; box-sizing: border-box;}
+.container {width: 940px;border: 1px dashed green;float: left;padding: 20px;background-image: url(https://i.postimg.cc/8PJRGKDG/whitegrain.gif);z-index: 0;height: 1253px;margin-bottom: 100px;margin-left: -70px; box-sizing: border-box;}
 .homeTitle {margin-top: 10px; float: right; margin-right: -20px; margin-bottom: -20px; z-index: 500; position: relative; width: 500px; height: auto;}
 .polaroid {z-index: 80; position: absolute; width: 260px; height: auto; margin-left: -100px;}
 .tt-polaroid {position: absolute; display: inline-block; height: 80px;  }
