@@ -4,7 +4,7 @@
 body{font-family:'MS PGothic';padding-left:20px;padding-right:20px;background-image:url(https://i.postimg.cc/Ss9gY0xq/background.webp);background-size:100% auto;padding-top:10px;width:560px;overflow-x:hidden}
 a{font-weight:700;color:#ff69b4;text-decoration:underline}a:hover{color:#9acd32}
 .tv{animation-name:heartbeat;animation-duration:1.4s;animation-iteration-count:infinite;height:150px;width:auto;rotate:15deg;filter:drop-shadow(0px 2px 5px turquoise);z-index:1}  
-.bubble{display:flexbox;position:absolute;height:100px;width:193px;margin-left:-30px;filter:drop-shadow(0px 2px 5px gold);z-index:3}
+.bubble{display:flexbox;position:absolute;height:90px;width:auto;margin-left:-30px;filter:drop-shadow(0px 2px 5px gold);z-index:3}
 .gsbox{background-image:url(https://i.postimg.cc/s24FQZ6w/greenbubble.webp);width:150px;height:100px;position:absolute;margin-top:-88px;margin-left:160px;font-family:'MS Gothic';font-size:small;z-index:2;text-align:center}
 .mediabubbletext{padding-top:5px;padding-left:15px;padding-right:15px;font-family:'MS Gothic'}
 .gslink1{font-weight:700;color:#87cefa}.gslink1:hover{color:orange}.gslink2{font-weight:700;color:#ff69b4}.gslink2:hover{color:green}
