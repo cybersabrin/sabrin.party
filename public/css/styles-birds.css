@@ -1,112 +1,71 @@
-@font-face {
-    font-family: 'EB Garamond';
-    src: url('/fonts/EBGaramond-Regular.woff2') format('woff2'),
-        url('/fonts/EBGaramond-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
+@font-face{font-family:'MS Gothic';src:url('/fonts/MS-Gothic.woff2') format('woff2'),url('/fonts/MS-Gothic.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Palatino';src:url('/fonts/Palatino-Roman.woff2') format('woff2'),url('/fonts/Palatino-Roman.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
 body {
-    background-image: url(https://i.postimg.cc/QNS4CnRW/cloud1anim.gif);
+    font-family: 'MS Gothic';
+    background-image: url(https://i.postimg.cc/PqZTxQcm/collage.webp);
+    background-size: 100% auto; 
 }
-
-body::-webkit-scrollbar {
-    display: none;
-}
-
-h1 {
-    font-family: 'EB Garamond';
-    font-size: 8em;
-    line-height: .8em;
-    transform: rotate(-6deg);
-    margin: 20px 0px 70px;
-}
-
-.title {
-    width: 800px;
-    height: 220px;
-    background-color: rgba(255, 255, 255, 0.85);
-    border: 3px outset rgb(255, 255, 255);
-    padding: 20px;
-}
-
+p {margin-top: 0px;}
+a, a:visited {color: #ff69b4; text-decoration: underline;}
+a:hover {color: #77c71b;}
 .container {
-    width: 700px;
-    margin: 0 auto;
+    width: 1000px; height: 1400px; 
+    margin: 0 auto; margin-top: 75px; margin-bottom: 200px;
+}
+.titleBox {
+    background-image: url(https://i.postimg.cc/zfnY5Xb7/title-Card.webp); height: 325px; width: 520px;
+    background-size: cover; position: absolute;
+    margin-top: 230px; margin-left: 240px;
+}
+.titleText {
+    font-family: 'Palatino'; font-style: italic;
+    margin-top: 90px; margin-left: 100px;
+    position: absolute; color: #ff69b4;
+}
+.titleDesc {
+    font-family: 'Palatino';
+    margin-top: 130px; position: absolute;
+    width: 360px; text-align: center; margin-left: 80px;
 }
 
-p, a, h3 {
-    font-family: 'EB Garamond';
-}
-
-a {
-    font-weight: bold;
-}
-
-.boxL {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    display: inline-block;
-    background-color: transparent;
-    border: 0;
-    margin-left: 60px;
-    margin-top: 26px;
-}
-
-.boxL .img-top {
-    display: none;
+.item {
+    width: 250px;
+    height: 125px;
+    padding: 5px;
+    border:3px solid #fff;
+    background:#fff;
+    border-radius: 50%;
+    box-shadow:0 0 10px #fff,0 0 10px #fff,0 0 10px #fff,0 0 10px #fff,0 0 14px gold;
     position: absolute;
-    top: 2;
-    left: 0;
-    margin-left: 0px;
-    z-index: 99;
-}
-.boxL:hover .img-top {
-    display: inline;
+    margin-top: 20px; margin-left: 50px;
+    z-index: 2;
 }
 
-.BL {
-    width: 500px;
-    height: 350px;
-    background-image: url(/assets/shrine-birds/paper.png);
-    background-size: contain;
-    padding: 10px;
-    margin-top: 20px;
-    float: left;
+.flick {
+    margin: 0 auto; display: block;
+    transition: 1s ease;
+}
+.flick:hover{
+    -webkit-transform: rotateZ(5deg);
+    -ms-transform: rotateZ(5deg);
+    transform: rotateZ(5deg);
 }
 
-
-.BR {
-    width: 500px;
-    height: 270px;
-    background-image: url(/assets/shrine-birds/paper2.png);
-    background-size: contain;
-    padding: 10px;
-    margin-top: 20px;
-    float: right;
+.desc {
+    z-index: 1;
+    width: 275px;
+    height: 200px; overflow: scroll;
+    background: white;
+    border: #ff98ee 2px solid;
+    position: absolute; 
+}
+.descHeader {
+    width: 100%;
+    height: 24px; text-align: center;
+    background-color: #b3e60e; color: hotpink;
+    font-family: 'Palatino';
 }
 
-.boxR {
-    width: 160px;
-    height: 160px;
-    position: relative;
-    display: inline-block;
-    background-color: transparent;
-    border: 0;
-    margin-left: 66px;
-    margin-top: 60px;
-}
-
-.boxR .img-top {
-    display: none;
-    position: absolute;
-    top: 2;
-    left: 0;
-    margin-left: 0px;
-    z-index: 99;
-}
-.boxR:hover .img-top {
-    display: inline;
+.tinyBird {
+    width: 68px; margin-top: -12px; float: right; padding-right: 5px; border-radius: 10px;
 }
