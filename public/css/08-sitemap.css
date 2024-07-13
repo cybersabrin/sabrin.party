@@ -4,3 +4,4 @@ body {background-image: url(https://i.postimg.cc/rpSvkqbd/sitemapbg.webp); backg
 .indentLink, .indentLink:visited {color: #ff69b4;}
 a {color: #7aaf0e;}
 a:hover {color: cornflowerblue;}
+.indentLink:hover {color: cornflowerblue;}
