@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MS Gothic';
-    src: url('fonts/MS-Gothic.woff2') format('woff2'), url('fonts/MS-Gothic.woff') format('woff');
+    src: url('/fonts/MS-Gothic.woff2') format('woff2'), url('/fonts/MS-Gothic.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: Palatino;
-    src: url('fonts/Palatino-Roman.woff2') format('woff2'), url('fonts/Palatino-Roman.woff') format('woff');
+    src: url('/fonts/Palatino-Roman.woff2') format('woff2'), url('/fonts/Palatino-Roman.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: Nunito;
-    src: url('fonts/Nunito-ExtraBold.woff2') format('woff2'), url('fonts/Nunito-ExtraBold.woff') format('woff');
+    src: url('/fonts/Nunito-ExtraBold.woff2') format('woff2'), url('/fonts/Nunito-ExtraBold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap
