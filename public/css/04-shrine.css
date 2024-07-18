@@ -7,3 +7,4 @@ table.shrineTable{width:100%;margin-top:50px;height:400px;text-align:center;z-in
 .linkIcon{height:80px;width:auto}.linkIcon:hover{animation-name:floating;animation-duration:1.5s;animation-iteration-count:infinite;animation-timing-function:ease-in-out}
 #remus{mask:radial-gradient(at 70% 31%,#000 29%,#0000 30%),radial-gradient(at 30% 31%,#000 29%,#0000 30%),linear-gradient(#000 0 0) bottom/100% 50% no-repeat;clip-path:polygon(-41% 0,50% 91%,141% 0)}
 .titleDesc,.titleImg{z-index:1;text-align:center;position:absolute}.titleImg{width:92%;top:35%;margin:auto;color:#fff;font-weight:700;font-size:xxx-large;text-shadow:-3px 0 #a8c6fe,0 3px #a8c6fe,3px 0 #a8c6fe,0 -3px #a8c6fe}.titleDesc{font-size:small;width:34%;top:45%;margin:0 auto 0 29%}
+html {scrollbar-color: transparent transparent;}

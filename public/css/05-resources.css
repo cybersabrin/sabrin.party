@@ -1,4 +1,5 @@
 @font-face{font-family:'MS PGothic';src:url('/fonts/MS-PGothic.eot');src:url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'),url('/fonts/MS-PGothic.woff2') format('woff2'),url('/fonts/MS-PGothic.woff') format('woff'),url('/fonts/MS-PGothic.ttf') format('truetype'),url('/fonts/MS-PGothic.svg#MS-PGothic') format('svg');font-weight:400;font-style:normal}@font-face{font-family:'MS Gothic';src:url('/fonts/MS-Gothic.woff2') format('woff2'),url('/fonts/MS-Gothic.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+html {scrollbar-color: transparent transparent;}
 
 body {
     background-image: url(https://i.postimg.cc/sgvNN6nB/dogsbg.webp);
@@ -10,7 +11,41 @@ body {
     height: 800px;
 
 }
-
+.award {
+    z-index: 3;
+    position: absolute;
+    margin-top: 450px; margin-left: 512px;
+    border-radius: 5px;
+    transform: rotate(10deg);
+    height: 70px; width: 70px;
+}
+.award:hover {
+    box-shadow: 0 0 10px turquoise;
+}
+/* style-my-tootltips plugin, tooltip styling */
+#s-m-t-tooltip{
+	/* basic */
+	max-width:150px;
+	z-index: 9999;
+	margin:24px 14px 7px 12px;
+	/* style and design */
+	padding:8px;
+	background: white;
+    background-size: 100%; background-position: center;
+	border: 2px #00eeff dashed;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius: 10px;
+	-moz-box-shadow:2px 2px 0 yellow,-1px -1px 0 rgba(255,255,255);
+	-webkit-box-shadow:2px 2px 0 yellow,-1px -1px 0 rgba(255,255,255);
+	box-shadow:0 0 7px yellow;
+	/* font */
+	font-family: Arial, Helvetica, sans-serif;
+	color:#ffffff; font-weight: bold;
+    color: red;
+    text-shadow: yellow 0 0 10px;
+    text-align: center; font-size: small;
+}
 h1 {
     font-family: Arial;
     font-weight: bold;

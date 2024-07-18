@@ -12,6 +12,7 @@ body {
 mark {
     background: lightgoldenrodyellow;
 }
+html {scrollbar-color: transparent transparent;}
 
 .header {
     height: 10px;

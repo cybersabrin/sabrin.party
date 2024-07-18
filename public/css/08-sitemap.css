@@ -5,3 +5,4 @@ body {background-image: url(https://i.postimg.cc/rpSvkqbd/sitemapbg.webp); backg
 a {color: #7aaf0e;}
 a:hover {color: cornflowerblue;}
 .indentLink:hover {color: cornflowerblue;}
+html {scrollbar-color: transparent transparent;}

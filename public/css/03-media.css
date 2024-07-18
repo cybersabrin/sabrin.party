@@ -17,3 +17,34 @@ a{font-weight:700;color:#ff69b4;text-decoration:underline}a:hover{color:#9acd32}
 .cover{float:left;padding-right:5px;width:84px;height:132px}
 .details{width:100px;float:right;font:.80em sans-serif;margin-right:-28px;margin-top:180px;color:#539e0f;;}
 .titleLink:hover{color:#9acd32}.titleLink{text-decoration:underline;color:#ff69b4;font-family:'MS Gothic';font-weight:700;font-style:italic;font-size:large}
+html {scrollbar-color: transparent transparent;}
+@font-face {
+    font-family: Nunito;
+    src: url('/fonts/Nunito-ExtraBold.woff2') format('woff2'), url('/fonts/Nunito-ExtraBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: block
+}
+/* style-my-tootltips plugin, tooltip styling */
+#s-m-t-tooltip{
+	/* basic */
+	max-width:150px;
+	z-index: 5;
+	margin:24px 14px 7px 12px;
+	/* style and design */
+	padding:8px;
+	background: url(https://i.postimg.cc/KzkpM1Lg/p.webp);
+    background-size: 100%; background-position: center;
+	border: 2px hotpink dashed;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius: 10px;
+	-moz-box-shadow:2px 2px 0 yellow,-1px -1px 0 rgba(255,255,255);
+	-webkit-box-shadow:2px 2px 0 yellow,-1px -1px 0 rgba(255,255,255);
+	box-shadow:0 0 7px yellow;
+	/* font */
+	font-family: 'Nunito';
+	color:#ffffff; font-weight: bold;
+    text-shadow: -1px -1px 0 yellowgreen, 1px -1px 0 yellowgreen, -1px 1px 0 yellowgreen, 1px 1px 0 yellowgreen;
+    text-align: center; font-size: small;
+}

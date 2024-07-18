@@ -15,6 +15,7 @@
 body::-webkit-scrollbar {
     display: none;
 }
+html {scrollbar-color: transparent transparent;}
 
 * {
     box-sizing:border-box;
