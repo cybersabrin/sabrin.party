@@ -23,7 +23,7 @@ html {scrollbar-color: transparent transparent;}
     margin: auto;
     margin-top: 30px;
 }
-
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat997.cur), auto !important;} /* End https://www.cursors-4u.com */
 #wrapper-index {
     /* the notebook's cover */
     background: url(https://i.postimg.cc/5N0hZrt3/enlightenment.webp);

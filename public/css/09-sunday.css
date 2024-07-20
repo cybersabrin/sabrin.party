@@ -15,7 +15,7 @@ body {
     font-family: 'MS Gothic';
 }
 html {scrollbar-color: transparent transparent;}
-
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat997.cur), auto !important;} /* End https://www.cursors-4u.com */
 a {color: red; text-decoration: underline;}
 a:hover {background-color: #ffffb0;}
 .large {

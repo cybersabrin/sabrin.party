@@ -28,6 +28,7 @@
     margin-top: 25px; display: block;
     font-family: 'Nunito';
 }
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat997.cur), auto !important;} /* End https://www.cursors-4u.com */
 .motm:hover {
     text-shadow: -1px -1px 0 #40e0d0, 1px -1px 0 #40e0d0, -1px 1px 0 #40e0d0, 1px 1px 0 #40e0d0;
 }

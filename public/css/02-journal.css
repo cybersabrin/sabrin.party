@@ -5,7 +5,7 @@
     font-style: normal;
     font-display: swap
 }
-
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat997.cur), auto !important;} /* End https://www.cursors-4u.com */
 @font-face {
     font-family: Palatino;
     src: url('/fonts/Palatino-Roman.woff2') format('woff2'), url('/fonts/Palatino-Roman.woff') format('woff');
