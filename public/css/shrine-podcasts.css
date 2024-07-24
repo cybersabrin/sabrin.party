@@ -1,36 +1,180 @@
 @font-face {
-    font-family:'MS PGothic';
-    src:url(/fonts/MS-PGothic.eot);
-    src:url(/fonts/MS-PGothic.eot?#iefix) format("embedded-opentype"),url(/fonts/MS-PGothic.woff2) format("woff2"),url(/fonts/MS-PGothic.woff) format("woff"),url(/fonts/MS-PGothic.ttf) format("truetype"),url(/fonts/MS-PGothic.svg#MS-PGothic) format("svg");
-    font-weight:400;font-style:normal
+    font-family: 'MS PGothic';
+    src: url(/fonts/MS-PGothic.eot);
+    src: url(/fonts/MS-PGothic.eot?#iefix) format("embedded-opentype"), url(/fonts/MS-PGothic.woff2) format("woff2"), url(/fonts/MS-PGothic.woff) format("woff"), url(/fonts/MS-PGothic.ttf) format("truetype"), url(/fonts/MS-PGothic.svg#MS-PGothic) format("svg");
+    font-weight: 400;
+    font-style: normal
 }
 
 @font-face {
-    font-family:'DOS';
-    src:url(/fonts/perfect_dos_vga_437-webfont.woff2) format("woff2"),url(/fonts/perfect_dos_vga_437-webfont.woff) format("woff");
-    font-weight:400;
-    font-style:normal
+    font-family: 'DOS';
+    src: url(/fonts/perfect_dos_vga_437-webfont.woff2) format("woff2"), url(/fonts/perfect_dos_vga_437-webfont.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
 }
 
 body::-webkit-scrollbar {
     display: none;
 }
-html {scrollbar-color: transparent transparent;}
+
+html {
+    scrollbar-color: transparent transparent;
+}
 
 * {
-    box-sizing:border-box;
-    font-family:'MS PGothic';
+    box-sizing: border-box;
+    font-family: 'MS PGothic';
 }
-.container{position:relative;max-width:900px;height:720px;margin:auto;margin-top:50px;border:2px dashed #e49a79;padding:20px;background-image:url(https://i.postimg.cc/8PJRGKDG/whitegrain.gif);border-radius:25px}
-.title{position:relative;height:160px;border-radius:10px 10px 0 0;border:dashed #42858d 2px;padding-left:160px;padding-right:160px;background-image:url(/assets/shrine-pods/cats.png);background-position:center;opacity:.75}
-.titlePNG{height:100px;-webkit-filter:drop-shadow(10px 10px 10px #e5f07b);filter:drop-shadow(10px 10px 10px #e5f07b)}
-h1{font-family:'Times New Roman',Times,serif;font-size:60pt;line-height:30px;margin-top:20px;color:#fff;-webkit-filter:drop-shadow(5px 5px 5px #a87c48);filter:drop-shadow(5px 5px 5px #a87c48)}
-h2{margin-top:-5px}
-p{text-align:justify}
-.tab{position:relative;display:inline-block;vertical-align:top;width:200px;height:250px;border:2px #a87c48 dashed;border-radius:10px;padding:10px}
-.tab button{text-align:center;background-color:#85aceb;color:#fdfdfd;padding:3px;width:170px;height:26px;border-radius:10px;margin-bottom:14px;font-weight:700;box-sizing:border-box;position:relative;text-decoration:underline}
-.tab button:hover{text-align:center;background-color:#e2ad8d;color:#fdfdfd;padding:3px;width:170px;height:26px;border-radius:10px;margin-bottom:14px;font-weight:700;box-sizing:border-box;position:relative;text-decoration:underline}
-.tab button.active{text-align:center;background-color:#e2ad8d;color:#fdfdfd;padding:3px;width:170px;height:26px;border-radius:10px;margin-bottom:14px;font-weight:700;box-sizing:border-box;position:relative;text-decoration:underline}
-.tabcontent{position:relative;display:inline-block;height:460px;width:630px;border:2px #9999df dashed;overflow:scroll;padding:20px;margin-left:220px;margin-top:-460px;vertical-align:top;border-radius:10px}
-.kitty{position:relative;display:block;height:200px;margin-top:10px;mix-blend-mode:darken;filter:drop-shadow(8px 0px 10px #a87c48)}
-.icon{float:left;height:180px;padding-right:15px;padding-bottom:5px;margin-top:6px}
+
+.container {
+    position: relative;
+    max-width: 900px;
+    height: 720px;
+    margin: auto;
+    margin-top: 50px;
+    border: 2px dashed #e49a79;
+    padding: 20px;
+    background-image: url(https://i.postimg.cc/8PJRGKDG/whitegrain.gif);
+    border-radius: 25px
+}
+
+.title {
+    position: relative;
+    height: 160px;
+    border-radius: 10px 10px 0 0;
+    border: dashed #42858d 2px;
+    padding-left: 160px;
+    padding-right: 160px;
+    background-image: url(https://i.postimg.cc/C5Hjbc1M/cats.webp);
+    background-position: center;
+    opacity: .75
+}
+
+.titlePNG {
+    height: 100px;
+    -webkit-filter: drop-shadow(10px 10px 10px #e5f07b);
+    filter: drop-shadow(10px 10px 10px #e5f07b)
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60pt;
+    line-height: 30px;
+    margin-top: 20px;
+    color: #fff;
+    -webkit-filter: drop-shadow(5px 5px 5px #a87c48);
+    filter: drop-shadow(5px 5px 5px #a87c48)
+}
+
+h2 {
+    margin-top: -5px
+}
+
+p {
+    text-align: justify
+}
+
+.tab {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    height: 250px;
+    border: 2px #a87c48 dashed;
+    border-radius: 10px;
+    padding: 10px
+}
+
+.tab button {
+    text-align: center;
+    background-color: #85aceb;
+    color: #fdfdfd;
+    padding: 3px;
+    width: 170px;
+    height: 26px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    font-weight: 700;
+    box-sizing: border-box;
+    position: relative;
+    text-decoration: underline
+}
+
+.tab button:hover {
+    text-align: center;
+    background-color: #e2ad8d;
+    color: #fdfdfd;
+    padding: 3px;
+    width: 170px;
+    height: 26px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    font-weight: 700;
+    box-sizing: border-box;
+    position: relative;
+    text-decoration: underline
+}
+
+.tab button.active {
+    text-align: center;
+    background-color: #e2ad8d;
+    color: #fdfdfd;
+    padding: 3px;
+    width: 170px;
+    height: 26px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    font-weight: 700;
+    box-sizing: border-box;
+    position: relative;
+    text-decoration: underline
+}
+
+.tabcontent {
+    position: relative;
+    display: inline-block;
+    height: 460px;
+    width: 630px;
+    border: 2px #9999df dashed;
+    overflow: scroll;
+    padding: 20px;
+    margin-left: 220px;
+    margin-top: -460px;
+    vertical-align: top;
+    border-radius: 10px
+}
+
+.kitty {
+    position: relative;
+    display: block;
+    height: 200px;
+    margin-top: 10px;
+    mix-blend-mode: darken;
+    filter: drop-shadow(8px 0px 10px #a87c48)
+}
+
+.icon {
+    float: left;
+    height: 180px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    margin-top: 6px
+}
+
+/* style-my-tootltips plugin, tooltip styling */
+#s-m-t-tooltip{
+	/* basic */
+	max-width:150px;
+	z-index: 5;
+	margin:24px 14px 7px 12px;
+	/* style and design */
+	padding:8px;
+	background:#a58176;
+	border: 2px #bdd6ff dashed;
+	border-radius: 10px;
+	box-shadow: 0 0 7px #a87c48;
+	/* font */
+	font-family: 'MS Gothic';
+	color:white; font-weight: bold;
+    text-align: center; font-size: small;
+}
