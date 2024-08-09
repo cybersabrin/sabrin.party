@@ -338,11 +338,4 @@ html {
 
 /* End https://www.cursors-4u.com */
 
-.quote:hover {
-	font-style: italics;
-	background-color: lemonchiffon;
-}
-
-.quote {
-	font-style: italic;
-}
+.quote {font-style: italics; background-color: lemonchiffon;}
