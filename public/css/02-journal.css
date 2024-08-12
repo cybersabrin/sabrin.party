@@ -26,7 +26,7 @@ html {
 }
 body {
     width: 600px;
-    background-image: url(https://i.postimg.cc/BvVpPh3q/blogbg.webp);
+    background-image: url(/assets/03-images/blogbg.webp);
     background-size: contain;
     padding: 20px
 }
@@ -148,8 +148,10 @@ body {
 .bloglink {
     color: #7e75f6;
     text-decoration: underline;
-    font-family: Nunito;
-    font-size: small
+}
+
+.bloglink:hover {
+    background-color: #f6f475ce;
 }
 
 .tulip {
