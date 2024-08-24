@@ -86,7 +86,7 @@ body {
     overflow: hidden;
     border: 2px dashed #f1d976;
     background-color: #74954f;
-    width: 1026px;
+    width: 93%;
     margin: 0 auto;
 }
 
@@ -114,8 +114,7 @@ html {scrollbar-color: transparent transparent;}
     padding: 10px 40px;
     border: 1px solid #f1d976;
     border-top: none;
-    width: 1026px;
-    height: 550px;
+    width: 93%;
     overflow: auto;
     background-color: beige;
     margin: 0 auto;
