@@ -13,6 +13,14 @@
     font-style: normal;
     font-display: swap
 }
+@font-face {
+    font-family: 'Gaegu';
+    src: url('/fonts/Gaegu.woff2') format('woff2'),
+        url('/fonts/Gaegu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 @font-face {
     font-family: Nunito;
@@ -146,7 +154,7 @@ body {
 }
 
 .bloglink {
-    color: #7e75f6;
+    color: hotpink;
     text-decoration: underline;
 }
 
