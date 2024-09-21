@@ -14,15 +14,6 @@
     font-display: swap
 }
 @font-face {
-    font-family: 'Gaegu';
-    src: url('/fonts/Gaegu.woff2') format('woff2'),
-        url('/fonts/Gaegu.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: Nunito;
     src: url('/fonts/Nunito-ExtraBold.woff2') format('woff2'), url('/fonts/Nunito-ExtraBold.woff') format('woff');
     font-weight: 700;
