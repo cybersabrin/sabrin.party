@@ -150,7 +150,7 @@ body {
 }
 
 .bloglink:hover {
-    background-color: #f6f475ce;
+    filter: drop-shadow(2px 2px 5px gold);
 }
 
 .tulip {
@@ -159,4 +159,15 @@ body {
     filter: drop-shadow(2px 2px 5px pink);
     width: 104px;
     height: 114px
+}
+
+.zine-fashion {
+    margin-left: 2px;
+    padding-bottom: 10px;
+    width: 206px;
+    height: 165px;
+    display: block;
+    float: right;
+    padding-top: 10px;
+    padding-left: 10px;
 }
