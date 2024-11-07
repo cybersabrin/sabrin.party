@@ -16,13 +16,11 @@ $(document).ready(function () {
         // class is an identifier
         let div = $(`<div class="item">
         <div class="inner">
-          
           <a class="titleLink" target="_blank" href="` + entry.link + `">` + entry.title + `</a>
           <br>
-          <p class="details">` + entry.type + ` <br> ` + entry.date + ` <br> <strong>status:</strong><br> ` + entry.status + `</p>
-          <img loading="eager" alt="` + entry.alt + `" class="cover" src="` + entry.image + `">
+          <p class="details">` + entry.type + ` <br> ` + entry.date + ` <br> <strong>status:</strong><br> ` + entry.status + `</p><img alt="` + entry.alt + `" class="cover" src="` + entry.image + `">
           <p class="text">` + entry.review + `</p>
-          </div></div>`)
+        </div></div>`)
         .appendTo("#content"); // # refers to div id
     
       });
