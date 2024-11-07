@@ -20,7 +20,8 @@ $(document).ready(function () {
           <a class="titleLink" target="_blank" href="` + entry.link + `">` + entry.title + `</a>
           <br>
           <p class="details">` + entry.type + ` <br> ` + entry.date + ` <br> <strong>status:</strong><br> ` + entry.status + `</p>
-          <p class="text"><img loading="eager" alt="` + entry.alt + `" class="cover" src="` + entry.image + `">` + entry.review + `</p>
+          <img loading="eager" alt="` + entry.alt + `" class="cover" src="` + entry.image + `">
+          <p class="text">` + entry.review + `</p>
           </div></div>`)
         .appendTo("#content"); // # refers to div id
     
