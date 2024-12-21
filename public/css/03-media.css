@@ -62,7 +62,7 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     background-image: url(https://i.postimg.cc/sgvNN6nB/dogsbg.webp);
-    background-size:  55% auto;
+    background-size:  100% auto;
     padding-top: 10px;
     width: 560px;
     overflow-x: hidden
@@ -70,12 +70,12 @@ body {
 
 .gslink2,
 a {
-    color: #ff69b4
+    color: #9acd32;
 }
 
 .titleLink:hover,
 a:hover {
-    color: #9acd32
+    color: #ff69b4;
 }
 
 .tv {
@@ -144,26 +144,6 @@ a:hover {
     color: #fff
 }
 
-.title {
-    margin-left: 310px;
-    text-shadow: 1px 1px 7px #ff69b4
-}
-
-.title2 {
-    margin-left: 400px;
-    text-shadow: 1px 1px 7px #40e0d0
-}
-
-.title3 {
-    transform: scale(1, 3);
-    -webkit-transform: scale(1, 3);
-    -moz-transform: scale(1, 3);
-    -o-transform: scale(1, 3);
-    transform-origin: 0% -8%;
-    margin-left: 490px;
-    text-shadow: 1px 1px 7px gold
-}
-
 .star {
     height: 50px;
     width: 50px;
@@ -225,11 +205,11 @@ a:hover {
     font: .80em sans-serif;
     margin-left: 4px;
     margin-top: 160px;
-    color: #539e0f
+    color: #ff69b4;
 }
 
 .titleLink {
-    color: #ff69b4;
+    color: #69c3ff;
     font-family: 'MS Gothic';
     font-weight: 700;
     font-style: italic;
