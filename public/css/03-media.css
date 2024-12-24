@@ -121,6 +121,10 @@ a:hover {
     color: orange
 }
 
+.gslink2 {
+    color: #ff84a9
+}
+
 .gslink2:hover {
     color: green
 }
@@ -209,7 +213,7 @@ a:hover {
 }
 
 .titleLink {
-    color: #69c3ff;
+    color: #90d326;
     font-family: 'MS Gothic';
     font-weight: 700;
     font-style: italic;
