@@ -1,9 +1,9 @@
 :root {
-	--text: darkslategray;
-	--line: #9DD9D2;
-	--accent: #EF3054;
-	--bg: #9DD9D2;
-	--fill: #f5f5f5de;
+	--text: #000000;
+	--line: #b293c1;
+	--accent: #a47cc5;
+	--bg: #cb9dd9;
+	--fill: #ffffffde;
 }
 
 body {
@@ -40,8 +40,7 @@ nav {
 	width: 15%;
 	height: 100vh;
 	position: relative;
-	background: url(/assets/03-images/jjkbg2.png);
-	background-size: cover;
+	background: url(/assets/03-images/jjkbg.png);
 }
 
 nav div {
@@ -77,8 +76,6 @@ main {
 	padding: 2em;
 	overflow-y: scroll;
 	background: url(/assets/03-images/jjkbg.png);
-	background-size: cover;
-	background-position: center;
 }
 
 .container {
