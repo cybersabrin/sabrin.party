@@ -60,7 +60,9 @@ body::-webkit-scrollbar {
     margin-bottom: 100px;
     margin-left: -70px
 }
-
+.name, .current, .divider {
+    margin-top: 0px;
+}
 .homeTitle {
     margin-top: 10px;
     float: right;
@@ -439,16 +441,16 @@ a:hover {
 .audio-player {
     height: 20px;
     width: 350px;
-    background: linear-gradient(0deg, #60BEF1 0, #fff);
+    background-color: #e6ff8a;
     border-radius: 20px;
-    border: 2px solid gold;
-    color: #ff69b4; font-weight: bolder;
+    border: 6px solid #539e0f;
+    color: #539e0f; font-weight: bolder;
     overflow: hidden;
     display: grid;
     margin-left: -40px;
-    margin-top: -2px;
+    margin-top: -6px;
     grid-template-rows: 5px auto;
-    padding-bottom: 10px
+    padding-bottom: 6px
 }
 
 .buttonScroll,
@@ -458,13 +460,13 @@ a:hover {
 }
 
 .audio-player .timeline {
-    background: #A0DE44;
+    background: #e6ff8a;
     width: 100%;
     position: relative
 }
 
 .audio-player .timeline .progress {
-    background: #ff69b4;
+    background: #539e0f;
     width: 0%;
     height: 100%;
     transition: .25s
@@ -474,7 +476,8 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    padding: 0 20px
+    padding: 0 20px;
+    margin-top: -2px;    
 }
 
 .audio-player .controls>* {
