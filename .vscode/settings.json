@@ -45,5 +45,6 @@
         "toybox",
         "truetype",
         "webfont"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }

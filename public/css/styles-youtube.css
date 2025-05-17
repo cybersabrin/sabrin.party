@@ -1,11 +1,11 @@
-body {background-image: url(https://media.tenor.com/ZjdXOHbgtwUAAAAC/90s-internet.gif);background-size: 100% 100%;}
-.container {background-image: url(https://i.postimg.cc/TPPZywRZ/computer.png);background-size:contain;width: 800px; height: 600px;margin: 0 auto; margin-top: 80px;}
-.snail {position: absolute; margin-top: -440px; margin-left: 250px; height: 250px; width: auto;}
+body {background-image: url(https://i.gifer.com/7wsF.gif);background-size: 640px 705px;}
+.container {background-image: url(https://i.postimg.cc/TPPZywRZ/computer.png);background-size:contain;width: 660px; height: 460px;margin: 0 auto; margin-top: 130px;}
+.snail {position: absolute; margin-top: -410px; margin-left: 300px; height: 250px; width: auto;}
 .speechbubble {color: yellow;font-size: x-large; font-style: italic;font-family: Arial; font-weight: bolder;max-width: 16ch;text-align: center;}
-.speechbubble {margin-top: -10px; position: absolute;margin-left: 60px;--b: .7em; --h: .3em;--c:rgb(255, 0, 0);padding: 1em;border-radius: 1.2em;border-bottom-right-radius: 0;clip-path: polygon(100% 0,0 0,0 100%,calc(100% - var(--b)) 100%,calc(100% + var(--h)) calc(100% + var(--h)),100% calc(100% - var(--b)));background: var(--c);border-image: conic-gradient(var(--c) 0 0) 0 999 999 0/0 calc(var(--h) + var(--b)) calc(var(--h) + var(--b)) 0/0 var(--h) var(--h) 0;}
+.speechbubble {margin-top: -30px; position: absolute;margin-left: 40px;--b: .7em; --h: .3em;--c:rgb(255, 0, 0);padding: 1em;border-radius: 1.2em;border-bottom-right-radius: 0;clip-path: polygon(100% 0,0 0,0 100%,calc(100% - var(--b)) 100%,calc(100% + var(--h)) calc(100% + var(--h)),100% calc(100% - var(--b)));background: var(--c);border-image: conic-gradient(var(--c) 0 0) 0 999 999 0/0 calc(var(--h) + var(--b)) calc(var(--h) + var(--b)) 0/0 var(--h) var(--h) 0;}
 html{scrollbar-color:transparent transparent}
-.side {width: 170px; height: 415px;margin-left: 530px;padding: 15px;border-radius: 20px;overflow: scroll; font-family: Arial, Helvetica, sans-serif;}
-.frame {background-color: white;width: 298px; height: 236px;margin-top: -319px; margin-left: 189px;border-radius: 5px;}
+.side {width: 140px; height: 320px;margin-left: 400px;padding: 15px;border-radius: 20px;overflow: scroll; font-family: Arial, Helvetica, sans-serif;}
+.frame {background-color: white;width: 227px; height: 179px;margin-top: -250px; margin-left: 145px;border-radius: 10px;}
 .yellow {background-color: rgba(255, 217, 0, 0.3);}
 a {color: red; font-weight: bold; text-shadow: 2px 2px 3px white; font-style: normal;}
 a:hover {color: blue;font-weight: bold;  font-style: italic; text-shadow: 2px 2px 3px white;}
