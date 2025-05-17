@@ -1,0 +1,13 @@
+body {background-image: url(https://media.tenor.com/ZjdXOHbgtwUAAAAC/90s-internet.gif);background-size: 100% 100%;}
+@font-face{font-family:'Palatino';src:url('/fonts/Palatino-Roman.woff2') format('woff2'),url('/fonts/Palatino-Roman.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'MS Gothic';src:url('/fonts/MS-Gothic.woff2') format('woff2'),url('/fonts/MS-Gothic.woff') format('woff');font-display:block}
+.container {background-image: url(https://i.postimg.cc/TPPZywRZ/computer.png);background-size:contain;width: 800px; height: 600px;margin: 0 auto; margin-top: 80px;}
+.snail {position: absolute; margin-top: -440px; margin-left: 250px; height: 250px; width: auto;}
+.speechbubble {color: yellow;font-size: x-large; font-style: italic;font-family: Arial; font-weight: bolder;max-width: 16ch;text-align: center;}
+.speechbubble {margin-top: -10px; position: absolute;margin-left: 60px;--b: .7em; --h: .3em;--c:rgb(255, 0, 0);padding: 1em;border-radius: 1.2em;border-bottom-right-radius: 0;clip-path: polygon(100% 0,0 0,0 100%,calc(100% - var(--b)) 100%,calc(100% + var(--h)) calc(100% + var(--h)),100% calc(100% - var(--b)));background: var(--c);border-image: conic-gradient(var(--c) 0 0) 0 999 999 0/0 calc(var(--h) + var(--b)) calc(var(--h) + var(--b)) 0/0 var(--h) var(--h) 0;}
+html{scrollbar-color:transparent transparent}
+.side {width: 170px; height: 415px;margin-left: 530px;padding: 15px;border-radius: 20px;font-family: 'MS PGothic';overflow: scroll;  font-weight: bold;}
+.frame {background-color: white;width: 298px; height: 236px;margin-top: -319px; margin-left: 189px;border-radius: 5px;}
+.yellow {background-color: rgba(255, 217, 0, 0.3);}.blue {background-color: rgba(0, 204, 255, 0.3);}
+a {color: rgb(255, 123, 0); text-shadow: 0px 0px 3px rgb(181, 224, 64); font-weight: bolder;}
+a:hover {color: aqua; text-shadow: 0px 0px 3px hotpink; font-weight: bolder;}
