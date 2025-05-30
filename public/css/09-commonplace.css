@@ -1,52 +1,54 @@
 body {
     background-color: white;
-    background-image: url(https://file.garden/Zkk-azEbhyHsv9a-/beachdithered.png);
+    background-image: url(/assets/03-images/commonplacebg.png);
     background-attachment: fixed;
     background-size: cover;
+    padding: 20px;
 }
-
+@font-face{font-family:Voxel;src:url('/fonts/Voxel.woff2') format('woff2'),url('/fonts/Voxel.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:'MS PGothic';src:url('/fonts/MS-PGothic.eot');src:url('/fonts/MS-PGothic.eot?#iefix') format('embedded-opentype'),url('/fonts/MS-PGothic.woff2') format('woff2'),url('/fonts/MS-PGothic.woff') format('woff'),url('/fonts/MS-PGothic.ttf') format('truetype'),url('/fonts/MS-PGothic.svg#MS-PGothic') format('svg');font-display:block}
 #header {
     width: 100%;
     max-width: 150px;
-
+    font-family: 'MS PGothic';
     padding: 10px;
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 25px;
+    right: 25px;
     border: 1px dashed white;
-    background: deeppink;
-    color: white;
-    box-shadow: 2px 2px deeppink;
+    background: #fff5aa;
+    color: #ff5555;
+    box-shadow: 2px 2px #69e5f8;
 }
-
-#header a {
-    color: limegreen;
+#normal {
+    color: #aa7dcc;
+    text-decoration: underline;
+}
+#normal:hover {
+    color: blue; font-style: italic;
+}
+#home {
+    color: #ff5555;
     display: block;
     text-align: center;
     padding: 3px;
-    border: 1px dashed limegreen;
+    border: 1px dashed #ff5555;
     background: white;
     text-decoration: none;
-
+    font-family: 'Voxel'; font-weight: bold;
     margin-top: 20px;
     border-radius: 8px;
-
     box-shadow: 2px 2px;
 }
 
-#header a:hover {
-    background: limegreen;
+#home:hover {
+    background: #ff5555;
     color: white;
     box-shadow: 0;
+    font-family: 'Voxel'; font-weight: bold;
 }
 
 #body {
     margin-right: 200px;
-}
-
-.homestuck {
-    font-family: "Courier New", Courier, monospace;
-    font-weight: bold;
 }
 
 .grid {
@@ -54,41 +56,43 @@ body {
 
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
 }
 
 .starred {
     position: absolute;
     top: -30px;
     left: -13px;
-    text-shadow: 2px 2px 3px rgba(50, 205, 50, 0.5);
+    text-shadow: 2px 2px 5px #ff5571ab;
     transform: rotate(45deg);
 }
 
 .starred::after {
     content: "★";
-    color: deeppink;
+    color: gold;
     font-size: 48px;
 }
 
 .card {
-    border: 1px dashed limegreen;
+    border: 2px dashed #ff5555;
     box-shadow:
-        2px 2px limegreen,
-        2px 2px 5px rgba(50, 205, 50, 0.2);
-    
+        2px 2px #69e5f8,
+        2px 2px 7px gold;
+    height: fit-content;
     background: white;
-
+    border-radius: 25px;
     position: relative;
     font-family: Georgia, Times, "Times New Roman", Times, serif;
 }
-
+body::-webkit-scrollbar{display:none}
+html{scrollbar-color:transparent transparent}
 .card .text {
     padding: 12px;
     padding-bottom: 30px;
-    width: 250px;
-    height: 350px;
+    width: 200px;
+    height: 300px;
     overflow-y: auto;
+    font-size: small;
 }
 
 .card img {
@@ -100,15 +104,15 @@ body {
 }
 
 .card .caption {
-    color: darkgray;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #875bff;
+    font-family: 'MS PGothic';
     font-weight: normal;
     text-align: center;
     font-size: 11px;
-    border-top: 1px dashed darkgray;
+    border-top: 1px dashed #ffaa5b;
     padding-top: 5px;
 }
 
 .card .caption::before {
-    content: "â˜† ";
+    content: "— ";
 }
