@@ -1,0 +1,114 @@
+body {
+    background-color: white;
+    background-image: url(https://file.garden/Zkk-azEbhyHsv9a-/beachdithered.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#header {
+    width: 100%;
+    max-width: 150px;
+
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border: 1px dashed white;
+    background: deeppink;
+    color: white;
+    box-shadow: 2px 2px deeppink;
+}
+
+#header a {
+    color: limegreen;
+    display: block;
+    text-align: center;
+    padding: 3px;
+    border: 1px dashed limegreen;
+    background: white;
+    text-decoration: none;
+
+    margin-top: 20px;
+    border-radius: 8px;
+
+    box-shadow: 2px 2px;
+}
+
+#header a:hover {
+    background: limegreen;
+    color: white;
+    box-shadow: 0;
+}
+
+#body {
+    margin-right: 200px;
+}
+
+.homestuck {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+}
+
+.grid {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.starred {
+    position: absolute;
+    top: -30px;
+    left: -13px;
+    text-shadow: 2px 2px 3px rgba(50, 205, 50, 0.5);
+    transform: rotate(45deg);
+}
+
+.starred::after {
+    content: "★";
+    color: deeppink;
+    font-size: 48px;
+}
+
+.card {
+    border: 1px dashed limegreen;
+    box-shadow:
+        2px 2px limegreen,
+        2px 2px 5px rgba(50, 205, 50, 0.2);
+    
+    background: white;
+
+    position: relative;
+    font-family: Georgia, Times, "Times New Roman", Times, serif;
+}
+
+.card .text {
+    padding: 12px;
+    padding-bottom: 30px;
+    width: 250px;
+    height: 350px;
+    overflow-y: auto;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card p {
+    margin-top: 0px;
+}
+
+.card .caption {
+    color: darkgray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 11px;
+    border-top: 1px dashed darkgray;
+    padding-top: 5px;
+}
+
+.card .caption::before {
+    content: "â˜† ";
+}
