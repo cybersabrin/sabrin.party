@@ -1,1 +1,122 @@
-#s-m-t-tooltip,body{font-family:'MS Gothic'}@keyframes floating{0%,100%{transform:translate(0,0)}50%{transform:translate(0,5px)}}*{box-sizing:border-box}body{padding-left:20px;padding-right:20px;background-image:url(https://i.postimg.cc/VL86LBp2/shrinesbg.webp);background-size:100% auto;padding-top:30px}a:hover{text-decoration:none;filter:drop-shadow(0px 0px 8px #6c9bff)}.border{margin:0 auto;height:620px;width:95%;top:50%;padding:20px;opacity:.9}.inner{width:100%;height:100%;border:3px solid #fff;background:#fff;border-radius:10px;box-shadow:0 0 10px #fff,0 0 10px #fff,0 0 10px #fff,0 0 10px #fff,0 0 14px #fff}table.shrineTable{width:100%;margin-top:50px;height:400px;text-align:center;z-index:2}.linkIcon{height:80px;width:auto}.linkIcon:hover{animation-name:floating;animation-duration:1.5s;animation-iteration-count:infinite;animation-timing-function:ease-in-out}#remus{mask:radial-gradient(at 70% 31%,#000 29%,#0000 30%),radial-gradient(at 30% 31%,#000 29%,#0000 30%),linear-gradient(#000 0 0) bottom/100% 50% no-repeat;clip-path:polygon(-41% 0,50% 91%,141% 0)}.titleDesc,.titleImg{z-index:1;text-align:center;position:absolute}.titleImg{width:92%;top:35%;margin:auto;color:#fff;font-weight:700;font-size:xxx-large;text-shadow:-3px 0 #a8c6fe,0 3px #a8c6fe,3px 0 #a8c6fe,0 -3px #a8c6fe}.titleDesc{font-size:small;width:34%;top:45%;margin:0 auto 0 29%}html{scrollbar-color:transparent transparent}#s-m-t-tooltip{max-width:200px;z-index:5;margin:24px 14px 7px 12px;padding:8px;background:linear-gradient(0deg,#ff69b4 0,#fff);border:2px solid #40e0d0;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:10px;-moz-box-shadow:2px 2px 0 gold,-1px -1px 0 rgba(255,255,255);-webkit-box-shadow:2px 2px 0 gold,-1px -1px 0 rgba(255,255,255);box-shadow:0 0 7px gold;text-align:center;font-size:small}
+#s-m-t-tooltip,
+body {
+    font-family: 'MS Gothic'
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translate(0, 0)
+    }
+
+    50% {
+        transform: translate(0, 5px)
+    }
+}
+
+* {
+    box-sizing: border-box
+}
+@font-face{font-family:Palatino;src:url('/fonts/Palatino-Roman.woff2') format('woff2'),url('/fonts/Palatino-Roman.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+body {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: url(https://i.postimg.cc/KvGyk7qh/shrines.png);
+    background-size: 100% auto;
+    padding-top: 30px
+}
+
+a:hover {
+    text-decoration: none;
+    filter: drop-shadow(0px 0px 8px #ff69b4)
+}
+
+.border {
+    margin: 0 auto;
+    height: 620px;
+    width: 95%;
+    top: 50%;
+    padding: 20px;
+    opacity: .9
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ffffff9c;
+    background: #ffffff9c;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ffffff9c, 0 0 10px #ffffff9c, 0 0 10px #ffffff9c, 0 0 10px #ffffff9c, 0 0 14px #ffffff9c
+}
+
+table.shrineTable {
+    width: 100%;
+    margin-top: 50px;
+    height: 400px;
+    text-align: center;
+    z-index: 2;
+}
+
+.linkIcon {
+    width: 80px;
+    height: auto;
+}
+
+.linkIcon:hover {
+    animation-name: floating;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out
+}
+
+#remus {
+    mask: radial-gradient(at 70% 31%, #000 29%, #0000 30%), radial-gradient(at 30% 31%, #000 29%, #0000 30%), linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+    clip-path: polygon(-41% 0, 50% 91%, 141% 0)
+}
+
+.titleDesc,
+.titleImg {
+    z-index: 1;
+    text-align: center;
+    position: absolute;
+}
+
+.titleImg {
+    width: 92%;
+    top: 35%;
+    margin: auto;
+    color: #fff;
+    font-weight: 700;
+    font-size: xxx-large;
+    text-shadow: -3px 0 #92b83c, 0 3px #92b83c, 3px 0 #92b83c, 0 -3px #92b83c
+}
+
+.titleDesc {
+    font-size: small;
+    width: 34%;
+    top: 45%;
+    margin: 0 auto 0 29%;
+    font-family: 'Palatino';
+}
+
+html {
+    scrollbar-color: transparent transparent
+}
+
+#s-m-t-tooltip {
+    max-width: 200px;
+    z-index: 5;
+    margin: 24px 14px 7px 12px;
+    padding: 8px;
+    background: linear-gradient(0deg, #92b83c 0, #fff);
+    border: 2px solid #ff7dbe;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 10px;
+    -moz-box-shadow: 2px 2px 0 turquoise, -1px -1px 0 hsl(0, 0%, 100%);
+    -webkit-box-shadow: 2px 2px 0 turquoise, -1px -1px 0 rgba(255, 255, 255);
+    box-shadow: 0 0 7px turquoise;
+    text-align: center;
+    font-size: small
+}
