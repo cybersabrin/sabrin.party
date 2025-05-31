@@ -1,3 +1,3 @@
 # sabrin.party
 
- personal website!!! in progress... i've never coded a thing before in my life. i truly have no idea what i am doing. i don't know what a github is. i don't know what these settings are. so uh. yeah! xoxo
+ personal website! here, i talk about my life, my anxieties, my favorite movies, tv shows, books, things. i just sorta dump everything i love (and hate?) on here.
