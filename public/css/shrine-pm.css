@@ -1,0 +1,41 @@
+@font-face{font-family:Palatino;src:url('/public/fonts/Palatino-Roman.woff2') format('woff2'),url('/public/fonts/Palatino-Roman.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+body {
+    background: url(/public/assets/03-images/commonplace.png);
+}
+.frame {
+    height: 190px; width: 440px;
+    background-image: url(/public/assets/03-images/frame.webp); 
+    background-size: 100% 100%;
+    margin-left: 130px; z-index: 5; position: absolute;
+    -webkit-filter: drop-shadow(0 0 10px gold);
+    filter: drop-shadow(0 0 10px gold);
+}
+.title {
+    margin-top: 50px; margin-left: 70px;
+    position: absolute;
+    font-family: 'Palatino';
+    font-size: xx-large; font-style: italic; z-index: 6;
+}
+.flowers {
+    z-index: 1; margin-top: 50px;  margin-left: 540px; position: absolute; 
+}
+.music {
+    z-index: 3; margin: 40px; margin-left: 650px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 800px; height: 1200px;
+}
+
+.shelf {
+    background-image: url(/public/assets/03-images/shelf.png);
+    z-index: 1;
+    background-size: 100% 100%;
+    width: 600px; height: 1000px;
+    margin: 0 auto;
+    -webkit-box-shadow:0 0 20px white; 
+    -moz-box-shadow: 0 0 20px white; 
+    box-shadow:0 0 20px white;
+    margin-top: -90px;
+}
