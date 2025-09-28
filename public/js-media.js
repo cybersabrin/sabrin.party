@@ -1,18 +1,13 @@
-var SPREADSHEET_ID_AND_TAB = "14iIGUtL0pREld4d6JW3fljlEFU444iw5eRm5poEhq-c/log";
+var SPREADSHEET_ID_AND_TAB = "14iIGUtL0pREld4d6JW3fljlEFU444iw5eRm5poEhq/log";
 
 $(document).ready(function () {
   
     $.getJSON("https://opensheet.elk.sh/" + SPREADSHEET_ID_AND_TAB, function (data) {
-      
       /* TO VIEW CONSOLE.LOG RESULTS, RIGHT-CLICK AND INSPECT */
       console.log(data); // This gives me an ARRAY of every OBJECT...
-      
       data.forEach(function (entry, index) { // For each object in data, read it as an ENTRY...
-        
         console.log(entry); // This logs the OBJECT...
-        
         if(index == 0) return;
-        
         // class is an identifier
         let div = $(`<div class="item">
         <div class="inner">
