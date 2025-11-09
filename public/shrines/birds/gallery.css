@@ -2,7 +2,7 @@
 
 body {
     font-family: "Palatino", serif;
-    background: url(https://i.postimg.cc/sx8Kq4Kr/basil-border.jpg);
+    background: url(https://i.postimg.cc/02kmjpjP/flipthat.png) center center/cover no-repeat fixed;
     font-size: 1.1em;
     background-size: 100% 100%;
     padding-left: 300px; padding-right: 300px; padding-bottom: 200px;padding-top: 100px;
@@ -13,65 +13,60 @@ a:visited {
     color: hotpink;
     text-decoration: underline;
 }
-
-a:hover {
-    text-decoration: none;
+.wave-text span {
+    display: inline-block;
+    font-size: 4rem;
+    animation: wave 2s ease-in-out infinite;
+    color: white; filter: drop-shadow(0 0 15px hotpink);
 }
-
+.wave-text span:nth-child(1) {animation-delay: 0s;}
+.wave-text span:nth-child(2) {animation-delay: 0.2s;}
+.wave-text span:nth-child(3) {animation-delay: 0.4s;}
+.wave-text span:nth-child(4) {animation-delay: 0.6s;}
+.wave-text span:nth-child(5) {animation-delay: 0s;}
+.wave-text span:nth-child(6) {animation-delay: 0.2s;}
+.wave-text span:nth-child(7) {animation-delay: 0.4s;}
+.wave-text span:nth-child(8) {animation-delay: 0.6s;}
+@keyframes wave {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-20px);}
+}
+.wave-container{display: flex; justify-content: center; }
+a:hover {text-decoration: none;}
 header,
 body > section,
-footer {
-    padding: 5px;
-}
-
-nav {
-    margin: 10px;
-    clear: both;
-}
-
-footer {
-    clear: both;
-    font-size: 0.7em;
-    padding-top: 30px;
-}
-
+footer {padding: 5px;border:3px solid #fff;background:#fff;border-radius:8px;box-shadow:0 0 10px #fff,0 0 10px #fff,0 0 10px #fff,0 0 10px #fff,0 0 14px #d1d0fc; margin:10px; margin-bottom: 30px;}
+nav {margin: 10px;clear: both;}
+footer {clear: both;font-size: 0.7em;padding-top: 10px;}
 /* Gallery Pages */
-
 #photos {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
 }
-
 #photos figure {
     margin: 10px;
     max-width: min-content;
 }
-
 #photos img {
     border: 3px ridge #ffda00;
     border-radius: 10px;
     /* Enable this for pixel art!! */
     /* image-rendering: pixelated; */
 }
-
 #photos img:hover {
     border-color: #40e0d0;
 }
-
 #photos span {
     text-align: center;
     display: block;
 }
-
 #photos figcaption {
     padding: 10px 0px;
 }
-
 .page-links {
     text-align: center;
 }
-
 .page-links ul {
     padding: 0px 5px;
     margin: 10px 0px;
@@ -82,26 +77,13 @@ footer {
     display: inline;
     margin: 0px 3px;
 }
-
 /* Mobile Styling */
-
 @media (max-width: 800px) {
-    body {
-        padding: 10px;
-    }
-
-    #photos figure {
-        width: 95%;
-        max-width: unset;
-    }
-
-    #photos img {
-        width: 100%;
-    }
+    body {padding: 10px;}
+    #photos figure {width: 95%;max-width: unset;}
+    #photos img {width: 100%;}
 }
-
 /* Styling for JavaScript viewer (if enabled) */
-
 #js-viewer {
     position: fixed;
     top: 0px;
