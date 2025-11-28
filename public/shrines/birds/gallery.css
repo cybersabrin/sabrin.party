@@ -33,40 +33,50 @@ a:visited {
 }
 .wave-container{display: flex; justify-content: center; }
 a:hover {text-decoration: none;}
+
+
 header,
 body > section,
 footer {padding: 5px;border:3px solid #fff;background:#fff;border-radius:8px;box-shadow:0 0 10px #fff,0 0 10px #fff,0 0 10px #fff,0 0 10px #fff,0 0 14px #d1d0fc; margin:10px; margin-bottom: 30px;}
 nav {margin: 10px;clear: both;}
 footer {clear: both;font-size: 0.7em;padding-top: 10px;}
 /* Gallery Pages */
+
 #photos {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
 }
+
 #photos figure {
     margin: 10px;
     max-width: min-content;
 }
+
 #photos img {
     border: 3px ridge #ffda00;
     border-radius: 10px;
     /* Enable this for pixel art!! */
     /* image-rendering: pixelated; */
 }
+
 #photos img:hover {
     border-color: #40e0d0;
 }
+
 #photos span {
     text-align: center;
     display: block;
 }
+
 #photos figcaption {
     padding: 10px 0px;
 }
+
 .page-links {
     text-align: center;
 }
+
 .page-links ul {
     padding: 0px 5px;
     margin: 10px 0px;
@@ -77,13 +87,17 @@ footer {clear: both;font-size: 0.7em;padding-top: 10px;}
     display: inline;
     margin: 0px 3px;
 }
+
 /* Mobile Styling */
+
 @media (max-width: 800px) {
     body {padding: 10px;}
     #photos figure {width: 95%;max-width: unset;}
     #photos img {width: 100%;}
 }
+
 /* Styling for JavaScript viewer (if enabled) */
+
 #js-viewer {
     position: fixed;
     top: 0px;
