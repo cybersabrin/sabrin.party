@@ -1,0 +1,45 @@
+@font-face{font-family:Palatino;src:url("/fonts/Palatino-Roman.woff2") format("woff2"), url("/fonts/Palatino-Roman.woff") format("woff");font-weight:400;font-style:normal;font-display:swap}
+body{
+    background: url("https://i.postimg.cc/HsgJbLLW/rainbowzoo.png") center center / cover no-repeat fixed;
+    font-family: 'Palatino';
+    padding-left: 50px; padding-right: 50px;
+}
+.header{
+    background-color: white;
+    display: block; margin: 0 auto;
+    width: 75%; height: 320px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 50px 60px white;
+    margin-top: 100px; margin-bottom: 200px;
+}
+.dancer{
+    display: block; position: absolute;
+    width: 200px; margin-top: -200px;z-index: 5;
+}
+.lyrics{
+    z-index: 1; display: block;position: absolute; width: 200px;margin-top: -160px;margin-left: 30px;
+}
+#s-m-t-tooltip {
+    max-width: 200px;
+    z-index: 5;
+    margin: 24px 14px 7px 12px;
+    padding: 8px;
+    background: #fff;
+    border: 2px solid #ff7dbe;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: small
+}
+h2{color: rgb(0, 72, 255); text-decoration: underline;text-align: center; font-weight:900;}
+.text{
+    background-color: #ffffffca;
+    display: block; margin: 0 auto;
+    width:55%; height: auto;
+    box-shadow: 0 0 50px 60px #ffffffca;
+    margin-top: 100px; margin-bottom: 150px;
+
+}
+a {color: red;text-decoration: underline;} a:hover{background-color: yellow;}
