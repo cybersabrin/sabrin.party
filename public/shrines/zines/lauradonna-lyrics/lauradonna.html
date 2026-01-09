@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles-zines.css" type="text/css"/>
+    <title>wolfwood body horror zine</title>
+</head>
+<body>
+  <style>body {background-image: url(/assets/03-images/funkypink.gif); padding-top: 10px; background-size: 30%; background-repeat: repeat;overflow: hidden;}</style>
+  <script>
+    let slideIndex = 1;
+      showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }</script>
+     <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade active">
+      <p style="text-align: center;"><img src="/shrines/zines/lauradonna-lyrics/FRONT.png" style="width: 85%;"></p>
+    </div>
+  
+    <div class="mySlides fade">
+      <p style="text-align: center;"><img src="/shrines/zines/lauradonna-lyrics/INNERFRONT.png" style="width: 85%;"></p>
+    </div>
+  
+    <div class="mySlides fade">
+      <p style="text-align: center;"><img src="/shrines/zines/lauradonna-lyrics/1.png" style="width: 85%;"></p>
+    </div>
+
+    <div class="mySlides fade">
+        <p style="text-align: center;"><img src="/shrines/zines/lauradonna-lyrics/2.png" style="width: 85%;"></p>
+      </div>
+
+      <div class="mySlides fade">
+        <p style="text-align: center;"><img src="/shrines/zines/lauradonna-lyrics/3.png" style="width: 85%;"></p>
+      </div>
+      <div class="mySlides fade">
+        <p style="text-align: center;"><img src="/shrines/zines/lauradonna-lyrics/4.png" style="width: 85%;"></p>
+      </div>
+      <div class="mySlides fade">
+        <p style="text-align: center;"><img src="/shrines/zines/lauradonna-lyrics/5.png" style="width: 85%;"></p>
+      </div>
+      <div class="mySlides fade">
+        <p style="text-align: center;"><img src="/shrines/zines/lauradonna-lyrics/BACK.png" style="width: 85%;"></p>
+      </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  
+</body>
+</html>
