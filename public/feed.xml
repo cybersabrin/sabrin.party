@@ -6,25 +6,27 @@
 	<description>the latest and greatest from yours truly.</description>
 	<link>https://sabrin.party/</link>
 	<language>en</language>
-	<webMaster>sabrin@cyberdude.com</webMaster>
+	<webMaster>sabrin@cyberdude.com (sabrin)</webMaster>
+	<image>
+	<url>https://neocities.org/site_screenshots/10/78/sabrin/index.html.jpg</url>
+	<link>https://sabrin.party/</link>
+	<description>screenshot of sabrin.party</description>
+	<title>sabrin.party</title>
+	</image>
 	<item>
 	<title>song of the week*</title>
 	<description>DEVIOUS (خراب) by SADWRIST. stumbled upon this album on &lt;a href="https://sadwrist.bandcamp.com/album/k-thizein"&gt;bandcamp&lt;/a&gt;. enjoying this sound a lot.</description>
-	<pubDate>12 Jan 2026 19:18:57 GMT</pubDate>
+	<pubDate>12 Jan 2026 19:50:36 GMT</pubDate>
 	<link>http://sabrin.party</link>
-	<author>sabrin@cyberdude.com (sabrin)</author>
 	<category>music</category>
-	<enclosure url="https://sabrin.party/assets/01-home/sotw.mp3" length="9429017" type="audio/mpeg"/>
-	<guid isPermaLink="false">D971F0BE-393C-4417-915B-EC4B02DD1E61</guid>
+	<guid isPermaLink="false">ACB2F2B6-9353-4B81-8B31-EB3C7B9A1A91</guid>
 	</item>
 	<item>
 	<title>happy new year! my 2025 media wrapped</title>
 	<description>take a look at my media wrapped slideshow thang. happy new year 2006! &lt;a href="https://sabrin.party/journal#010126"&gt;sabrin.party/journal&lt;/a&gt;</description>
-	<pubDate>12 Jan 2026 07:13:39 GMT</pubDate>
+	<pubDate>1 Jan 2026 07:13:39 GMT</pubDate>
 	<link>https://sabrin.party/journal#010126</link>
-	<author>sabrin@cyberdude.com (sabrin)</author>
 	<category>blog</category>
-	<enclosure url="https://sabrin.party/assets/04-blog/2026-mediawrapped01.png" length="1071175" type="image/jpeg"/>
 	<guid isPermaLink="false">815FB010-1FB9-4D9D-BAD8-515D108BD279</guid>
 	</item>
 	</channel></rss>
