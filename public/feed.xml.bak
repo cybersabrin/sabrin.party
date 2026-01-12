@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 	<channel>
+	<generator>Feed Editor (Unlicensed)</generator>
 	<pubDate>12 Jan 2026 19:12:46 GMT</pubDate>
 	<title>sabrin.party updates</title>
 	<description>the latest and greatest from yours truly.</description>
@@ -27,6 +28,7 @@
 	<pubDate>1 Jan 2026 07:13:39 GMT</pubDate>
 	<link>https://sabrin.party/journal#010126</link>
 	<category>blog</category>
+	<enclosure url="https://i.postimg.cc/bJgqZrpb/2026-mediawrapped01.jpg" length="276983" type="image/jpeg"/>
 	<guid isPermaLink="false">815FB010-1FB9-4D9D-BAD8-515D108BD279</guid>
 	</item>
 	</channel></rss>
