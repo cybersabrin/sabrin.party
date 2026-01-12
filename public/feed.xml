@@ -4,10 +4,10 @@
 <channel>
   <title>sabrin.party</title>
   <link>https://www.sabrin.party</link>
-  <atom:link href="http://sabrin.party/feed.xml" rel="self" type="application/rss+xml">
   <description>my personal online junk journal</description>
   <item>
     <title>song of the week*</title>
+    <pubDate>Mon, 12 Jan 2026</pubDate>
     <image>
       <title>DEVIOUS (خراب) by SADWRIST</title>
       <url>https://f4.bcbits.com/img/a2620789857_16.jpg</url>
@@ -21,6 +21,7 @@
   </item>
   <item>
     <title>blog post: happy new year! my 2025 media wrapped</title>
+    <pubDate>Thu, 1 Jan 2026</pubDate>
     <image>
       <title>weenie's 2025 media wrapped</title>
       <url>https://sabrin.party/assets/04-blog/2026-mediawrapped01.png</url>
