@@ -7,7 +7,7 @@
   <description>my personal online junk journal</description>
   <item>
     <title>song of the week*</title>
-    <pubDate>Mon, 12 Jan 2026</pubDate>
+    <pubDate>Mon, 12 Jan 2026 13:50:00 EST</pubDate>
     <image>
       <title>DEVIOUS (خراب) by SADWRIST</title>
       <url>https://f4.bcbits.com/img/a2620789857_16.jpg</url>
@@ -21,7 +21,7 @@
   </item>
   <item>
     <title>blog post: happy new year! my 2025 media wrapped</title>
-    <pubDate>Thu, 1 Jan 2026</pubDate>
+    <pubDate>Thu, 1 Jan 2026 1:15:00 EST</pubDate>
     <image>
       <title>weenie's 2025 media wrapped</title>
       <url>https://sabrin.party/assets/04-blog/2026-mediawrapped01.png</url>
@@ -33,5 +33,4 @@
     <description>take a look at my media wrapped slideshow thang. happy new year 2006!</description>
   </item>
 </channel>
-
 </rss>
