@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 	<channel>
-	<generator>Feed Editor (Unlicensed)</generator>
 	<pubDate>12 Jan 2026 19:12:46 GMT</pubDate>
 	<title>sabrin.party updates</title>
 	<description>the latest and greatest from yours truly.</description>
@@ -10,6 +9,9 @@
 	<webMaster>sabrin@cyberdude.com (sabrin)</webMaster>
 	<image>
 	<url>https://neocities.org/site_screenshots/10/78/sabrin/index.html.jpg</url>
+	<link>https://sabrin.party/</link>
+	<description>screenshot of sabrin.party</description>
+	<title>sabrin.party</title>
 	</image>
 	<item>
 	<title>song of the week*</title>

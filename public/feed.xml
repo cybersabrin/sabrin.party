@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 	<channel>
+	<generator>Feed Editor (Unlicensed)</generator>
 	<pubDate>12 Jan 2026 19:12:46 GMT</pubDate>
 	<title>sabrin.party updates</title>
 	<description>the latest and greatest from yours truly.</description>
@@ -23,7 +24,8 @@
 	</item>
 	<item>
 	<title>happy new year! my 2025 media wrapped</title>
-	<description>take a look at my media wrapped slideshow thang. happy new year 2006! &lt;a href="https://sabrin.party/journal#010126"&gt;sabrin.party/journal&lt;/a&gt;</description>
+	<description>take a look at my media wrapped slideshow thang. happy new year 2006! &lt;a href="https://sabrin.party/journal#010126"&gt;sabrin.party/journal&lt;/a&gt;
+&lt;img src="https://sabrin.party/assets/04-blog/2026-mediawrapped01.png"&gt;</description>
 	<pubDate>1 Jan 2026 07:13:39 GMT</pubDate>
 	<link>https://sabrin.party/journal#010126</link>
 	<category>blog</category>
