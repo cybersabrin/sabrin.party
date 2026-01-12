@@ -1,36 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
-
-<channel>
-  <title>sabrin.party</title>
-  <link>https://www.sabrin.party</link>
-  <description>my personal online junk journal</description>
-  <item>
-    <title>song of the week*</title>
-    <pubDate>Mon, 12 Jan 2026 13:50:00 EST</pubDate>
-    <image>
-      <title>DEVIOUS (خراب) by SADWRIST</title>
-      <url>https://f4.bcbits.com/img/a2620789857_16.jpg</url>
-      <link>https://sadwrist.bandcamp.com/album/k-thizein</link>
-      <description>bandcamp link to KÅTHIZEIN+ by SADWRIST</description>
-    </image>
-    <link>https://www.sabrin.party</link>
-    <guid>https://www.sabrin.party</guid>
-    <description>DEVIOUS (خراب) by SADWRIST. stumbled upon this album on bandcamp. enjoying this sound a lot.</description>
-    
-  </item>
-  <item>
-    <title>blog post: happy new year! my 2025 media wrapped</title>
-    <pubDate>Thu, 1 Jan 2026 1:15:00 EST</pubDate>
-    <image>
-      <title>weenie's 2025 media wrapped</title>
-      <url>https://sabrin.party/assets/04-blog/2026-mediawrapped01.png</url>
-      <link>https://sabrin.party/journal</link>
-      <description>the first page of my media wrapped!</description>
-    </image>
-    <link>https://sabrin.party/journal</link>
-    <guid>https://sabrin.party/journal</guid>
-    <description>take a look at my media wrapped slideshow thang. happy new year 2006!</description>
-  </item>
-</channel>
-</rss>
+	<channel>
+	<pubDate>12 Jan 2026 19:12:46 GMT</pubDate>
+	<title>sabrin.party updates</title>
+	<description>the latest and greatest from yours truly.</description>
+	<link>https://sabrin.party/</link>
+	<language>en</language>
+	<webMaster>sabrin@cyberdude.com</webMaster>
+	<item>
+	<title>song of the week*</title>
+	<description>DEVIOUS (خراب) by SADWRIST. stumbled upon this album on bandcamp. enjoying this sound a lot.</description>
+	<pubDate>12 Jan 2026 19:18:57 GMT</pubDate>
+	<link>http://sabrin.party</link>
+	<author>sabrin@cyberdude.com</author>
+	<enclosure url="https://sabrin.party/assets/01-home/sotw.mp3" length="9429017" type="audio/mp3"/>
+	<guid isPermaLink="false">D971F0BE-393C-4417-915B-EC4B02DD1E61</guid>
+	</item>
+	<item>
+	<title>blog post: happy new year! my 2025 media wrapped</title>
+	<description>take a look at my media wrapped slideshow thang. happy new year 2006!</description>
+	<pubDate>12 Jan 2026 07:13:39 GMT</pubDate>
+	<link>https://sabrin.party/journal#010126</link>
+	<enclosure url="https://sabrin.party/assets/04-blog/2026-mediawrapped01.png" length="1071175" type="image/png"/>
+	<guid isPermaLink="false">815FB010-1FB9-4D9D-BAD8-515D108BD279</guid>
+	</item>
+	</channel></rss>
