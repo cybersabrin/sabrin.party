@@ -4,15 +4,31 @@
 <channel>
   <title>sabrin.party</title>
   <link>https://www.sabrin.party</link>
+  <atom:link href="http://sabrin.party/feed.xml" rel="self" type="application/rss+xml">
   <description>my personal online junk journal</description>
   <item>
     <title>song of the week*</title>
+    <image>
+      <title>DEVIOUS (خراب) by SADWRIST</title>
+      <url>https://f4.bcbits.com/img/a2620789857_16.jpg</url>
+      <link>https://sadwrist.bandcamp.com/album/k-thizein</link>
+      <description>bandcamp link to KÅTHIZEIN+ by SADWRIST</description>
+    </image>
     <link>https://www.sabrin.party</link>
+    <guid>https://www.sabrin.party</guid>
     <description>DEVIOUS (خراب) by SADWRIST. stumbled upon this album on bandcamp. enjoying this sound a lot.</description>
+    
   </item>
   <item>
     <title>blog post: happy new year! my 2025 media wrapped</title>
+    <image>
+      <title>weenie's 2025 media wrapped</title>
+      <url>https://sabrin.party/assets/04-blog/2026-mediawrapped01.png</url>
+      <link>https://sabrin.party/journal</link>
+      <description>the first page of my media wrapped!</description>
+    </image>
     <link>https://sabrin.party/journal</link>
+    <guid>https://sabrin.party/journal</guid>
     <description>take a look at my media wrapped slideshow thang. happy new year 2006!</description>
   </item>
 </channel>
