@@ -1,45 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="/css/10-feed.xsl" type="text/xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>sabrin.party updates</title>
-<description>the latest and greatest from yours truly.</description>  
-<link>https://sabrin.party/</link>
-<language>en</language>
-<webMaster>sabrin@cyberdude.com (sabrin)</webMaster>
-<image>
-<url>https://neocities.org/site_screenshots/10/78/sabrin/index.html.jpg</url>
-<link>https://sabrin.party/</link>
-<description>screenshot of sabrin.party</description>  
-<title>sabrin.party updates</title>
-</image>
+
+<atom:link href="https://sabrin.party/feed.xml" rel="self" type="application/rss+xml" />
+<title>sabrin.party</title>
+<link>https://sabrin.party</link>
+<description>sabrin.party updates</description>
 
 <item>
-<title>revamped hxh shrine + birthday!</title>
-<description>hxh shrine update + journal entry</description>
-<content:encoded><![CDATA[<p>am procrastinating by revamping <a href="https://sabrin.party/shrines/hxh">my hxh shrine</a> so it look cooler to me. not many content changes it just looks different now.</p><img src="https://i.postimg.cc/CMqKhmyf/hxhupdate.png" style="width:100%;"><p>i also realized that i missed sabrin.party's birthday! again! quick blog post <a href="http://sabrin.party/journal#011526">here</a></p>]]></content:encoded>  
-<pubDate>15 Jan 2026 19:15:34 GMT </pubDate>
+<title>revamped hxh shrine + website birthday post!</title>
+<description>
+<![CDATA[
+    <p>am procrastinating by revamping <a href="https://sabrin.party/shrines/hxh">my hxh shrine</a> so it look cooler to me. not many content changes it just looks different now.</p><img src="https://i.postimg.cc/CMqKhmyf/hxhupdate.png" style="width:100%;"><p>i also realized that i missed sabrin.party's birthday! again! quick blog post <a href="http://sabrin.party/journal#011526">here</a></p>
+]]></description>
+<pubDate>15 Jan 2026 19:15:34 EST </pubDate>
 <link>http://sabrin.party/shrines/hxh</link>
 <category>pages, blog</category>
-<guid>d1a13cee-d646-4486-950b-27d9701e35e7</guid>
 </item>
 <item>
 <title>song of the week*</title>
-<description>DEVIOUS (خراب) by SADWRIST</description>
-<content:encoded><![CDATA[<p>DEVIOUS (خراب) by SADWRIST. stumbled upon this album on <a href="https://sadwrist.bandcamp.com/album/k-thizein">bandcamp</a>. enjoying this sound a lot.</p><img src="https://f4.bcbits.com/img/a2620789857_10.jpg" style="width:100%;">]]></content:encoded>  
-<pubDate>12 Jan 2026 19:50:36 GMT </pubDate>
+<description><![CDATA[
+    <p>DEVIOUS (خراب) by SADWRIST. stumbled upon this album on <a href="https://sadwrist.bandcamp.com/album/k-thizein">bandcamp</a>. enjoying this sound a lot.</p><img src="https://f4.bcbits.com/img/a2620789857_10.jpg" style="width:100%;">
+    ]]></description>  
+<pubDate>12 Jan 2026 19:50:36 EST </pubDate>
 <link>http://sabrin.party</link>
 <category>music</category>
-<guid>fe545047-ba7b-4f69-ae7c-c9f1f295afd8</guid>
 
 </item>
 <item>
 <title>happy new year! my 2025 media wrapped</title>
-<description>media wrapped blogpost just dropped.</description>
-<content:encoded><![CDATA[<p>take a look at my media wrapped slideshow thang. happy new year 2006! <a href="https://sabrin.party/journal#010126">sabrin.party/journal</a></p><img src="https://sabrin.party/assets/04-blog/2026-mediawrapped01.png" style=width:100%;>]]></content:encoded>  
-<pubDate>1 Jan 2026 07:13:39 GMT</pubDate>
+<description><![CDATA[
+    <p>take a look at my media wrapped slideshow thang. happy new year 2006! <a href="https://sabrin.party/journal#010126">sabrin.party/journal</a></p><img src="https://sabrin.party/assets/04-blog/2026-mediawrapped01.png" style=width:100%;>
+    ]]></description>  
+<pubDate>1 Jan 2026 07:13:39 EST</pubDate>
 <link>https://sabrin.party/journal#010126</link>
 <category>blog</category>
-<guid>e772a53e-0b4f-4a4e-adf3-fdbcbf50e4e1</guid>
 </item>
 </channel>
 </rss>

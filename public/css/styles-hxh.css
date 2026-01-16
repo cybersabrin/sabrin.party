@@ -5,14 +5,10 @@ body {
     width: 65vw;
     left: 50%;
     margin-left: -32.5vw;
-    background: url(/public/assets/03-images/whitegrain.gif);
+    background: url(/assets/03-images/whitegrain.gif);
 }
 
-html {
-    padding: 40px;
-
-}
-
+html {padding: 40px;}
 p {
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -51,7 +47,7 @@ li {
     z-index: 5;
     margin: -24px 14px 7px -120px;
     padding: 8px;
-    background: url(/public/assets/03-images/greenpurple.png) center;
+    background: url(/assets/03-images/greenpurple.png) center;
     border: 2px solid rgb(118, 192, 102);
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -91,12 +87,6 @@ a:hover {
     font-style: italic;
 }
 
-.homeimg1 {
-    float: left;
-    width: 12vw;
-    padding-right: 10px;
-    padding-bottom: 10px
-}
 
 .homeimg2 {
     float: right;
