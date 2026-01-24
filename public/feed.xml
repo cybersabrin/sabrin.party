@@ -7,6 +7,22 @@
 <title>sabrin.party</title>
 <link>https://sabrin.party</link>
 <description>sabrin.party updates</description>
+<image>
+    <url>https://i.postimg.cc/T3DCZ0gt/xml-icon.webp</url>
+    <title>sabrin.party</title>
+    <link>https://sabrin.party</link>
+</image>
+<item>
+<title>new dream journal entry</title>
+<description>
+<![CDATA[
+    <p>first dream of 2026!</p>
+    <img src="https://i.postimg.cc/YSmKDQCH/dreamjournal.webp" style="width:100%">
+]]></description>
+<pubDate>24 Jan 2026 13:12:22 EST</pubDate>
+<link>https://sabrin.party/dreams</link>
+<category>pages</category>
+</item>
 
 <item>
 <title>redesigned a bunch of pages</title>
