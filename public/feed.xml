@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <?xml-stylesheet href="/css/10-feed.xsl" type="text/xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel>
 
+<channel>
 <atom:link href="https://sabrin.party/feed.xml" rel="self" type="application/rss+xml" />
 <title>sabrin.party</title>
 <link>https://sabrin.party</link>
 <description>sabrin.party updates</description>
-https://i.postimg.cc/595NRH15/newbuttons.png
+
+<item>
+<title>redesigned a bunch of pages</title>
+<description>
+<![CDATA[
+    <p>i've been refreshing(?) revamping(?) redesigning a bunch of my main pages which are:</p><ul><li><a href="https://sabrin.party/journal">journal</a></li>
+    <li><a href="https://sabrin.party/medialog">journal</a></li>
+    <li><a href="https://sabrin.party/about">about the webmaster</a></li>
+    <li><a href="https://sabrin.party/sitemap">sitemap</a></li></ul>
+    <p>i've just been getting bored with the way they looked. not anymore!</p>
+    <img src="https://i.postimg.cc/rwK8RMpf/pageredesign.webp" style="width:100%">
+]]></description>
+<pubDate>23 Jan 2026 21:21:07 EST</pubDate>
+<link>https://sabrin.party/medialog</link>
+<category>pages</category>
+</item>
+
 <item>
 <title>button corkboard is live + sotw</title>
 <description>
