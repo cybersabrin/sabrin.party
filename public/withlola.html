@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/watchparty.css">
+    <title>tv with lola</title>
+</head>
+<body>
+    <h1>sabrin & lola's watchlist</h1>
+    <h2>thought i'd be fun to turn our watchlist into a web page.</h2>
+    <label>
+    <input type="checkbox">
+    <span>Buy Coffee</span>
+  </label>
+  
+  <label>
+    <input type="checkbox">
+    <span>Ask question on SO</span>
+  </label>
+  
+  <label>
+    <input type="checkbox" checked>
+    <span>kill la kill</span> <button onclick="myFunction()">penny for our thoughts?</button>
+    <div id="thoughts">
+    <table><thead>
+    <tr>
+        <th>lola</th>
+        <th>sabrin</th>
+    </tr></thead>
+    <tbody>
+    <tr>
+        <td>𓆉 𓆉 𓆉 𓆉 𓆉</td>
+        <td>5/5 sentient uniforms</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+
+  </label>
+  <script>function myFunction() {
+  var x = document.getElementById("thoughts");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}</script>
+</body>
+</html>
