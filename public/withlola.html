@@ -3,48 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/watchparty.css">
+    <link rel="stylesheet" href="/css/watchparty.css">
     <title>tv with lola</title>
 </head>
 <body>
-    <h1>sabrin & lola's watchlist</h1>
-    <h2>thought i'd be fun to turn our watchlist into a cute little web page.</h2>
-    <label>
-    <input type="checkbox">
-    <span>Buy Coffee</span>
-  </label>
-  
-  <label>
-    <input type="checkbox">
-    <span>Ask question on SO</span>
-  </label>
-  
-  <label>
-    <input type="checkbox" checked>
-    <span>kill la kill</span> <button onclick="myFunction()">penny for our thoughts?</button>
-    <div id="thoughts">
-    <table><thead>
-    <tr>
-        <th>lola</th>
-        <th>sabrin</th>
-    </tr></thead>
-    <tbody>
-    <tr>
-        <td>𓆉 𓆉 𓆉 𓆉 𓆉</td>
-        <td>5/5 sentient uniforms</td>
-    </tr>
-    </tbody>
-    </table>
-    </div>
-
-  </label>
-  <script>function myFunction() {
+   <script>function myFunction() {
   var x = document.getElementById("thoughts");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
-    x.style.display = "none";
-  }
-}</script>
+    x.style.display = "none";}}</script>
+    
+    <img src="https://i.postimg.cc/G2FpVzQx/title.gif" class="title">
+    <h2>thought i'd be fun to turn our watchlist into a cute little web page.</h2>
+    <p>i wish i knew how to make this actually interactive (aka having it actually save if you checked off a box) but i don't have the skillz for that.</p>
+    <label><input type="checkbox"><span>1000xRESIST (game, but still)</span></label>
+  
+  <label><input type="checkbox"><span>trigun STARGAZE</span></label>
+  <label><input type="checkbox"><span>oniisama e...</span></label>
+  <label><input type="checkbox"><span>akira</span></label>
+  <label><input type="checkbox"><span>madoka magica (rewatch to prepare for the movie)</span></label>
+  <label><input type="checkbox"><span>super crooks</span></label>
+  
+  <label><input type="checkbox" checked><span>kill la kill</span> <button onclick="myFunction()">penny for our thoughts?</button>
+    <div id="thoughts">
+    <table><thead><tr>
+      <th>lola</th>
+      <th>sabrin</th></tr></thead>
+    <tbody><tr>
+      <td>★ ★ ★ ★ ★</td>
+      <td>5/5 sentient uniforms</td></tr>
+    </tbody></table></div></label>
+ 
 </body>
 </html>
