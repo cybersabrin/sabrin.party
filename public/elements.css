@@ -11,8 +11,7 @@
 }
 .site-box {
     text-align: center;
-    background-image: url(https://sabrin.nekoweb.org/sabrin.party/assets/03-images/cloud1anim.gif); /* Only your-username.nekoweb.org URLs allowed, use FULL url to your file like https://your-username.nekoweb.org/your-username.nekoweb.org/bg.png */
-    background-size: cover;
+    background-color: gold; /* Only your-username.nekoweb.org URLs allowed, use FULL url to your file like https://your-username.nekoweb.org/your-username.nekoweb.org/bg.png */
     color: #0000ff;
     font-size: 12px;
 }
