@@ -7,9 +7,9 @@
 /* Must start with ".site-box". Change how your website will appear on main nekoweb site: https://nekoweb.org/assets/siteboxes.png */
 .site-box {
     text-align: center;
-    background-image: url(https:://sabrin.nekoweb.org/sabrin.party/public/assets/.webp); /* Only your-username.nekoweb.org URLs allowed, use FULL url to your file like https://your-username.nekoweb.org/your-username.nekoweb.org/bg.png */
+    background-image: url(https:://sabrin.nekoweb.org/sabrin.party/public/assets/preview.webp); /* Only your-username.nekoweb.org URLs allowed, use FULL url to your file like https://your-username.nekoweb.org/your-username.nekoweb.org/bg.png */
     background-repeat: no-repeat;
-    color: #b08271;
+    color: #0000ff;
     font-size: 12px;
 }
 .site-box > a > p {
