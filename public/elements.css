@@ -5,25 +5,22 @@
 */
 
 /* Must start with ".site-box". Change how your website will appear on main nekoweb site: https://nekoweb.org/assets/siteboxes.png */
-@font-face{font-family:'ANK24';src:url('/fonts/Web437_DOS-V_re_ANK24.woff2') format("woff2"),url('/fonts/Web437_DOS-V_re_ANK24.woff') format("woff");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'ANK24';src:url('https://sabrin.nekoweb.org/sabrin.party/fonts/Web437_DOS-V_re_ANK24.woff2') format("woff2"),url('https://sabrin.nekoweb.org/sabrin.party/fonts/Web437_DOS-V_re_ANK24.woff') format("woff");font-weight:400;font-style:normal;font-display:swap}
 * {
     font-family: 'ANK24';
 }
 .site-box {
     text-align: center;
     background-image: url(https://sabrin.nekoweb.org/sabrin.party/assets/03-images/cloud1anim.gif); /* Only your-username.nekoweb.org URLs allowed, use FULL url to your file like https://your-username.nekoweb.org/your-username.nekoweb.org/bg.png */
-    background-repeat: no-repeat;
+    background-size: cover;
     color: #0000ff;
     font-size: 12px;
 }
 .site-box > a > p {
-    background-color: #fffb2b;
     color: #0000ff;
     font-weight: bold;
 }
 .site-box > a > span {
-    color: var(--darkbrown);
-    background-color: #fffb2b;
     color: #0000ff;
     font-style: italic;
 }
