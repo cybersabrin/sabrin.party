@@ -9,6 +9,17 @@
 <description>sabrin.party updates</description>
 
 <item>
+<title>bird shrine temporarily closed</title>
+<description>
+<![CDATA[
+    <p>temporarily deleted my bird shrine/gallery page as i figure out how to get melon's awesome <a href="https://melonking.net/free/software/gallery-maker" target="_blank">gallery maker</a> running on my new linux setup.</p>
+]]></description>
+<pubDate>12 Apr 2026 18:16:05 EST</pubDate>
+<link></link>
+<category>pages</category>
+</item>
+
+<item>
 <title>journal entry</title>
 <description>
 <![CDATA[
@@ -16,7 +27,7 @@
 ]]></description>
 <pubDate>03 Apr 2026 01:26:58 EST</pubDate>
 <link>https://sabrin.party/journal</link>
-<category>pages</category>
+<category>blog</category>
 </item>
 
 <item>
@@ -27,7 +38,7 @@
 ]]></description>
 <pubDate>21 Mar 2026 01:26:12 EST</pubDate>
 <link>https://sabrin.party/journal</link>
-<category>pages, music</category>
+<category>blog, music</category>
 </item>
 
 <item>
