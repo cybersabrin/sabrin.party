@@ -50,4 +50,6 @@ User-agent: Timpibot
 User-agent: VelenPublicWebCrawler
 User-agent: Webzio-Extended
 User-agent: YouBot
+User-agent: Grok
+User-agent: xai-crawler
 Disallow: /
