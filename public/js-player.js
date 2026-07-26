@@ -73,6 +73,7 @@ audioPlayer.querySelector(".volume-button").addEventListener("click", () => {
 });
 
 //turn 128 seconds into 2:08
+// turn 128 seconds into 2:08 (Pale Moon compatible)
 function getTimeCodeFromNum(num) {
   let seconds = parseInt(num);
   let minutes = parseInt(seconds / 60);
@@ -80,8 +81,14 @@ function getTimeCodeFromNum(num) {
   const hours = parseInt(minutes / 60);
   minutes -= hours * 60;
 
-  if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
-  return `${String(hours).padStart(2, 0)}:${minutes}:${String(
-    seconds % 60
-  ).padStart(2, 0)}`;
+  // Format seconds with a leading zero if under 10
+  const formattedSeconds = ('0' + (seconds % 60)).slice(-2);
+
+  if (hours === 0) {
+    return `${minutes}:${formattedSeconds}`;
+  }
+  
+  // Format hours with a leading zero if under 10
+  const formattedHours = ('0' + hours).slice(-2);
+  return `${formattedHours}:${minutes}:${formattedSeconds}`;
 }
