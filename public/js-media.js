@@ -1,6 +1,6 @@
 // Configured specifically for your 'sabrinparty-sheetsite' document and 'Log' table!
 var GRIST_DOC_ID = "k9K537SAjQ9B";   
-var GRIST_TABLE_ID = "log"; 
+var GRIST_TABLE_ID = "Log"; 
 
 $(document).ready(function () {
     // 1. We append an asterisk cross-origin filter parameter to bypass the silent browser blocks
