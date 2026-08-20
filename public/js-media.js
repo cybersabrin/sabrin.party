@@ -1,18 +1,40 @@
-var SPREADSHEET_ID_AND_TAB = "14iIGUtL0pREld4d6JW3fljlEFU444iw5eRm5poEhq-c/log";
+var GRIST_DOC_ID = "k9K537SAjQ9Bxyg3mW8xF8";  
+var GRIST_TABLE_ID = "log";                  
+var GRIST_API_KEY = "8816faa83d198d6974e793d4d2cff1b9b2bc7100"; 
 
 $(document).ready(function () {
   
-    $.getJSON("https://opensheet.elk.sh/" + SPREADSHEET_ID_AND_TAB, function (data) {
-      /* TO VIEW CONSOLE.LOG RESULTS, RIGHT-CLICK AND INSPECT */
-      console.log(data); // This gives me an ARRAY of every OBJECT...
-      data.forEach(function (entry, index) { // For each object in data, read it as an ENTRY...
-        console.log(entry); // This logs the OBJECT...
-        if(index == 0) return;
-        // class is an identifier
-        let div = $(`<div class="item">
-          <div class="left"><p class="details">` + entry.type + ` <br> ` + entry.date + ` <br> <strong>status:</strong><br> ` + entry.status + `</p><img alt="` + entry.alt + `" class="cover" src="` + entry.image + `"></div><a class="titleLink" target="_blank" href="` + entry.link + `">` + entry.title + `</a><br><p class="text">` + entry.review + `</p>
+    var gristUrl = "https://docs.getgrist.com/api/docs/" + GRIST_DOC_ID + "/tables/" + GRIST_TABLE_ID + "/records";
+
+    $.ajax({
+      url: gristUrl,
+      type: "GET",
+      headers: {
+        "Authorization": "Bearer " + GRIST_API_KEY
+      },
+      success: function (response) {
+
+        console.log(response.records); 
+        
+        response.records.forEach(function (record) { 
+
+          let entry = record.fields;
+          console.log(entry); 
+          
+          let div = $(`<div class="item">
+            <div class="left">
+              <p class="details">` + (entry.type || '') + ` <br> ` + (entry.date || '') + ` <br> <strong>status:</strong><br> ` + (entry.status || '') + `</p>
+              <img alt="` + (entry.alt || '') + `" class="cover" src="` + (entry.image || '') + `">
+            </div>
+            <a class="titleLink" target="_blank" href="` + (entry.link || '') + `">` + (entry.title || '') + `</a>
+            <br>
+            <p class="text">` + (entry.review || '') + `</p>
           </div></div>`)
-        .appendTo("#content"); // # refers to div id
-      });
+          .appendTo("#content"); 
+        });
+      },
+      error: function (xhr, status, error) {
+        console.error("Failed to fetch data from Grist:", error);
+      }
     });  
-  });
+});
