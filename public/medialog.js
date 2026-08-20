@@ -6,47 +6,49 @@ $(document).ready(function () {
 
       console.log("Grist response:", response);
 
-      response.records.slice().reverse().forEach(function (record) {
+      response.records
+        .sort((a, b) => (b.fields.date || 0) - (a.fields.date || 0))
+        .forEach(function (record) {
 
-        const entry = record.fields;
+          const entry = record.fields;
 
-        console.log("Entry:", entry);
+          console.log("Entry:", entry);
 
-        let div = $(`
-          <div class="item">
-            <div class="left">
-              <p class="details">
-                ${entry.type || ""}<br>
-                ${entry.date ? new Date(entry.date * 1000).toLocaleDateString("en-US") : ""}<br>
-                <strong>status:</strong><br>
-                ${entry.status || ""}
-              </p>
+          let div = $(`
+            <div class="item">
+              <div class="left">
+                <p class="details">
+                  ${entry.type || ""}<br>
+                  ${entry.date ? new Date(entry.date * 1000).toLocaleDateString("en-US") : ""}<br>
+                  <strong>status:</strong><br>
+                  ${entry.status || ""}
+                </p>
 
-              <img
-                alt="${entry.alt || ""}"
-                class="cover"
-                src="${entry.image || ""}"
+                <img
+                  alt="${entry.alt || ""}"
+                  class="cover"
+                  src="${entry.image || ""}"
+                >
+              </div>
+
+              <a
+                class="titleLink"
+                target="_blank"
+                href="${entry.link || "#"}"
               >
+                ${entry.title || ""}
+              </a>
+
+              <br>
+
+              <p class="text">
+                ${entry.review || ""}
+              </p>
             </div>
+          `);
 
-            <a
-              class="titleLink"
-              target="_blank"
-              href="${entry.link || "#"}"
-            >
-              ${entry.title || ""}
-            </a>
-
-            <br>
-
-            <p class="text">
-              ${entry.review || ""}
-            </p>
-          </div>
-        `);
-
-        div.appendTo("#content");
-      });
+          div.appendTo("#content");
+        });
 
     }
   );
