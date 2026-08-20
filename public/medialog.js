@@ -6,7 +6,7 @@ $(document).ready(function () {
 
       console.log("Grist response:", response);
 
-      response.records.forEach(function (record) {
+      response.records.slice().reverse().forEach(function (record) {
 
         const entry = record.fields;
 
@@ -17,7 +17,7 @@ $(document).ready(function () {
             <div class="left">
               <p class="details">
                 ${entry.type || ""}<br>
-                ${entry.date || ""}<br>
+                ${entry.date ? new Date(entry.date * 1000).toLocaleDateString("en-US") : ""}<br>
                 <strong>status:</strong><br>
                 ${entry.status || ""}
               </p>
