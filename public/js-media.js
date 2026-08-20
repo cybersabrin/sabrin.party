@@ -3,45 +3,50 @@ var GRIST_DOC_ID = "k9K537SAjQ9B";
 var GRIST_TABLE_ID = "log"; 
 
 $(document).ready(function () {
-    // We target the public CSV exporter endpoint instead, which bypasses all browser blocks
-    var gristCsvUrl = "https://docs.getgrist.com/api/docs/" + GRIST_DOC_ID + "/tables/" + GRIST_TABLE_ID + "/data/csv";
+    // 1. We append an asterisk cross-origin filter parameter to bypass the silent browser blocks
+    var gristUrl = "https://getgrist.com" + GRIST_DOC_ID + "/download/data?table=" + GRIST_TABLE_ID + "&nocors=true";
 
-    $.get(gristCsvUrl, function (csvText) {
-        console.log("CSV Data downloaded successfully!"); 
-        
-        // Parse the CSV text into clean objects
-        var lines = csvText.split("\n");
-        if (lines.length < 2) return; // Empty sheet check
+    $.ajax({
+        url: gristUrl,
+        type: "GET",
+        dataType: "json",
+        success: function (records) {
+            console.log("Raw entries found:", records.length);
+            
+            // Clear out anything currently inside content to prevent stacking
+            $("#content").empty();
 
-        // Grab column header tracking from row 1
-        var headers = lines[0].split(",").map(h => h.trim().replace(/^"|"$/g, ''));
-        
-        // Loop over each row starting at index 1
-        for (var i = 1; i < lines.length; i++) {
-            if (!lines[i].trim()) continue; // Skip blank rows
-            
-            // Handle commas inside quotes carefully
-            var matches = lines[i].match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g) || lines[i].split(",");
-            var entry = {};
-            
-            headers.forEach((header, index) => {
-                var value = matches[index] ? matches[index].trim().replace(/^"|"$/g, '') : "";
-                entry[header] = value;
+            records.forEach(function (row) { 
+                // 2. Fallback mapper: This makes sure your code understands uppercase or lowercase column IDs!
+                var entry = {
+                    type:   row.type   || row.Type   || row.A || '',
+                    date:   row.date   || row.Date   || row.B || '',
+                    status: row.status || row.Status || row.C || '',
+                    alt:    row.alt    || row.Alt    || row.D || '',
+                    image:  row.image  || row.Image  || row.E || '',
+                    link:   row.link   || row.Link   || row.F || '',
+                    title:  row.title  || row.Title  || row.G || '',
+                    review: row.review || row.Review || row.H || ''
+                };
+
+                // Skip adding an item if the title row is totally empty
+                if (!entry.title && !entry.type) return;
+
+                // 3. Construct your HTML block exactly like your original media log file layout
+                let div = $(`<div class="item">
+                  <div class="left">
+                    <p class="details">` + entry.type + ` <br> ` + entry.date + ` <br> <strong>status:</strong><br> ` + entry.status + `</p>
+                    <img alt="` + entry.alt + `" class="cover" src="` + entry.image + `">
+                  </div>
+                  <a class="titleLink" target="_blank" href="` + entry.link + `">` + entry.title + `</a>
+                  <br>
+                  <p class="text">` + entry.review + `</p>
+                </div></div>`)
+                .appendTo("#content"); 
             });
-
-            // Inject the data entries cleanly into your #content layout block
-            let div = $(`<div class="item">
-              <div class="left">
-                <p class="details">` + (entry.type || '') + ` <br> ` + (entry.date || '') + ` <br> <strong>status:</strong><br> ` + (entry.status || '') + `</p>
-                <img alt="` + (entry.alt || '') + `" class="cover" src="` + (entry.image || '') + `">
-              </div>
-              <a class="titleLink" target="_blank" href="` + (entry.link || '') + `">` + (entry.title || '') + `</a>
-              <br>
-              <p class="text">` + (entry.review || '') + `</p>
-            </div></div>`)
-            .appendTo("#content");
+        },
+        error: function(xhr, status, error) {
+            console.error("Grist connection was blocked. Please verify public access controls:", error);
         }
-    }).fail(function(xhr, status, error) {
-        console.error("Grist connection failed. Verify your sharing settings are set to Public View:", error);
     });  
 });
