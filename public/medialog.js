@@ -1,26 +1,25 @@
 $(document).ready(function () {
 
   $.getJSON(
-    "https://docs.getgrist.com/api/docs/k9K537SAjQ9B/tables/log/records",
+    "https://docs.getgrist.com/api/docs/k9K537SAjQ9B/tables/Log/records",
     function (response) {
 
-      console.log(response);
+      console.log("Grist response:", response);
 
       response.records.forEach(function (record) {
 
-        // Grist stores the actual row data inside `fields`
         const entry = record.fields;
 
-        console.log(entry);
+        console.log("Entry:", entry);
 
         let div = $(`
           <div class="item">
             <div class="left">
               <p class="details">
-                ${entry.type}<br>
-                ${entry.date}<br>
+                ${entry.type || ""}<br>
+                ${entry.date || ""}<br>
                 <strong>status:</strong><br>
-                ${entry.status}
+                ${entry.status || ""}
               </p>
 
               <img
@@ -35,7 +34,7 @@ $(document).ready(function () {
               target="_blank"
               href="${entry.link || "#"}"
             >
-              ${entry.title}
+              ${entry.title || ""}
             </a>
 
             <br>
@@ -48,6 +47,7 @@ $(document).ready(function () {
 
         div.appendTo("#content");
       });
+
     }
   );
 
