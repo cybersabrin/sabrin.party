@@ -1,26 +1,14 @@
 var GRIST_DOC_ID = "k9K537SAjQ9Bxyg3mW8xF8";  
 var GRIST_TABLE_ID = "log";                  
-var GRIST_API_KEY = "8816faa83d198d6974e793d4d2cff1b9b2bc7100"; 
 
 $(document).ready(function () {
-  
-    var gristUrl = "https://docs.getgrist.com/api/docs/" + GRIST_DOC_ID + "/tables/" + GRIST_TABLE_ID + "/records";
+    // Note the /download/ endpoint. This bypasses CORS for public files!
+    var gristUrl = "https://getgrist.com" + GRIST_DOC_ID + "/download/data?table=" + GRIST_TABLE_ID;
 
-    $.ajax({
-      url: gristUrl,
-      type: "GET",
-      headers: {
-        "Authorization": "Bearer " + GRIST_API_KEY
-      },
-      success: function (response) {
-
-        console.log(response.records); 
+    $.getJSON(gristUrl, function (records) {
+        console.log(records); 
         
-        response.records.forEach(function (record) { 
-
-          let entry = record.fields;
-          console.log(entry); 
-          
+        records.forEach(function (entry) { 
           let div = $(`<div class="item">
             <div class="left">
               <p class="details">` + (entry.type || '') + ` <br> ` + (entry.date || '') + ` <br> <strong>status:</strong><br> ` + (entry.status || '') + `</p>
@@ -32,9 +20,7 @@ $(document).ready(function () {
           </div></div>`)
           .appendTo("#content"); 
         });
-      },
-      error: function (xhr, status, error) {
-        console.error("Failed to fetch data from Grist:", error);
-      }
+    }).fail(function(xhr, status, error) {
+        console.error("Failed to fetch public Grist data:", error);
     });  
 });
