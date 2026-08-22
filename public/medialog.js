@@ -7,7 +7,6 @@ $(document).ready(function () {
       console.log("Grist response:", response);
 
       response.records
-        .sort((a, b) => b.id - a.id)
         .forEach(function (record) {
 
           const entry = record.fields;
@@ -19,7 +18,7 @@ $(document).ready(function () {
               <div class="left">
                 <p class="details">
                   ${entry.type || ""}<br>
-                  ${entry.date ? new Date(entry.date * 1000).toLocaleDateString("en-US", { timeZone: "America/New_York" }) : ""}<br>
+                  ${entry.date ? new Date(entry.date * 1000).toLocaleDateString("en-US", { timeZone: "UTC" }) : ""}<br>
                   <strong>status:</strong><br>
                   ${entry.status || ""}
                 </p>
