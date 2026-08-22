@@ -1,36 +1,10 @@
 $(document).ready(function () {
 
   $.getJSON(
-    "https://docs.getgrist.com/api/docs/k9K537SAjQ9B/tables/Log/records",
+    "https://docs.getgrist.com/api/docs/k9K537SAjQ9B/tables/Log/records?sort=-date,manualSort",
     function (response) {
 
       console.log("Grist response:", response);
-
-      response.records.sort(function (a, b) {
-
-      const dateA = Number(a.fields.date) || 0;
-      const dateB = Number(b.fields.date) || 0;
-
-      // Different dates → newest first
-      if (dateA !== dateB) {
-        return dateB - dateA;
-      }
-
-      // Same date → most recently added first
-      return Number(b.id) - Number(a.id);
-    });
-
-
-    console.log(
-      "SORTED:",
-      response.records.map(function (record) {
-        return {
-          id: record.id,
-          title: record.fields.title,
-          date: record.fields.date
-        };
-      })
-    );
 
       response.records.forEach(function (record) {
 
