@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
   $.getJSON(
-    "https://docs.getgrist.com/api/docs/k9K537SAjQ9B/tables/Log/records?sort=-date,manualSort",
+    "https://docs.getgrist.com/api/docs/k9K537SAjQ9B/tables/Log/records?sort=manualSort",
     function (response) {
 
       console.log("Grist response:", response);
