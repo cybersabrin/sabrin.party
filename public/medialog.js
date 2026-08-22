@@ -8,15 +8,29 @@ $(document).ready(function () {
 
       response.records.sort(function (a, b) {
 
-        const dateA = a.fields.date || 0;
-        const dateB = b.fields.date || 0;
+      const dateA = Number(a.fields.date) || 0;
+      const dateB = Number(b.fields.date) || 0;
 
-        if (dateA !== dateB) {
-          return dateB - dateA;
-        }
+      // Different dates → newest first
+      if (dateA !== dateB) {
+        return dateB - dateA;
+      }
 
-        return b.id - a.id;
-      });
+      // Same date → most recently added first
+      return Number(b.id) - Number(a.id);
+    });
+
+
+    console.log(
+      "SORTED:",
+      response.records.map(function (record) {
+        return {
+          id: record.id,
+          title: record.fields.title,
+          date: record.fields.date
+        };
+      })
+    );
 
       response.records.forEach(function (record) {
 
