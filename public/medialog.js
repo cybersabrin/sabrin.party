@@ -6,48 +6,70 @@ $(document).ready(function () {
 
       console.log("Grist response:", response);
 
-      response.records
-        .forEach(function (record) {
+      response.records.sort(function (a, b) {
 
-          const entry = record.fields;
+        const dateA = a.fields.date || 0;
+        const dateB = b.fields.date || 0;
 
-          console.log("Entry:", entry);
+        if (dateA !== dateB) {
+          return dateB - dateA;
+        }
 
-          let div = $(`
-            <div class="item">
-              <div class="left">
-                <p class="details">
-                  ${entry.type || ""}<br>
-                  ${entry.date ? new Date(entry.date * 1000).toLocaleDateString("en-US", { timeZone: "UTC" }) : ""}<br>
-                  <strong>status:</strong><br>
-                  ${entry.status || ""}
-                </p>
+        return b.id - a.id;
+      });
 
-                <img
-                  alt="${entry.alt || ""}"
-                  class="cover"
-                  src="${entry.image || ""}"
-                >
-              </div>
+      response.records.forEach(function (record) {
 
-              <a
-                class="titleLink"
-                target="_blank"
-                href="${entry.link || "#"}"
-              >
-                ${entry.title || ""}
-              </a>
+        const entry = record.fields;
 
-              <br>
+        console.log("Entry:", entry);
 
-              <p class="text">
-                ${entry.review || ""}
+        const date = entry.date
+          ? new Date(entry.date * 1000).toLocaleDateString("en-US", {
+              timeZone: "UTC"
+            })
+          : "";
+
+        const div = $(`
+          <div class="item">
+
+            <div class="left">
+
+              <p class="details">
+                ${entry.type || ""}<br>
+                ${date}<br>
+                <strong>status:</strong><br>
+                ${entry.status || ""}
               </p>
-            </div>
-          `);
 
-          div.appendTo("#content");
-        });
+              <img
+                alt="${entry.alt || ""}"
+                class="cover"
+                src="${entry.image || ""}"
+              >
+
+            </div>
+
+            <a
+              class="titleLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="${entry.link || "#"}"
+            >
+              ${entry.title || ""}
+            </a>
+
+            <br>
+
+            <p class="text">
+              ${entry.review || ""}
+            </p>
+
+          </div>
+        `);
+
+        div.appendTo("#content");
+      });
 
     }
   );
