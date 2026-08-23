@@ -1,15 +1,10 @@
 $(document).ready(function () {
 
   $.getJSON(
-    "https://docs.getgrist.com/api/docs/k9K537SAjQ9B/tables/Log/records",
+    "https://docs.getgrist.com/api/docs/k9K537SAjQ9B/tables/Log/records?sort=manualSort",
     function (response) {
 
       console.log("Grist response:", response);
-
-      // sort
-      response.records.sort(function (a, b) {
-        return b.id - a.id;
-      });
 
       response.records.forEach(function (record) {
 
