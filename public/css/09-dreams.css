@@ -1,6 +1,6 @@
-@font-face{font-family:Palatino;src:url("/fonts/Palatino-Roman.woff2") format("woff2"), url("/fonts/Palatino-Roman.woff") format("woff");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Palatino;src:url("/public/fonts/Palatino-Roman.woff2") format("woff2"), url("/public/fonts/Palatino-Roman.woff") format("woff");font-weight:400;font-style:normal;font-display:swap}
 body{
-    background: url("/assets/03-images/rainbowzoo.png") center center / cover no-repeat fixed;
+    background: url("/public/assets/03-images/rainbowzoo.png") center center / cover no-repeat fixed;
     font-family: 'Palatino';
     padding-left: 50px; padding-right: 50px;
 }
@@ -50,7 +50,7 @@ a {color: red;text-decoration: underline;} a:hover{background-color: yellow;}
   right: 30px; /* Place the button 30px from the right */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background: url(/assets/03-images/candle.webp);
+  background: url(/public/assets/03-images/candle.webp);
   width: 100px; height: 130px; /* Set a background color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
