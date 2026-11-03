@@ -1,6 +1,6 @@
 const audioPlayer = document.querySelector(".audio-player");
 const audio = new Audio(
-  "/assets/01-home/sotw.mp3"
+  "/assets/01-home/i6f.mp3"
 );
 
 console.dir(audio);

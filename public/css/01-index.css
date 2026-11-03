@@ -240,8 +240,8 @@ div.piclog {
     float: right
 }
 
-img.piclog {
-    width: 100%;
+img.piclogImg {
+    width: 156px;
     height: 200px;
     z-index: 1
 }
