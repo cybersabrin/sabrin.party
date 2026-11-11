@@ -218,15 +218,6 @@ dd {
     rotate: -2deg
 }
 
-#hoverText {
-    text-decoration: underline;
-    color: #00f;
-    cursor: default;
-    
-}
-#hoverText:hover {
-    font-style: italic;
-}
 a,
 a:visited {
     color: blue
